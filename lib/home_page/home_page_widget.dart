@@ -213,8 +213,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     10.0, 0.0, 0.0, 0.0),
                                 child: Container(
-                                  width: MediaQuery.of(context).size.width,
-                                  height: MediaQuery.of(context).size.height,
+                                  width: 90.0,
+                                  height: 90.0,
                                   decoration: BoxDecoration(),
                                   child: Container(
                                     width:
