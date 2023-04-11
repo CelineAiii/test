@@ -217,8 +217,10 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                   height: MediaQuery.of(context).size.height,
                                   decoration: BoxDecoration(),
                                   child: Container(
-                                    width: 70.0,
-                                    height: 70.0,
+                                    width:
+                                        MediaQuery.of(context).size.width * 0.3,
+                                    height:
+                                        MediaQuery.of(context).size.width * 0.3,
                                     clipBehavior: Clip.antiAlias,
                                     decoration: BoxDecoration(
                                       shape: BoxShape.circle,
