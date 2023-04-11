@@ -234,8 +234,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                               ),
                               Expanded(
                                 child: Container(
-                                  width: 308.0,
-                                  height: 100.0,
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.12,
                                   decoration: BoxDecoration(),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
