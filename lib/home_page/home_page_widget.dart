@@ -201,104 +201,61 @@ class _HomePageWidgetState extends State<HomePageWidget>
                     children: [
                       Align(
                         alignment: AlignmentDirectional(0.0, 0.0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  10.0, 0.0, 0.0, 0.0),
-                              child: Container(
-                                width: MediaQuery.of(context).size.width,
-                                height: MediaQuery.of(context).size.height,
-                                decoration: BoxDecoration(),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 10.0, 0.0, 0.0),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    10.0, 0.0, 0.0, 0.0),
                                 child: Container(
-                                  width: 70.0,
-                                  height: 70.0,
-                                  clipBehavior: Clip.antiAlias,
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Image.network(
-                                    'https://picsum.photos/seed/130/600',
-                                    fit: BoxFit.fill,
+                                  width: MediaQuery.of(context).size.width,
+                                  height: MediaQuery.of(context).size.height,
+                                  decoration: BoxDecoration(),
+                                  child: Container(
+                                    width: 70.0,
+                                    height: 70.0,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Image.network(
+                                      'https://picsum.photos/seed/130/600',
+                                      fit: BoxFit.fill,
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                            Expanded(
-                              child: Container(
-                                width: MediaQuery.of(context).size.width,
-                                height: MediaQuery.of(context).size.height,
-                                decoration: BoxDecoration(),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          20.0, 10.0, 100.0, 0.0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Text(
-                                            'Celine Ai',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium,
-                                          ),
-                                          Text(
-                                            'LV.9999',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium,
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    Expanded(
-                                      child: Padding(
+                              Expanded(
+                                child: Container(
+                                  width: MediaQuery.of(context).size.width,
+                                  height: MediaQuery.of(context).size.height,
+                                  decoration: BoxDecoration(),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            20.0, 10.0, 0.0, 0.0),
-                                        child: LinearPercentIndicator(
-                                          percent: 0.5,
-                                          width: MediaQuery.of(context)
-                                                  .size
-                                                  .width *
-                                              0.6,
-                                          lineHeight: 24.0,
-                                          animation: true,
-                                          progressColor: Color(0xFF3C2E92),
-                                          backgroundColor: Color(0xFFF1F4F8),
-                                          center: Text(
-                                            '50%',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily: 'Poppins',
-                                                  color: Color(0xFFA492BE),
-                                                ),
-                                          ),
-                                          barRadius: Radius.circular(10.0),
-                                          padding: EdgeInsets.zero,
-                                        ),
-                                      ),
-                                    ),
-                                    Expanded(
-                                      child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            20.0, 5.0, 0.0, 0.0),
+                                            20.0, 10.0, 100.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
                                           children: [
-                                            Icon(
-                                              Icons.attach_money,
-                                              color: Colors.black,
-                                              size: 24.0,
+                                            Text(
+                                              'Celine Ai',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium,
                                             ),
                                             Text(
-                                              '100000',
+                                              'LV.9999',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -306,12 +263,66 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                           ],
                                         ),
                                       ),
-                                    ),
-                                  ],
+                                      Expanded(
+                                        child: Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  20.0, 10.0, 0.0, 0.0),
+                                          child: LinearPercentIndicator(
+                                            percent: 0.5,
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                0.6,
+                                            lineHeight: 24.0,
+                                            animation: true,
+                                            progressColor: Color(0xFF3C2E92),
+                                            backgroundColor: Color(0xFFF1F4F8),
+                                            center: Text(
+                                              '50%',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'Poppins',
+                                                        color:
+                                                            Color(0xFFA492BE),
+                                                      ),
+                                            ),
+                                            barRadius: Radius.circular(10.0),
+                                            padding: EdgeInsets.zero,
+                                          ),
+                                        ),
+                                      ),
+                                      Expanded(
+                                        child: Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  20.0, 5.0, 0.0, 0.0),
+                                          child: Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Icon(
+                                                Icons.attach_money,
+                                                color: Colors.black,
+                                                size: 24.0,
+                                              ),
+                                              Text(
+                                                '100000',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium,
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                       Align(
