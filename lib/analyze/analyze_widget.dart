@@ -358,7 +358,6 @@ class _AnalyzeWidgetState extends State<AnalyzeWidget> {
                                 25.0, 10.0, 25.0, 0.0),
                             child: Container(
                               width: 100.0,
-                              height: MediaQuery.of(context).size.height,
                               decoration: BoxDecoration(
                                 color: Color(0xFFE5E0EB),
                                 borderRadius: BorderRadius.circular(10.0),
