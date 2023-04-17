@@ -7,7 +7,6 @@ import 'flutter_flow/flutter_flow_util.dart';
 import 'flutter_flow/internationalization.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'flutter_flow/nav/nav.dart';
 import 'index.dart';
 
@@ -107,8 +106,7 @@ class _NavBarPageState extends State<NavBarPage> {
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
     return Scaffold(
       body: _currentPage ?? tabs[_currentPageName],
-      extendBody: true,
-      bottomNavigationBar: FloatingNavbar(
+      bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
         onTap: (i) => setState(() {
           _currentPage = null;
@@ -116,152 +114,58 @@ class _NavBarPageState extends State<NavBarPage> {
         }),
         backgroundColor: Colors.white,
         selectedItemColor: Color(0xFF3C2E92),
-        unselectedItemColor: Color(0x00000000),
-        selectedBackgroundColor: FlutterFlowTheme.of(context).primaryBtnText,
-        borderRadius: 8.0,
-        itemBorderRadius: 8.0,
-        margin: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-        padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-        width: double.infinity,
-        elevation: 10.0,
-        items: [
-          FloatingNavbarItem(
-            customWidget: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  Icons.home_rounded,
-                  color:
-                      currentIndex == 0 ? Color(0xFF3C2E92) : Color(0x00000000),
-                  size: 24.0,
-                ),
-                Text(
-                  '首頁',
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    color: currentIndex == 0
-                        ? Color(0xFF3C2E92)
-                        : Color(0x00000000),
-                    fontSize: 11.0,
-                  ),
-                ),
-              ],
+        unselectedItemColor: Color(0x8A000000),
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        type: BottomNavigationBarType.fixed,
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home_rounded,
+              size: 24.0,
             ),
+            label: '首頁',
+            tooltip: '',
           ),
-          FloatingNavbarItem(
-            customWidget: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  Icons.shopping_cart,
-                  color:
-                      currentIndex == 1 ? Color(0xFF3C2E92) : Color(0x00000000),
-                  size: 24.0,
-                ),
-                Text(
-                  '購物',
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    color: currentIndex == 1
-                        ? Color(0xFF3C2E92)
-                        : Color(0x00000000),
-                    fontSize: 11.0,
-                  ),
-                ),
-              ],
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.shopping_cart,
+              size: 24.0,
             ),
+            label: '購物',
+            tooltip: '',
           ),
-          FloatingNavbarItem(
-            customWidget: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  Icons.sports_handball,
-                  color:
-                      currentIndex == 2 ? Color(0xFF3C2E92) : Color(0x00000000),
-                  size: 24.0,
-                ),
-                Text(
-                  '運動',
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    color: currentIndex == 2
-                        ? Color(0xFF3C2E92)
-                        : Color(0x00000000),
-                    fontSize: 11.0,
-                  ),
-                ),
-              ],
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.sports_handball,
+              size: 24.0,
             ),
+            label: '運動',
+            tooltip: '',
           ),
-          FloatingNavbarItem(
-            customWidget: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  Icons.people,
-                  color:
-                      currentIndex == 3 ? Color(0xFF3C2E92) : Color(0x00000000),
-                  size: 24.0,
-                ),
-                Text(
-                  '社群',
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    color: currentIndex == 3
-                        ? Color(0xFF3C2E92)
-                        : Color(0x00000000),
-                    fontSize: 11.0,
-                  ),
-                ),
-              ],
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.people,
+              size: 24.0,
             ),
+            label: '社群',
+            tooltip: '',
           ),
-          FloatingNavbarItem(
-            customWidget: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  Icons.assignment_outlined,
-                  color:
-                      currentIndex == 4 ? Color(0xFF3C2E92) : Color(0x00000000),
-                  size: 24.0,
-                ),
-                Text(
-                  '減肥',
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    color: currentIndex == 4
-                        ? Color(0xFF3C2E92)
-                        : Color(0x00000000),
-                    fontSize: 11.0,
-                  ),
-                ),
-              ],
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.assignment_outlined,
+              size: 24.0,
             ),
+            label: '減肥',
+            tooltip: '',
           ),
-          FloatingNavbarItem(
-            customWidget: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  FontAwesomeIcons.solidUserCircle,
-                  color:
-                      currentIndex == 5 ? Color(0xFF3C2E92) : Color(0x00000000),
-                  size: 24.0,
-                ),
-                Text(
-                  'user',
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    color: currentIndex == 5
-                        ? Color(0xFF3C2E92)
-                        : Color(0x00000000),
-                    fontSize: 11.0,
-                  ),
-                ),
-              ],
+          BottomNavigationBarItem(
+            icon: FaIcon(
+              FontAwesomeIcons.solidUserCircle,
+              size: 24.0,
             ),
+            label: 'user',
+            tooltip: '',
           )
         ],
       ),
