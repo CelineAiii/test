@@ -28,6 +28,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
   final _unfocusNode = FocusNode();
+  int get mealWaterCurrentIndex => _model.mealWaterController != null &&
+          _model.mealWaterController!.hasClients &&
+          _model.mealWaterController!.page != null
+      ? _model.mealWaterController!.page!.round()
+      : 0;
 
   final animationsMap = {
     'containerOnPageLoadAnimation': AnimationInfo(
@@ -1231,8 +1236,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                           PageController(initialPage: 0),
                                       count: 3,
                                       axisDirection: Axis.horizontal,
-                                      onDotClicked: (i) {
-                                        _model.mealWaterController!
+                                      onDotClicked: (i) async {
+                                        await _model.mealWaterController!
                                             .animateToPage(
                                           i,
                                           duration: Duration(milliseconds: 500),

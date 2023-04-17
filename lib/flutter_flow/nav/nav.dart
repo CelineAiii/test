@@ -75,6 +75,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => params.isEmpty
                   ? NavBarPage(initialPage: 'diet_plan')
                   : DietPlanWidget(),
+            ),
+            FFRoute(
+              name: 'user',
+              path: 'user',
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'user')
+                  : UserWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),
