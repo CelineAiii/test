@@ -355,7 +355,7 @@ class _SportWidgetState extends State<SportWidget> {
                       children: [
                         Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
-                              2.0, 2.0, 2.0, 12.0),
+                              2.0, 2.0, 2.0, 10.0),
                           child: Container(
                             width: MediaQuery.of(context).size.width * 0.44,
                             height: 250.0,
@@ -372,7 +372,7 @@ class _SportWidgetState extends State<SportWidget> {
                             ),
                             child: Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
-                                  12.0, 8.0, 12.0, 8.0),
+                                  10.0, 8.0, 10.0, 8.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment:
@@ -456,7 +456,7 @@ class _SportWidgetState extends State<SportWidget> {
                         ),
                         Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
-                              2.0, 2.0, 2.0, 12.0),
+                              2.0, 2.0, 2.0, 0.0),
                           child: Container(
                             width: MediaQuery.of(context).size.width * 0.44,
                             height: 180.0,
@@ -473,7 +473,7 @@ class _SportWidgetState extends State<SportWidget> {
                             ),
                             child: Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
-                                  12.0, 8.0, 12.0, 8.0),
+                                  12.0, 8.0, 10.0, 8.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.start,
