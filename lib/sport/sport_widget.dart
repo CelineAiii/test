@@ -43,37 +43,54 @@ class _SportWidgetState extends State<SportWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: Color(0xFFF1F4F8),
-        appBar: AppBar(
-          backgroundColor: Color(0xFF3C2E92),
-          automaticallyImplyLeading: false,
-          title: Text(
-            'Hi, HsiuHsiu',
-            style: FlutterFlowTheme.of(context).displaySmall.override(
-                  fontFamily: 'Outfit',
-                  color: Color(0xFFE5E0EB),
-                  fontSize: 32.0,
-                  fontWeight: FontWeight.w500,
-                ),
-          ),
-          actions: [
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 16.0, 0.0),
-              child: Container(
-                width: 50.0,
-                height: 50.0,
-                clipBehavior: Clip.antiAlias,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                ),
-                child: Image.network(
-                  'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHVzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
-                  fit: BoxFit.fitWidth,
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(70.0),
+          child: AppBar(
+            backgroundColor: Color(0xFF3C2E92),
+            automaticallyImplyLeading: false,
+            leading: FlutterFlowIconButton(
+              borderColor: Colors.transparent,
+              borderRadius: 30.0,
+              borderWidth: 1.0,
+              buttonSize: 60.0,
+              icon: Icon(
+                Icons.arrow_back_outlined,
+                color: Color(0xFFD4D4DC),
+                size: 30.0,
+              ),
+              onPressed: () async {
+                context.safePop();
+              },
+            ),
+            title: Text(
+              'Hi! Celine',
+              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                    fontFamily: 'Poppins',
+                    color: FlutterFlowTheme.of(context).primaryBtnText,
+                    fontSize: 25.0,
+                  ),
+            ),
+            actions: [
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
+                child: Container(
+                  width: MediaQuery.of(context).size.width * 0.15,
+                  height: MediaQuery.of(context).size.width * 0.15,
+                  clipBehavior: Clip.antiAlias,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                  ),
+                  child: Image.network(
+                    'https://picsum.photos/seed/856/600',
+                    fit: BoxFit.contain,
+                  ),
                 ),
               ),
-            ),
-          ],
-          centerTitle: false,
-          elevation: 0.0,
+            ],
+            centerTitle: false,
+            toolbarHeight: 70.0,
+            elevation: 2.0,
+          ),
         ),
         body: SingleChildScrollView(
           child: Column(

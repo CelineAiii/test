@@ -58,7 +58,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'sport',
               path: 'sport',
-              builder: (context, params) => SportWidget(),
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'sport')
+                  : SportWidget(),
             ),
             FFRoute(
               name: 'social',
