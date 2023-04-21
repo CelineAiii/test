@@ -423,7 +423,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                       AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Image.asset(
-                                                    'assets/images/test1.png',
+                                                    'assets/images/candy_can1.png',
                                                     width: double.infinity,
                                                     height: double.infinity,
                                                     fit: BoxFit.cover,
