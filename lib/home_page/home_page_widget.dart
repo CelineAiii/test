@@ -183,8 +183,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                   color: Color(0xFFD4D4DC),
                   size: 30.0,
                 ),
-                onPressed: () {
-                  print('diet_page pressed ...');
+                onPressed: () async {
+                  context.pushNamed('record');
                 },
               ),
             ],

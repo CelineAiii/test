@@ -58,9 +58,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'sport',
               path: 'sport',
-              builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'sport')
-                  : SportWidget(),
+              builder: (context, params) => SportWidget(),
             ),
             FFRoute(
               name: 'social',
@@ -92,6 +90,36 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'forget_password',
               path: 'forgetPassword',
               builder: (context, params) => ForgetPasswordWidget(),
+            ),
+            FFRoute(
+              name: 'food',
+              path: 'food',
+              builder: (context, params) => FoodWidget(),
+            ),
+            FFRoute(
+              name: 'record',
+              path: 'record',
+              builder: (context, params) => RecordWidget(),
+            ),
+            FFRoute(
+              name: 'view_food',
+              path: 'viewFood',
+              builder: (context, params) => ViewFoodWidget(),
+            ),
+            FFRoute(
+              name: 'nutrient',
+              path: 'nutrient',
+              builder: (context, params) => NutrientWidget(),
+            ),
+            FFRoute(
+              name: 'after_scan',
+              path: 'afterScan',
+              builder: (context, params) => AfterScanWidget(),
+            ),
+            FFRoute(
+              name: 'timer',
+              path: 'timer',
+              builder: (context, params) => TimerWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

@@ -98,7 +98,6 @@ class _NavBarPageState extends State<NavBarPage> {
     final tabs = {
       'HomePage': HomePageWidget(),
       'shopping': ShoppingWidget(),
-      'sport': SportWidget(),
       'social': SocialWidget(),
       'diet_plan': DietPlanWidget(),
       'user': UserWidget(),
@@ -133,14 +132,6 @@ class _NavBarPageState extends State<NavBarPage> {
               size: 24.0,
             ),
             label: '購物',
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.sports_handball,
-              size: 24.0,
-            ),
-            label: '運動',
             tooltip: '',
           ),
           BottomNavigationBarItem(
