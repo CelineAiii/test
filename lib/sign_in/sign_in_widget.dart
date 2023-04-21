@@ -122,7 +122,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                           children: [
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
-                                  24.0, 24.0, 24.0, 24.0),
+                                  24.0, 24.0, 24.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
@@ -394,7 +394,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                             ),
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
-                                  24.0, 24.0, 24.0, 24.0),
+                                  24.0, 24.0, 24.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
