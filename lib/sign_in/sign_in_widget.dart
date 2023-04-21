@@ -133,7 +133,6 @@ class _SignInWidgetState extends State<SignInWidget> {
                                       controller: _model.emailAddressController,
                                       obscureText: false,
                                       decoration: InputDecoration(
-                                        labelText: 'Email Address',
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .bodySmall
                                             .override(
@@ -146,9 +145,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                                         hintStyle: FlutterFlowTheme.of(context)
                                             .bodySmall
                                             .override(
-                                              fontFamily: 'Outfit',
-                                              color: Color(0xFF57636C),
-                                              fontSize: 14.0,
+                                              fontFamily: 'Poppins',
                                               fontWeight: FontWeight.normal,
                                             ),
                                         enabledBorder: OutlineInputBorder(
@@ -209,7 +206,6 @@ class _SignInWidgetState extends State<SignInWidget> {
                                       controller: _model.passwordController,
                                       obscureText: !_model.passwordVisibility,
                                       decoration: InputDecoration(
-                                        labelText: 'Password',
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .bodySmall
                                             .override(
