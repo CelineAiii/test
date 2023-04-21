@@ -188,7 +188,7 @@ class _SportWidgetState extends State<SportWidget> {
                                   ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 16.0, 0.0, 16.0),
+                                        0.0, 16.0, 0.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
                                       mainAxisAlignment:

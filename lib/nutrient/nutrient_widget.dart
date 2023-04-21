@@ -518,7 +518,6 @@ class _NutrientWidgetState extends State<NutrientWidget> {
                 Expanded(
                   child: TextFormField(
                     controller: _model.textController,
-                    autofocus: true,
                     obscureText: false,
                     decoration: InputDecoration(
                       hintText: '份/克',

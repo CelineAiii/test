@@ -187,7 +187,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                                         fillColor: Colors.white,
                                         contentPadding:
                                             EdgeInsetsDirectional.fromSTEB(
-                                                20.0, 24.0, 20.0, 24.0),
+                                                20.0, 24.0, 20.0, 0.0),
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
@@ -263,7 +263,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                                         fillColor: Colors.white,
                                         contentPadding:
                                             EdgeInsetsDirectional.fromSTEB(
-                                                20.0, 24.0, 20.0, 24.0),
+                                                20.0, 24.0, 20.0, 0.0),
                                         suffixIcon: InkWell(
                                           onTap: () => setState(
                                             () => _model.passwordVisibility =
@@ -460,7 +460,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                                         fillColor: Colors.white,
                                         contentPadding:
                                             EdgeInsetsDirectional.fromSTEB(
-                                                20.0, 24.0, 20.0, 24.0),
+                                                20.0, 24.0, 20.0, 0.0),
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
@@ -539,7 +539,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                                         fillColor: Colors.white,
                                         contentPadding:
                                             EdgeInsetsDirectional.fromSTEB(
-                                                20.0, 24.0, 20.0, 24.0),
+                                                20.0, 24.0, 20.0, 0.0),
                                         suffixIcon: InkWell(
                                           onTap: () => setState(
                                             () => _model
