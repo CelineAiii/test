@@ -29,12 +29,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, _) => NavBarPage(),
+      errorBuilder: (context, _) => SignInWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => NavBarPage(),
+          builder: (context, _) => SignInWidget(),
           routes: [
             FFRoute(
               name: 'HomePage',
@@ -84,14 +84,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   : UserWidget(),
             ),
             FFRoute(
-              name: 'forget_password',
-              path: 'forgetPassword',
-              builder: (context, params) => ForgetPasswordWidget(),
-            ),
-            FFRoute(
               name: 'sign_in',
               path: 'signIn',
               builder: (context, params) => SignInWidget(),
+            ),
+            FFRoute(
+              name: 'forget_password',
+              path: 'forgetPassword',
+              builder: (context, params) => ForgetPasswordWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

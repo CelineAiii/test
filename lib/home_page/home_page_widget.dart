@@ -434,7 +434,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                       AlignmentDirectional(
                                                           0.07, 0.58),
                                                   child: Image.asset(
-                                                    'assets/images/eoeaz_.png',
+                                                    'assets/images/candy_blue.png',
                                                     width:
                                                         MediaQuery.of(context)
                                                                 .size
@@ -557,7 +557,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                           ),
                                           Expanded(
                                             child: Image.asset(
-                                              'assets/images/test.png',
+                                              'assets/images/cup.png',
                                               width: 100.0,
                                               height: 100.0,
                                               fit: BoxFit.cover,
