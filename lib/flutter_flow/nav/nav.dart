@@ -44,16 +44,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   : HomePageWidget(),
             ),
             FFRoute(
-              name: 'analyze',
-              path: 'analyze',
-              builder: (context, params) => AnalyzeWidget(),
-            ),
-            FFRoute(
               name: 'shopping',
               path: 'shopping',
               builder: (context, params) => params.isEmpty
                   ? NavBarPage(initialPage: 'shopping')
                   : ShoppingWidget(),
+            ),
+            FFRoute(
+              name: 'analyze',
+              path: 'analyze',
+              builder: (context, params) => AnalyzeWidget(),
             ),
             FFRoute(
               name: 'sport',
@@ -89,14 +89,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => SignInWidget(),
             ),
             FFRoute(
-              name: 'forget_password',
-              path: 'forgetPassword',
-              builder: (context, params) => ForgetPasswordWidget(),
-            ),
-            FFRoute(
               name: 'food',
               path: 'food',
               builder: (context, params) => FoodWidget(),
+            ),
+            FFRoute(
+              name: 'forget_password',
+              path: 'forgetPassword',
+              builder: (context, params) => ForgetPasswordWidget(),
             ),
             FFRoute(
               name: 'record',

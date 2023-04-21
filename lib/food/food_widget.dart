@@ -60,7 +60,7 @@ class _FoodWidgetState extends State<FoodWidget> {
               size: 30.0,
             ),
             onPressed: () async {
-              context.pushNamed('HomePage');
+              context.safePop();
             },
           ),
           actions: [

@@ -82,8 +82,8 @@ class _ViewFoodWidgetState extends State<ViewFoodWidget> {
                   color: Color(0xFFE5E0EB),
                   size: 45.0,
                 ),
-                onPressed: () {
-                  print('IconButton pressed ...');
+                onPressed: () async {
+                  context.pushNamed('food');
                 },
               ),
             ],

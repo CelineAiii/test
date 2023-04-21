@@ -57,8 +57,8 @@ class _NutrientWidgetState extends State<NutrientWidget> {
               color: Color(0xFFE5E0EB),
               size: 30.0,
             ),
-            onPressed: () {
-              print('IconButton pressed ...');
+            onPressed: () async {
+              context.safePop();
             },
           ),
           title: FFButtonWidget(

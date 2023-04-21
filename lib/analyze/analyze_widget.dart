@@ -114,8 +114,8 @@ class _AnalyzeWidgetState extends State<AnalyzeWidget> {
                   color: Color(0xFFD4D4DC),
                   size: 30.0,
                 ),
-                onPressed: () {
-                  print('IconButton pressed ...');
+                onPressed: () async {
+                  context.pushNamed('record');
                 },
               ),
             ],

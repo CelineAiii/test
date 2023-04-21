@@ -59,7 +59,7 @@ class _SportWidgetState extends State<SportWidget> {
                 size: 30.0,
               ),
               onPressed: () async {
-                context.safePop();
+                context.pushNamed('HomePage');
               },
             ),
             title: Text(
@@ -101,14 +101,18 @@ class _SportWidgetState extends State<SportWidget> {
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
-                    Text(
-                      'This is your daily summary.',
-                      style: FlutterFlowTheme.of(context).bodySmall.override(
-                            fontFamily: 'Outfit',
-                            color: Color(0xFF57636C),
-                            fontSize: 14.0,
-                            fontWeight: FontWeight.normal,
-                          ),
+                    Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                      child: Text(
+                        'This is your daily summary.',
+                        style: FlutterFlowTheme.of(context).bodySmall.override(
+                              fontFamily: 'Outfit',
+                              color: Color(0xFF57636C),
+                              fontSize: 14.0,
+                              fontWeight: FontWeight.normal,
+                            ),
+                      ),
                     ),
                   ],
                 ),

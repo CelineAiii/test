@@ -104,8 +104,8 @@ class _SocialWidgetState extends State<SocialWidget> {
                 color: Color(0xFFD4D4DC),
                 size: 30.0,
               ),
-              onPressed: () {
-                print('diet_page pressed ...');
+              onPressed: () async {
+                context.pushNamed('record');
               },
             ),
           ],

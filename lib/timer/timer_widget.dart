@@ -59,8 +59,8 @@ class _TimerWidgetState extends State<TimerWidget> {
               color: Color(0xFF14181B),
               size: 30.0,
             ),
-            onPressed: () {
-              print('IconButton pressed ...');
+            onPressed: () async {
+              context.safePop();
             },
           ),
           title: Text(
