@@ -6,3 +6,5 @@ export '/sport/sport_widget.dart' show SportWidget;
 export '/social/social_widget.dart' show SocialWidget;
 export '/diet_plan/diet_plan_widget.dart' show DietPlanWidget;
 export '/user/user_widget.dart' show UserWidget;
+export '/forget_password/forget_password_widget.dart' show ForgetPasswordWidget;
+export '/sign_in/sign_in_widget.dart' show SignInWidget;
