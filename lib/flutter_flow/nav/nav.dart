@@ -109,19 +109,44 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => ViewFoodWidget(),
             ),
             FFRoute(
+              name: 'timer',
+              path: 'timer',
+              builder: (context, params) => TimerWidget(),
+            ),
+            FFRoute(
               name: 'nutrient',
               path: 'nutrient',
               builder: (context, params) => NutrientWidget(),
             ),
             FFRoute(
-              name: 'after_scan',
-              path: 'afterScan',
-              builder: (context, params) => AfterScanWidget(),
+              name: 'food_recommand',
+              path: 'foodRecommand',
+              builder: (context, params) => FoodRecommandWidget(),
             ),
             FFRoute(
-              name: 'timer',
-              path: 'timer',
-              builder: (context, params) => TimerWidget(),
+              name: 'target_setting1',
+              path: 'targetSetting1',
+              builder: (context, params) => TargetSetting1Widget(),
+            ),
+            FFRoute(
+              name: 'target_setting2',
+              path: 'targetSetting2',
+              builder: (context, params) => TargetSetting2Widget(),
+            ),
+            FFRoute(
+              name: 'target_setting3',
+              path: 'targetSetting3',
+              builder: (context, params) => TargetSetting3Widget(),
+            ),
+            FFRoute(
+              name: 'setting',
+              path: 'setting',
+              builder: (context, params) => SettingWidget(),
+            ),
+            FFRoute(
+              name: 'user_setting',
+              path: 'userSetting',
+              builder: (context, params) => UserSettingWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

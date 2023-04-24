@@ -6,20 +6,21 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class AfterScanModel extends FlutterFlowModel {
+class TargetSetting2Model extends FlutterFlowModel {
   ///  State fields for stateful widgets in this page.
 
-  // State field(s) for TextField widget.
-  TextEditingController? textController;
-  String? Function(BuildContext, String?)? textControllerValidator;
+  // State field(s) for CheckboxListTile widget.
+  bool? checkboxListTileValue1;
+  // State field(s) for CheckboxListTile widget.
+  bool? checkboxListTileValue2;
+  // State field(s) for CheckboxListTile widget.
+  bool? checkboxListTileValue3;
 
   /// Initialization and disposal methods.
 
   void initState(BuildContext context) {}
 
-  void dispose() {
-    textController?.dispose();
-  }
+  void dispose() {}
 
   /// Additional helper methods are added here.
 
