@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/upload_data.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
@@ -10,6 +11,11 @@ import 'package:provider/provider.dart';
 
 class FoodModel extends FlutterFlowModel {
   ///  State fields for stateful widgets in this page.
+
+  final unfocusNode = FocusNode();
+  bool isDataUploading = false;
+  FFUploadedFile uploadedLocalFile =
+      FFUploadedFile(bytes: Uint8List.fromList([]));
 
   var takeshotValue = '';
   // State field(s) for TextField widget.
@@ -21,9 +27,11 @@ class FoodModel extends FlutterFlowModel {
   void initState(BuildContext context) {}
 
   void dispose() {
+    unfocusNode.dispose();
     textController?.dispose();
   }
 
-  /// Additional helper methods are added here.
+  /// Action blocks are added here.
 
+  /// Additional helper methods are added here.
 }

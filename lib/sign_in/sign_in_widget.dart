@@ -9,7 +9,12 @@ import 'sign_in_model.dart';
 export 'sign_in_model.dart';
 
 class SignInWidget extends StatefulWidget {
-  const SignInWidget({Key? key}) : super(key: key);
+  const SignInWidget({
+    Key? key,
+    this.password,
+  }) : super(key: key);
+
+  final String? password;
 
   @override
   _SignInWidgetState createState() => _SignInWidgetState();
@@ -19,7 +24,6 @@ class _SignInWidgetState extends State<SignInWidget> {
   late SignInModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
-  final _unfocusNode = FocusNode();
 
   @override
   void initState() {
@@ -36,14 +40,13 @@ class _SignInWidgetState extends State<SignInWidget> {
   void dispose() {
     _model.dispose();
 
-    _unfocusNode.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
+      onTap: () => FocusScope.of(context).requestFocus(_model.unfocusNode),
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: Color(0xFFC0ADDC),
@@ -289,39 +292,56 @@ class _SignInWidgetState extends State<SignInWidget> {
                                           .asValidator(context),
                                     ),
                                   ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 24.0, 0.0, 0.0),
-                                    child: FFButtonWidget(
-                                      onPressed: () async {
-                                        context.pushNamed('HomePage');
-                                      },
-                                      text: 'Sign In',
-                                      options: FFButtonOptions(
-                                        width: 230.0,
-                                        height: 50.0,
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 0.0),
-                                        iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
-                                                0.0, 0.0, 0.0, 0.0),
-                                        color: Colors.white,
-                                        textStyle: FlutterFlowTheme.of(context)
-                                            .titleSmall
-                                            .override(
-                                              fontFamily: 'Outfit',
-                                              color: Color(0xFFA492BE),
-                                              fontSize: 16.0,
-                                              fontWeight: FontWeight.normal,
-                                            ),
-                                        elevation: 3.0,
-                                        borderSide: BorderSide(
-                                          color: Colors.transparent,
-                                          width: 1.0,
+                                  if (widget.password == '')
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 24.0, 0.0, 0.0),
+                                      child: FFButtonWidget(
+                                        onPressed: () async {
+                                          if (_model.passwordController.text ==
+                                              '111') {
+                                            context.pushNamed('user_setting');
+
+                                            return;
+                                          } else {
+                                            setState(() {
+                                              _model.emailAddressController
+                                                  ?.clear();
+                                              _model.passwordController
+                                                  ?.clear();
+                                            });
+                                            return;
+                                          }
+                                        },
+                                        text: 'Sign In',
+                                        options: FFButtonOptions(
+                                          width: 230.0,
+                                          height: 50.0,
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 0.0, 0.0, 0.0),
+                                          iconPadding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 0.0, 0.0, 0.0),
+                                          color: Colors.white,
+                                          textStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .titleSmall
+                                                  .override(
+                                                    fontFamily: 'Outfit',
+                                                    color: Color(0xFFA492BE),
+                                                    fontSize: 16.0,
+                                                    fontWeight:
+                                                        FontWeight.normal,
+                                                  ),
+                                          elevation: 3.0,
+                                          borderSide: BorderSide(
+                                            color: Colors.transparent,
+                                            width: 1.0,
+                                          ),
                                         ),
                                       ),
                                     ),
-                                  ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 20.0, 0.0, 0.0),
@@ -356,35 +376,6 @@ class _SignInWidgetState extends State<SignInWidget> {
                                       ),
                                     ),
                                   ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        20.0, 0.0, 20.0, 12.0),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 12.0, 0.0, 0.0),
-                                          child: Text(
-                                            'Or use a social account to login',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily: 'Lexend Deca',
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primaryBtnText,
-                                                  fontSize: 14.0,
-                                                  fontWeight: FontWeight.normal,
-                                                ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
                                 ],
                               ),
                             ),
@@ -402,7 +393,6 @@ class _SignInWidgetState extends State<SignInWidget> {
                                           _model.emailAddressCreateController,
                                       obscureText: false,
                                       decoration: InputDecoration(
-                                        labelText: 'Email Address',
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .bodySmall
                                             .override(
@@ -481,7 +471,6 @@ class _SignInWidgetState extends State<SignInWidget> {
                                       obscureText:
                                           !_model.passwordCreateVisibility,
                                       decoration: InputDecoration(
-                                        labelText: 'Password',
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .bodySmall
                                             .override(
@@ -571,8 +560,8 @@ class _SignInWidgetState extends State<SignInWidget> {
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 24.0, 0.0, 0.0),
                                     child: FFButtonWidget(
-                                      onPressed: () async {
-                                        context.pushNamed('user');
+                                      onPressed: () {
+                                        print('Button-Login pressed ...');
                                       },
                                       text: 'Create Account',
                                       options: FFButtonOptions(
@@ -598,35 +587,6 @@ class _SignInWidgetState extends State<SignInWidget> {
                                           width: 1.0,
                                         ),
                                       ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        20.0, 0.0, 20.0, 12.0),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 24.0, 0.0, 0.0),
-                                          child: Text(
-                                            'Sign up using a social account',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily: 'Lexend Deca',
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primaryBtnText,
-                                                  fontSize: 14.0,
-                                                  fontWeight: FontWeight.normal,
-                                                ),
-                                          ),
-                                        ),
-                                      ],
                                     ),
                                   ),
                                 ],

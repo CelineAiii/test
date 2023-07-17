@@ -11,7 +11,13 @@ import 'timer_model.dart';
 export 'timer_model.dart';
 
 class TimerWidget extends StatefulWidget {
-  const TimerWidget({Key? key}) : super(key: key);
+  const TimerWidget({
+    Key? key,
+    int? time,
+  })  : this.time = time ?? 60000,
+        super(key: key);
+
+  final int time;
 
   @override
   _TimerWidgetState createState() => _TimerWidgetState();
@@ -21,7 +27,6 @@ class _TimerWidgetState extends State<TimerWidget> {
   late TimerModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
-  final _unfocusNode = FocusNode();
 
   @override
   void initState() {
@@ -35,14 +40,13 @@ class _TimerWidgetState extends State<TimerWidget> {
   void dispose() {
     _model.dispose();
 
-    _unfocusNode.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
+      onTap: () => FocusScope.of(context).requestFocus(_model.unfocusNode),
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: Colors.white,
@@ -103,6 +107,32 @@ class _TimerWidgetState extends State<TimerWidget> {
                                 fontWeight: FontWeight.w500,
                               ),
                         ),
+                        FFButtonWidget(
+                          onPressed: () {
+                            print('Button pressed ...');
+                          },
+                          text: '修改時間',
+                          options: FFButtonOptions(
+                            height: 40.0,
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                24.0, 0.0, 24.0, 0.0),
+                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color: Color(0xFFAE99E3),
+                            textStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
+                                  fontFamily: 'Poppins',
+                                  color: Colors.white,
+                                ),
+                            elevation: 3.0,
+                            borderSide: BorderSide(
+                              color: Colors.transparent,
+                              width: 1.0,
+                            ),
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                        ),
                         FlutterFlowIconButton(
                           borderColor: Color(0xFFE0E3E7),
                           borderRadius: 30.0,
@@ -130,12 +160,10 @@ class _TimerWidgetState extends State<TimerWidget> {
                         padding: EdgeInsetsDirectional.fromSTEB(
                             0.0, 32.0, 0.0, 24.0),
                         child: FlutterFlowTimer(
-                          initialTime: _model.timerMilliseconds,
+                          initialTime: widget.time,
                           getDisplayTime: (value) =>
-                              StopWatchTimer.getDisplayTime(
-                            value,
-                            hours: false,
-                          ),
+                              StopWatchTimer.getDisplayTime(value,
+                                  milliSecond: false),
                           timer: _model.timerController,
                           onChanged: (value, displayTime, shouldUpdate) {
                             _model.timerMilliseconds = value;
@@ -179,7 +207,7 @@ class _TimerWidgetState extends State<TimerWidget> {
                         borderRadius: 30.0,
                         borderWidth: 2.0,
                         buttonSize: 60.0,
-                        fillColor: Color(0xFF03CE9F),
+                        fillColor: Color(0xFFAE99E3),
                         icon: Icon(
                           Icons.play_arrow_rounded,
                           color: Colors.white,

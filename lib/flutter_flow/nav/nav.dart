@@ -17,6 +17,11 @@ export 'serialization_util.dart';
 const kTransitionInfoKey = '__transition_info__';
 
 class AppStateNotifier extends ChangeNotifier {
+  AppStateNotifier._();
+
+  static AppStateNotifier? _instance;
+  static AppStateNotifier get instance => _instance ??= AppStateNotifier._();
+
   bool showSplashImage = true;
 
   void stopShowingSplashImage() {
@@ -29,7 +34,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, _) => SignInWidget(),
+      errorBuilder: (context, state) => SignInWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
@@ -51,16 +56,18 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   : ShoppingWidget(),
             ),
             FFRoute(
-              name: 'analyze',
-              path: 'analyze',
-              builder: (context, params) => AnalyzeWidget(),
-            ),
-            FFRoute(
               name: 'sport',
               path: 'sport',
               builder: (context, params) => params.isEmpty
                   ? NavBarPage(initialPage: 'sport')
-                  : SportWidget(),
+                  : SportWidget(
+                      date: params.getParam('date', ParamType.DateTime),
+                    ),
+            ),
+            FFRoute(
+              name: 'analyze',
+              path: 'analyze',
+              builder: (context, params) => AnalyzeWidget(),
             ),
             FFRoute(
               name: 'social',
@@ -86,12 +93,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'sign_in',
               path: 'signIn',
-              builder: (context, params) => SignInWidget(),
-            ),
-            FFRoute(
-              name: 'food',
-              path: 'food',
-              builder: (context, params) => FoodWidget(),
+              builder: (context, params) => SignInWidget(
+                password: params.getParam('password', ParamType.String),
+              ),
             ),
             FFRoute(
               name: 'forget_password',
@@ -99,19 +103,26 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => ForgetPasswordWidget(),
             ),
             FFRoute(
+              name: 'food',
+              path: 'food',
+              builder: (context, params) => FoodWidget(),
+            ),
+            FFRoute(
               name: 'record',
               path: 'record',
               builder: (context, params) => RecordWidget(),
             ),
             FFRoute(
+              name: 'timer',
+              path: 'timer',
+              builder: (context, params) => TimerWidget(
+                time: params.getParam('time', ParamType.int),
+              ),
+            ),
+            FFRoute(
               name: 'view_food',
               path: 'viewFood',
               builder: (context, params) => ViewFoodWidget(),
-            ),
-            FFRoute(
-              name: 'timer',
-              path: 'timer',
-              builder: (context, params) => TimerWidget(),
             ),
             FFRoute(
               name: 'nutrient',
@@ -147,11 +158,95 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'user_setting',
               path: 'userSetting',
               builder: (context, params) => UserSettingWidget(),
+            ),
+            FFRoute(
+              name: 'nutrient_record',
+              path: 'nutrientRecord',
+              builder: (context, params) => NutrientRecordWidget(),
+            ),
+            FFRoute(
+              name: 'classify_food',
+              path: 'classifyFood',
+              builder: (context, params) => ClassifyFoodWidget(),
+            ),
+            FFRoute(
+              name: 'select_analyze',
+              path: 'selectAnalyze',
+              builder: (context, params) => SelectAnalyzeWidget(),
+            ),
+            FFRoute(
+              name: 'weight_analyze',
+              path: 'weightAnalyze',
+              builder: (context, params) => WeightAnalyzeWidget(),
+            ),
+            FFRoute(
+              name: 'sport_record',
+              path: 'sportRecord',
+              builder: (context, params) => SportRecordWidget(),
+            ),
+            FFRoute(
+              name: 'sport_ball',
+              path: 'sportBall',
+              builder: (context, params) => SportBallWidget(),
+            ),
+            FFRoute(
+              name: 'sport_swim',
+              path: 'sportSwim',
+              builder: (context, params) => SportSwimWidget(),
+            ),
+            FFRoute(
+              name: 'sport_run',
+              path: 'sportRun',
+              builder: (context, params) => SportRunWidget(),
+            ),
+            FFRoute(
+              name: 'sport_other',
+              path: 'sportOther',
+              builder: (context, params) => SportOtherWidget(),
+            ),
+            FFRoute(
+              name: 'product',
+              path: 'product',
+              builder: (context, params) => ProductWidget(),
+            ),
+            FFRoute(
+              name: 'diet',
+              path: 'diet',
+              builder: (context, params) => DietWidget(),
+            ),
+            FFRoute(
+              name: 'record_water',
+              path: 'recordWater',
+              builder: (context, params) => RecordWaterWidget(),
+            ),
+            FFRoute(
+              name: 'view_food2',
+              path: 'viewFood2',
+              builder: (context, params) => ViewFood2Widget(),
+            ),
+            FFRoute(
+              name: 'view_food3',
+              path: 'viewFood3',
+              builder: (context, params) => ViewFood3Widget(),
+            ),
+            FFRoute(
+              name: 'view_food4',
+              path: 'viewFood4',
+              builder: (context, params) => ViewFood4Widget(),
+            ),
+            FFRoute(
+              name: 'water_target',
+              path: 'waterTarget',
+              builder: (context, params) => WaterTargetWidget(),
+            ),
+            FFRoute(
+              name: 'view_sport',
+              path: 'viewSport',
+              builder: (context, params) => ViewSportWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
-      urlPathStrategy: UrlPathStrategy.path,
     );
 
 extension NavParamExtensions on Map<String, String?> {
@@ -166,10 +261,10 @@ extension NavigationExtensions on BuildContext {
   void safePop() {
     // If there is only one route on the stack, navigate to the initial
     // page instead of popping.
-    if (GoRouter.of(this).routerDelegate.matches.length <= 1) {
-      go('/');
-    } else {
+    if (canPop()) {
       pop();
+    } else {
+      go('/');
     }
   }
 }
@@ -178,8 +273,8 @@ extension _GoRouterStateExtensions on GoRouterState {
   Map<String, dynamic> get extraMap =>
       extra != null ? extra as Map<String, dynamic> : {};
   Map<String, dynamic> get allParams => <String, dynamic>{}
-    ..addAll(params)
-    ..addAll(queryParams)
+    ..addAll(pathParameters)
+    ..addAll(queryParameters)
     ..addAll(extraMap);
   TransitionInfo get transitionInfo => extraMap.containsKey(kTransitionInfoKey)
       ? extraMap[kTransitionInfoKey] as TransitionInfo

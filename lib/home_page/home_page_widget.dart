@@ -27,12 +27,6 @@ class _HomePageWidgetState extends State<HomePageWidget>
   late HomePageModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
-  final _unfocusNode = FocusNode();
-  int get mealWaterCurrentIndex => _model.mealWaterController != null &&
-          _model.mealWaterController!.hasClients &&
-          _model.mealWaterController!.page != null
-      ? _model.mealWaterController!.page!.round()
-      : 0;
 
   final animationsMap = {
     'containerOnPageLoadAnimation': AnimationInfo(
@@ -118,14 +112,13 @@ class _HomePageWidgetState extends State<HomePageWidget>
   void dispose() {
     _model.dispose();
 
-    _unfocusNode.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
+      onTap: () => FocusScope.of(context).requestFocus(_model.unfocusNode),
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: Color(0xFFE5E0EB),
@@ -170,7 +163,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                   size: 30.0,
                 ),
                 onPressed: () async {
-                  context.pushNamed('analyze');
+                  context.pushNamed('select_analyze');
                 },
               ),
               FlutterFlowIconButton(
@@ -194,6 +187,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
           ),
         ),
         body: SafeArea(
+          top: true,
           child: Container(
             width: double.infinity,
             height: double.infinity,
@@ -223,9 +217,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                   decoration: BoxDecoration(),
                                   child: Container(
                                     width:
-                                        MediaQuery.of(context).size.width * 0.2,
+                                        MediaQuery.sizeOf(context).width * 0.2,
                                     height:
-                                        MediaQuery.of(context).size.width * 0.2,
+                                        MediaQuery.sizeOf(context).width * 0.2,
                                     clipBehavior: Clip.antiAlias,
                                     decoration: BoxDecoration(
                                       shape: BoxShape.circle,
@@ -240,7 +234,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                               Expanded(
                                 child: Container(
                                   height:
-                                      MediaQuery.of(context).size.height * 0.12,
+                                      MediaQuery.sizeOf(context).height * 0.12,
                                   decoration: BoxDecoration(),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -277,8 +271,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                   20.0, 10.0, 0.0, 0.0),
                                           child: LinearPercentIndicator(
                                             percent: 0.5,
-                                            width: MediaQuery.of(context)
-                                                    .size
+                                            width: MediaQuery.sizeOf(context)
                                                     .width *
                                                 0.6,
                                             lineHeight: 24.0,
@@ -314,11 +307,13 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                 color: Colors.black,
                                                 size: 24.0,
                                               ),
-                                              Text(
-                                                '100000',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium,
+                                              Expanded(
+                                                child: Text(
+                                                  '100000',
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium,
+                                                ),
                                               ),
                                             ],
                                           ),
@@ -391,8 +386,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                     30.0, 0.0, 0.0, 0.0),
                                             child: LinearPercentIndicator(
                                               percent: 0.5,
-                                              width: MediaQuery.of(context)
-                                                      .size
+                                              width: MediaQuery.sizeOf(context)
                                                       .width *
                                                   0.85,
                                               lineHeight: 24.0,
@@ -416,76 +410,77 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                             ),
                                           ),
                                           Expanded(
-                                            child: Stack(
-                                              children: [
-                                                Align(
-                                                  alignment:
-                                                      AlignmentDirectional(
-                                                          0.0, 0.0),
-                                                  child: Image.asset(
-                                                    'assets/images/candy_can1.png',
-                                                    width: double.infinity,
-                                                    height: double.infinity,
-                                                    fit: BoxFit.cover,
+                                            child: Container(
+                                              width: 100.0,
+                                              height: 100.0,
+                                              decoration: BoxDecoration(),
+                                              child: Stack(
+                                                children: [
+                                                  Align(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            0.0, 0.0),
+                                                    child: Image.asset(
+                                                      'assets/images/candy_can1.png',
+                                                      width: double.infinity,
+                                                      height: double.infinity,
+                                                      fit: BoxFit.cover,
+                                                    ),
                                                   ),
-                                                ),
-                                                Align(
-                                                  alignment:
-                                                      AlignmentDirectional(
-                                                          0.07, 0.58),
-                                                  child: Image.asset(
-                                                    'assets/images/candy_blue.png',
-                                                    width:
-                                                        MediaQuery.of(context)
-                                                                .size
-                                                                .width *
-                                                            0.4,
-                                                    fit: BoxFit.contain,
+                                                  Align(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            0.07, 0.58),
+                                                    child: Image.asset(
+                                                      'assets/images/candy_blue.png',
+                                                      width: MediaQuery.sizeOf(
+                                                                  context)
+                                                              .width *
+                                                          0.4,
+                                                      fit: BoxFit.contain,
+                                                    ),
                                                   ),
-                                                ),
-                                                Align(
-                                                  alignment:
-                                                      AlignmentDirectional(
-                                                          -0.19, 0.54),
-                                                  child: Image.asset(
-                                                    'assets/images/candy_orange.png',
-                                                    width:
-                                                        MediaQuery.of(context)
-                                                                .size
-                                                                .width *
-                                                            0.4,
-                                                    fit: BoxFit.contain,
+                                                  Align(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            -0.19, 0.54),
+                                                    child: Image.asset(
+                                                      'assets/images/candy_orange.png',
+                                                      width: MediaQuery.sizeOf(
+                                                                  context)
+                                                              .width *
+                                                          0.4,
+                                                      fit: BoxFit.contain,
+                                                    ),
                                                   ),
-                                                ),
-                                                Align(
-                                                  alignment:
-                                                      AlignmentDirectional(
-                                                          -0.14, 0.34),
-                                                  child: Image.asset(
-                                                    'assets/images/candy_gray.png',
-                                                    width:
-                                                        MediaQuery.of(context)
-                                                                .size
-                                                                .width *
-                                                            0.4,
-                                                    fit: BoxFit.contain,
+                                                  Align(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            -0.14, 0.34),
+                                                    child: Image.asset(
+                                                      'assets/images/candy_gray.png',
+                                                      width: MediaQuery.sizeOf(
+                                                                  context)
+                                                              .width *
+                                                          0.4,
+                                                      fit: BoxFit.contain,
+                                                    ),
                                                   ),
-                                                ),
-                                                Align(
-                                                  alignment:
-                                                      AlignmentDirectional(
-                                                          -0.54, 0.46),
-                                                  child: Image.asset(
-                                                    'assets/images/candy_pink.png',
-                                                    width:
-                                                        MediaQuery.of(context)
-                                                                .size
-                                                                .width *
-                                                            0.4,
-                                                    fit: BoxFit.contain,
+                                                  Align(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            -0.41, 0.36),
+                                                    child: Image.asset(
+                                                      'assets/images/candy_pink.png',
+                                                      width: MediaQuery.sizeOf(
+                                                                  context)
+                                                              .width *
+                                                          0.2,
+                                                      fit: BoxFit.contain,
+                                                    ),
                                                   ),
-                                                ),
-                                              ],
+                                                ],
+                                              ),
                                             ),
                                           ),
                                         ],
@@ -531,8 +526,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                     30.0, 0.0, 0.0, 0.0),
                                             child: LinearPercentIndicator(
                                               percent: 0.5,
-                                              width: MediaQuery.of(context)
-                                                      .size
+                                              width: MediaQuery.sizeOf(context)
                                                       .width *
                                                   0.85,
                                               lineHeight: 24.0,
@@ -585,113 +579,129 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                 12.0,
                                                                 16.0,
                                                                 0.0),
-                                                    child: Container(
-                                                      width:
-                                                          MediaQuery.of(context)
-                                                                  .size
-                                                                  .width *
-                                                              1.0,
-                                                      decoration: BoxDecoration(
-                                                        color: Colors.white,
-                                                        boxShadow: [
-                                                          BoxShadow(
-                                                            blurRadius: 3.0,
-                                                            color: Color(
-                                                                0x25000000),
-                                                            offset: Offset(
-                                                                0.0, 2.0),
-                                                          )
-                                                        ],
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(8.0),
-                                                      ),
-                                                      child: Row(
-                                                        mainAxisSize:
-                                                            MainAxisSize.max,
-                                                        children: [
-                                                          Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        8.0,
-                                                                        8.0,
-                                                                        4.0,
-                                                                        8.0),
-                                                            child: Container(
-                                                              width: 4.0,
-                                                              height: 65.0,
-                                                              decoration:
-                                                                  BoxDecoration(
-                                                                color: Color(
-                                                                    0xFF4B39EF),
-                                                                borderRadius:
-                                                                    BorderRadius
-                                                                        .circular(
-                                                                            4.0),
+                                                    child: InkWell(
+                                                      splashColor:
+                                                          Colors.transparent,
+                                                      focusColor:
+                                                          Colors.transparent,
+                                                      hoverColor:
+                                                          Colors.transparent,
+                                                      highlightColor:
+                                                          Colors.transparent,
+                                                      onTap: () async {
+                                                        context.pushNamed(
+                                                            'view_food');
+                                                      },
+                                                      child: Container(
+                                                        width:
+                                                            MediaQuery.sizeOf(
+                                                                        context)
+                                                                    .width *
+                                                                1.0,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: Colors.white,
+                                                          boxShadow: [
+                                                            BoxShadow(
+                                                              blurRadius: 3.0,
+                                                              color: Color(
+                                                                  0x25000000),
+                                                              offset: Offset(
+                                                                  0.0, 2.0),
+                                                            )
+                                                          ],
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      8.0),
+                                                        ),
+                                                        child: Row(
+                                                          mainAxisSize:
+                                                              MainAxisSize.max,
+                                                          children: [
+                                                            Padding(
+                                                              padding:
+                                                                  EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          8.0,
+                                                                          8.0,
+                                                                          4.0,
+                                                                          8.0),
+                                                              child: Container(
+                                                                width: 4.0,
+                                                                height: 65.0,
+                                                                decoration:
+                                                                    BoxDecoration(
+                                                                  color: Color(
+                                                                      0xFF4B39EF),
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              4.0),
+                                                                ),
                                                               ),
                                                             ),
-                                                          ),
-                                                          Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        12.0,
-                                                                        12.0,
-                                                                        16.0,
-                                                                        12.0),
-                                                            child: Column(
-                                                              mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .max,
-                                                              crossAxisAlignment:
-                                                                  CrossAxisAlignment
-                                                                      .start,
-                                                              children: [
-                                                                Text(
-                                                                  '早餐',
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .headlineMedium
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            'Outfit',
-                                                                        color: Color(
-                                                                            0xFF101213),
-                                                                        fontSize:
-                                                                            22.0,
-                                                                        fontWeight:
-                                                                            FontWeight.w500,
-                                                                      ),
-                                                                ),
-                                                                Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                            Padding(
+                                                              padding:
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
-                                                                          0.0,
-                                                                          4.0,
-                                                                          0.0,
-                                                                          0.0),
-                                                                  child: Text(
-                                                                    '共230大卡',
+                                                                          12.0,
+                                                                          12.0,
+                                                                          16.0,
+                                                                          12.0),
+                                                              child: Column(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                crossAxisAlignment:
+                                                                    CrossAxisAlignment
+                                                                        .start,
+                                                                children: [
+                                                                  Text(
+                                                                    '早餐',
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
-                                                                        .bodyMedium
+                                                                        .headlineMedium
                                                                         .override(
                                                                           fontFamily:
                                                                               'Outfit',
                                                                           color:
-                                                                              Color(0xFF4B39EF),
+                                                                              Color(0xFF101213),
                                                                           fontSize:
-                                                                              14.0,
+                                                                              22.0,
                                                                           fontWeight:
                                                                               FontWeight.w500,
                                                                         ),
                                                                   ),
-                                                                ),
-                                                              ],
+                                                                  Padding(
+                                                                    padding: EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0.0,
+                                                                            4.0,
+                                                                            0.0,
+                                                                            0.0),
+                                                                    child: Text(
+                                                                      '共230大卡',
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'Outfit',
+                                                                            color:
+                                                                                Color(0xFF4B39EF),
+                                                                            fontSize:
+                                                                                14.0,
+                                                                            fontWeight:
+                                                                                FontWeight.w500,
+                                                                          ),
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
                                                             ),
-                                                          ),
-                                                        ],
+                                                          ],
+                                                        ),
                                                       ),
                                                     ),
                                                   ),
@@ -703,113 +713,129 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                 12.0,
                                                                 16.0,
                                                                 0.0),
-                                                    child: Container(
-                                                      width:
-                                                          MediaQuery.of(context)
-                                                                  .size
-                                                                  .width *
-                                                              1.0,
-                                                      decoration: BoxDecoration(
-                                                        color: Colors.white,
-                                                        boxShadow: [
-                                                          BoxShadow(
-                                                            blurRadius: 3.0,
-                                                            color: Color(
-                                                                0x25000000),
-                                                            offset: Offset(
-                                                                0.0, 2.0),
-                                                          )
-                                                        ],
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(8.0),
-                                                      ),
-                                                      child: Row(
-                                                        mainAxisSize:
-                                                            MainAxisSize.max,
-                                                        children: [
-                                                          Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        8.0,
-                                                                        8.0,
-                                                                        4.0,
-                                                                        8.0),
-                                                            child: Container(
-                                                              width: 4.0,
-                                                              height: 65.0,
-                                                              decoration:
-                                                                  BoxDecoration(
-                                                                color: Color(
-                                                                    0xFF39D2C0),
-                                                                borderRadius:
-                                                                    BorderRadius
-                                                                        .circular(
-                                                                            4.0),
+                                                    child: InkWell(
+                                                      splashColor:
+                                                          Colors.transparent,
+                                                      focusColor:
+                                                          Colors.transparent,
+                                                      hoverColor:
+                                                          Colors.transparent,
+                                                      highlightColor:
+                                                          Colors.transparent,
+                                                      onTap: () async {
+                                                        context.pushNamed(
+                                                            'view_food2');
+                                                      },
+                                                      child: Container(
+                                                        width:
+                                                            MediaQuery.sizeOf(
+                                                                        context)
+                                                                    .width *
+                                                                1.0,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: Colors.white,
+                                                          boxShadow: [
+                                                            BoxShadow(
+                                                              blurRadius: 3.0,
+                                                              color: Color(
+                                                                  0x25000000),
+                                                              offset: Offset(
+                                                                  0.0, 2.0),
+                                                            )
+                                                          ],
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      8.0),
+                                                        ),
+                                                        child: Row(
+                                                          mainAxisSize:
+                                                              MainAxisSize.max,
+                                                          children: [
+                                                            Padding(
+                                                              padding:
+                                                                  EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          8.0,
+                                                                          8.0,
+                                                                          4.0,
+                                                                          8.0),
+                                                              child: Container(
+                                                                width: 4.0,
+                                                                height: 65.0,
+                                                                decoration:
+                                                                    BoxDecoration(
+                                                                  color: Color(
+                                                                      0xFF39D2C0),
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              4.0),
+                                                                ),
                                                               ),
                                                             ),
-                                                          ),
-                                                          Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        12.0,
-                                                                        12.0,
-                                                                        16.0,
-                                                                        12.0),
-                                                            child: Column(
-                                                              mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .max,
-                                                              crossAxisAlignment:
-                                                                  CrossAxisAlignment
-                                                                      .start,
-                                                              children: [
-                                                                Text(
-                                                                  '午餐',
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .headlineMedium
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            'Outfit',
-                                                                        color: Color(
-                                                                            0xFF101213),
-                                                                        fontSize:
-                                                                            22.0,
-                                                                        fontWeight:
-                                                                            FontWeight.w500,
-                                                                      ),
-                                                                ),
-                                                                Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                            Padding(
+                                                              padding:
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
-                                                                          0.0,
-                                                                          4.0,
-                                                                          0.0,
-                                                                          0.0),
-                                                                  child: Text(
-                                                                    '共580大卡',
+                                                                          12.0,
+                                                                          12.0,
+                                                                          16.0,
+                                                                          12.0),
+                                                              child: Column(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                crossAxisAlignment:
+                                                                    CrossAxisAlignment
+                                                                        .start,
+                                                                children: [
+                                                                  Text(
+                                                                    '午餐',
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
-                                                                        .bodyMedium
+                                                                        .headlineMedium
                                                                         .override(
                                                                           fontFamily:
                                                                               'Outfit',
                                                                           color:
-                                                                              Color(0xFF39D2C0),
+                                                                              Color(0xFF101213),
                                                                           fontSize:
-                                                                              14.0,
+                                                                              22.0,
                                                                           fontWeight:
                                                                               FontWeight.w500,
                                                                         ),
                                                                   ),
-                                                                ),
-                                                              ],
+                                                                  Padding(
+                                                                    padding: EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0.0,
+                                                                            4.0,
+                                                                            0.0,
+                                                                            0.0),
+                                                                    child: Text(
+                                                                      '共580大卡',
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'Outfit',
+                                                                            color:
+                                                                                Color(0xFF39D2C0),
+                                                                            fontSize:
+                                                                                14.0,
+                                                                            fontWeight:
+                                                                                FontWeight.w500,
+                                                                          ),
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
                                                             ),
-                                                          ),
-                                                        ],
+                                                          ],
+                                                        ),
                                                       ),
                                                     ),
                                                   ),
@@ -821,113 +847,129 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                 12.0,
                                                                 16.0,
                                                                 0.0),
-                                                    child: Container(
-                                                      width:
-                                                          MediaQuery.of(context)
-                                                                  .size
-                                                                  .width *
-                                                              1.0,
-                                                      decoration: BoxDecoration(
-                                                        color: Colors.white,
-                                                        boxShadow: [
-                                                          BoxShadow(
-                                                            blurRadius: 3.0,
-                                                            color: Color(
-                                                                0x25000000),
-                                                            offset: Offset(
-                                                                0.0, 2.0),
-                                                          )
-                                                        ],
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(8.0),
-                                                      ),
-                                                      child: Row(
-                                                        mainAxisSize:
-                                                            MainAxisSize.max,
-                                                        children: [
-                                                          Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        8.0,
-                                                                        8.0,
-                                                                        4.0,
-                                                                        8.0),
-                                                            child: Container(
-                                                              width: 4.0,
-                                                              height: 65.0,
-                                                              decoration:
-                                                                  BoxDecoration(
-                                                                color: Color(
-                                                                    0xFFEE8B60),
-                                                                borderRadius:
-                                                                    BorderRadius
-                                                                        .circular(
-                                                                            4.0),
+                                                    child: InkWell(
+                                                      splashColor:
+                                                          Colors.transparent,
+                                                      focusColor:
+                                                          Colors.transparent,
+                                                      hoverColor:
+                                                          Colors.transparent,
+                                                      highlightColor:
+                                                          Colors.transparent,
+                                                      onTap: () async {
+                                                        context.pushNamed(
+                                                            'view_food3');
+                                                      },
+                                                      child: Container(
+                                                        width:
+                                                            MediaQuery.sizeOf(
+                                                                        context)
+                                                                    .width *
+                                                                1.0,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: Colors.white,
+                                                          boxShadow: [
+                                                            BoxShadow(
+                                                              blurRadius: 3.0,
+                                                              color: Color(
+                                                                  0x25000000),
+                                                              offset: Offset(
+                                                                  0.0, 2.0),
+                                                            )
+                                                          ],
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      8.0),
+                                                        ),
+                                                        child: Row(
+                                                          mainAxisSize:
+                                                              MainAxisSize.max,
+                                                          children: [
+                                                            Padding(
+                                                              padding:
+                                                                  EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          8.0,
+                                                                          8.0,
+                                                                          4.0,
+                                                                          8.0),
+                                                              child: Container(
+                                                                width: 4.0,
+                                                                height: 65.0,
+                                                                decoration:
+                                                                    BoxDecoration(
+                                                                  color: Color(
+                                                                      0xFFEE8B60),
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              4.0),
+                                                                ),
                                                               ),
                                                             ),
-                                                          ),
-                                                          Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        12.0,
-                                                                        12.0,
-                                                                        16.0,
-                                                                        12.0),
-                                                            child: Column(
-                                                              mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .max,
-                                                              crossAxisAlignment:
-                                                                  CrossAxisAlignment
-                                                                      .start,
-                                                              children: [
-                                                                Text(
-                                                                  '晚餐',
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .headlineMedium
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            'Outfit',
-                                                                        color: Color(
-                                                                            0xFF101213),
-                                                                        fontSize:
-                                                                            22.0,
-                                                                        fontWeight:
-                                                                            FontWeight.w500,
-                                                                      ),
-                                                                ),
-                                                                Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                            Padding(
+                                                              padding:
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
-                                                                          0.0,
-                                                                          4.0,
-                                                                          0.0,
-                                                                          0.0),
-                                                                  child: Text(
-                                                                    '共500大卡',
+                                                                          12.0,
+                                                                          12.0,
+                                                                          16.0,
+                                                                          12.0),
+                                                              child: Column(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                crossAxisAlignment:
+                                                                    CrossAxisAlignment
+                                                                        .start,
+                                                                children: [
+                                                                  Text(
+                                                                    '晚餐',
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
-                                                                        .bodyMedium
+                                                                        .headlineMedium
                                                                         .override(
                                                                           fontFamily:
                                                                               'Outfit',
                                                                           color:
-                                                                              Color(0xFFEE8B60),
+                                                                              Color(0xFF101213),
                                                                           fontSize:
-                                                                              14.0,
+                                                                              22.0,
                                                                           fontWeight:
                                                                               FontWeight.w500,
                                                                         ),
                                                                   ),
-                                                                ),
-                                                              ],
+                                                                  Padding(
+                                                                    padding: EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0.0,
+                                                                            4.0,
+                                                                            0.0,
+                                                                            0.0),
+                                                                    child: Text(
+                                                                      '共500大卡',
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'Outfit',
+                                                                            color:
+                                                                                Color(0xFFEE8B60),
+                                                                            fontSize:
+                                                                                14.0,
+                                                                            fontWeight:
+                                                                                FontWeight.w500,
+                                                                          ),
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
                                                             ),
-                                                          ),
-                                                        ],
+                                                          ],
+                                                        ),
                                                       ),
                                                     ),
                                                   ),
@@ -939,113 +981,129 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                 12.0,
                                                                 16.0,
                                                                 0.0),
-                                                    child: Container(
-                                                      width:
-                                                          MediaQuery.of(context)
-                                                                  .size
-                                                                  .width *
-                                                              1.0,
-                                                      decoration: BoxDecoration(
-                                                        color: Colors.white,
-                                                        boxShadow: [
-                                                          BoxShadow(
-                                                            blurRadius: 3.0,
-                                                            color: Color(
-                                                                0x25000000),
-                                                            offset: Offset(
-                                                                0.0, 2.0),
-                                                          )
-                                                        ],
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(8.0),
-                                                      ),
-                                                      child: Row(
-                                                        mainAxisSize:
-                                                            MainAxisSize.max,
-                                                        children: [
-                                                          Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        8.0,
-                                                                        8.0,
-                                                                        4.0,
-                                                                        8.0),
-                                                            child: Container(
-                                                              width: 4.0,
-                                                              height: 65.0,
-                                                              decoration:
-                                                                  BoxDecoration(
-                                                                color: Color(
-                                                                    0xFFCF77C3),
-                                                                borderRadius:
-                                                                    BorderRadius
-                                                                        .circular(
-                                                                            4.0),
+                                                    child: InkWell(
+                                                      splashColor:
+                                                          Colors.transparent,
+                                                      focusColor:
+                                                          Colors.transparent,
+                                                      hoverColor:
+                                                          Colors.transparent,
+                                                      highlightColor:
+                                                          Colors.transparent,
+                                                      onTap: () async {
+                                                        context.pushNamed(
+                                                            'view_food4');
+                                                      },
+                                                      child: Container(
+                                                        width:
+                                                            MediaQuery.sizeOf(
+                                                                        context)
+                                                                    .width *
+                                                                1.0,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: Colors.white,
+                                                          boxShadow: [
+                                                            BoxShadow(
+                                                              blurRadius: 3.0,
+                                                              color: Color(
+                                                                  0x25000000),
+                                                              offset: Offset(
+                                                                  0.0, 2.0),
+                                                            )
+                                                          ],
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      8.0),
+                                                        ),
+                                                        child: Row(
+                                                          mainAxisSize:
+                                                              MainAxisSize.max,
+                                                          children: [
+                                                            Padding(
+                                                              padding:
+                                                                  EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          8.0,
+                                                                          8.0,
+                                                                          4.0,
+                                                                          8.0),
+                                                              child: Container(
+                                                                width: 4.0,
+                                                                height: 65.0,
+                                                                decoration:
+                                                                    BoxDecoration(
+                                                                  color: Color(
+                                                                      0xFFCF77C3),
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              4.0),
+                                                                ),
                                                               ),
                                                             ),
-                                                          ),
-                                                          Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        12.0,
-                                                                        12.0,
-                                                                        16.0,
-                                                                        12.0),
-                                                            child: Column(
-                                                              mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .max,
-                                                              crossAxisAlignment:
-                                                                  CrossAxisAlignment
-                                                                      .start,
-                                                              children: [
-                                                                Text(
-                                                                  '點心',
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .headlineMedium
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            'Outfit',
-                                                                        color: Color(
-                                                                            0xFF101213),
-                                                                        fontSize:
-                                                                            22.0,
-                                                                        fontWeight:
-                                                                            FontWeight.w500,
-                                                                      ),
-                                                                ),
-                                                                Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                            Padding(
+                                                              padding:
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
-                                                                          0.0,
-                                                                          4.0,
-                                                                          0.0,
-                                                                          0.0),
-                                                                  child: Text(
-                                                                    '共480大卡',
+                                                                          12.0,
+                                                                          12.0,
+                                                                          16.0,
+                                                                          12.0),
+                                                              child: Column(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                crossAxisAlignment:
+                                                                    CrossAxisAlignment
+                                                                        .start,
+                                                                children: [
+                                                                  Text(
+                                                                    '點心',
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
-                                                                        .bodyMedium
+                                                                        .headlineMedium
                                                                         .override(
                                                                           fontFamily:
                                                                               'Outfit',
                                                                           color:
-                                                                              Color(0xFFEE8B60),
+                                                                              Color(0xFF101213),
                                                                           fontSize:
-                                                                              14.0,
+                                                                              22.0,
                                                                           fontWeight:
                                                                               FontWeight.w500,
                                                                         ),
                                                                   ),
-                                                                ),
-                                                              ],
+                                                                  Padding(
+                                                                    padding: EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0.0,
+                                                                            4.0,
+                                                                            0.0,
+                                                                            0.0),
+                                                                    child: Text(
+                                                                      '共480大卡',
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'Outfit',
+                                                                            color:
+                                                                                Color(0xFFEE8B60),
+                                                                            fontSize:
+                                                                                14.0,
+                                                                            fontWeight:
+                                                                                FontWeight.w500,
+                                                                          ),
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
                                                             ),
-                                                          ),
-                                                        ],
+                                                          ],
+                                                        ),
                                                       ),
                                                     ),
                                                   ),

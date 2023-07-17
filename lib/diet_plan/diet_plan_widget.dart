@@ -21,12 +21,6 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
   late DietPlanModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
-  final _unfocusNode = FocusNode();
-  int get pageViewCurrentIndex => _model.pageViewController != null &&
-          _model.pageViewController!.hasClients &&
-          _model.pageViewController!.page != null
-      ? _model.pageViewController!.page!.round()
-      : 0;
 
   @override
   void initState() {
@@ -38,14 +32,13 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
   void dispose() {
     _model.dispose();
 
-    _unfocusNode.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
+      onTap: () => FocusScope.of(context).requestFocus(_model.unfocusNode),
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: Color(0xFFE5E0EB),
@@ -114,6 +107,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
           ),
         ),
         body: SafeArea(
+          top: true,
           child: SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.max,
@@ -190,7 +184,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 50.0),
                           child: PageView(
-                            controller: _model.pageViewController ??=
+                            controller: _model.pageViewController1 ??=
                                 PageController(initialPage: 0),
                             scrollDirection: Axis.horizontal,
                             children: [
@@ -198,10 +192,9 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     15.0, 10.0, 15.0, 0.0),
                                 child: Container(
-                                  width:
-                                      MediaQuery.of(context).size.width * 1.0,
+                                  width: MediaQuery.sizeOf(context).width * 1.0,
                                   height:
-                                      MediaQuery.of(context).size.height * 0.8,
+                                      MediaQuery.sizeOf(context).height * 0.8,
                                   decoration: BoxDecoration(
                                     color: Color(0xFFDACBEB),
                                     borderRadius: BorderRadius.circular(15.0),
@@ -229,12 +222,10 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   15.0, 20.0, 15.0, 0.0),
                                           child: Container(
-                                            width: MediaQuery.of(context)
-                                                    .size
+                                            width: MediaQuery.sizeOf(context)
                                                     .width *
                                                 1.0,
-                                            height: MediaQuery.of(context)
-                                                    .size
+                                            height: MediaQuery.sizeOf(context)
                                                     .height *
                                                 0.45,
                                             decoration: BoxDecoration(
@@ -373,10 +364,9 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     15.0, 10.0, 15.0, 0.0),
                                 child: Container(
-                                  width:
-                                      MediaQuery.of(context).size.width * 1.0,
+                                  width: MediaQuery.sizeOf(context).width * 1.0,
                                   height:
-                                      MediaQuery.of(context).size.height * 0.8,
+                                      MediaQuery.sizeOf(context).height * 0.8,
                                   decoration: BoxDecoration(
                                     color: Color(0xFFDACBEB),
                                     borderRadius: BorderRadius.circular(15.0),
@@ -404,12 +394,10 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   15.0, 20.0, 15.0, 0.0),
                                           child: Container(
-                                            width: MediaQuery.of(context)
-                                                    .size
+                                            width: MediaQuery.sizeOf(context)
                                                     .width *
                                                 1.0,
-                                            height: MediaQuery.of(context)
-                                                    .size
+                                            height: MediaQuery.sizeOf(context)
                                                     .height *
                                                 0.45,
                                             decoration: BoxDecoration(
@@ -548,10 +536,9 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     15.0, 10.0, 15.0, 0.0),
                                 child: Container(
-                                  width:
-                                      MediaQuery.of(context).size.width * 1.0,
+                                  width: MediaQuery.sizeOf(context).width * 1.0,
                                   height:
-                                      MediaQuery.of(context).size.height * 0.8,
+                                      MediaQuery.sizeOf(context).height * 0.8,
                                   decoration: BoxDecoration(
                                     color: Color(0xFFDACBEB),
                                     borderRadius: BorderRadius.circular(15.0),
@@ -579,12 +566,10 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   15.0, 20.0, 15.0, 0.0),
                                           child: Container(
-                                            width: MediaQuery.of(context)
-                                                    .size
+                                            width: MediaQuery.sizeOf(context)
                                                     .width *
                                                 1.0,
-                                            height: MediaQuery.of(context)
-                                                    .size
+                                            height: MediaQuery.sizeOf(context)
                                                     .height *
                                                 0.45,
                                             decoration: BoxDecoration(
@@ -728,12 +713,12 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 10.0),
                             child: smooth_page_indicator.SmoothPageIndicator(
-                              controller: _model.pageViewController ??=
+                              controller: _model.pageViewController1 ??=
                                   PageController(initialPage: 0),
                               count: 3,
                               axisDirection: Axis.horizontal,
                               onDotClicked: (i) async {
-                                await _model.pageViewController!.animateToPage(
+                                await _model.pageViewController1!.animateToPage(
                                   i,
                                   duration: Duration(milliseconds: 500),
                                   curve: Curves.ease,
@@ -753,6 +738,526 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                           ),
                         ),
                       ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 0.0),
+                  child: Container(
+                    width: 100.0,
+                    height: 92233720368547760.0,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15.0),
+                    ),
+                    child: Container(
+                      width: double.infinity,
+                      child: Stack(
+                        children: [
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 50.0),
+                            child: PageView(
+                              controller: _model.pageViewController2 ??=
+                                  PageController(initialPage: 0),
+                              scrollDirection: Axis.horizontal,
+                              children: [
+                                Container(
+                                  width: 100.0,
+                                  height:
+                                      MediaQuery.sizeOf(context).height * 0.8,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFFDACBEB),
+                                    borderRadius: BorderRadius.circular(15.0),
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 10.0, 0.0, 0.0),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Icon(
+                                              Icons.food_bank_outlined,
+                                              color: Colors.black,
+                                              size: 30.0,
+                                            ),
+                                            Text(
+                                              '推薦食譜',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'Poppins',
+                                                        fontSize: 20.0,
+                                                      ),
+                                            ),
+                                          ],
+                                        ),
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  15.0, 10.0, 15.0, 10.0),
+                                          child: Container(
+                                            width: double.infinity,
+                                            decoration: BoxDecoration(
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryBackground,
+                                              borderRadius:
+                                                  BorderRadius.circular(15.0),
+                                            ),
+                                            child: Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      0.0, 0.0, 0.0, 10.0),
+                                              child: Column(
+                                                mainAxisSize: MainAxisSize.max,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.stretch,
+                                                children: [
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(10.0,
+                                                                10.0, 0.0, 0.0),
+                                                    child: Text(
+                                                      '1. 早餐:',
+                                                      textAlign:
+                                                          TextAlign.start,
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
+                                                            fontFamily:
+                                                                'Poppins',
+                                                            fontSize: 20.0,
+                                                            fontWeight:
+                                                                FontWeight.bold,
+                                                          ),
+                                                    ),
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(30.0,
+                                                                10.0, 0.0, 0.0),
+                                                    child: Text(
+                                                      '希臘優格+燕麥\n香蕉*1',
+                                                      textAlign:
+                                                          TextAlign.start,
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Poppins',
+                                                                fontSize: 20.0,
+                                                              ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  15.0, 10.0, 15.0, 10.0),
+                                          child: Container(
+                                            width: double.infinity,
+                                            decoration: BoxDecoration(
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryBackground,
+                                              borderRadius:
+                                                  BorderRadius.circular(15.0),
+                                            ),
+                                            child: Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      0.0, 0.0, 0.0, 10.0),
+                                              child: Column(
+                                                mainAxisSize: MainAxisSize.max,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.stretch,
+                                                children: [
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(10.0,
+                                                                10.0, 0.0, 0.0),
+                                                    child: Text(
+                                                      '1. 早餐:',
+                                                      textAlign:
+                                                          TextAlign.start,
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
+                                                            fontFamily:
+                                                                'Poppins',
+                                                            fontSize: 20.0,
+                                                            fontWeight:
+                                                                FontWeight.bold,
+                                                          ),
+                                                    ),
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(30.0,
+                                                                10.0, 0.0, 0.0),
+                                                    child: Text(
+                                                      '希臘優格+燕麥\n香蕉*1',
+                                                      textAlign:
+                                                          TextAlign.start,
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Poppins',
+                                                                fontSize: 20.0,
+                                                              ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  15.0, 10.0, 15.0, 10.0),
+                                          child: Container(
+                                            width: double.infinity,
+                                            decoration: BoxDecoration(
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryBackground,
+                                              borderRadius:
+                                                  BorderRadius.circular(15.0),
+                                            ),
+                                            child: Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      0.0, 0.0, 0.0, 10.0),
+                                              child: Column(
+                                                mainAxisSize: MainAxisSize.max,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.stretch,
+                                                children: [
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(10.0,
+                                                                10.0, 0.0, 0.0),
+                                                    child: Text(
+                                                      '1. 早餐:',
+                                                      textAlign:
+                                                          TextAlign.start,
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
+                                                            fontFamily:
+                                                                'Poppins',
+                                                            fontSize: 20.0,
+                                                            fontWeight:
+                                                                FontWeight.bold,
+                                                          ),
+                                                    ),
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(30.0,
+                                                                10.0, 0.0, 0.0),
+                                                    child: Text(
+                                                      '希臘優格+燕麥\n香蕉*1',
+                                                      textAlign:
+                                                          TextAlign.start,
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Poppins',
+                                                                fontSize: 20.0,
+                                                              ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  width: MediaQuery.sizeOf(context).width * 1.0,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFFDACBEB),
+                                    borderRadius: BorderRadius.circular(15.0),
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 10.0, 0.0, 0.0),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Icon(
+                                              Icons.food_bank_outlined,
+                                              color: Colors.black,
+                                              size: 30.0,
+                                            ),
+                                            Text(
+                                              '推薦食譜',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'Poppins',
+                                                        fontSize: 20.0,
+                                                      ),
+                                            ),
+                                          ],
+                                        ),
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  15.0, 10.0, 15.0, 10.0),
+                                          child: Container(
+                                            width: double.infinity,
+                                            decoration: BoxDecoration(
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryBackground,
+                                              borderRadius:
+                                                  BorderRadius.circular(15.0),
+                                            ),
+                                            child: Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      0.0, 0.0, 0.0, 10.0),
+                                              child: Column(
+                                                mainAxisSize: MainAxisSize.max,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.stretch,
+                                                children: [
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(10.0,
+                                                                10.0, 0.0, 0.0),
+                                                    child: Text(
+                                                      '1. 早餐:',
+                                                      textAlign:
+                                                          TextAlign.start,
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
+                                                            fontFamily:
+                                                                'Poppins',
+                                                            fontSize: 20.0,
+                                                            fontWeight:
+                                                                FontWeight.bold,
+                                                          ),
+                                                    ),
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(30.0,
+                                                                10.0, 0.0, 0.0),
+                                                    child: Text(
+                                                      '希臘優格+燕麥\n香蕉*1',
+                                                      textAlign:
+                                                          TextAlign.start,
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Poppins',
+                                                                fontSize: 20.0,
+                                                              ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  width: MediaQuery.sizeOf(context).width * 1.0,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFFDACBEB),
+                                    borderRadius: BorderRadius.circular(15.0),
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 10.0, 0.0, 0.0),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Icon(
+                                              Icons.food_bank_outlined,
+                                              color: Colors.black,
+                                              size: 30.0,
+                                            ),
+                                            Text(
+                                              '推薦食譜',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'Poppins',
+                                                        fontSize: 20.0,
+                                                      ),
+                                            ),
+                                          ],
+                                        ),
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  15.0, 10.0, 15.0, 10.0),
+                                          child: Container(
+                                            width: double.infinity,
+                                            decoration: BoxDecoration(
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryBackground,
+                                              borderRadius:
+                                                  BorderRadius.circular(15.0),
+                                            ),
+                                            child: Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      0.0, 0.0, 0.0, 10.0),
+                                              child: Column(
+                                                mainAxisSize: MainAxisSize.max,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.stretch,
+                                                children: [
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(10.0,
+                                                                10.0, 0.0, 0.0),
+                                                    child: Text(
+                                                      '1. 早餐:',
+                                                      textAlign:
+                                                          TextAlign.start,
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
+                                                            fontFamily:
+                                                                'Poppins',
+                                                            fontSize: 20.0,
+                                                            fontWeight:
+                                                                FontWeight.bold,
+                                                          ),
+                                                    ),
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(30.0,
+                                                                10.0, 0.0, 0.0),
+                                                    child: Text(
+                                                      '希臘優格+燕麥\n香蕉*1',
+                                                      textAlign:
+                                                          TextAlign.start,
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Poppins',
+                                                                fontSize: 20.0,
+                                                              ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Align(
+                            alignment: AlignmentDirectional(0.0, 1.0),
+                            child: Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 10.0),
+                              child: smooth_page_indicator.SmoothPageIndicator(
+                                controller: _model.pageViewController2 ??=
+                                    PageController(initialPage: 0),
+                                count: 3,
+                                axisDirection: Axis.horizontal,
+                                onDotClicked: (i) async {
+                                  await _model.pageViewController2!
+                                      .animateToPage(
+                                    i,
+                                    duration: Duration(milliseconds: 500),
+                                    curve: Curves.ease,
+                                  );
+                                },
+                                effect:
+                                    smooth_page_indicator.ExpandingDotsEffect(
+                                  expansionFactor: 2.0,
+                                  spacing: 8.0,
+                                  radius: 16.0,
+                                  dotWidth: 16.0,
+                                  dotHeight: 16.0,
+                                  dotColor:
+                                      FlutterFlowTheme.of(context).accent2,
+                                  activeDotColor:
+                                      FlutterFlowTheme.of(context).primary,
+                                  paintStyle: PaintingStyle.fill,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),

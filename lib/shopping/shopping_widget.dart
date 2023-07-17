@@ -23,26 +23,48 @@ class _ShoppingWidgetState extends State<ShoppingWidget>
   late ShoppingModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
-  final _unfocusNode = FocusNode();
 
   @override
   void initState() {
     super.initState();
     _model = createModel(context, () => ShoppingModel());
+
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      var confirmDialogResponse = await showDialog<bool>(
+            context: context,
+            builder: (alertDialogContext) {
+              return AlertDialog(
+                title: Text('111'),
+                content: Text('1'),
+                actions: [
+                  TextButton(
+                    onPressed: () => Navigator.pop(alertDialogContext, false),
+                    child: Text('Cancel'),
+                  ),
+                  TextButton(
+                    onPressed: () => Navigator.pop(alertDialogContext, true),
+                    child: Text('Confirm'),
+                  ),
+                ],
+              );
+            },
+          ) ??
+          false;
+    });
   }
 
   @override
   void dispose() {
     _model.dispose();
 
-    _unfocusNode.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
+      onTap: () => FocusScope.of(context).requestFocus(_model.unfocusNode),
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: Color(0xFFF1F4F8),
@@ -87,7 +109,7 @@ class _ShoppingWidgetState extends State<ShoppingWidget>
                   size: 30.0,
                 ),
                 onPressed: () async {
-                  context.pushNamed('analyze');
+                  context.pushNamed('select_analyze');
                 },
               ),
               FlutterFlowIconButton(
@@ -111,6 +133,7 @@ class _ShoppingWidgetState extends State<ShoppingWidget>
           ),
         ),
         body: SafeArea(
+          top: true,
           child: SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.max,
@@ -132,19 +155,35 @@ class _ShoppingWidgetState extends State<ShoppingWidget>
                                   fontWeight: FontWeight.normal,
                                 ),
                       ),
-                      FlutterFlowIconButton(
-                        borderColor: Colors.transparent,
-                        borderRadius: 30.0,
-                        borderWidth: 1.0,
-                        buttonSize: 40.0,
-                        icon: Icon(
-                          Icons.tune_rounded,
-                          color: Color(0xFF57636C),
-                          size: 20.0,
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(
+                            0.0, 10.0, 0.0, 10.0),
+                        child: FFButtonWidget(
+                          onPressed: () async {
+                            context.pushNamed('product');
+                          },
+                          text: '已擁有之商品',
+                          options: FFButtonOptions(
+                            height: 40.0,
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                24.0, 0.0, 24.0, 0.0),
+                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color: Color(0xFF7767FE),
+                            textStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
+                                  fontFamily: 'Poppins',
+                                  color: Colors.white,
+                                ),
+                            elevation: 3.0,
+                            borderSide: BorderSide(
+                              color: Colors.transparent,
+                              width: 1.0,
+                            ),
+                            borderRadius: BorderRadius.circular(15.0),
+                          ),
                         ),
-                        onPressed: () {
-                          print('IconButton pressed ...');
-                        },
                       ),
                     ],
                   ),
@@ -160,110 +199,204 @@ class _ShoppingWidgetState extends State<ShoppingWidget>
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 12.0),
-                        child: Container(
-                          width: 100.0,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            boxShadow: [
-                              BoxShadow(
-                                blurRadius: 5.0,
-                                color: Color(0x1F000000),
-                                offset: Offset(0.0, 2.0),
-                              )
-                            ],
-                            borderRadius: BorderRadius.circular(12.0),
-                          ),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    4.0, 4.0, 4.0, 4.0),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(12.0),
-                                  child: Image.network(
-                                    'https://static.nike.com/a/images/f_auto,b_rgb:f5f5f5,w_880/e5e376f2-7b53-49fc-9720-0e1d69ff0fb9/zion-1-basketball-shoes-bJ0hLJ.png',
-                                    width: 120.0,
-                                    height: 100.0,
-                                    fit: BoxFit.cover,
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            var confirmDialogResponse = await showDialog<bool>(
+                                  context: context,
+                                  builder: (alertDialogContext) {
+                                    return AlertDialog(
+                                      title: Text('是否購買？'),
+                                      content: Text('確定花費30 Pt購買此商品嗎？'),
+                                      actions: [
+                                        TextButton(
+                                          onPressed: () => Navigator.pop(
+                                              alertDialogContext, false),
+                                          child: Text('取消'),
+                                        ),
+                                        TextButton(
+                                          onPressed: () => Navigator.pop(
+                                              alertDialogContext, true),
+                                          child: Text('確定'),
+                                        ),
+                                      ],
+                                    );
+                                  },
+                                ) ??
+                                false;
+                          },
+                          child: Container(
+                            width: 100.0,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              boxShadow: [
+                                BoxShadow(
+                                  blurRadius: 5.0,
+                                  color: Color(0x1F000000),
+                                  offset: Offset(0.0, 2.0),
+                                )
+                              ],
+                              borderRadius: BorderRadius.circular(12.0),
+                            ),
+                            child: InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                var confirmDialogResponse =
+                                    await showDialog<bool>(
+                                          context: context,
+                                          builder: (alertDialogContext) {
+                                            return AlertDialog(
+                                              title: Text('1'),
+                                              content: Text('1'),
+                                              actions: [
+                                                TextButton(
+                                                  onPressed: () =>
+                                                      Navigator.pop(
+                                                          alertDialogContext,
+                                                          false),
+                                                  child: Text('Cancel'),
+                                                ),
+                                                TextButton(
+                                                  onPressed: () =>
+                                                      Navigator.pop(
+                                                          alertDialogContext,
+                                                          true),
+                                                  child: Text('Confirm'),
+                                                ),
+                                              ],
+                                            );
+                                          },
+                                        ) ??
+                                        false;
+                                await showDialog(
+                                  context: context,
+                                  builder: (alertDialogContext) {
+                                    return AlertDialog(
+                                      title: Text('1'),
+                                      content: Text('1'),
+                                      actions: [
+                                        TextButton(
+                                          onPressed: () =>
+                                              Navigator.pop(alertDialogContext),
+                                          child: Text('Ok'),
+                                        ),
+                                      ],
+                                    );
+                                  },
+                                );
+                              },
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        4.0, 4.0, 4.0, 4.0),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(12.0),
+                                      child: Image.asset(
+                                        'assets/images/n4fa6_.png',
+                                        width: 120.0,
+                                        height: 100.0,
+                                        fit: BoxFit.fill,
+                                      ),
+                                    ),
                                   ),
-                                ),
+                                  Expanded(
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  8.0, 12.0, 16.0, 0.0),
+                                          child: Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Text(
+                                                '漂亮的糖果罐',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .headlineSmall
+                                                        .override(
+                                                          fontFamily: 'Outfit',
+                                                          color:
+                                                              Color(0xFF14181B),
+                                                          fontSize: 20.0,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                        ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  8.0, 0.0, 16.0, 0.0),
+                                          child: Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Text(
+                                                'Produced by Celine',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodySmall
+                                                        .override(
+                                                          fontFamily: 'Outfit',
+                                                          color:
+                                                              Color(0xFF57636C),
+                                                          fontSize: 12.0,
+                                                          fontWeight:
+                                                              FontWeight.normal,
+                                                        ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  8.0, 0.0, 16.0, 12.0),
+                                          child: Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.end,
+                                            children: [
+                                              Text(
+                                                '30 Pt',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .titleMedium
+                                                        .override(
+                                                          fontFamily: 'Outfit',
+                                                          color:
+                                                              Color(0xFF4B39EF),
+                                                          fontSize: 18.0,
+                                                          fontWeight:
+                                                              FontWeight.normal,
+                                                        ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
                               ),
-                              Expanded(
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          8.0, 12.0, 16.0, 0.0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Text(
-                                            'Zion Limited',
-                                            style: FlutterFlowTheme.of(context)
-                                                .headlineSmall
-                                                .override(
-                                                  fontFamily: 'Outfit',
-                                                  color: Color(0xFF14181B),
-                                                  fontSize: 20.0,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          8.0, 0.0, 16.0, 0.0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Text(
-                                            'Produced by Nike',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodySmall
-                                                .override(
-                                                  fontFamily: 'Outfit',
-                                                  color: Color(0xFF57636C),
-                                                  fontSize: 12.0,
-                                                  fontWeight: FontWeight.normal,
-                                                ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          8.0, 0.0, 16.0, 12.0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.end,
-                                        children: [
-                                          Text(
-                                            '\$120.00',
-                                            style: FlutterFlowTheme.of(context)
-                                                .titleMedium
-                                                .override(
-                                                  fontFamily: 'Outfit',
-                                                  color: Color(0xFF4B39EF),
-                                                  fontSize: 18.0,
-                                                  fontWeight: FontWeight.normal,
-                                                ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
+                            ),
                           ),
                         ),
                       ),
@@ -283,427 +416,580 @@ class _ShoppingWidgetState extends State<ShoppingWidget>
                             ],
                             borderRadius: BorderRadius.circular(12.0),
                           ),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    4.0, 4.0, 4.0, 4.0),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(12.0),
-                                  child: Image.network(
-                                    'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f1600702-c3d7-4b94-b955-a9133de02cf9/air-jordan-xxxvi-basketball-shoes-1D0pp7.png',
-                                    width: 120.0,
-                                    height: 100.0,
-                                    fit: BoxFit.cover,
+                          child: InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () async {
+                              var confirmDialogResponse =
+                                  await showDialog<bool>(
+                                        context: context,
+                                        builder: (alertDialogContext) {
+                                          return AlertDialog(
+                                            title: Text('是否購買？'),
+                                            content: Text('確定以28 Pt購買此商品嗎？'),
+                                            actions: [
+                                              TextButton(
+                                                onPressed: () => Navigator.pop(
+                                                    alertDialogContext, false),
+                                                child: Text('取消'),
+                                              ),
+                                              TextButton(
+                                                onPressed: () => Navigator.pop(
+                                                    alertDialogContext, true),
+                                                child: Text('確定'),
+                                              ),
+                                            ],
+                                          );
+                                        },
+                                      ) ??
+                                      false;
+                            },
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      4.0, 4.0, 4.0, 4.0),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(12.0),
+                                    child: Image.asset(
+                                      'assets/images/n4fa6_.png',
+                                      width: 120.0,
+                                      height: 100.0,
+                                      fit: BoxFit.fill,
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Expanded(
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          8.0, 12.0, 16.0, 0.0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Text(
-                                            'Air Jordan XXXVI',
-                                            style: FlutterFlowTheme.of(context)
-                                                .headlineSmall
-                                                .override(
-                                                  fontFamily: 'Outfit',
-                                                  color: Color(0xFF14181B),
-                                                  fontSize: 20.0,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
-                                          ),
-                                        ],
+                                Expanded(
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            8.0, 12.0, 16.0, 0.0),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text(
+                                              '可愛的糖果罐',
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .headlineSmall
+                                                  .override(
+                                                    fontFamily: 'Outfit',
+                                                    color: Color(0xFF14181B),
+                                                    fontSize: 20.0,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
+                                            ),
+                                          ],
+                                        ),
                                       ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          8.0, 0.0, 16.0, 0.0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Text(
-                                            'Produced by Nike',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodySmall
-                                                .override(
-                                                  fontFamily: 'Outfit',
-                                                  color: Color(0xFF57636C),
-                                                  fontSize: 12.0,
-                                                  fontWeight: FontWeight.normal,
-                                                ),
-                                          ),
-                                        ],
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            8.0, 0.0, 16.0, 0.0),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text(
+                                              'Produced by Celine',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodySmall
+                                                      .override(
+                                                        fontFamily: 'Outfit',
+                                                        color:
+                                                            Color(0xFF57636C),
+                                                        fontSize: 12.0,
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                      ),
+                                            ),
+                                          ],
+                                        ),
                                       ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          8.0, 0.0, 16.0, 12.0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.end,
-                                        children: [
-                                          Text(
-                                            '\$185.00',
-                                            style: FlutterFlowTheme.of(context)
-                                                .titleMedium
-                                                .override(
-                                                  fontFamily: 'Outfit',
-                                                  color: Color(0xFF4B39EF),
-                                                  fontSize: 18.0,
-                                                  fontWeight: FontWeight.normal,
-                                                ),
-                                          ),
-                                        ],
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            8.0, 0.0, 16.0, 12.0),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.end,
+                                          children: [
+                                            Text(
+                                              '28 Pt',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleMedium
+                                                      .override(
+                                                        fontFamily: 'Outfit',
+                                                        color:
+                                                            Color(0xFF4B39EF),
+                                                        fontSize: 18.0,
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                      ),
+                                            ),
+                                          ],
+                                        ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       ),
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 12.0),
-                        child: Container(
-                          width: 100.0,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            boxShadow: [
-                              BoxShadow(
-                                blurRadius: 5.0,
-                                color: Color(0x1F000000),
-                                offset: Offset(0.0, 2.0),
-                              )
-                            ],
-                            borderRadius: BorderRadius.circular(12.0),
-                          ),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    4.0, 4.0, 4.0, 4.0),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(12.0),
-                                  child: Image.network(
-                                    'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/857967e1-e397-4a23-a238-dedaad117dba/lebron-witness-6-basketball-shoes-HXbMw7.png',
-                                    width: 120.0,
-                                    height: 100.0,
-                                    fit: BoxFit.cover,
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            var confirmDialogResponse = await showDialog<bool>(
+                                  context: context,
+                                  builder: (alertDialogContext) {
+                                    return AlertDialog(
+                                      title: Text('是否購買？'),
+                                      content: Text('確定以50 Pt購買此商品嗎？'),
+                                      actions: [
+                                        TextButton(
+                                          onPressed: () => Navigator.pop(
+                                              alertDialogContext, false),
+                                          child: Text('取消'),
+                                        ),
+                                        TextButton(
+                                          onPressed: () => Navigator.pop(
+                                              alertDialogContext, true),
+                                          child: Text('確定'),
+                                        ),
+                                      ],
+                                    );
+                                  },
+                                ) ??
+                                false;
+                          },
+                          child: Container(
+                            width: 100.0,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              boxShadow: [
+                                BoxShadow(
+                                  blurRadius: 5.0,
+                                  color: Color(0x1F000000),
+                                  offset: Offset(0.0, 2.0),
+                                )
+                              ],
+                              borderRadius: BorderRadius.circular(12.0),
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      4.0, 4.0, 4.0, 4.0),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(12.0),
+                                    child: Image.asset(
+                                      'assets/images/n4fa6_.png',
+                                      width: 120.0,
+                                      height: 100.0,
+                                      fit: BoxFit.fill,
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Expanded(
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          8.0, 12.0, 16.0, 0.0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Text(
-                                            'LeBron Witness 6',
-                                            style: FlutterFlowTheme.of(context)
-                                                .headlineSmall
-                                                .override(
-                                                  fontFamily: 'Outfit',
-                                                  color: Color(0xFF14181B),
-                                                  fontSize: 20.0,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
-                                          ),
-                                        ],
+                                Expanded(
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            8.0, 12.0, 16.0, 0.0),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text(
+                                              '拐杖糖',
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .headlineSmall
+                                                  .override(
+                                                    fontFamily: 'Outfit',
+                                                    color: Color(0xFF14181B),
+                                                    fontSize: 20.0,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
+                                            ),
+                                          ],
+                                        ),
                                       ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          8.0, 0.0, 16.0, 0.0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Text(
-                                            'Produced by Nike',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodySmall
-                                                .override(
-                                                  fontFamily: 'Outfit',
-                                                  color: Color(0xFF57636C),
-                                                  fontSize: 12.0,
-                                                  fontWeight: FontWeight.normal,
-                                                ),
-                                          ),
-                                        ],
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            8.0, 0.0, 16.0, 0.0),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text(
+                                              'Produced by Celine',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodySmall
+                                                      .override(
+                                                        fontFamily: 'Outfit',
+                                                        color:
+                                                            Color(0xFF57636C),
+                                                        fontSize: 12.0,
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                      ),
+                                            ),
+                                          ],
+                                        ),
                                       ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          8.0, 0.0, 16.0, 12.0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.end,
-                                        children: [
-                                          Text(
-                                            '\$200.00',
-                                            style: FlutterFlowTheme.of(context)
-                                                .titleMedium
-                                                .override(
-                                                  fontFamily: 'Outfit',
-                                                  color: Color(0xFF4B39EF),
-                                                  fontSize: 18.0,
-                                                  fontWeight: FontWeight.normal,
-                                                ),
-                                          ),
-                                        ],
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            8.0, 0.0, 16.0, 12.0),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.end,
+                                          children: [
+                                            Text(
+                                              '50 Pt',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleMedium
+                                                      .override(
+                                                        fontFamily: 'Outfit',
+                                                        color:
+                                                            Color(0xFF4B39EF),
+                                                        fontSize: 18.0,
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                      ),
+                                            ),
+                                          ],
+                                        ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       ),
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 12.0),
-                        child: Container(
-                          width: 100.0,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            boxShadow: [
-                              BoxShadow(
-                                blurRadius: 5.0,
-                                color: Color(0x1F000000),
-                                offset: Offset(0.0, 2.0),
-                              )
-                            ],
-                            borderRadius: BorderRadius.circular(12.0),
-                          ),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    4.0, 4.0, 4.0, 4.0),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(12.0),
-                                  child: Image.network(
-                                    'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/23c43f61-88da-4d9a-9957-2e1d5a9a3ec2/lebron-19-low-basketball-shoes-8HVgF8.png',
-                                    width: 120.0,
-                                    height: 100.0,
-                                    fit: BoxFit.cover,
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            var confirmDialogResponse = await showDialog<bool>(
+                                  context: context,
+                                  builder: (alertDialogContext) {
+                                    return AlertDialog(
+                                      title: Text('是否購買？'),
+                                      content: Text('確定以50 Pt 購買此商品嗎？'),
+                                      actions: [
+                                        TextButton(
+                                          onPressed: () => Navigator.pop(
+                                              alertDialogContext, false),
+                                          child: Text('取消'),
+                                        ),
+                                        TextButton(
+                                          onPressed: () => Navigator.pop(
+                                              alertDialogContext, true),
+                                          child: Text('確定'),
+                                        ),
+                                      ],
+                                    );
+                                  },
+                                ) ??
+                                false;
+                          },
+                          child: Container(
+                            width: 100.0,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              boxShadow: [
+                                BoxShadow(
+                                  blurRadius: 5.0,
+                                  color: Color(0x1F000000),
+                                  offset: Offset(0.0, 2.0),
+                                )
+                              ],
+                              borderRadius: BorderRadius.circular(12.0),
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      4.0, 4.0, 4.0, 4.0),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(12.0),
+                                    child: Image.asset(
+                                      'assets/images/n4fa6_.png',
+                                      width: 120.0,
+                                      height: 100.0,
+                                      fit: BoxFit.fill,
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Expanded(
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          8.0, 12.0, 16.0, 0.0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Text(
-                                            'Lebron 19 Lows',
-                                            style: FlutterFlowTheme.of(context)
-                                                .headlineSmall
-                                                .override(
-                                                  fontFamily: 'Outfit',
-                                                  color: Color(0xFF14181B),
-                                                  fontSize: 20.0,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
-                                          ),
-                                        ],
+                                Expanded(
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            8.0, 12.0, 16.0, 0.0),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text(
+                                              '好看的糖果',
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .headlineSmall
+                                                  .override(
+                                                    fontFamily: 'Outfit',
+                                                    color: Color(0xFF14181B),
+                                                    fontSize: 20.0,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
+                                            ),
+                                          ],
+                                        ),
                                       ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          8.0, 0.0, 16.0, 0.0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Text(
-                                            'Produced by Nike',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodySmall
-                                                .override(
-                                                  fontFamily: 'Outfit',
-                                                  color: Color(0xFF57636C),
-                                                  fontSize: 12.0,
-                                                  fontWeight: FontWeight.normal,
-                                                ),
-                                          ),
-                                        ],
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            8.0, 0.0, 16.0, 0.0),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text(
+                                              'Produced by Celine',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodySmall
+                                                      .override(
+                                                        fontFamily: 'Outfit',
+                                                        color:
+                                                            Color(0xFF57636C),
+                                                        fontSize: 12.0,
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                      ),
+                                            ),
+                                          ],
+                                        ),
                                       ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          8.0, 0.0, 16.0, 12.0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.end,
-                                        children: [
-                                          Text(
-                                            '\$200.00',
-                                            style: FlutterFlowTheme.of(context)
-                                                .titleMedium
-                                                .override(
-                                                  fontFamily: 'Outfit',
-                                                  color: Color(0xFF4B39EF),
-                                                  fontSize: 18.0,
-                                                  fontWeight: FontWeight.normal,
-                                                ),
-                                          ),
-                                        ],
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            8.0, 0.0, 16.0, 12.0),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.end,
+                                          children: [
+                                            Text(
+                                              '50 Pt',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleMedium
+                                                      .override(
+                                                        fontFamily: 'Outfit',
+                                                        color:
+                                                            Color(0xFF4B39EF),
+                                                        fontSize: 18.0,
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                      ),
+                                            ),
+                                          ],
+                                        ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       ),
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 12.0),
-                        child: Container(
-                          width: 100.0,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            boxShadow: [
-                              BoxShadow(
-                                blurRadius: 5.0,
-                                color: Color(0x1F000000),
-                                offset: Offset(0.0, 2.0),
-                              )
-                            ],
-                            borderRadius: BorderRadius.circular(12.0),
-                          ),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    4.0, 4.0, 4.0, 4.0),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(12.0),
-                                  child: Image.network(
-                                    'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/894c37da-1a69-4351-b23d-2bb8ad772ec4/jordan-5-why-not-mens-basketball-shoes-pJNKMq.png',
-                                    width: 120.0,
-                                    height: 100.0,
-                                    fit: BoxFit.cover,
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            var confirmDialogResponse = await showDialog<bool>(
+                                  context: context,
+                                  builder: (alertDialogContext) {
+                                    return AlertDialog(
+                                      title: Text('是否購買'),
+                                      content: Text('確定以20 Pt購買此商品嗎？'),
+                                      actions: [
+                                        TextButton(
+                                          onPressed: () => Navigator.pop(
+                                              alertDialogContext, false),
+                                          child: Text('取消'),
+                                        ),
+                                        TextButton(
+                                          onPressed: () => Navigator.pop(
+                                              alertDialogContext, true),
+                                          child: Text('確定'),
+                                        ),
+                                      ],
+                                    );
+                                  },
+                                ) ??
+                                false;
+                          },
+                          child: Container(
+                            width: 100.0,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              boxShadow: [
+                                BoxShadow(
+                                  blurRadius: 5.0,
+                                  color: Color(0x1F000000),
+                                  offset: Offset(0.0, 2.0),
+                                )
+                              ],
+                              borderRadius: BorderRadius.circular(12.0),
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      4.0, 4.0, 4.0, 4.0),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(12.0),
+                                    child: Image.asset(
+                                      'assets/images/can5.png',
+                                      width: 120.0,
+                                      height: 100.0,
+                                      fit: BoxFit.contain,
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Expanded(
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          8.0, 12.0, 16.0, 0.0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Text(
-                                            'Jordan .5 \'Why Not?\'',
-                                            style: FlutterFlowTheme.of(context)
-                                                .headlineSmall
-                                                .override(
-                                                  fontFamily: 'Outfit',
-                                                  color: Color(0xFF14181B),
-                                                  fontSize: 20.0,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
-                                          ),
-                                        ],
+                                Expanded(
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            8.0, 12.0, 16.0, 0.0),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text(
+                                              '普通好看的糖果罐',
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .headlineSmall
+                                                  .override(
+                                                    fontFamily: 'Outfit',
+                                                    color: Color(0xFF14181B),
+                                                    fontSize: 20.0,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
+                                            ),
+                                          ],
+                                        ),
                                       ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          8.0, 0.0, 16.0, 0.0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Text(
-                                            'Produced by Nike',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodySmall
-                                                .override(
-                                                  fontFamily: 'Outfit',
-                                                  color: Color(0xFF57636C),
-                                                  fontSize: 12.0,
-                                                  fontWeight: FontWeight.normal,
-                                                ),
-                                          ),
-                                        ],
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            8.0, 0.0, 16.0, 0.0),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text(
+                                              'Produced by Celine',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodySmall
+                                                      .override(
+                                                        fontFamily: 'Outfit',
+                                                        color:
+                                                            Color(0xFF57636C),
+                                                        fontSize: 12.0,
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                      ),
+                                            ),
+                                          ],
+                                        ),
                                       ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          8.0, 0.0, 16.0, 12.0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.end,
-                                        children: [
-                                          Text(
-                                            '\$130.00',
-                                            style: FlutterFlowTheme.of(context)
-                                                .titleMedium
-                                                .override(
-                                                  fontFamily: 'Outfit',
-                                                  color: Color(0xFF4B39EF),
-                                                  fontSize: 18.0,
-                                                  fontWeight: FontWeight.normal,
-                                                ),
-                                          ),
-                                        ],
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            8.0, 0.0, 16.0, 12.0),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.end,
+                                          children: [
+                                            Text(
+                                              '20 Pt',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleMedium
+                                                      .override(
+                                                        fontFamily: 'Outfit',
+                                                        color:
+                                                            Color(0xFF4B39EF),
+                                                        fontSize: 18.0,
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                      ),
+                                            ),
+                                          ],
+                                        ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       ),

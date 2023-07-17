@@ -119,7 +119,7 @@ class _SocialWidgetState extends State<SocialWidget> {
           mainAxisSize: MainAxisSize.max,
           children: [
             Container(
-              width: MediaQuery.of(context).size.width * 1.0,
+              width: MediaQuery.sizeOf(context).width * 1.0,
               decoration: BoxDecoration(
                 color: Colors.white,
                 boxShadow: [
@@ -223,7 +223,7 @@ class _SocialWidgetState extends State<SocialWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 12.0),
                     child: Container(
-                      width: MediaQuery.of(context).size.width * 0.94,
+                      width: MediaQuery.sizeOf(context).width * 0.94,
                       decoration: BoxDecoration(),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -301,7 +301,7 @@ class _SocialWidgetState extends State<SocialWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 4.0, 0.0, 0.0),
                             child: Container(
-                              width: MediaQuery.of(context).size.width * 0.96,
+                              width: MediaQuery.sizeOf(context).width * 0.96,
                               decoration: BoxDecoration(
                                 color: Colors.white,
                                 boxShadow: [
@@ -437,7 +437,7 @@ class _SocialWidgetState extends State<SocialWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 12.0),
                     child: Container(
-                      width: MediaQuery.of(context).size.width * 0.94,
+                      width: MediaQuery.sizeOf(context).width * 0.94,
                       decoration: BoxDecoration(),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -515,7 +515,7 @@ class _SocialWidgetState extends State<SocialWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 4.0, 0.0, 0.0),
                             child: Container(
-                              width: MediaQuery.of(context).size.width * 0.96,
+                              width: MediaQuery.sizeOf(context).width * 0.96,
                               decoration: BoxDecoration(
                                 color: Colors.white,
                                 boxShadow: [

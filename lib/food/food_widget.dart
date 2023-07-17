@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/upload_data.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
@@ -21,7 +22,6 @@ class _FoodWidgetState extends State<FoodWidget> {
   late FoodModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
-  final _unfocusNode = FocusNode();
 
   @override
   void initState() {
@@ -35,14 +35,13 @@ class _FoodWidgetState extends State<FoodWidget> {
   void dispose() {
     _model.dispose();
 
-    _unfocusNode.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
+      onTap: () => FocusScope.of(context).requestFocus(_model.unfocusNode),
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: Color(0xFFF1F4F8),
@@ -65,13 +64,57 @@ class _FoodWidgetState extends State<FoodWidget> {
           ),
           actions: [
             FlutterFlowIconButton(
+              borderRadius: 30.0,
+              borderWidth: 1.0,
+              buttonSize: 60.0,
+              icon: Icon(
+                Icons.photo_camera,
+                color: FlutterFlowTheme.of(context).lineColor,
+                size: 30.0,
+              ),
+              onPressed: () async {
+                final selectedMedia = await selectMediaWithSourceBottomSheet(
+                  context: context,
+                  allowPhoto: true,
+                );
+                if (selectedMedia != null &&
+                    selectedMedia.every(
+                        (m) => validateFileFormat(m.storagePath, context))) {
+                  setState(() => _model.isDataUploading = true);
+                  var selectedUploadedFiles = <FFUploadedFile>[];
+
+                  try {
+                    selectedUploadedFiles = selectedMedia
+                        .map((m) => FFUploadedFile(
+                              name: m.storagePath.split('/').last,
+                              bytes: m.bytes,
+                              height: m.dimensions?.height,
+                              width: m.dimensions?.width,
+                              blurHash: m.blurHash,
+                            ))
+                        .toList();
+                  } finally {
+                    _model.isDataUploading = false;
+                  }
+                  if (selectedUploadedFiles.length == selectedMedia.length) {
+                    setState(() {
+                      _model.uploadedLocalFile = selectedUploadedFiles.first;
+                    });
+                  } else {
+                    setState(() {});
+                    return;
+                  }
+                }
+              },
+            ),
+            FlutterFlowIconButton(
               borderColor: Colors.transparent,
               borderRadius: 30.0,
               borderWidth: 1.0,
               buttonSize: 60.0,
               icon: FaIcon(
                 FontAwesomeIcons.barcode,
-                color: Color(0xFFD4D4DC),
+                color: FlutterFlowTheme.of(context).lineColor,
                 size: 30.0,
               ),
               onPressed: () async {
@@ -207,17 +250,23 @@ class _FoodWidgetState extends State<FoodWidget> {
                               4.0, 4.0, 4.0, 4.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 4.0),
-                                child: Icon(
+                              FlutterFlowIconButton(
+                                borderColor: Colors.transparent,
+                                borderRadius: 30.0,
+                                borderWidth: 1.0,
+                                buttonSize: 60.0,
+                                icon: Icon(
                                   Icons.cake,
-                                  color: Color(0xFF57636C),
-                                  size: 44.0,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  size: 30.0,
                                 ),
+                                onPressed: () {
+                                  print('IconButton pressed ...');
+                                },
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
@@ -264,14 +313,20 @@ class _FoodWidgetState extends State<FoodWidget> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 4.0),
-                                child: FaIcon(
+                              FlutterFlowIconButton(
+                                borderColor: Colors.transparent,
+                                borderRadius: 30.0,
+                                borderWidth: 1.0,
+                                buttonSize: 60.0,
+                                icon: FaIcon(
                                   FontAwesomeIcons.fish,
-                                  color: Color(0xFF57636C),
-                                  size: 44.0,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  size: 30.0,
                                 ),
+                                onPressed: () {
+                                  print('IconButton pressed ...');
+                                },
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
@@ -318,14 +373,20 @@ class _FoodWidgetState extends State<FoodWidget> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 4.0),
-                                child: FaIcon(
+                              FlutterFlowIconButton(
+                                borderColor: Colors.transparent,
+                                borderRadius: 30.0,
+                                borderWidth: 1.0,
+                                buttonSize: 60.0,
+                                icon: FaIcon(
                                   FontAwesomeIcons.drupal,
-                                  color: Color(0xFF57636C),
-                                  size: 44.0,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  size: 30.0,
                                 ),
+                                onPressed: () {
+                                  print('IconButton pressed ...');
+                                },
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
@@ -372,14 +433,20 @@ class _FoodWidgetState extends State<FoodWidget> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 4.0),
-                                child: FaIcon(
-                                  FontAwesomeIcons.wineGlass,
-                                  color: Color(0xFF57636C),
-                                  size: 44.0,
+                              FlutterFlowIconButton(
+                                borderColor: Colors.transparent,
+                                borderRadius: 30.0,
+                                borderWidth: 1.0,
+                                buttonSize: 60.0,
+                                icon: Icon(
+                                  Icons.local_drink,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  size: 30.0,
                                 ),
+                                onPressed: () {
+                                  print('IconButton pressed ...');
+                                },
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
@@ -448,7 +515,7 @@ class _FoodWidgetState extends State<FoodWidget> {
                   clipBehavior: Clip.none,
                   children: [
                     Container(
-                      width: MediaQuery.of(context).size.width * 0.45,
+                      width: MediaQuery.sizeOf(context).width * 0.45,
                       height: 190.0,
                       decoration: BoxDecoration(
                         color: Colors.white,
@@ -464,56 +531,65 @@ class _FoodWidgetState extends State<FoodWidget> {
                       child: Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(4.0, 4.0, 4.0, 4.0),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(10.0),
-                              child: Image.network(
-                                'https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Zm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60',
-                                width: double.infinity,
-                                height: 115.0,
-                                fit: BoxFit.cover,
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            context.pushNamed('classify_food');
+                          },
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(10.0),
+                                child: Image.network(
+                                  'https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Zm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60',
+                                  width: double.infinity,
+                                  height: 115.0,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                            ),
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  8.0, 12.0, 0.0, 0.0),
-                              child: Text(
-                                'Steak',
-                                style: FlutterFlowTheme.of(context)
-                                    .titleMedium
-                                    .override(
-                                      fontFamily: 'Outfit',
-                                      color: Color(0xFF14181B),
-                                      fontSize: 18.0,
-                                      fontWeight: FontWeight.normal,
-                                    ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    8.0, 12.0, 0.0, 0.0),
+                                child: Text(
+                                  'Steak',
+                                  style: FlutterFlowTheme.of(context)
+                                      .titleMedium
+                                      .override(
+                                        fontFamily: 'Outfit',
+                                        color: Color(0xFF14181B),
+                                        fontSize: 18.0,
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                ),
                               ),
-                            ),
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  8.0, 4.0, 0.0, 0.0),
-                              child: Text(
-                                'Category Name',
-                                style: FlutterFlowTheme.of(context)
-                                    .bodySmall
-                                    .override(
-                                      fontFamily: 'Outfit',
-                                      color: Color(0xFF57636C),
-                                      fontSize: 12.0,
-                                      fontWeight: FontWeight.normal,
-                                    ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    8.0, 4.0, 0.0, 0.0),
+                                child: Text(
+                                  'Category Name',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodySmall
+                                      .override(
+                                        fontFamily: 'Outfit',
+                                        color: Color(0xFF57636C),
+                                        fontSize: 12.0,
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),
                     Container(
-                      width: MediaQuery.of(context).size.width * 0.45,
+                      width: MediaQuery.sizeOf(context).width * 0.45,
                       height: 190.0,
                       decoration: BoxDecoration(
                         color: Colors.white,
@@ -529,56 +605,65 @@ class _FoodWidgetState extends State<FoodWidget> {
                       child: Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(4.0, 4.0, 4.0, 4.0),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(10.0),
-                              child: Image.network(
-                                'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Zm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60',
-                                width: double.infinity,
-                                height: 115.0,
-                                fit: BoxFit.cover,
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            context.pushNamed('classify_food');
+                          },
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(10.0),
+                                child: Image.network(
+                                  'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Zm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60',
+                                  width: double.infinity,
+                                  height: 115.0,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                            ),
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  8.0, 12.0, 0.0, 0.0),
-                              child: Text(
-                                'Salad',
-                                style: FlutterFlowTheme.of(context)
-                                    .titleMedium
-                                    .override(
-                                      fontFamily: 'Outfit',
-                                      color: Color(0xFF14181B),
-                                      fontSize: 18.0,
-                                      fontWeight: FontWeight.normal,
-                                    ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    8.0, 12.0, 0.0, 0.0),
+                                child: Text(
+                                  'Salad',
+                                  style: FlutterFlowTheme.of(context)
+                                      .titleMedium
+                                      .override(
+                                        fontFamily: 'Outfit',
+                                        color: Color(0xFF14181B),
+                                        fontSize: 18.0,
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                ),
                               ),
-                            ),
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  8.0, 4.0, 0.0, 0.0),
-                              child: Text(
-                                'Category Name',
-                                style: FlutterFlowTheme.of(context)
-                                    .bodySmall
-                                    .override(
-                                      fontFamily: 'Outfit',
-                                      color: Color(0xFF57636C),
-                                      fontSize: 12.0,
-                                      fontWeight: FontWeight.normal,
-                                    ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    8.0, 4.0, 0.0, 0.0),
+                                child: Text(
+                                  'Category Name',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodySmall
+                                      .override(
+                                        fontFamily: 'Outfit',
+                                        color: Color(0xFF57636C),
+                                        fontSize: 12.0,
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),
                     Container(
-                      width: MediaQuery.of(context).size.width * 0.45,
+                      width: MediaQuery.sizeOf(context).width * 0.45,
                       height: 190.0,
                       decoration: BoxDecoration(
                         color: Colors.white,
@@ -594,56 +679,65 @@ class _FoodWidgetState extends State<FoodWidget> {
                       child: Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(4.0, 4.0, 4.0, 4.0),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(10.0),
-                              child: Image.network(
-                                'https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Zm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60',
-                                width: double.infinity,
-                                height: 115.0,
-                                fit: BoxFit.cover,
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            context.pushNamed('classify_food');
+                          },
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(10.0),
+                                child: Image.network(
+                                  'https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Zm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60',
+                                  width: double.infinity,
+                                  height: 115.0,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                            ),
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  8.0, 12.0, 0.0, 0.0),
-                              child: Text(
-                                'Cake',
-                                style: FlutterFlowTheme.of(context)
-                                    .titleMedium
-                                    .override(
-                                      fontFamily: 'Outfit',
-                                      color: Color(0xFF14181B),
-                                      fontSize: 18.0,
-                                      fontWeight: FontWeight.normal,
-                                    ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    8.0, 12.0, 0.0, 0.0),
+                                child: Text(
+                                  'Cake',
+                                  style: FlutterFlowTheme.of(context)
+                                      .titleMedium
+                                      .override(
+                                        fontFamily: 'Outfit',
+                                        color: Color(0xFF14181B),
+                                        fontSize: 18.0,
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                ),
                               ),
-                            ),
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  8.0, 4.0, 0.0, 0.0),
-                              child: Text(
-                                'Category Name',
-                                style: FlutterFlowTheme.of(context)
-                                    .bodySmall
-                                    .override(
-                                      fontFamily: 'Outfit',
-                                      color: Color(0xFF57636C),
-                                      fontSize: 12.0,
-                                      fontWeight: FontWeight.normal,
-                                    ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    8.0, 4.0, 0.0, 0.0),
+                                child: Text(
+                                  'Category Name',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodySmall
+                                      .override(
+                                        fontFamily: 'Outfit',
+                                        color: Color(0xFF57636C),
+                                        fontSize: 12.0,
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),
                     Container(
-                      width: MediaQuery.of(context).size.width * 0.45,
+                      width: MediaQuery.sizeOf(context).width * 0.45,
                       height: 190.0,
                       decoration: BoxDecoration(
                         color: Colors.white,
@@ -659,56 +753,65 @@ class _FoodWidgetState extends State<FoodWidget> {
                       child: Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(4.0, 4.0, 4.0, 4.0),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(10.0),
-                              child: Image.network(
-                                'https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
-                                width: double.infinity,
-                                height: 115.0,
-                                fit: BoxFit.cover,
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            context.pushNamed('classify_food');
+                          },
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(10.0),
+                                child: Image.network(
+                                  'https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
+                                  width: double.infinity,
+                                  height: 115.0,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                            ),
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  8.0, 12.0, 0.0, 0.0),
-                              child: Text(
-                                'Western Cuisine',
-                                style: FlutterFlowTheme.of(context)
-                                    .titleMedium
-                                    .override(
-                                      fontFamily: 'Outfit',
-                                      color: Color(0xFF14181B),
-                                      fontSize: 18.0,
-                                      fontWeight: FontWeight.normal,
-                                    ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    8.0, 12.0, 0.0, 0.0),
+                                child: Text(
+                                  'Western Cuisine',
+                                  style: FlutterFlowTheme.of(context)
+                                      .titleMedium
+                                      .override(
+                                        fontFamily: 'Outfit',
+                                        color: Color(0xFF14181B),
+                                        fontSize: 18.0,
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                ),
                               ),
-                            ),
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  8.0, 4.0, 0.0, 0.0),
-                              child: Text(
-                                'Category Name',
-                                style: FlutterFlowTheme.of(context)
-                                    .bodySmall
-                                    .override(
-                                      fontFamily: 'Outfit',
-                                      color: Color(0xFF57636C),
-                                      fontSize: 12.0,
-                                      fontWeight: FontWeight.normal,
-                                    ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    8.0, 4.0, 0.0, 0.0),
+                                child: Text(
+                                  'Category Name',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodySmall
+                                      .override(
+                                        fontFamily: 'Outfit',
+                                        color: Color(0xFF57636C),
+                                        fontSize: 12.0,
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),
                     Container(
-                      width: MediaQuery.of(context).size.width * 0.45,
+                      width: MediaQuery.sizeOf(context).width * 0.45,
                       height: 190.0,
                       decoration: BoxDecoration(
                         color: Colors.white,
@@ -724,56 +827,65 @@ class _FoodWidgetState extends State<FoodWidget> {
                       child: Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(4.0, 4.0, 4.0, 4.0),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(10.0),
-                              child: Image.network(
-                                'https://images.unsplash.com/photo-1484980972926-edee96e0960d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
-                                width: double.infinity,
-                                height: 115.0,
-                                fit: BoxFit.cover,
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            context.pushNamed('classify_food');
+                          },
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(10.0),
+                                child: Image.network(
+                                  'https://images.unsplash.com/photo-1484980972926-edee96e0960d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
+                                  width: double.infinity,
+                                  height: 115.0,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                            ),
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  8.0, 12.0, 0.0, 0.0),
-                              child: Text(
-                                'Spaghetti',
-                                style: FlutterFlowTheme.of(context)
-                                    .titleMedium
-                                    .override(
-                                      fontFamily: 'Outfit',
-                                      color: Color(0xFF14181B),
-                                      fontSize: 18.0,
-                                      fontWeight: FontWeight.normal,
-                                    ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    8.0, 12.0, 0.0, 0.0),
+                                child: Text(
+                                  'Spaghetti',
+                                  style: FlutterFlowTheme.of(context)
+                                      .titleMedium
+                                      .override(
+                                        fontFamily: 'Outfit',
+                                        color: Color(0xFF14181B),
+                                        fontSize: 18.0,
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                ),
                               ),
-                            ),
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  8.0, 4.0, 0.0, 0.0),
-                              child: Text(
-                                'Category Name',
-                                style: FlutterFlowTheme.of(context)
-                                    .bodySmall
-                                    .override(
-                                      fontFamily: 'Outfit',
-                                      color: Color(0xFF57636C),
-                                      fontSize: 12.0,
-                                      fontWeight: FontWeight.normal,
-                                    ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    8.0, 4.0, 0.0, 0.0),
+                                child: Text(
+                                  'Category Name',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodySmall
+                                      .override(
+                                        fontFamily: 'Outfit',
+                                        color: Color(0xFF57636C),
+                                        fontSize: 12.0,
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),
                     Container(
-                      width: MediaQuery.of(context).size.width * 0.45,
+                      width: MediaQuery.sizeOf(context).width * 0.45,
                       height: 190.0,
                       decoration: BoxDecoration(
                         color: Colors.white,
@@ -789,51 +901,60 @@ class _FoodWidgetState extends State<FoodWidget> {
                       child: Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(4.0, 4.0, 4.0, 4.0),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(10.0),
-                              child: Image.network(
-                                'https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
-                                width: double.infinity,
-                                height: 115.0,
-                                fit: BoxFit.cover,
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            context.pushNamed('classify_food');
+                          },
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(10.0),
+                                child: Image.network(
+                                  'https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
+                                  width: double.infinity,
+                                  height: 115.0,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                            ),
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  8.0, 12.0, 0.0, 0.0),
-                              child: Text(
-                                'Others',
-                                style: FlutterFlowTheme.of(context)
-                                    .titleMedium
-                                    .override(
-                                      fontFamily: 'Outfit',
-                                      color: Color(0xFF14181B),
-                                      fontSize: 18.0,
-                                      fontWeight: FontWeight.normal,
-                                    ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    8.0, 12.0, 0.0, 0.0),
+                                child: Text(
+                                  'Others',
+                                  style: FlutterFlowTheme.of(context)
+                                      .titleMedium
+                                      .override(
+                                        fontFamily: 'Outfit',
+                                        color: Color(0xFF14181B),
+                                        fontSize: 18.0,
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                ),
                               ),
-                            ),
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  8.0, 4.0, 0.0, 0.0),
-                              child: Text(
-                                'Category Name',
-                                style: FlutterFlowTheme.of(context)
-                                    .bodySmall
-                                    .override(
-                                      fontFamily: 'Outfit',
-                                      color: Color(0xFF57636C),
-                                      fontSize: 12.0,
-                                      fontWeight: FontWeight.normal,
-                                    ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    8.0, 4.0, 0.0, 0.0),
+                                child: Text(
+                                  'Category Name',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodySmall
+                                      .override(
+                                        fontFamily: 'Outfit',
+                                        color: Color(0xFF57636C),
+                                        fontSize: 12.0,
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),

@@ -19,7 +19,6 @@ class _ViewFoodWidgetState extends State<ViewFoodWidget> {
   late ViewFoodModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
-  final _unfocusNode = FocusNode();
 
   @override
   void initState() {
@@ -31,14 +30,13 @@ class _ViewFoodWidgetState extends State<ViewFoodWidget> {
   void dispose() {
     _model.dispose();
 
-    _unfocusNode.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
+      onTap: () => FocusScope.of(context).requestFocus(_model.unfocusNode),
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: Color(0xFFF1F4F8),
@@ -92,6 +90,7 @@ class _ViewFoodWidgetState extends State<ViewFoodWidget> {
           ),
         ),
         body: SafeArea(
+          top: true,
           child: SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.max,
@@ -122,7 +121,7 @@ class _ViewFoodWidgetState extends State<ViewFoodWidget> {
                         hoverColor: Colors.transparent,
                         highlightColor: Colors.transparent,
                         onTap: () async {
-                          context.pushNamed('nutrient');
+                          context.pushNamed('nutrient_record');
                         },
                         child: Slidable(
                           endActionPane: ActionPane(
@@ -146,8 +145,12 @@ class _ViewFoodWidgetState extends State<ViewFoodWidget> {
                                   .headlineSmall
                                   .override(
                                     fontFamily: 'Poppins',
-                                    lineHeight: 3.0,
+                                    lineHeight: 2.0,
                                   ),
+                            ),
+                            subtitle: Text(
+                              '500大卡',
+                              style: FlutterFlowTheme.of(context).titleSmall,
                             ),
                             trailing: Icon(
                               Icons.arrow_forward_ios,
@@ -164,7 +167,7 @@ class _ViewFoodWidgetState extends State<ViewFoodWidget> {
                         hoverColor: Colors.transparent,
                         highlightColor: Colors.transparent,
                         onTap: () async {
-                          context.pushNamed('nutrient');
+                          context.pushNamed('nutrient_record');
                         },
                         child: Slidable(
                           endActionPane: ActionPane(
@@ -188,8 +191,12 @@ class _ViewFoodWidgetState extends State<ViewFoodWidget> {
                                   .headlineSmall
                                   .override(
                                     fontFamily: 'Poppins',
-                                    lineHeight: 3.0,
+                                    lineHeight: 2.0,
                                   ),
+                            ),
+                            subtitle: Text(
+                              '180大卡',
+                              style: FlutterFlowTheme.of(context).titleSmall,
                             ),
                             trailing: Icon(
                               Icons.arrow_forward_ios,

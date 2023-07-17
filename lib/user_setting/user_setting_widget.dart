@@ -22,7 +22,6 @@ class _UserSettingWidgetState extends State<UserSettingWidget> {
   late UserSettingModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
-  final _unfocusNode = FocusNode();
 
   @override
   void initState() {
@@ -39,14 +38,13 @@ class _UserSettingWidgetState extends State<UserSettingWidget> {
   void dispose() {
     _model.dispose();
 
-    _unfocusNode.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
+      onTap: () => FocusScope.of(context).requestFocus(_model.unfocusNode),
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
@@ -100,6 +98,7 @@ class _UserSettingWidgetState extends State<UserSettingWidget> {
           ),
         ),
         body: SafeArea(
+          top: true,
           child: SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.max,
@@ -121,8 +120,8 @@ class _UserSettingWidgetState extends State<UserSettingWidget> {
                   padding:
                       EdgeInsetsDirectional.fromSTEB(15.0, 10.0, 15.0, 0.0),
                   child: Container(
-                    width: MediaQuery.of(context).size.width * 1.0,
-                    height: MediaQuery.of(context).size.height * 0.7,
+                    width: MediaQuery.sizeOf(context).width * 1.0,
+                    height: MediaQuery.sizeOf(context).height * 0.7,
                     decoration: BoxDecoration(
                       color: Color(0xFFDACBEB),
                       borderRadius: BorderRadius.circular(15.0),
@@ -135,8 +134,8 @@ class _UserSettingWidgetState extends State<UserSettingWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 15.0, 20.0, 15.0, 0.0),
                             child: Container(
-                              width: MediaQuery.of(context).size.width * 1.0,
-                              height: MediaQuery.of(context).size.height * 0.6,
+                              width: MediaQuery.sizeOf(context).width * 1.0,
+                              height: MediaQuery.sizeOf(context).height * 0.6,
                               decoration: BoxDecoration(
                                 color: Color(0xFFDDCBE9),
                                 borderRadius: BorderRadius.circular(15.0),

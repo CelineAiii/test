@@ -45,7 +45,7 @@ class _UserWidgetState extends State<UserWidget> {
             Stack(
               children: [
                 Container(
-                  width: MediaQuery.of(context).size.width * 1.0,
+                  width: MediaQuery.sizeOf(context).width * 1.0,
                   height: 220.0,
                   decoration: BoxDecoration(
                     color: Color(0xFF3C2E92),
@@ -140,17 +140,27 @@ class _UserWidgetState extends State<UserWidget> {
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 10.0, 0.0),
-                              child: Container(
-                                width: MediaQuery.of(context).size.width * 0.25,
-                                height:
-                                    MediaQuery.of(context).size.width * 0.25,
-                                clipBehavior: Clip.antiAlias,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Image.asset(
-                                  'assets/images/IMG_1692.jpeg',
-                                  fit: BoxFit.cover,
+                              child: InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () async {
+                                  context.pushNamed('user');
+                                },
+                                child: Container(
+                                  width:
+                                      MediaQuery.sizeOf(context).width * 0.25,
+                                  height:
+                                      MediaQuery.sizeOf(context).width * 0.25,
+                                  clipBehavior: Clip.antiAlias,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: Image.asset(
+                                    'assets/images/IMG_1692.jpeg',
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
                               ),
                             ),
@@ -201,7 +211,8 @@ class _UserWidgetState extends State<UserWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 190.0, 0.0, 0.0),
                   child: Container(
-                    width: MediaQuery.of(context).size.width * 1.0,
+                    width: MediaQuery.sizeOf(context).width * 1.0,
+                    height: MediaQuery.sizeOf(context).height * 1.0,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       boxShadow: [
@@ -290,58 +301,6 @@ class _UserWidgetState extends State<UserWidget> {
                                   ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        20.0, 0.0, 20.0, 0.0),
-                                    child: Container(
-                                      width: double.infinity,
-                                      decoration: BoxDecoration(
-                                        color: Color(0xFFE3D6EB),
-                                        borderRadius:
-                                            BorderRadius.circular(15.0),
-                                      ),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        children: [
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 10.0, 0.0, 0.0),
-                                            child: Text(
-                                              '關於',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily: 'Poppins',
-                                                        color:
-                                                            Color(0xFF0D0814),
-                                                        fontSize: 28.0,
-                                                      ),
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 0.0, 0.0, 10.0),
-                                            child: Text(
-                                              '16小時禁食\n＆\n8小時進食\n..\n..\n..\n（更多資訊）',
-                                              textAlign: TextAlign.center,
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily: 'Poppins',
-                                                        color:
-                                                            Color(0xFF0D0814),
-                                                        fontSize: 20.0,
-                                                      ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         20.0, 20.0, 20.0, 20.0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
@@ -376,40 +335,85 @@ class _UserWidgetState extends State<UserWidget> {
                                       ),
                                     ),
                                   ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        20.0, 0.0, 20.0, 20.0),
-                                    child: FFButtonWidget(
-                                      onPressed: () async {
-                                        context.pushNamed('diet_plan');
-                                      },
-                                      text: '修改減肥方法',
-                                      options: FFButtonOptions(
-                                        width: double.infinity,
-                                        height: 40.0,
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 0.0),
-                                        iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
-                                                0.0, 0.0, 0.0, 0.0),
-                                        color: Color(0xFFE3D6EB),
-                                        textStyle: FlutterFlowTheme.of(context)
-                                            .titleSmall
-                                            .override(
-                                              fontFamily: 'Poppins',
-                                              color: Color(0xFF0D0814),
-                                            ),
-                                        elevation: 2.0,
-                                        borderSide: BorderSide(
-                                          color: Colors.transparent,
-                                          width: 1.0,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(15.0),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                16.0, 15.0, 16.0, 15.0),
+                            child: Container(
+                              width: double.infinity,
+                              decoration: BoxDecoration(
+                                color: Color(0xFFF1F4F8),
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                              child: SingleChildScrollView(
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          12.0, 12.0, 12.0, 12.0),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Icon(
+                                            Icons.fastfood_sharp,
+                                            color: Colors.black,
+                                            size: 30.0,
+                                          ),
+                                          Text(
+                                            '今日飲食攝取量',
+                                            textAlign: TextAlign.center,
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodySmall
+                                                .override(
+                                                  fontFamily: 'Outfit',
+                                                  color: Color(0xFF0D0814),
+                                                  fontSize: 24.0,
+                                                  fontWeight: FontWeight.w600,
+                                                ),
+                                          ),
+                                        ],
                                       ),
                                     ),
-                                  ),
-                                ],
+                                    SingleChildScrollView(
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        children: [
+                                          Text(
+                                            '攝取卡路里數：1000 kal',
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily: 'Poppins',
+                                                  color: Color(0xFF0D0814),
+                                                  fontSize: 20.0,
+                                                ),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 0.0, 0.0, 10.0),
+                                            child: Text(
+                                              '每日總攝取限制：1500 kal',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'Poppins',
+                                                        fontSize: 20.0,
+                                                      ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
@@ -489,6 +493,18 @@ class _UserWidgetState extends State<UserWidget> {
                                   ],
                                 ),
                               ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 30.0, 0.0, 0.0),
+                            child: Text(
+                              'Created by Candy Diary',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Open Sans Condensed',
+                                  ),
                             ),
                           ),
                         ],

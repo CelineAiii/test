@@ -19,7 +19,6 @@ class _FoodRecommandWidgetState extends State<FoodRecommandWidget> {
   late FoodRecommandModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
-  final _unfocusNode = FocusNode();
 
   @override
   void initState() {
@@ -31,14 +30,13 @@ class _FoodRecommandWidgetState extends State<FoodRecommandWidget> {
   void dispose() {
     _model.dispose();
 
-    _unfocusNode.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
+      onTap: () => FocusScope.of(context).requestFocus(_model.unfocusNode),
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: Color(0xFFE5E0EB),
@@ -92,9 +90,11 @@ class _FoodRecommandWidgetState extends State<FoodRecommandWidget> {
           ),
         ),
         body: SafeArea(
+          top: true,
           child: SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Padding(
@@ -113,8 +113,7 @@ class _FoodRecommandWidgetState extends State<FoodRecommandWidget> {
                   padding:
                       EdgeInsetsDirectional.fromSTEB(15.0, 10.0, 15.0, 0.0),
                   child: Container(
-                    width: MediaQuery.of(context).size.width * 1.0,
-                    height: MediaQuery.of(context).size.height * 0.68,
+                    width: MediaQuery.sizeOf(context).width * 1.0,
                     decoration: BoxDecoration(
                       color: Color(0xFFDACBEB),
                       borderRadius: BorderRadius.circular(15.0),
@@ -140,215 +139,227 @@ class _FoodRecommandWidgetState extends State<FoodRecommandWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 15.0, 20.0, 15.0, 0.0),
                             child: Container(
-                              width: MediaQuery.of(context).size.width * 1.0,
-                              height: MediaQuery.of(context).size.height * 0.55,
+                              width: MediaQuery.sizeOf(context).width * 1.0,
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context)
                                     .primaryBackground,
                                 borderRadius: BorderRadius.circular(15.0),
                               ),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Align(
-                                    alignment: AlignmentDirectional(-0.85, 0.0),
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 10.0, 0.0, 0.0),
-                                      child: Text(
-                                        '1. 早餐：',
-                                        textAlign: TextAlign.start,
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Poppins',
-                                              fontSize: 20.0,
-                                            ),
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        15.0, 15.0, 15.0, 15.0),
-                                    child: FFButtonWidget(
-                                      onPressed: () {
-                                        print('Button pressed ...');
-                                      },
-                                      text: '...',
-                                      options: FFButtonOptions(
-                                        width: double.infinity,
-                                        height: 40.0,
+                              child: SingleChildScrollView(
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Align(
+                                      alignment:
+                                          AlignmentDirectional(-0.85, 0.0),
+                                      child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 0.0),
-                                        iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
-                                                0.0, 0.0, 0.0, 0.0),
-                                        color: Color(0xFFC0ADDC),
-                                        textStyle: FlutterFlowTheme.of(context)
-                                            .titleSmall
-                                            .override(
-                                              fontFamily: 'Poppins',
-                                              color: Colors.white,
-                                            ),
-                                        borderSide: BorderSide(
-                                          color: Colors.transparent,
-                                          width: 1.0,
+                                            0.0, 10.0, 0.0, 0.0),
+                                        child: Text(
+                                          '1. 早餐：',
+                                          textAlign: TextAlign.start,
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Poppins',
+                                                color: Color(0xFF050505),
+                                                fontSize: 20.0,
+                                              ),
                                         ),
-                                        borderRadius:
-                                            BorderRadius.circular(15.0),
                                       ),
                                     ),
-                                  ),
-                                  Align(
-                                    alignment: AlignmentDirectional(-0.85, 0.0),
-                                    child: Padding(
+                                    Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 10.0, 0.0, 0.0),
-                                      child: Text(
-                                        '2. 午餐：',
-                                        textAlign: TextAlign.start,
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Poppins',
-                                              fontSize: 20.0,
+                                          15.0, 0.0, 15.0, 0.0),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        children: [
+                                          Column(
+                                            mainAxisSize: MainAxisSize.max,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                'Hello World',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily: 'Poppins',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primary,
+                                                          fontSize: 16.0,
+                                                        ),
+                                              ),
+                                              Text(
+                                                'Hello World',
+                                                textAlign: TextAlign.start,
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily: 'Poppins',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .secondaryText,
+                                                        ),
+                                              ),
+                                            ],
+                                          ),
+                                          Expanded(
+                                            child: Align(
+                                              alignment: AlignmentDirectional(
+                                                  1.0, 1.0),
+                                              child: Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        0.0, 20.0, 0.0, 0.0),
+                                                child: Text(
+                                                  'Hello World',
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'Poppins',
+                                                        color:
+                                                            Color(0xFFCB5165),
+                                                      ),
+                                                ),
+                                              ),
                                             ),
+                                          ),
+                                        ],
                                       ),
                                     ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        15.0, 15.0, 15.0, 15.0),
-                                    child: FFButtonWidget(
-                                      onPressed: () {
-                                        print('Button pressed ...');
-                                      },
-                                      text: '...',
-                                      options: FFButtonOptions(
-                                        width: double.infinity,
-                                        height: 40.0,
+                                    Align(
+                                      alignment:
+                                          AlignmentDirectional(-0.85, 0.0),
+                                      child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 0.0),
-                                        iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
-                                                0.0, 0.0, 0.0, 0.0),
-                                        color: Color(0xFFC0ADDC),
-                                        textStyle: FlutterFlowTheme.of(context)
-                                            .titleSmall
-                                            .override(
-                                              fontFamily: 'Poppins',
-                                              color: Colors.white,
-                                            ),
-                                        borderSide: BorderSide(
-                                          color: Colors.transparent,
-                                          width: 1.0,
+                                            0.0, 10.0, 0.0, 0.0),
+                                        child: Text(
+                                          '2. 午餐：',
+                                          textAlign: TextAlign.start,
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Poppins',
+                                                fontSize: 20.0,
+                                              ),
                                         ),
-                                        borderRadius:
-                                            BorderRadius.circular(15.0),
                                       ),
                                     ),
-                                  ),
-                                  Align(
-                                    alignment: AlignmentDirectional(-0.85, 0.0),
-                                    child: Padding(
+                                    Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 10.0, 0.0, 0.0),
-                                      child: Text(
-                                        '3. 晚餐：',
-                                        textAlign: TextAlign.start,
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Poppins',
-                                              fontSize: 20.0,
+                                          15.0, 0.0, 15.0, 0.0),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        children: [
+                                          Column(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Text(
+                                                'Hello World',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily: 'Poppins',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primary,
+                                                          fontSize: 16.0,
+                                                        ),
+                                              ),
+                                              Text(
+                                                'Hello World',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily: 'Poppins',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .secondaryText,
+                                                        ),
+                                              ),
+                                            ],
+                                          ),
+                                          Expanded(
+                                            child: Align(
+                                              alignment: AlignmentDirectional(
+                                                  1.0, 1.0),
+                                              child: Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        0.0, 20.0, 0.0, 0.0),
+                                                child: Text(
+                                                  'Hello World',
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'Poppins',
+                                                        color:
+                                                            Color(0xFFCB5165),
+                                                      ),
+                                                ),
+                                              ),
                                             ),
+                                          ),
+                                        ],
                                       ),
                                     ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        15.0, 15.0, 15.0, 15.0),
-                                    child: FFButtonWidget(
-                                      onPressed: () {
-                                        print('Button pressed ...');
-                                      },
-                                      text: '...',
-                                      options: FFButtonOptions(
-                                        width: double.infinity,
-                                        height: 40.0,
+                                    Align(
+                                      alignment:
+                                          AlignmentDirectional(-0.85, 0.0),
+                                      child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 0.0),
-                                        iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
-                                                0.0, 0.0, 0.0, 0.0),
-                                        color: Color(0xFFC0ADDC),
-                                        textStyle: FlutterFlowTheme.of(context)
-                                            .titleSmall
-                                            .override(
-                                              fontFamily: 'Poppins',
-                                              color: Colors.white,
-                                            ),
-                                        borderSide: BorderSide(
-                                          color: Colors.transparent,
-                                          width: 1.0,
+                                            0.0, 10.0, 0.0, 0.0),
+                                        child: Text(
+                                          '3. 晚餐：',
+                                          textAlign: TextAlign.start,
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Poppins',
+                                                fontSize: 20.0,
+                                              ),
                                         ),
-                                        borderRadius:
-                                            BorderRadius.circular(15.0),
                                       ),
                                     ),
-                                  ),
-                                  Align(
-                                    alignment: AlignmentDirectional(-0.85, 0.0),
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 10.0, 0.0, 0.0),
-                                      child: Text(
-                                        '4. 點心：',
-                                        textAlign: TextAlign.start,
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Poppins',
-                                              fontSize: 20.0,
-                                            ),
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        15.0, 15.0, 15.0, 15.0),
-                                    child: FFButtonWidget(
-                                      onPressed: () {
-                                        print('Button pressed ...');
-                                      },
-                                      text: '...',
-                                      options: FFButtonOptions(
-                                        width: double.infinity,
-                                        height: 40.0,
+                                    Align(
+                                      alignment:
+                                          AlignmentDirectional(-0.85, 0.0),
+                                      child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 0.0),
-                                        iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
-                                                0.0, 0.0, 0.0, 0.0),
-                                        color: Color(0xFFC0ADDC),
-                                        textStyle: FlutterFlowTheme.of(context)
-                                            .titleSmall
-                                            .override(
-                                              fontFamily: 'Poppins',
-                                              color: Colors.white,
-                                            ),
-                                        borderSide: BorderSide(
-                                          color: Colors.transparent,
-                                          width: 1.0,
+                                            0.0, 10.0, 0.0, 0.0),
+                                        child: Text(
+                                          '4. 點心：',
+                                          textAlign: TextAlign.start,
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Poppins',
+                                                fontSize: 20.0,
+                                              ),
                                         ),
-                                        borderRadius:
-                                            BorderRadius.circular(15.0),
                                       ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
+                          ),
+                          Text(
+                            ' ',
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'Poppins',
+                                  fontSize: 20.0,
+                                ),
                           ),
                         ],
                       ),

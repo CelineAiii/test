@@ -11,12 +11,10 @@ import 'package:provider/provider.dart';
 class TimerModel extends FlutterFlowModel {
   ///  State fields for stateful widgets in this page.
 
+  final unfocusNode = FocusNode();
   // State field(s) for Timer widget.
-  int timerMilliseconds = 60000;
-  String timerValue = StopWatchTimer.getDisplayTime(
-    60000,
-    hours: false,
-  );
+  int timerMilliseconds = 0;
+  String timerValue = StopWatchTimer.getDisplayTime(0, milliSecond: false);
   StopWatchTimer timerController =
       StopWatchTimer(mode: StopWatchMode.countDown);
 
@@ -25,9 +23,11 @@ class TimerModel extends FlutterFlowModel {
   void initState(BuildContext context) {}
 
   void dispose() {
+    unfocusNode.dispose();
     timerController.dispose();
   }
 
-  /// Additional helper methods are added here.
+  /// Action blocks are added here.
 
+  /// Additional helper methods are added here.
 }

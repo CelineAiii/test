@@ -2,9 +2,11 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/random_data_util.dart' as random_data;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'forget_password_model.dart';
 export 'forget_password_model.dart';
 
@@ -219,6 +221,23 @@ class _ForgetPasswordWidgetState extends State<ForgetPasswordWidget> {
             padding: EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
             child: FFButtonWidget(
               onPressed: () async {
+                await launchUrl(Uri(
+                    scheme: 'mailto',
+                    path: _model.emailAddressController.text,
+                    query: {
+                      'subject': 'Your new password for CandyDiary',
+                      'body': random_data.randomString(
+                        8,
+                        10,
+                        true,
+                        true,
+                        true,
+                      ),
+                    }
+                        .entries
+                        .map((MapEntry<String, String> e) =>
+                            '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}')
+                        .join('&')));
                 await showDialog(
                   context: context,
                   builder: (alertDialogContext) {
