@@ -8,6 +8,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'product_model.dart';
 export 'product_model.dart';
 
@@ -472,16 +473,25 @@ class _ProductWidgetState extends State<ProductWidget>
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceBetween,
                                         children: [
-                                          Text(
+                                          GradientText(
                                             '普通好看的糖果罐',
                                             style: FlutterFlowTheme.of(context)
                                                 .headlineSmall
                                                 .override(
                                                   fontFamily: 'Outfit',
                                                   color: Color(0xFF14181B),
-                                                  fontSize: 20.0,
+                                                  fontSize: 18.0,
                                                   fontWeight: FontWeight.w500,
                                                 ),
+                                            colors: [
+                                              FlutterFlowTheme.of(context)
+                                                  .primary,
+                                              FlutterFlowTheme.of(context)
+                                                  .secondary
+                                            ],
+                                            gradientDirection:
+                                                GradientDirection.ltr,
+                                            gradientType: GradientType.linear,
                                           ),
                                         ],
                                       ),

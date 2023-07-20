@@ -14,7 +14,11 @@ class TimerModel extends FlutterFlowModel {
   final unfocusNode = FocusNode();
   // State field(s) for Timer widget.
   int timerMilliseconds = 0;
-  String timerValue = StopWatchTimer.getDisplayTime(0, milliSecond: false);
+  String timerValue = StopWatchTimer.getDisplayTime(
+    0,
+    hours: false,
+    milliSecond: false,
+  );
   StopWatchTimer timerController =
       StopWatchTimer(mode: StopWatchMode.countDown);
 

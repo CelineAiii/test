@@ -259,6 +259,8 @@ class _RecordWaterWidgetState extends State<RecordWaterWidget> {
                       );
                     },
                   );
+
+                  context.pushNamed('record');
                 },
                 text: 'Add',
                 options: FFButtonOptions(

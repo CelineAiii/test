@@ -253,7 +253,12 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                               'Celine Ai',
                                               style:
                                                   FlutterFlowTheme.of(context)
-                                                      .bodyMedium,
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'Poppins',
+                                                        color:
+                                                            Color(0xFF050505),
+                                                      ),
                                             ),
                                             Text(
                                               'LV.9999',
@@ -421,7 +426,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                         AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: Image.asset(
-                                                      'assets/images/candy_can1.png',
+                                                      'assets/images/can5.png',
                                                       width: double.infinity,
                                                       height: double.infinity,
                                                       fit: BoxFit.cover,
@@ -430,13 +435,13 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                   Align(
                                                     alignment:
                                                         AlignmentDirectional(
-                                                            0.07, 0.58),
+                                                            0.26, 0.61),
                                                     child: Image.asset(
-                                                      'assets/images/candy_blue.png',
+                                                      'assets/images/niojk_.png',
                                                       width: MediaQuery.sizeOf(
                                                                   context)
                                                               .width *
-                                                          0.4,
+                                                          0.2,
                                                       fit: BoxFit.contain,
                                                     ),
                                                   ),
@@ -445,24 +450,24 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                         AlignmentDirectional(
                                                             -0.19, 0.54),
                                                     child: Image.asset(
-                                                      'assets/images/candy_orange.png',
+                                                      'assets/images/niojk_.png',
                                                       width: MediaQuery.sizeOf(
                                                                   context)
                                                               .width *
-                                                          0.4,
+                                                          0.2,
                                                       fit: BoxFit.contain,
                                                     ),
                                                   ),
                                                   Align(
                                                     alignment:
                                                         AlignmentDirectional(
-                                                            -0.14, 0.34),
+                                                            0.11, 0.3),
                                                     child: Image.asset(
-                                                      'assets/images/candy_gray.png',
+                                                      'assets/images/niojk_.png',
                                                       width: MediaQuery.sizeOf(
                                                                   context)
                                                               .width *
-                                                          0.4,
+                                                          0.2,
                                                       fit: BoxFit.contain,
                                                     ),
                                                   ),
@@ -471,7 +476,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                         AlignmentDirectional(
                                                             -0.41, 0.36),
                                                     child: Image.asset(
-                                                      'assets/images/candy_pink.png',
+                                                      'assets/images/niojk_.png',
                                                       width: MediaQuery.sizeOf(
                                                                   context)
                                                               .width *
@@ -1171,29 +1176,21 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                               FontWeight.w500,
                                                                         ),
                                                                   ),
-                                                                  Padding(
-                                                                    padding: EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            0.0,
-                                                                            8.0,
-                                                                            0.0,
-                                                                            0.0),
-                                                                    child: Text(
-                                                                      '共1790卡',
-                                                                      style: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .displaySmall
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                'Outfit',
-                                                                            color:
-                                                                                Color(0xFF101213),
-                                                                            fontSize:
-                                                                                28.0,
-                                                                            fontWeight:
-                                                                                FontWeight.w600,
-                                                                          ),
-                                                                    ),
+                                                                  Text(
+                                                                    '共1790卡',
+                                                                    style: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .displaySmall
+                                                                        .override(
+                                                                          fontFamily:
+                                                                              'Outfit',
+                                                                          color:
+                                                                              Color(0xFF101213),
+                                                                          fontSize:
+                                                                              28.0,
+                                                                          fontWeight:
+                                                                              FontWeight.w600,
+                                                                        ),
                                                                   ),
                                                                 ],
                                                               ).animateOnPageLoad(

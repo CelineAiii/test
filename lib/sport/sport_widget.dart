@@ -157,6 +157,7 @@ class _SportWidgetState extends State<SportWidget> {
                                   12.0, 8.0, 12.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.start,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Padding(
@@ -204,7 +205,7 @@ class _SportWidgetState extends State<SportWidget> {
                                               .override(
                                                 fontFamily: 'Outfit',
                                                 color: Color(0xFF0F1113),
-                                                fontSize: 80.0,
+                                                fontSize: 70.0,
                                                 fontWeight: FontWeight.w500,
                                               ),
                                         ),
@@ -288,7 +289,7 @@ class _SportWidgetState extends State<SportWidget> {
                                               .override(
                                                 fontFamily: 'Outfit',
                                                 color: Color(0xFF0F1113),
-                                                fontSize: 80.0,
+                                                fontSize: 70.0,
                                                 fontWeight: FontWeight.w500,
                                               ),
                                         ),
@@ -331,7 +332,7 @@ class _SportWidgetState extends State<SportWidget> {
                 padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
                 child: FlutterFlowCalendar(
                   color: Color(0xFFCB5165),
-                  iconColor: FlutterFlowTheme.of(context).primaryText,
+                  iconColor: Color(0xFF0D0F10),
                   weekFormat: false,
                   weekStartsMonday: false,
                   initialDate: widget.date,
@@ -340,12 +341,17 @@ class _SportWidgetState extends State<SportWidget> {
                     setState(
                         () => _model.calendarSelectedDay = newSelectedDate);
                   },
-                  titleStyle: FlutterFlowTheme.of(context).headlineSmall,
-                  dayOfWeekStyle: FlutterFlowTheme.of(context).labelLarge,
-                  dateStyle: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Poppins',
-                        fontSize: 15.0,
-                      ),
+                  titleStyle:
+                      FlutterFlowTheme.of(context).headlineSmall.override(
+                            fontFamily: 'Poppins',
+                            color: Color(0xFF0D0F10),
+                          ),
+                  dayOfWeekStyle:
+                      FlutterFlowTheme.of(context).labelLarge.override(
+                            fontFamily: 'Poppins',
+                            color: Color(0xFF0D0F10),
+                          ),
+                  dateStyle: FlutterFlowTheme.of(context).titleSmall,
                   selectedDateStyle:
                       FlutterFlowTheme.of(context).headlineSmall.override(
                             fontFamily: 'Poppins',

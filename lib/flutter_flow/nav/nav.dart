@@ -243,6 +243,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'view_sport',
               path: 'viewSport',
               builder: (context, params) => ViewSportWidget(),
+            ),
+            FFRoute(
+              name: 'target_info',
+              path: 'targetInfo',
+              builder: (context, params) => TargetInfoWidget(),
+            ),
+            FFRoute(
+              name: 'food_weekend',
+              path: 'foodWeekend',
+              builder: (context, params) => FoodWeekendWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

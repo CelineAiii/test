@@ -96,17 +96,53 @@ class _RecordWidgetState extends State<RecordWidget> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 0.0, 0.0),
-                child: Text(
-                  'Daily Lessons',
-                  style: FlutterFlowTheme.of(context).titleMedium.override(
-                        fontFamily: 'Outfit',
-                        color: Color(0xFF57636C),
-                        fontSize: 18.0,
-                        fontWeight: FontWeight.normal,
+              Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 0.0, 0.0),
+                    child: Text(
+                      'Daily Lessons',
+                      style: FlutterFlowTheme.of(context).titleMedium.override(
+                            fontFamily: 'Outfit',
+                            color: Color(0xFF57636C),
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.normal,
+                          ),
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 16.0, 0.0),
+                    child: FFButtonWidget(
+                      onPressed: () {
+                        print('Button pressed ...');
+                      },
+                      text: '查看本週紀錄',
+                      options: FFButtonOptions(
+                        height: 40.0,
+                        padding: EdgeInsetsDirectional.fromSTEB(
+                            24.0, 0.0, 24.0, 0.0),
+                        iconPadding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        color: Color(0xFFAE99E3),
+                        textStyle:
+                            FlutterFlowTheme.of(context).titleSmall.override(
+                                  fontFamily: 'Poppins',
+                                  color: Colors.white,
+                                ),
+                        elevation: 3.0,
+                        borderSide: BorderSide(
+                          color: Colors.transparent,
+                          width: 1.0,
+                        ),
+                        borderRadius: BorderRadius.circular(8.0),
                       ),
-                ),
+                    ),
+                  ),
+                ],
               ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),

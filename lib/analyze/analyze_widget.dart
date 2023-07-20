@@ -8,6 +8,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
+import 'package:share_plus/share_plus.dart';
 import 'analyze_model.dart';
 export 'analyze_model.dart';
 
@@ -170,6 +171,7 @@ class _AnalyzeWidgetState extends State<AnalyzeWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 1.0),
                   child: ListView(
                     padding: EdgeInsets.zero,
+                    primary: false,
                     shrinkWrap: true,
                     scrollDirection: Axis.vertical,
                     children: [
@@ -631,19 +633,25 @@ class _AnalyzeWidgetState extends State<AnalyzeWidget> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            FlutterFlowIconButton(
-                              borderColor: Colors.transparent,
-                              borderRadius: 30.0,
-                              borderWidth: 1.0,
-                              buttonSize: 45.0,
-                              icon: FaIcon(
-                                FontAwesomeIcons.camera,
-                                color: Color(0xFF0D0814),
-                                size: 30.0,
+                            Builder(
+                              builder: (context) => FlutterFlowIconButton(
+                                borderColor: Colors.transparent,
+                                borderRadius: 30.0,
+                                borderWidth: 1.0,
+                                buttonSize: 45.0,
+                                icon: FaIcon(
+                                  FontAwesomeIcons.camera,
+                                  color: Color(0xFF0D0814),
+                                  size: 30.0,
+                                ),
+                                onPressed: () async {
+                                  await Share.share(
+                                    '',
+                                    sharePositionOrigin:
+                                        getWidgetBoundingBox(context),
+                                  );
+                                },
                               ),
-                              onPressed: () {
-                                print('IconButton pressed ...');
-                              },
                             ),
                             Text(
                               '截圖',

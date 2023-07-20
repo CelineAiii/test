@@ -108,8 +108,8 @@ class _TimerWidgetState extends State<TimerWidget> {
                               ),
                         ),
                         FFButtonWidget(
-                          onPressed: () {
-                            print('Button pressed ...');
+                          onPressed: () async {
+                            Navigator.pop(context);
                           },
                           text: '修改時間',
                           options: FFButtonOptions(
@@ -162,8 +162,11 @@ class _TimerWidgetState extends State<TimerWidget> {
                         child: FlutterFlowTimer(
                           initialTime: widget.time,
                           getDisplayTime: (value) =>
-                              StopWatchTimer.getDisplayTime(value,
-                                  milliSecond: false),
+                              StopWatchTimer.getDisplayTime(
+                            value,
+                            hours: false,
+                            milliSecond: false,
+                          ),
                           timer: _model.timerController,
                           onChanged: (value, displayTime, shouldUpdate) {
                             _model.timerMilliseconds = value;

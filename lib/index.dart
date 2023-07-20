@@ -36,3 +36,5 @@ export '/view_food3/view_food3_widget.dart' show ViewFood3Widget;
 export '/view_food4/view_food4_widget.dart' show ViewFood4Widget;
 export '/water_target/water_target_widget.dart' show WaterTargetWidget;
 export '/view_sport/view_sport_widget.dart' show ViewSportWidget;
+export '/target_info/target_info_widget.dart' show TargetInfoWidget;
+export '/food_weekend/food_weekend_widget.dart' show FoodWeekendWidget;
