@@ -114,7 +114,7 @@ class _SportSwimWidgetState extends State<SportSwimWidget> {
               child: FlutterFlowDropDown<String>(
                 controller: _model.dropDownValueController ??=
                     FormFieldController<String>(null),
-                options: ['游泳'],
+                options: ['游泳（慢）', '游泳（較快）'],
                 onChanged: (val) => setState(() => _model.dropDownValue = val),
                 width: 300.0,
                 height: 80.0,

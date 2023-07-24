@@ -7,25 +7,25 @@ import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'sport_run_model.dart';
-export 'sport_run_model.dart';
+import 'sport_bike_model.dart';
+export 'sport_bike_model.dart';
 
-class SportRunWidget extends StatefulWidget {
-  const SportRunWidget({Key? key}) : super(key: key);
+class SportBikeWidget extends StatefulWidget {
+  const SportBikeWidget({Key? key}) : super(key: key);
 
   @override
-  _SportRunWidgetState createState() => _SportRunWidgetState();
+  _SportBikeWidgetState createState() => _SportBikeWidgetState();
 }
 
-class _SportRunWidgetState extends State<SportRunWidget> {
-  late SportRunModel _model;
+class _SportBikeWidgetState extends State<SportBikeWidget> {
+  late SportBikeModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => SportRunModel());
+    _model = createModel(context, () => SportBikeModel());
 
     _model.textController ??= TextEditingController();
   }
@@ -114,7 +114,7 @@ class _SportRunWidgetState extends State<SportRunWidget> {
               child: FlutterFlowDropDown<String>(
                 controller: _model.dropDownValueController ??=
                     FormFieldController<String>(null),
-                options: ['快走、健走', '慢走', '下樓梯', '上樓梯', '慢跑', '普通快跑', '加強快跑'],
+                options: ['一般速度 10km/hr', '偏快 20km/hr', '快速30km/hr'],
                 onChanged: (val) => setState(() => _model.dropDownValue = val),
                 width: 300.0,
                 height: 80.0,

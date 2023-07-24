@@ -117,8 +117,8 @@ class _RecordWidgetState extends State<RecordWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 16.0, 0.0),
                     child: FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
+                      onPressed: () async {
+                        context.pushNamed('food_weekend');
                       },
                       text: '查看本週紀錄',
                       options: FFButtonOptions(

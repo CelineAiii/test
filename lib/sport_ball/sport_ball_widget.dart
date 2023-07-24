@@ -115,7 +115,19 @@ class _SportBallWidgetState extends State<SportBallWidget> {
               child: FlutterFlowDropDown<String>(
                 controller: _model.dropDownValueController ??=
                     FormFieldController<String>(null),
-                options: ['籃球', '排球', '羽球', '足球'],
+                options: [
+                  '保齡球',
+                  '排球',
+                  '保齡球',
+                  '乒乓球',
+                  '棒壘球',
+                  '高爾夫球',
+                  '羽毛球',
+                  '籃球（半場）',
+                  '籃球（全場）',
+                  '網球',
+                  '足球'
+                ],
                 onChanged: (val) => setState(() => _model.dropDownValue = val),
                 width: 300.0,
                 height: 80.0,

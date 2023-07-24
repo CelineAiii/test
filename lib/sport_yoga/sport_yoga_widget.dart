@@ -7,25 +7,25 @@ import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'sport_run_model.dart';
-export 'sport_run_model.dart';
+import 'sport_yoga_model.dart';
+export 'sport_yoga_model.dart';
 
-class SportRunWidget extends StatefulWidget {
-  const SportRunWidget({Key? key}) : super(key: key);
+class SportYogaWidget extends StatefulWidget {
+  const SportYogaWidget({Key? key}) : super(key: key);
 
   @override
-  _SportRunWidgetState createState() => _SportRunWidgetState();
+  _SportYogaWidgetState createState() => _SportYogaWidgetState();
 }
 
-class _SportRunWidgetState extends State<SportRunWidget> {
-  late SportRunModel _model;
+class _SportYogaWidgetState extends State<SportYogaWidget> {
+  late SportYogaModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => SportRunModel());
+    _model = createModel(context, () => SportYogaModel());
 
     _model.textController ??= TextEditingController();
   }
@@ -114,7 +114,7 @@ class _SportRunWidgetState extends State<SportRunWidget> {
               child: FlutterFlowDropDown<String>(
                 controller: _model.dropDownValueController ??=
                     FormFieldController<String>(null),
-                options: ['快走、健走', '慢走', '下樓梯', '上樓梯', '慢跑', '普通快跑', '加強快跑'],
+                options: ['瑜珈', '跳舞（慢）', '跳舞（快）', '太極拳', '有氧舞蹈'],
                 onChanged: (val) => setState(() => _model.dropDownValue = val),
                 width: 300.0,
                 height: 80.0,
@@ -153,7 +153,7 @@ class _SportRunWidgetState extends State<SportRunWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 20.0, 0.0),
                     child: Text(
-                      '跑步',
+                      '瑜珈',
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Poppins',
@@ -171,7 +171,7 @@ class _SportRunWidgetState extends State<SportRunWidget> {
                 autofocus: true,
                 obscureText: false,
                 decoration: InputDecoration(
-                  labelText: '請輸入運動總時數...(單位：分鐘）',
+                  labelText: '請輸入運動總時間...(單位：分鐘）',
                   labelStyle: FlutterFlowTheme.of(context).labelMedium,
                   hintStyle: FlutterFlowTheme.of(context).labelMedium,
                   enabledBorder: OutlineInputBorder(
@@ -213,7 +213,7 @@ class _SportRunWidgetState extends State<SportRunWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 0.0, 0.0),
                   child: Text(
-                    '此次輸入之總時數為：',
+                    '此次輸入之總時間為：',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Poppins',
                           fontSize: 20.0,

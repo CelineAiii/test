@@ -160,11 +160,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => UserSettingWidget(),
             ),
             FFRoute(
-              name: 'nutrient_record',
-              path: 'nutrientRecord',
-              builder: (context, params) => NutrientRecordWidget(),
-            ),
-            FFRoute(
               name: 'classify_food',
               path: 'classifyFood',
               builder: (context, params) => ClassifyFoodWidget(),
@@ -173,6 +168,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'select_analyze',
               path: 'selectAnalyze',
               builder: (context, params) => SelectAnalyzeWidget(),
+            ),
+            FFRoute(
+              name: 'nutrient_record',
+              path: 'nutrientRecord',
+              builder: (context, params) => NutrientRecordWidget(),
             ),
             FFRoute(
               name: 'weight_analyze',
@@ -200,9 +200,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => SportRunWidget(),
             ),
             FFRoute(
-              name: 'sport_other',
-              path: 'sportOther',
-              builder: (context, params) => SportOtherWidget(),
+              name: 'sport_yoga',
+              path: 'sportYoga',
+              builder: (context, params) => SportYogaWidget(),
             ),
             FFRoute(
               name: 'product',
@@ -253,6 +253,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'food_weekend',
               path: 'foodWeekend',
               builder: (context, params) => FoodWeekendWidget(),
+            ),
+            FFRoute(
+              name: 'sport_bike',
+              path: 'sportBike',
+              builder: (context, params) => SportBikeWidget(),
+            ),
+            FFRoute(
+              name: 'sport_other',
+              path: 'sportOther',
+              builder: (context, params) => SportOtherWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

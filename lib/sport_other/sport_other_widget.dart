@@ -114,7 +114,7 @@ class _SportOtherWidgetState extends State<SportOtherWidget> {
               child: FlutterFlowDropDown<String>(
                 controller: _model.dropDownValueController ??=
                     FormFieldController<String>(null),
-                options: ['核心運動', '瑜珈'],
+                options: ['跳繩（慢）', '跳繩（快）', '飛盤', '直排輪'],
                 onChanged: (val) => setState(() => _model.dropDownValue = val),
                 width: 300.0,
                 height: 80.0,
@@ -153,7 +153,7 @@ class _SportOtherWidgetState extends State<SportOtherWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 20.0, 0.0),
                     child: Text(
-                      '核心',
+                      '瑜珈',
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Poppins',
