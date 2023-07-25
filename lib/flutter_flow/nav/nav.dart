@@ -210,11 +210,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => ProductWidget(),
             ),
             FFRoute(
-              name: 'diet',
-              path: 'diet',
-              builder: (context, params) => DietWidget(),
-            ),
-            FFRoute(
               name: 'record_water',
               path: 'recordWater',
               builder: (context, params) => RecordWaterWidget(),
@@ -243,11 +238,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'view_sport',
               path: 'viewSport',
               builder: (context, params) => ViewSportWidget(),
-            ),
-            FFRoute(
-              name: 'target_info',
-              path: 'targetInfo',
-              builder: (context, params) => TargetInfoWidget(),
             ),
             FFRoute(
               name: 'food_weekend',

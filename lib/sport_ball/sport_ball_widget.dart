@@ -130,7 +130,7 @@ class _SportBallWidgetState extends State<SportBallWidget> {
                 ],
                 onChanged: (val) => setState(() => _model.dropDownValue = val),
                 width: 300.0,
-                height: 80.0,
+                height: 70.0,
                 textStyle: FlutterFlowTheme.of(context).bodyMedium,
                 hintText: '請選擇球類...',
                 icon: Icon(
