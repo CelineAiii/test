@@ -140,7 +140,7 @@ class _UserWidgetState extends State<UserWidget> {
                           children: [
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 10.0, 0.0),
+                                  0.0, 0.0, 10.0, 5.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
                                 focusColor: Colors.transparent,
@@ -197,9 +197,9 @@ class _UserWidgetState extends State<UserWidget> {
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
                                   ),
-                                  child: Image.asset(
-                                    'assets/images/IMG_1692.jpeg',
-                                    fit: BoxFit.cover,
+                                  child: Image.network(
+                                    '',
+                                    fit: BoxFit.fitWidth,
                                   ),
                                 ),
                               ),

@@ -94,6 +94,7 @@ class _ViewFood2WidgetState extends State<ViewFood2Widget> {
           child: SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
                   width: double.infinity,

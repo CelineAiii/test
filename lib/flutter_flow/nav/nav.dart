@@ -34,12 +34,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, state) => SignInWidget(),
+      errorBuilder: (context, state) => NavBarPage(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => SignInWidget(),
+          builder: (context, _) => NavBarPage(),
           routes: [
             FFRoute(
               name: 'HomePage',
@@ -84,18 +84,18 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   : DietPlanWidget(),
             ),
             FFRoute(
-              name: 'user',
-              path: 'user',
-              builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'user')
-                  : UserWidget(),
-            ),
-            FFRoute(
               name: 'sign_in',
               path: 'signIn',
               builder: (context, params) => SignInWidget(
                 password: params.getParam('password', ParamType.String),
               ),
+            ),
+            FFRoute(
+              name: 'user',
+              path: 'user',
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'user')
+                  : UserWidget(),
             ),
             FFRoute(
               name: 'forget_password',
@@ -108,16 +108,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => FoodWidget(),
             ),
             FFRoute(
-              name: 'record',
-              path: 'record',
-              builder: (context, params) => RecordWidget(),
-            ),
-            FFRoute(
               name: 'timer',
               path: 'timer',
               builder: (context, params) => TimerWidget(
                 time: params.getParam('time', ParamType.int),
               ),
+            ),
+            FFRoute(
+              name: 'record',
+              path: 'record',
+              builder: (context, params) => RecordWidget(),
             ),
             FFRoute(
               name: 'view_food',
