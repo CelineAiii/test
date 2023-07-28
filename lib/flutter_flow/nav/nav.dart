@@ -3,12 +3,13 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:page_transition/page_transition.dart';
-import '../flutter_flow_theme.dart';
 
-import '../../index.dart';
-import '../../main.dart';
-import '../lat_lng.dart';
-import '../place.dart';
+import '/index.dart';
+import '/main.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/lat_lng.dart';
+import '/flutter_flow/place.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'serialization_util.dart';
 
 export 'package:go_router/go_router.dart';
@@ -177,7 +178,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'weight_analyze',
               path: 'weightAnalyze',
-              builder: (context, params) => WeightAnalyzeWidget(),
+              builder: (context, params) => WeightAnalyzeWidget(
+                weight:
+                    params.getParam<String>('weight', ParamType.String, true),
+              ),
             ),
             FFRoute(
               name: 'sport_record',
@@ -253,6 +257,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'sport_other',
               path: 'sportOther',
               builder: (context, params) => SportOtherWidget(),
+            ),
+            FFRoute(
+              name: 'food_costumize',
+              path: 'foodCostumize',
+              builder: (context, params) => FoodCostumizeWidget(),
+            ),
+            FFRoute(
+              name: 'sport_costumize',
+              path: 'sportCostumize',
+              builder: (context, params) => SportCostumizeWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

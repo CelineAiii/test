@@ -38,3 +38,5 @@ export '/view_sport/view_sport_widget.dart' show ViewSportWidget;
 export '/food_weekend/food_weekend_widget.dart' show FoodWeekendWidget;
 export '/sport_bike/sport_bike_widget.dart' show SportBikeWidget;
 export '/sport_other/sport_other_widget.dart' show SportOtherWidget;
+export '/food_costumize/food_costumize_widget.dart' show FoodCostumizeWidget;
+export '/sport_costumize/sport_costumize_widget.dart' show SportCostumizeWidget;
