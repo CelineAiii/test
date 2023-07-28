@@ -350,6 +350,22 @@ class _SportCostumizeWidgetState extends State<SportCostumizeWidget> {
               ),
               FFButtonWidget(
                 onPressed: () async {
+                  await showDialog(
+                    context: context,
+                    builder: (alertDialogContext) {
+                      return AlertDialog(
+                        title: Text('加入運動'),
+                        content: Text('加入成功'),
+                        actions: [
+                          TextButton(
+                            onPressed: () => Navigator.pop(alertDialogContext),
+                            child: Text('Ok'),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+
                   context.pushNamed('sport_record');
                 },
                 text: '儲存運動',

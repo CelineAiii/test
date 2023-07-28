@@ -532,6 +532,22 @@ class _FoodCostumizeWidgetState extends State<FoodCostumizeWidget> {
               ),
               FFButtonWidget(
                 onPressed: () async {
+                  await showDialog(
+                    context: context,
+                    builder: (alertDialogContext) {
+                      return AlertDialog(
+                        title: Text('加入食品'),
+                        content: Text('加入成功！'),
+                        actions: [
+                          TextButton(
+                            onPressed: () => Navigator.pop(alertDialogContext),
+                            child: Text('Ok'),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+
                   context.pushNamed('record');
                 },
                 text: '儲存食品',
