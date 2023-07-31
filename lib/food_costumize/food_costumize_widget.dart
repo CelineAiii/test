@@ -119,7 +119,9 @@ class _FoodCostumizeWidgetState extends State<FoodCostumizeWidget> {
                   builder: (context) {
                     return Padding(
                       padding: MediaQuery.viewInsetsOf(context),
-                      child: ChooseDetectWidget(),
+                      child: ChooseDetectWidget(
+                        name: widget.name!.toString(),
+                      ),
                     );
                   },
                 ).then((value) => setState(() {}));

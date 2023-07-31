@@ -21,6 +21,7 @@ class UploadImageCall {
       headers: {},
       params: {
         'image': image,
+        'name': name,
       },
       bodyType: BodyType.MULTIPART,
       returnBody: true,
