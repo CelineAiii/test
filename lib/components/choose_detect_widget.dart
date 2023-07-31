@@ -47,7 +47,7 @@ class _ChooseDetectWidgetState extends State<ChooseDetectWidget> {
       alignment: AlignmentDirectional(0.0, 1.0),
       child: Container(
         width: double.infinity,
-        height: 200.0,
+        height: 300.0,
         decoration: BoxDecoration(
           color: Colors.white,
           boxShadow: [
@@ -68,11 +68,11 @@ class _ChooseDetectWidgetState extends State<ChooseDetectWidget> {
                 padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
-                    'sofm4rxm' /* 選取辨識種類 */,
+                    'ihcfc3p3' /* 選取辨識種類 */,
                   ),
                   style: FlutterFlowTheme.of(context).headlineSmall.override(
                         fontFamily: 'Outfit',
-                        color: Color(0xFF14181B),
+                        color: Color(0xFF050505),
                         fontSize: 20.0,
                         fontWeight: FontWeight.w500,
                       ),
@@ -82,11 +82,11 @@ class _ChooseDetectWidgetState extends State<ChooseDetectWidget> {
                 padding: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 0.0, 8.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
-                    'ixrclx30' /* label or photo */,
+                    'p5xfmk81' /* label or photo */,
                   ),
                   style: FlutterFlowTheme.of(context).bodySmall.override(
                         fontFamily: 'Outfit',
-                        color: Color(0xFF57636C),
+                        color: Color(0xFF858E99),
                         fontSize: 14.0,
                         fontWeight: FontWeight.normal,
                       ),
@@ -136,13 +136,13 @@ class _ChooseDetectWidgetState extends State<ChooseDetectWidget> {
                               children: [
                                 Text(
                                   FFLocalizations.of(context).getText(
-                                    'v71sez5s' /* 食品影像 */,
+                                    '6kukh1jj' /* 食品影像 */,
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .titleSmall
                                       .override(
                                         fontFamily: 'Outfit',
-                                        color: Color(0xFF14181B),
+                                        color: Color(0xFF050505),
                                         fontSize: 16.0,
                                         fontWeight: FontWeight.w500,
                                       ),
@@ -192,13 +192,13 @@ class _ChooseDetectWidgetState extends State<ChooseDetectWidget> {
                             children: [
                               Text(
                                 FFLocalizations.of(context).getText(
-                                  'ztvo2cgc' /* 食品標籤 */,
+                                  'iwekrm3c' /* 食品標籤 */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .titleSmall
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF14181B),
+                                      color: Color(0xFF050505),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.w500,
                                     ),
