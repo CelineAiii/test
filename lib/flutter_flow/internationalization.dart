@@ -2764,6 +2764,25 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
+  // choose_detect
+  {
+    'usc3ou3r': {
+      'zh_Hant': '選取辨識種類',
+      'en': '',
+    },
+    'lry2ih4l': {
+      'zh_Hant': 'label or photo',
+      'en': '',
+    },
+    'nmbt1cqb': {
+      'zh_Hant': '食品影像',
+      'en': '',
+    },
+    '1klciuy5': {
+      'zh_Hant': '食品標籤',
+      'en': '',
+    },
+  },
   // Miscellaneous
   {
     '9pzqymt8': {
