@@ -67,7 +67,9 @@ class _AnalyzeWidgetState extends State<AnalyzeWidget> {
               onPressed: () async {
                 context.goNamed('HomePage');
               },
-              text: 'Candy Diary',
+              text: FFLocalizations.of(context).getText(
+                'hswzjhmp' /* Candy Diary */,
+              ),
               options: FFButtonOptions(
                 width: 185.0,
                 height: 40.0,
@@ -156,7 +158,9 @@ class _AnalyzeWidgetState extends State<AnalyzeWidget> {
                           ),
                         ),
                         Text(
-                          'Daily Report',
+                          FFLocalizations.of(context).getText(
+                            'djmb8y00' /* Daily Report */,
+                          ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Poppins',
@@ -197,7 +201,9 @@ class _AnalyzeWidgetState extends State<AnalyzeWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 10.0, 0.0, 10.0),
                                 child: Text(
-                                  '今日運動量完成率％',
+                                  FFLocalizations.of(context).getText(
+                                    '5mmtinlt' /* 今日運動量完成率％ */,
+                                  ),
                                   textAlign: TextAlign.center,
                                   style:
                                       FlutterFlowTheme.of(context).bodyMedium,
@@ -212,7 +218,9 @@ class _AnalyzeWidgetState extends State<AnalyzeWidget> {
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         15.0, 0.0, 0.0, 0.0),
                                     child: Text(
-                                      '目標時數：100 hr',
+                                      FFLocalizations.of(context).getText(
+                                        'dc0ph5gu' /* 目標時數：100 hr */,
+                                      ),
                                       textAlign: TextAlign.start,
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium,
@@ -222,7 +230,9 @@ class _AnalyzeWidgetState extends State<AnalyzeWidget> {
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 15.0, 0.0),
                                     child: Text(
-                                      '完成時數：50 hr',
+                                      FFLocalizations.of(context).getText(
+                                        '3eyklna1' /* 完成時數：50 hr */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium,
                                     ),
@@ -240,7 +250,9 @@ class _AnalyzeWidgetState extends State<AnalyzeWidget> {
                                   progressColor: Color(0xFFA492BE),
                                   backgroundColor: Color(0xFFF1F4F8),
                                   center: Text(
-                                    '50%',
+                                    FFLocalizations.of(context).getText(
+                                      '232n68u0' /* 50% */,
+                                    ),
                                     textAlign: TextAlign.center,
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
@@ -277,7 +289,9 @@ class _AnalyzeWidgetState extends State<AnalyzeWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 10.0, 0.0, 10.0),
                                   child: Text(
-                                    '今日卡路里攝取率％',
+                                    FFLocalizations.of(context).getText(
+                                      'kul1mz1g' /* 今日卡路里攝取率％ */,
+                                    ),
                                     textAlign: TextAlign.center,
                                     style:
                                         FlutterFlowTheme.of(context).bodyMedium,
@@ -292,7 +306,9 @@ class _AnalyzeWidgetState extends State<AnalyzeWidget> {
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           15.0, 0.0, 0.0, 0.0),
                                       child: Text(
-                                        '目標卡路里數：1200 kal',
+                                        FFLocalizations.of(context).getText(
+                                          'ce3axdje' /* 目標卡路里數：1200 kal */,
+                                        ),
                                         textAlign: TextAlign.start,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -306,7 +322,9 @@ class _AnalyzeWidgetState extends State<AnalyzeWidget> {
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 15.0, 0.0),
                                       child: Text(
-                                        '今日攝取：1000 kal',
+                                        FFLocalizations.of(context).getText(
+                                          'zaea4mzd' /* 今日攝取：1000 kal */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -329,7 +347,9 @@ class _AnalyzeWidgetState extends State<AnalyzeWidget> {
                                     progressColor: Color(0xFFA492BE),
                                     backgroundColor: Color(0xFFF1F4F8),
                                     center: Text(
-                                      '83.3%',
+                                      FFLocalizations.of(context).getText(
+                                        'e73albrz' /* 83.3% */,
+                                      ),
                                       textAlign: TextAlign.start,
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
@@ -365,7 +385,9 @@ class _AnalyzeWidgetState extends State<AnalyzeWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 10.0, 0.0, 10.0),
                                 child: Text(
-                                  '今日三大營養素攝取率％',
+                                  FFLocalizations.of(context).getText(
+                                    '58n8g2xb' /* 今日三大營養素攝取率％ */,
+                                  ),
                                   textAlign: TextAlign.center,
                                   style:
                                       FlutterFlowTheme.of(context).bodyMedium,
@@ -380,7 +402,9 @@ class _AnalyzeWidgetState extends State<AnalyzeWidget> {
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         15.0, 0.0, 0.0, 0.0),
                                     child: Text(
-                                      '蛋白質建議量：80 g',
+                                      FFLocalizations.of(context).getText(
+                                        '4toiwqcz' /* 蛋白質建議量：80 g */,
+                                      ),
                                       textAlign: TextAlign.start,
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
@@ -394,7 +418,9 @@ class _AnalyzeWidgetState extends State<AnalyzeWidget> {
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 15.0, 0.0),
                                     child: Text(
-                                      '今日攝取：40 g',
+                                      FFLocalizations.of(context).getText(
+                                        'a0fo2ua8' /* 今日攝取：40 g */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -416,7 +442,9 @@ class _AnalyzeWidgetState extends State<AnalyzeWidget> {
                                   progressColor: Color(0xFFA492BE),
                                   backgroundColor: Color(0xFFF1F4F8),
                                   center: Text(
-                                    '79%',
+                                    FFLocalizations.of(context).getText(
+                                      '7qpms948' /* 79% */,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -437,7 +465,9 @@ class _AnalyzeWidgetState extends State<AnalyzeWidget> {
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         15.0, 0.0, 0.0, 0.0),
                                     child: Text(
-                                      '脂質建議量：20 g',
+                                      FFLocalizations.of(context).getText(
+                                        'ktvzm7ku' /* 脂質建議量：20 g */,
+                                      ),
                                       textAlign: TextAlign.start,
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
@@ -451,7 +481,9 @@ class _AnalyzeWidgetState extends State<AnalyzeWidget> {
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 15.0, 0.0),
                                     child: Text(
-                                      '今日攝取：10 g',
+                                      FFLocalizations.of(context).getText(
+                                        'p4iqwfju' /* 今日攝取：10 g */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -473,7 +505,9 @@ class _AnalyzeWidgetState extends State<AnalyzeWidget> {
                                   progressColor: Color(0xFFA492BE),
                                   backgroundColor: Color(0xFFF1F4F8),
                                   center: Text(
-                                    '50%',
+                                    FFLocalizations.of(context).getText(
+                                      '5fyenfwc' /* 50% */,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -494,7 +528,9 @@ class _AnalyzeWidgetState extends State<AnalyzeWidget> {
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         15.0, 0.0, 0.0, 0.0),
                                     child: Text(
-                                      '碳水建議量：50 g',
+                                      FFLocalizations.of(context).getText(
+                                        'g2os0c7w' /* 碳水建議量：50 g */,
+                                      ),
                                       textAlign: TextAlign.start,
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
@@ -508,7 +544,9 @@ class _AnalyzeWidgetState extends State<AnalyzeWidget> {
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 15.0, 0.0),
                                     child: Text(
-                                      '今日攝取：30 g',
+                                      FFLocalizations.of(context).getText(
+                                        'v3rf4zqg' /* 今日攝取：30 g */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -530,7 +568,9 @@ class _AnalyzeWidgetState extends State<AnalyzeWidget> {
                                   progressColor: Color(0xFFA492BE),
                                   backgroundColor: Color(0xFFF1F4F8),
                                   center: Text(
-                                    '60%',
+                                    FFLocalizations.of(context).getText(
+                                      'n24zbw8o' /* 60% */,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -579,7 +619,9 @@ class _AnalyzeWidgetState extends State<AnalyzeWidget> {
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 10.0, 0.0, 10.0),
                                       child: Text(
-                                        '今日整體完成度',
+                                        FFLocalizations.of(context).getText(
+                                          'xlm3wsm2' /* 今日整體完成度 */,
+                                        ),
                                         textAlign: TextAlign.center,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -654,7 +696,9 @@ class _AnalyzeWidgetState extends State<AnalyzeWidget> {
                               ),
                             ),
                             Text(
-                              '截圖',
+                              FFLocalizations.of(context).getText(
+                                'u1a2r6a5' /* 截圖 */,
+                              ),
                               style: FlutterFlowTheme.of(context).bodyMedium,
                             ),
                           ],

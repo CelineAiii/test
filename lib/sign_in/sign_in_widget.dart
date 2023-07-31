@@ -74,7 +74,9 @@ class _SignInWidgetState extends State<SignInWidget> {
                           ),
                         ),
                         Text(
-                          'Candy Diary',
+                          FFLocalizations.of(context).getText(
+                            '69j8r5jo' /* Candy Diary */,
+                          ),
                           style: FlutterFlowTheme.of(context)
                               .bodyMedium
                               .override(
@@ -112,10 +114,14 @@ class _SignInWidgetState extends State<SignInWidget> {
                           indicatorColor: Colors.white,
                           tabs: [
                             Tab(
-                              text: 'Sign In',
+                              text: FFLocalizations.of(context).getText(
+                                's4wxv4lx' /* Sign In */,
+                              ),
                             ),
                             Tab(
-                              text: 'Sign Up',
+                              text: FFLocalizations.of(context).getText(
+                                '937kpc4c' /* Sign Up */,
+                              ),
                             ),
                           ],
                         ),
@@ -144,7 +150,10 @@ class _SignInWidgetState extends State<SignInWidget> {
                                               fontSize: 14.0,
                                               fontWeight: FontWeight.normal,
                                             ),
-                                        hintText: 'Enter your email...',
+                                        hintText:
+                                            FFLocalizations.of(context).getText(
+                                          'xyd37vh8' /* Enter your email... */,
+                                        ),
                                         hintStyle: FlutterFlowTheme.of(context)
                                             .bodySmall
                                             .override(
@@ -217,7 +226,10 @@ class _SignInWidgetState extends State<SignInWidget> {
                                               fontSize: 14.0,
                                               fontWeight: FontWeight.normal,
                                             ),
-                                        hintText: 'Enter your password...',
+                                        hintText:
+                                            FFLocalizations.of(context).getText(
+                                          'elimdt0x' /* Enter your password... */,
+                                        ),
                                         hintStyle: FlutterFlowTheme.of(context)
                                             .bodySmall
                                             .override(
@@ -313,7 +325,10 @@ class _SignInWidgetState extends State<SignInWidget> {
                                             return;
                                           }
                                         },
-                                        text: 'Sign In',
+                                        text:
+                                            FFLocalizations.of(context).getText(
+                                          'xf5mspge' /* Sign In */,
+                                        ),
                                         options: FFButtonOptions(
                                           width: 230.0,
                                           height: 50.0,
@@ -350,7 +365,9 @@ class _SignInWidgetState extends State<SignInWidget> {
                                         print(
                                             'Button-ForgotPassword pressed ...');
                                       },
-                                      text: 'Forgot Password?',
+                                      text: FFLocalizations.of(context).getText(
+                                        'sz3yi0lm' /* Forgot Password? */,
+                                      ),
                                       options: FFButtonOptions(
                                         width: 170.0,
                                         height: 40.0,
@@ -401,7 +418,10 @@ class _SignInWidgetState extends State<SignInWidget> {
                                               fontSize: 14.0,
                                               fontWeight: FontWeight.normal,
                                             ),
-                                        hintText: 'Enter your email...',
+                                        hintText:
+                                            FFLocalizations.of(context).getText(
+                                          'rlt88wwa' /* Enter your email... */,
+                                        ),
                                         hintStyle: FlutterFlowTheme.of(context)
                                             .bodySmall
                                             .override(
@@ -479,7 +499,10 @@ class _SignInWidgetState extends State<SignInWidget> {
                                               fontSize: 14.0,
                                               fontWeight: FontWeight.normal,
                                             ),
-                                        hintText: 'Enter your password...',
+                                        hintText:
+                                            FFLocalizations.of(context).getText(
+                                          '9c1wao67' /* Enter your password... */,
+                                        ),
                                         hintStyle: FlutterFlowTheme.of(context)
                                             .bodySmall
                                             .override(
@@ -563,7 +586,9 @@ class _SignInWidgetState extends State<SignInWidget> {
                                       onPressed: () {
                                         print('Button-Login pressed ...');
                                       },
-                                      text: 'Create Account',
+                                      text: FFLocalizations.of(context).getText(
+                                        'ki9xb0gs' /* Create Account */,
+                                      ),
                                       options: FFButtonOptions(
                                         width: 230.0,
                                         height: 50.0,

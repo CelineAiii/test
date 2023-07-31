@@ -2,6 +2,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/upload_data.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -95,7 +96,9 @@ class _UserWidgetState extends State<UserWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Text(
-                                    'Celine Ai',
+                                    FFLocalizations.of(context).getText(
+                                      '35ik1loa' /* Celine Ai */,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .headlineMedium
                                         .override(
@@ -115,7 +118,9 @@ class _UserWidgetState extends State<UserWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Text(
-                                    'LV.999 | \$100000',
+                                    FFLocalizations.of(context).getText(
+                                      '5bkv560c' /* LV.999 | $100000 */,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -140,16 +145,66 @@ class _UserWidgetState extends State<UserWidget> {
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 10.0, 5.0),
-                              child: Container(
-                                width: MediaQuery.sizeOf(context).width * 0.25,
-                                height: MediaQuery.sizeOf(context).width * 0.25,
-                                clipBehavior: Clip.antiAlias,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Image.network(
-                                  '',
-                                  fit: BoxFit.fitWidth,
+                              child: InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () async {
+                                  final selectedMedia =
+                                      await selectMediaWithSourceBottomSheet(
+                                    context: context,
+                                    allowPhoto: true,
+                                  );
+                                  if (selectedMedia != null &&
+                                      selectedMedia.every((m) =>
+                                          validateFileFormat(
+                                              m.storagePath, context))) {
+                                    setState(
+                                        () => _model.isDataUploading = true);
+                                    var selectedUploadedFiles =
+                                        <FFUploadedFile>[];
+
+                                    try {
+                                      selectedUploadedFiles = selectedMedia
+                                          .map((m) => FFUploadedFile(
+                                                name: m.storagePath
+                                                    .split('/')
+                                                    .last,
+                                                bytes: m.bytes,
+                                                height: m.dimensions?.height,
+                                                width: m.dimensions?.width,
+                                                blurHash: m.blurHash,
+                                              ))
+                                          .toList();
+                                    } finally {
+                                      _model.isDataUploading = false;
+                                    }
+                                    if (selectedUploadedFiles.length ==
+                                        selectedMedia.length) {
+                                      setState(() {
+                                        _model.uploadedLocalFile =
+                                            selectedUploadedFiles.first;
+                                      });
+                                    } else {
+                                      setState(() {});
+                                      return;
+                                    }
+                                  }
+                                },
+                                child: Container(
+                                  width:
+                                      MediaQuery.sizeOf(context).width * 0.25,
+                                  height:
+                                      MediaQuery.sizeOf(context).width * 0.25,
+                                  clipBehavior: Clip.antiAlias,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: Image.network(
+                                    '',
+                                    fit: BoxFit.fitWidth,
+                                  ),
                                 ),
                               ),
                             ),
@@ -163,7 +218,9 @@ class _UserWidgetState extends State<UserWidget> {
                                     onPressed: () async {
                                       context.pushNamed('setting');
                                     },
-                                    text: '修改個人資料',
+                                    text: FFLocalizations.of(context).getText(
+                                      'j3vvki8a' /* 修改個人資料 */,
+                                    ),
                                     options: FFButtonOptions(
                                       width: 130.0,
                                       height: 40.0,
@@ -241,7 +298,9 @@ class _UserWidgetState extends State<UserWidget> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Text(
-                                        '目前減肥計劃',
+                                        FFLocalizations.of(context).getText(
+                                          'pusgek6x' /* 目前減肥計劃 */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -272,7 +331,9 @@ class _UserWidgetState extends State<UserWidget> {
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 10.0, 0.0, 0.0),
                                       child: Text(
-                                        '168斷食法',
+                                        FFLocalizations.of(context).getText(
+                                          '54j4vvmt' /* 168斷食法 */,
+                                        ),
                                         textAlign: TextAlign.center,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -302,7 +363,9 @@ class _UserWidgetState extends State<UserWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 10.0, 0.0, 0.0),
                                           child: Text(
-                                            '- 預計花費 150 日即可達成 -',
+                                            FFLocalizations.of(context).getText(
+                                              'yyphs6vw' /* - 預計花費 150 日即可達成 - */,
+                                            ),
                                             textAlign: TextAlign.center,
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
@@ -323,7 +386,10 @@ class _UserWidgetState extends State<UserWidget> {
                                                   .fromSTEB(
                                                       0.0, 0.0, 0.0, 10.0),
                                               child: Text(
-                                                '每日可攝取總量：',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'vomy4mih' /* 每日可攝取總量： */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium
@@ -338,7 +404,10 @@ class _UserWidgetState extends State<UserWidget> {
                                                   .fromSTEB(
                                                       0.0, 0.0, 0.0, 10.0),
                                               child: Text(
-                                                '1200 kal',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'z58fccpp' /* 1200 kal */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium
@@ -363,7 +432,9 @@ class _UserWidgetState extends State<UserWidget> {
                                     onPressed: () async {
                                       context.pushNamed('food_recommand');
                                     },
-                                    text: '建議食譜',
+                                    text: FFLocalizations.of(context).getText(
+                                      '84yhfc16' /* 建議食譜 */,
+                                    ),
                                     icon: Icon(
                                       Icons.fastfood_sharp,
                                       size: 15.0,
@@ -422,7 +493,9 @@ class _UserWidgetState extends State<UserWidget> {
                                           size: 30.0,
                                         ),
                                         Text(
-                                          '今日飲食攝取量',
+                                          FFLocalizations.of(context).getText(
+                                            '7kwkyyac' /* 今日飲食攝取量 */,
+                                          ),
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
                                               .bodySmall
@@ -441,7 +514,9 @@ class _UserWidgetState extends State<UserWidget> {
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Text(
-                                          '攝取卡路里數：1000 kal',
+                                          FFLocalizations.of(context).getText(
+                                            'hlh45g3d' /* 攝取卡路里數：1000 kal */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
@@ -455,7 +530,9 @@ class _UserWidgetState extends State<UserWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 10.0),
                                           child: Text(
-                                            '每日總攝取限制：1500 kal',
+                                            FFLocalizations.of(context).getText(
+                                              'eyrerky5' /* 每日總攝取限制：1500 kal */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -499,7 +576,9 @@ class _UserWidgetState extends State<UserWidget> {
                                           size: 30.0,
                                         ),
                                         Text(
-                                          '今日運動消耗',
+                                          FFLocalizations.of(context).getText(
+                                            'wz3s5o9b' /* 今日運動消耗 */,
+                                          ),
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
                                               .bodySmall
@@ -518,7 +597,9 @@ class _UserWidgetState extends State<UserWidget> {
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Text(
-                                          '消耗卡路里數：1000 kal',
+                                          FFLocalizations.of(context).getText(
+                                            'fp8txb5v' /* 消耗卡路里數：1000 kal */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
@@ -532,7 +613,9 @@ class _UserWidgetState extends State<UserWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 10.0),
                                           child: Text(
-                                            '運動總時數：4 hr',
+                                            FFLocalizations.of(context).getText(
+                                              'b5alq9wr' /* 運動總時數：4 hr */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -553,7 +636,9 @@ class _UserWidgetState extends State<UserWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 30.0, 0.0, 0.0),
                           child: Text(
-                            'Created by Candy Diary',
+                            FFLocalizations.of(context).getText(
+                              'knyv0g86' /* Created by Candy Diary */,
+                            ),
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
@@ -568,7 +653,9 @@ class _UserWidgetState extends State<UserWidget> {
                             onPressed: () {
                               print('Button pressed ...');
                             },
-                            text: '登出',
+                            text: FFLocalizations.of(context).getText(
+                              'muylm87r' /* 登出 */,
+                            ),
                             options: FFButtonOptions(
                               height: 40.0,
                               padding: EdgeInsetsDirectional.fromSTEB(

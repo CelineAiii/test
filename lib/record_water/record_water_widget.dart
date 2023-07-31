@@ -64,7 +64,9 @@ class _RecordWaterWidgetState extends State<RecordWaterWidget> {
             onPressed: () {
               print('Button pressed ...');
             },
-            text: 'Candy Diary',
+            text: FFLocalizations.of(context).getText(
+              'opz6uv3s' /* Candy Diary */,
+            ),
             options: FFButtonOptions(
               width: 185.0,
               height: 40.0,
@@ -106,7 +108,9 @@ class _RecordWaterWidgetState extends State<RecordWaterWidget> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Name',
+                      FFLocalizations.of(context).getText(
+                        'nz7cv0y3' /* Name */,
+                      ),
                       style: FlutterFlowTheme.of(context).bodySmall.override(
                             fontFamily: 'Lexend Deca',
                             color: Color(0xFF95A1AC),
@@ -118,7 +122,9 @@ class _RecordWaterWidgetState extends State<RecordWaterWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                       child: Text(
-                        '飲水量',
+                        FFLocalizations.of(context).getText(
+                          'd5s9bleq' /* 飲水量 */,
+                        ),
                         textAlign: TextAlign.start,
                         style: FlutterFlowTheme.of(context)
                             .headlineMedium
@@ -148,7 +154,9 @@ class _RecordWaterWidgetState extends State<RecordWaterWidget> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        '請在此輸入要記錄的飲水量',
+                        FFLocalizations.of(context).getText(
+                          '51sqopy8' /* 請在此輸入要記錄的飲水量 */,
+                        ),
                         style: FlutterFlowTheme.of(context).bodySmall.override(
                               fontFamily: 'Lexend Deca',
                               color: Color(0xFF858E99),
@@ -168,7 +176,10 @@ class _RecordWaterWidgetState extends State<RecordWaterWidget> {
                                 autofocus: true,
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                  labelText: 'ex. 100、450',
+                                  labelText:
+                                      FFLocalizations.of(context).getText(
+                                    'pmhe4w0r' /* ex. 100、450 */,
+                                  ),
                                   labelStyle:
                                       FlutterFlowTheme.of(context).bodySmall,
                                   hintStyle:
@@ -221,7 +232,9 @@ class _RecordWaterWidgetState extends State<RecordWaterWidget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 35.0, 0.0, 0.0),
                               child: Text(
-                                'ml',
+                                FFLocalizations.of(context).getText(
+                                  'zzomoq1m' /* ml */,
+                                ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -262,7 +275,9 @@ class _RecordWaterWidgetState extends State<RecordWaterWidget> {
 
                   context.pushNamed('record');
                 },
-                text: 'Add',
+                text: FFLocalizations.of(context).getText(
+                  'su34n946' /* Add */,
+                ),
                 options: FFButtonOptions(
                   width: double.infinity,
                   height: 60.0,

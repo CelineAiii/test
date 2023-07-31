@@ -64,7 +64,9 @@ class _WaterTargetWidgetState extends State<WaterTargetWidget> {
             onPressed: () {
               print('Button pressed ...');
             },
-            text: 'Candy Diary',
+            text: FFLocalizations.of(context).getText(
+              'jafcv0rz' /* Candy Diary */,
+            ),
             options: FFButtonOptions(
               width: 185.0,
               height: 40.0,
@@ -106,7 +108,9 @@ class _WaterTargetWidgetState extends State<WaterTargetWidget> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Name',
+                      FFLocalizations.of(context).getText(
+                        '4h4z7uno' /* Name */,
+                      ),
                       style: FlutterFlowTheme.of(context).bodySmall.override(
                             fontFamily: 'Lexend Deca',
                             color: Color(0xFF95A1AC),
@@ -118,7 +122,9 @@ class _WaterTargetWidgetState extends State<WaterTargetWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                       child: Text(
-                        '飲水量目標',
+                        FFLocalizations.of(context).getText(
+                          '6uifvq0v' /* 飲水量目標 */,
+                        ),
                         textAlign: TextAlign.start,
                         style: FlutterFlowTheme.of(context)
                             .headlineMedium
@@ -148,7 +154,9 @@ class _WaterTargetWidgetState extends State<WaterTargetWidget> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        '請在此輸入欲修改的飲水量目標',
+                        FFLocalizations.of(context).getText(
+                          'wbnvepa0' /* 請在此輸入欲修改的飲水量目標 */,
+                        ),
                         style: FlutterFlowTheme.of(context).bodySmall.override(
                               fontFamily: 'Lexend Deca',
                               color: Color(0xFF858E99),
@@ -168,7 +176,10 @@ class _WaterTargetWidgetState extends State<WaterTargetWidget> {
                                 autofocus: true,
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                  labelText: 'ex. 2000、1500',
+                                  labelText:
+                                      FFLocalizations.of(context).getText(
+                                    'g7qdq292' /* ex. 2000、1500 */,
+                                  ),
                                   labelStyle:
                                       FlutterFlowTheme.of(context).bodySmall,
                                   hintStyle:
@@ -221,7 +232,9 @@ class _WaterTargetWidgetState extends State<WaterTargetWidget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 35.0, 0.0, 0.0),
                               child: Text(
-                                'ml',
+                                FFLocalizations.of(context).getText(
+                                  'qa6cyn6o' /* ml */,
+                                ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -260,7 +273,9 @@ class _WaterTargetWidgetState extends State<WaterTargetWidget> {
                     },
                   );
                 },
-                text: 'Add',
+                text: FFLocalizations.of(context).getText(
+                  'ghdfy7ln' /* Add */,
+                ),
                 options: FFButtonOptions(
                   width: double.infinity,
                   height: 60.0,

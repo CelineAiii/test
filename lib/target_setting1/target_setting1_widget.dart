@@ -68,7 +68,9 @@ class _TargetSetting1WidgetState extends State<TargetSetting1Widget> {
               onPressed: () {
                 print('Button pressed ...');
               },
-              text: 'Candy Diary',
+              text: FFLocalizations.of(context).getText(
+                'mttmdugs' /* Candy Diary */,
+              ),
               options: FFButtonOptions(
                 width: 185.0,
                 height: 40.0,
@@ -104,7 +106,9 @@ class _TargetSetting1WidgetState extends State<TargetSetting1Widget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                   child: Text(
-                    '- 目標設定 -',
+                    FFLocalizations.of(context).getText(
+                      'o5wyky0m' /* - 目標設定 - */,
+                    ),
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Poppins',
@@ -148,7 +152,9 @@ class _TargetSetting1WidgetState extends State<TargetSetting1Widget> {
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 10.0, 0.0, 0.0),
                                       child: Text(
-                                        '1. 身高：',
+                                        FFLocalizations.of(context).getText(
+                                          'b6v33zi9' /* 1. 身高： */,
+                                        ),
                                         textAlign: TextAlign.start,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -179,7 +185,11 @@ class _TargetSetting1WidgetState extends State<TargetSetting1Widget> {
                                           autofocus: true,
                                           obscureText: false,
                                           decoration: InputDecoration(
-                                            hintText: 'ex. 158',
+                                            hintText:
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                              'hbsw72ey' /* ex. 158 */,
+                                            ),
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodySmall,
@@ -248,7 +258,9 @@ class _TargetSetting1WidgetState extends State<TargetSetting1Widget> {
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 10.0, 0.0, 0.0),
                                       child: Text(
-                                        '2. 現在體重：',
+                                        FFLocalizations.of(context).getText(
+                                          'rigngj8h' /* 2. 現在體重： */,
+                                        ),
                                         textAlign: TextAlign.start,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -279,7 +291,11 @@ class _TargetSetting1WidgetState extends State<TargetSetting1Widget> {
                                           autofocus: true,
                                           obscureText: false,
                                           decoration: InputDecoration(
-                                            hintText: 'ex. 158',
+                                            hintText:
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                              '8smtamdb' /* ex. 158 */,
+                                            ),
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodySmall,
@@ -348,7 +364,9 @@ class _TargetSetting1WidgetState extends State<TargetSetting1Widget> {
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 10.0, 0.0, 0.0),
                                       child: Text(
-                                        '3. 目標體重：',
+                                        FFLocalizations.of(context).getText(
+                                          'ywdypywe' /* 3. 目標體重： */,
+                                        ),
                                         textAlign: TextAlign.start,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -379,7 +397,11 @@ class _TargetSetting1WidgetState extends State<TargetSetting1Widget> {
                                           autofocus: true,
                                           obscureText: false,
                                           decoration: InputDecoration(
-                                            hintText: 'ex. 158',
+                                            hintText:
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                              'mk2jzg5i' /* ex. 158 */,
+                                            ),
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodySmall,
@@ -453,7 +475,9 @@ class _TargetSetting1WidgetState extends State<TargetSetting1Widget> {
                               onPressed: () async {
                                 context.pushNamed('target_setting2');
                               },
-                              text: '確定',
+                              text: FFLocalizations.of(context).getText(
+                                'monnib9r' /* 確定 */,
+                              ),
                               options: FFButtonOptions(
                                 width: 130.0,
                                 height: 40.0,

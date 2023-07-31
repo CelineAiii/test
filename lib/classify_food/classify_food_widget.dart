@@ -76,7 +76,9 @@ class _ClassifyFoodWidgetState extends State<ClassifyFoodWidget> {
                 // takeshot
                 _model.takeshotValue = await FlutterBarcodeScanner.scanBarcode(
                   '#C62828', // scanning line color
-                  'Cancel', // cancel button text
+                  FFLocalizations.of(context).getText(
+                    'u51z3han' /* Cancel */,
+                  ), // cancel button text
                   true, // whether to show the flash icon
                   ScanMode.QR,
                 );
@@ -118,7 +120,9 @@ class _ClassifyFoodWidgetState extends State<ClassifyFoodWidget> {
                     ),
                     obscureText: false,
                     decoration: InputDecoration(
-                      labelText: 'Search products...',
+                      labelText: FFLocalizations.of(context).getText(
+                        'u7uinrr6' /* Search products... */,
+                      ),
                       labelStyle:
                           FlutterFlowTheme.of(context).bodySmall.override(
                                 fontFamily: 'Outfit',
@@ -227,7 +231,9 @@ class _ClassifyFoodWidgetState extends State<ClassifyFoodWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 4.0, 0.0, 0.0),
                                 child: Text(
-                                  'Carbohydrate',
+                                  FFLocalizations.of(context).getText(
+                                    'azkxhz10' /* Carbohydrate */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodySmall
                                       .override(
@@ -287,7 +293,9 @@ class _ClassifyFoodWidgetState extends State<ClassifyFoodWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 4.0, 0.0, 0.0),
                                 child: Text(
-                                  'Protein',
+                                  FFLocalizations.of(context).getText(
+                                    'y1vkhf9g' /* Protein */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodySmall
                                       .override(
@@ -347,7 +355,9 @@ class _ClassifyFoodWidgetState extends State<ClassifyFoodWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 4.0, 0.0, 0.0),
                                 child: Text(
-                                  'Fat',
+                                  FFLocalizations.of(context).getText(
+                                    'q6fjjp0j' /* Fat */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodySmall
                                       .override(
@@ -407,7 +417,9 @@ class _ClassifyFoodWidgetState extends State<ClassifyFoodWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 4.0, 0.0, 0.0),
                                 child: Text(
-                                  'Water',
+                                  FFLocalizations.of(context).getText(
+                                    'k1s6vtqa' /* Water */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodySmall
                                       .override(
@@ -436,7 +448,9 @@ class _ClassifyFoodWidgetState extends State<ClassifyFoodWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 4.0),
                       child: Text(
-                        'Salad',
+                        FFLocalizations.of(context).getText(
+                          'myjfigif' /* Salad */,
+                        ),
                         style: FlutterFlowTheme.of(context).titleSmall.override(
                               fontFamily: 'Outfit',
                               color: Color(0xFF57636C),
@@ -446,7 +460,9 @@ class _ClassifyFoodWidgetState extends State<ClassifyFoodWidget> {
                       ),
                     ),
                     Text(
-                      'See All',
+                      FFLocalizations.of(context).getText(
+                        'wcsclv9c' /* See All */,
+                      ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Outfit',
                             color: Color(0xFF14181B),
@@ -515,7 +531,9 @@ class _ClassifyFoodWidgetState extends State<ClassifyFoodWidget> {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          '燻鮭魚沙拉',
+                                          FFLocalizations.of(context).getText(
+                                            'cl2a1y1y' /* 燻鮭魚沙拉 */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .headlineMedium
                                               .override(
@@ -530,7 +548,9 @@ class _ClassifyFoodWidgetState extends State<ClassifyFoodWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 4.0, 0.0, 0.0),
                                           child: Text(
-                                            '230大卡',
+                                            FFLocalizations.of(context).getText(
+                                              'v8yltyu2' /* 230大卡 */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -609,7 +629,9 @@ class _ClassifyFoodWidgetState extends State<ClassifyFoodWidget> {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          '鮪魚沙拉',
+                                          FFLocalizations.of(context).getText(
+                                            'ifc2vzho' /* 鮪魚沙拉 */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .headlineMedium
                                               .override(
@@ -624,7 +646,9 @@ class _ClassifyFoodWidgetState extends State<ClassifyFoodWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 4.0, 0.0, 0.0),
                                           child: Text(
-                                            '580大卡',
+                                            FFLocalizations.of(context).getText(
+                                              'mnifl3ix' /* 580大卡 */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -703,7 +727,9 @@ class _ClassifyFoodWidgetState extends State<ClassifyFoodWidget> {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          '凱薩沙拉',
+                                          FFLocalizations.of(context).getText(
+                                            'fa9nsig7' /* 凱薩沙拉 */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .headlineMedium
                                               .override(
@@ -718,7 +744,9 @@ class _ClassifyFoodWidgetState extends State<ClassifyFoodWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 4.0, 0.0, 0.0),
                                           child: Text(
-                                            '500大卡',
+                                            FFLocalizations.of(context).getText(
+                                              '5ns3k6fm' /* 500大卡 */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -797,7 +825,9 @@ class _ClassifyFoodWidgetState extends State<ClassifyFoodWidget> {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          '和風沙拉',
+                                          FFLocalizations.of(context).getText(
+                                            '8d6qa1tx' /* 和風沙拉 */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .headlineMedium
                                               .override(
@@ -812,7 +842,9 @@ class _ClassifyFoodWidgetState extends State<ClassifyFoodWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 4.0, 0.0, 0.0),
                                           child: Text(
-                                            '480大卡',
+                                            FFLocalizations.of(context).getText(
+                                              'mi3x3a5g' /* 480大卡 */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -891,7 +923,9 @@ class _ClassifyFoodWidgetState extends State<ClassifyFoodWidget> {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          '千島醬沙拉',
+                                          FFLocalizations.of(context).getText(
+                                            'q9z6obcw' /* 千島醬沙拉 */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .headlineMedium
                                               .override(
@@ -906,7 +940,9 @@ class _ClassifyFoodWidgetState extends State<ClassifyFoodWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 4.0, 0.0, 0.0),
                                           child: Text(
-                                            '480大卡',
+                                            FFLocalizations.of(context).getText(
+                                              '8963fi29' /* 480大卡 */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -985,7 +1021,9 @@ class _ClassifyFoodWidgetState extends State<ClassifyFoodWidget> {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          '龍蝦沙拉',
+                                          FFLocalizations.of(context).getText(
+                                            '6gnn0szm' /* 龍蝦沙拉 */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .headlineMedium
                                               .override(
@@ -1000,7 +1038,9 @@ class _ClassifyFoodWidgetState extends State<ClassifyFoodWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 4.0, 0.0, 0.0),
                                           child: Text(
-                                            '480大卡',
+                                            FFLocalizations.of(context).getText(
+                                              '9pvxfw3n' /* 480大卡 */,
+                                            ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(

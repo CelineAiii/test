@@ -259,14 +259,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => SportOtherWidget(),
             ),
             FFRoute(
-              name: 'food_costumize',
-              path: 'foodCostumize',
-              builder: (context, params) => FoodCostumizeWidget(),
-            ),
-            FFRoute(
               name: 'sport_costumize',
               path: 'sportCostumize',
               builder: (context, params) => SportCostumizeWidget(),
+            ),
+            FFRoute(
+              name: 'food_costumize',
+              path: 'foodCostumize',
+              builder: (context, params) => FoodCostumizeWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

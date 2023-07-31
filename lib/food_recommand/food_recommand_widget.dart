@@ -63,7 +63,9 @@ class _FoodRecommandWidgetState extends State<FoodRecommandWidget> {
               onPressed: () {
                 print('Button pressed ...');
               },
-              text: 'Candy Diary',
+              text: FFLocalizations.of(context).getText(
+                '3na4ztc7' /* Candy Diary */,
+              ),
               options: FFButtonOptions(
                 width: 185.0,
                 height: 40.0,
@@ -100,7 +102,9 @@ class _FoodRecommandWidgetState extends State<FoodRecommandWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                   child: Text(
-                    '- 推薦食譜 -',
+                    FFLocalizations.of(context).getText(
+                      '2rtg499i' /* - 推薦食譜 - */,
+                    ),
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Poppins',
@@ -126,7 +130,9 @@ class _FoodRecommandWidgetState extends State<FoodRecommandWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 10.0, 0.0, 0.0),
                             child: Text(
-                              '以下為今日推薦您的食譜',
+                              FFLocalizations.of(context).getText(
+                                '1nygul98' /* 以下為今日推薦您的食譜 */,
+                              ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -156,7 +162,9 @@ class _FoodRecommandWidgetState extends State<FoodRecommandWidget> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 10.0, 0.0, 0.0),
                                         child: Text(
-                                          '1. 早餐：',
+                                          FFLocalizations.of(context).getText(
+                                            'tpq9dwlb' /* 1. 早餐： */,
+                                          ),
                                           textAlign: TextAlign.start,
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
@@ -180,7 +188,10 @@ class _FoodRecommandWidgetState extends State<FoodRecommandWidget> {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                'Hello World',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'v6wy9xwt' /* Hello World */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium
@@ -193,7 +204,10 @@ class _FoodRecommandWidgetState extends State<FoodRecommandWidget> {
                                                         ),
                                               ),
                                               Text(
-                                                'Hello World',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'zbblx6kc' /* Hello World */,
+                                                ),
                                                 textAlign: TextAlign.start,
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -216,7 +230,10 @@ class _FoodRecommandWidgetState extends State<FoodRecommandWidget> {
                                                     .fromSTEB(
                                                         0.0, 20.0, 0.0, 0.0),
                                                 child: Text(
-                                                  'Hello World',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    '1r5k8eku' /* Hello World */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyMedium
@@ -239,7 +256,9 @@ class _FoodRecommandWidgetState extends State<FoodRecommandWidget> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 10.0, 0.0, 0.0),
                                         child: Text(
-                                          '2. 午餐：',
+                                          FFLocalizations.of(context).getText(
+                                            'ej69lgmz' /* 2. 午餐： */,
+                                          ),
                                           textAlign: TextAlign.start,
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
@@ -260,7 +279,10 @@ class _FoodRecommandWidgetState extends State<FoodRecommandWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Text(
-                                                'Hello World',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'clm1s0eo' /* Hello World */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium
@@ -273,7 +295,10 @@ class _FoodRecommandWidgetState extends State<FoodRecommandWidget> {
                                                         ),
                                               ),
                                               Text(
-                                                'Hello World',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'm95ga6r3' /* Hello World */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium
@@ -295,7 +320,10 @@ class _FoodRecommandWidgetState extends State<FoodRecommandWidget> {
                                                     .fromSTEB(
                                                         0.0, 20.0, 0.0, 0.0),
                                                 child: Text(
-                                                  'Hello World',
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'c9h8oi58' /* Hello World */,
+                                                  ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyMedium
@@ -318,7 +346,9 @@ class _FoodRecommandWidgetState extends State<FoodRecommandWidget> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 10.0, 0.0, 0.0),
                                         child: Text(
-                                          '3. 晚餐：',
+                                          FFLocalizations.of(context).getText(
+                                            'e03qwnc6' /* 3. 晚餐： */,
+                                          ),
                                           textAlign: TextAlign.start,
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
@@ -336,7 +366,9 @@ class _FoodRecommandWidgetState extends State<FoodRecommandWidget> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 10.0, 0.0, 0.0),
                                         child: Text(
-                                          '4. 點心：',
+                                          FFLocalizations.of(context).getText(
+                                            'gzamu213' /* 4. 點心： */,
+                                          ),
                                           textAlign: TextAlign.start,
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
@@ -353,7 +385,9 @@ class _FoodRecommandWidgetState extends State<FoodRecommandWidget> {
                             ),
                           ),
                           Text(
-                            ' ',
+                            FFLocalizations.of(context).getText(
+                              'ory97fdp' /*   */,
+                            ),
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(

@@ -42,7 +42,9 @@ class _FoodWeekendWidgetState extends State<FoodWeekendWidget> {
           backgroundColor: FlutterFlowTheme.of(context).primary,
           automaticallyImplyLeading: false,
           title: Text(
-            'Page Title',
+            FFLocalizations.of(context).getText(
+              'qoyweu4c' /* Page Title */,
+            ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Poppins',
                   color: Colors.white,
@@ -114,7 +116,9 @@ class _FoodWeekendWidgetState extends State<FoodWeekendWidget> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  '早餐',
+                                  FFLocalizations.of(context).getText(
+                                    'ryt31ums' /* 早餐 */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .headlineMedium
                                       .override(
@@ -128,7 +132,9 @@ class _FoodWeekendWidgetState extends State<FoodWeekendWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 4.0, 0.0, 0.0),
                                   child: Text(
-                                    '共230大卡',
+                                    FFLocalizations.of(context).getText(
+                                      'z4i7smlm' /* 共230大卡 */,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -147,7 +153,9 @@ class _FoodWeekendWidgetState extends State<FoodWeekendWidget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 30.0, 20.0, 0.0),
                               child: Text(
-                                '早餐',
+                                FFLocalizations.of(context).getText(
+                                  '3yf1g9g2' /* 早餐 */,
+                                ),
                                 textAlign: TextAlign.end,
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
@@ -211,7 +219,9 @@ class _FoodWeekendWidgetState extends State<FoodWeekendWidget> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  '午餐',
+                                  FFLocalizations.of(context).getText(
+                                    '7tn9goye' /* 午餐 */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .headlineMedium
                                       .override(
@@ -225,7 +235,9 @@ class _FoodWeekendWidgetState extends State<FoodWeekendWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 4.0, 0.0, 0.0),
                                   child: Text(
-                                    '共580大卡',
+                                    FFLocalizations.of(context).getText(
+                                      'wxi1v3qb' /* 共580大卡 */,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -291,7 +303,9 @@ class _FoodWeekendWidgetState extends State<FoodWeekendWidget> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  '晚餐',
+                                  FFLocalizations.of(context).getText(
+                                    '7scmu7oy' /* 晚餐 */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .headlineMedium
                                       .override(
@@ -305,7 +319,9 @@ class _FoodWeekendWidgetState extends State<FoodWeekendWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 4.0, 0.0, 0.0),
                                   child: Text(
-                                    '共500大卡',
+                                    FFLocalizations.of(context).getText(
+                                      'l8p2ibjd' /* 共500大卡 */,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -371,7 +387,9 @@ class _FoodWeekendWidgetState extends State<FoodWeekendWidget> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  '點心',
+                                  FFLocalizations.of(context).getText(
+                                    '1l38tgvn' /* 點心 */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .headlineMedium
                                       .override(
@@ -385,7 +403,9 @@ class _FoodWeekendWidgetState extends State<FoodWeekendWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 4.0, 0.0, 0.0),
                                   child: Text(
-                                    '共480大卡',
+                                    FFLocalizations.of(context).getText(
+                                      '3wz0icku' /* 共480大卡 */,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(

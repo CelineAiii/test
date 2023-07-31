@@ -156,7 +156,9 @@ class _FoodWidgetState extends State<FoodWidget> {
                     ),
                     obscureText: false,
                     decoration: InputDecoration(
-                      labelText: 'Search products...',
+                      labelText: FFLocalizations.of(context).getText(
+                        'v2hbd5xf' /* Search products... */,
+                      ),
                       labelStyle:
                           FlutterFlowTheme.of(context).bodySmall.override(
                                 fontFamily: 'Outfit',
@@ -265,7 +267,9 @@ class _FoodWidgetState extends State<FoodWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 4.0, 0.0, 0.0),
                                 child: Text(
-                                  'Carbohydrate',
+                                  FFLocalizations.of(context).getText(
+                                    '9t7lo2gq' /* Carbohydrate */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodySmall
                                       .override(
@@ -325,7 +329,9 @@ class _FoodWidgetState extends State<FoodWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 4.0, 0.0, 0.0),
                                 child: Text(
-                                  'Protein',
+                                  FFLocalizations.of(context).getText(
+                                    'fnuj697m' /* Protein */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodySmall
                                       .override(
@@ -385,7 +391,9 @@ class _FoodWidgetState extends State<FoodWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 4.0, 0.0, 0.0),
                                 child: Text(
-                                  'Fat',
+                                  FFLocalizations.of(context).getText(
+                                    '9rozguco' /* Fat */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodySmall
                                       .override(
@@ -445,7 +453,9 @@ class _FoodWidgetState extends State<FoodWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 4.0, 0.0, 0.0),
                                 child: Text(
-                                  'Water',
+                                  FFLocalizations.of(context).getText(
+                                    'dgbp0dmb' /* Water */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodySmall
                                       .override(
@@ -474,7 +484,9 @@ class _FoodWidgetState extends State<FoodWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 4.0),
                       child: Text(
-                        'Categories',
+                        FFLocalizations.of(context).getText(
+                          'mwecd7z6' /* Categories */,
+                        ),
                         style: FlutterFlowTheme.of(context).titleSmall.override(
                               fontFamily: 'Outfit',
                               color: Color(0xFF57636C),
@@ -484,7 +496,9 @@ class _FoodWidgetState extends State<FoodWidget> {
                       ),
                     ),
                     Text(
-                      'See All',
+                      FFLocalizations.of(context).getText(
+                        'xxdo5vla' /* See All */,
+                      ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Outfit',
                             color: Color(0xFF14181B),
@@ -550,7 +564,9 @@ class _FoodWidgetState extends State<FoodWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     8.0, 12.0, 0.0, 0.0),
                                 child: Text(
-                                  'Steak',
+                                  FFLocalizations.of(context).getText(
+                                    '527jn22z' /* Steak */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .titleMedium
                                       .override(
@@ -565,7 +581,9 @@ class _FoodWidgetState extends State<FoodWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     8.0, 4.0, 0.0, 0.0),
                                 child: Text(
-                                  'Category Name',
+                                  FFLocalizations.of(context).getText(
+                                    'ip8g8e35' /* Category Name */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodySmall
                                       .override(
@@ -624,7 +642,9 @@ class _FoodWidgetState extends State<FoodWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     8.0, 12.0, 0.0, 0.0),
                                 child: Text(
-                                  'Salad',
+                                  FFLocalizations.of(context).getText(
+                                    'w56d6bp3' /* Salad */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .titleMedium
                                       .override(
@@ -639,7 +659,9 @@ class _FoodWidgetState extends State<FoodWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     8.0, 4.0, 0.0, 0.0),
                                 child: Text(
-                                  'Category Name',
+                                  FFLocalizations.of(context).getText(
+                                    'gduks77e' /* Category Name */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodySmall
                                       .override(
@@ -698,7 +720,9 @@ class _FoodWidgetState extends State<FoodWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     8.0, 12.0, 0.0, 0.0),
                                 child: Text(
-                                  'Cake',
+                                  FFLocalizations.of(context).getText(
+                                    'qji14274' /* Cake */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .titleMedium
                                       .override(
@@ -713,7 +737,9 @@ class _FoodWidgetState extends State<FoodWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     8.0, 4.0, 0.0, 0.0),
                                 child: Text(
-                                  'Category Name',
+                                  FFLocalizations.of(context).getText(
+                                    'i2y0bu9r' /* Category Name */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodySmall
                                       .override(
@@ -772,7 +798,9 @@ class _FoodWidgetState extends State<FoodWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     8.0, 12.0, 0.0, 0.0),
                                 child: Text(
-                                  'Western Cuisine',
+                                  FFLocalizations.of(context).getText(
+                                    'w7l76xok' /* Western Cuisine */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .titleMedium
                                       .override(
@@ -787,7 +815,9 @@ class _FoodWidgetState extends State<FoodWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     8.0, 4.0, 0.0, 0.0),
                                 child: Text(
-                                  'Category Name',
+                                  FFLocalizations.of(context).getText(
+                                    'uouw1t82' /* Category Name */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodySmall
                                       .override(
@@ -846,7 +876,9 @@ class _FoodWidgetState extends State<FoodWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     8.0, 12.0, 0.0, 0.0),
                                 child: Text(
-                                  'Spaghetti',
+                                  FFLocalizations.of(context).getText(
+                                    'v0wquucg' /* Spaghetti */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .titleMedium
                                       .override(
@@ -861,7 +893,9 @@ class _FoodWidgetState extends State<FoodWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     8.0, 4.0, 0.0, 0.0),
                                 child: Text(
-                                  'Category Name',
+                                  FFLocalizations.of(context).getText(
+                                    'c0h5l338' /* Category Name */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodySmall
                                       .override(
@@ -920,7 +954,9 @@ class _FoodWidgetState extends State<FoodWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     8.0, 12.0, 0.0, 0.0),
                                 child: Text(
-                                  'Others',
+                                  FFLocalizations.of(context).getText(
+                                    '3va8b5ge' /* Others */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .titleMedium
                                       .override(
@@ -935,7 +971,9 @@ class _FoodWidgetState extends State<FoodWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     8.0, 4.0, 0.0, 0.0),
                                 child: Text(
-                                  'Category Name',
+                                  FFLocalizations.of(context).getText(
+                                    '45voi4xi' /* Category Name */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodySmall
                                       .override(

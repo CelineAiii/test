@@ -1,9 +1,11 @@
+import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
+import '/flutter_flow/upload_data.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -32,6 +34,31 @@ class _FoodCostumizeWidgetState extends State<FoodCostumizeWidget> {
     _model.textController3 ??= TextEditingController();
     _model.textController4 ??= TextEditingController();
     _model.textController5 ??= TextEditingController();
+    _model.textController6 ??= TextEditingController();
+    _model.textController7 ??= TextEditingController();
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {
+          _model.textController1?.text = FFLocalizations.of(context).getText(
+            'wcjtue95' /* 無 */,
+          );
+          _model.textController2?.text = FFLocalizations.of(context).getText(
+            'i0l97nmk' /* 0 */,
+          );
+          _model.textController3?.text = FFLocalizations.of(context).getText(
+            '2jtfsany' /* 0 */,
+          );
+          _model.textController4?.text = FFLocalizations.of(context).getText(
+            '60g2t3d5' /* 0 */,
+          );
+          _model.textController5?.text = FFLocalizations.of(context).getText(
+            'nb8gtusv' /* 0 */,
+          );
+          _model.textController6?.text = FFLocalizations.of(context).getText(
+            'mcb3s2fq' /* 0 */,
+          );
+          _model.textController7?.text = FFLocalizations.of(context).getText(
+            '7hzuso7z' /* 0 */,
+          );
+        }));
   }
 
   @override
@@ -62,7 +89,61 @@ class _FoodCostumizeWidgetState extends State<FoodCostumizeWidget> {
             context.safePop();
           },
         ),
-        actions: [],
+        actions: [
+          Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+            child: FlutterFlowIconButton(
+              borderRadius: 20.0,
+              borderWidth: 1.0,
+              buttonSize: 48.0,
+              icon: Icon(
+                Icons.photo_camera,
+                color: Color(0xFFFAF7F7),
+                size: 30.0,
+              ),
+              onPressed: () async {
+                final selectedMedia = await selectMediaWithSourceBottomSheet(
+                  context: context,
+                  allowPhoto: true,
+                );
+                if (selectedMedia != null &&
+                    selectedMedia.every(
+                        (m) => validateFileFormat(m.storagePath, context))) {
+                  setState(() => _model.isDataUploading = true);
+                  var selectedUploadedFiles = <FFUploadedFile>[];
+
+                  try {
+                    selectedUploadedFiles = selectedMedia
+                        .map((m) => FFUploadedFile(
+                              name: m.storagePath.split('/').last,
+                              bytes: m.bytes,
+                              height: m.dimensions?.height,
+                              width: m.dimensions?.width,
+                              blurHash: m.blurHash,
+                            ))
+                        .toList();
+                  } finally {
+                    _model.isDataUploading = false;
+                  }
+                  if (selectedUploadedFiles.length == selectedMedia.length) {
+                    setState(() {
+                      _model.uploadedLocalFile = selectedUploadedFiles.first;
+                    });
+                  } else {
+                    setState(() {});
+                    return;
+                  }
+                }
+
+                _model.imageDetect = await UploadImageCall.call(
+                  image: _model.uploadedLocalFile,
+                );
+
+                setState(() {});
+              },
+            ),
+          ),
+        ],
         centerTitle: false,
         elevation: 0.0,
       ),
@@ -78,7 +159,9 @@ class _FoodCostumizeWidgetState extends State<FoodCostumizeWidget> {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Text(
-                      '快速加入食品',
+                      FFLocalizations.of(context).getText(
+                        '4xoj3ys5' /* 快速加入食品 */,
+                      ),
                       style:
                           FlutterFlowTheme.of(context).headlineMedium.override(
                                 fontFamily: 'Outfit',
@@ -107,7 +190,9 @@ class _FoodCostumizeWidgetState extends State<FoodCostumizeWidget> {
                               controller: _model.textController1,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: '食品名稱',
+                                labelText: FFLocalizations.of(context).getText(
+                                  'wjnn8ba4' /* 食品名稱 */,
+                                ),
                                 labelStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
                                     .override(
@@ -181,7 +266,9 @@ class _FoodCostumizeWidgetState extends State<FoodCostumizeWidget> {
                               controller: _model.textController2,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: '卡路里',
+                                labelText: FFLocalizations.of(context).getText(
+                                  'flntlqin' /* 卡路里 */,
+                                ),
                                 labelStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
                                     .override(
@@ -190,7 +277,9 @@ class _FoodCostumizeWidgetState extends State<FoodCostumizeWidget> {
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.normal,
                                     ),
-                                hintText: '(cal)',
+                                hintText: FFLocalizations.of(context).getText(
+                                  'ydog0gqb' /* (cal) */,
+                                ),
                                 hintStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
                                     .override(
@@ -234,7 +323,7 @@ class _FoodCostumizeWidgetState extends State<FoodCostumizeWidget> {
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'Plus Jakarta Sans',
-                                    color: Color(0xFFDBE2E7),
+                                    color: Color(0xFF050505),
                                     fontSize: 14.0,
                                     fontWeight: FontWeight.normal,
                                   ),
@@ -256,7 +345,9 @@ class _FoodCostumizeWidgetState extends State<FoodCostumizeWidget> {
                               controller: _model.textController3,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: '脂質',
+                                labelText: FFLocalizations.of(context).getText(
+                                  'xf4jn58p' /* 糖類 */,
+                                ),
                                 labelStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
                                     .override(
@@ -265,7 +356,9 @@ class _FoodCostumizeWidgetState extends State<FoodCostumizeWidget> {
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.normal,
                                     ),
-                                hintText: '(g)',
+                                hintText: FFLocalizations.of(context).getText(
+                                  'b12ps8fx' /* (g) */,
+                                ),
                                 hintStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
                                     .override(
@@ -309,7 +402,7 @@ class _FoodCostumizeWidgetState extends State<FoodCostumizeWidget> {
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'Plus Jakarta Sans',
-                                    color: Color(0xFFDBE2E7),
+                                    color: Color(0xFF050505),
                                     fontSize: 14.0,
                                     fontWeight: FontWeight.normal,
                                   ),
@@ -331,7 +424,9 @@ class _FoodCostumizeWidgetState extends State<FoodCostumizeWidget> {
                               controller: _model.textController4,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: '蛋白質',
+                                labelText: FFLocalizations.of(context).getText(
+                                  '0mqp5krt' /* 蛋白質 */,
+                                ),
                                 labelStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
                                     .override(
@@ -340,7 +435,9 @@ class _FoodCostumizeWidgetState extends State<FoodCostumizeWidget> {
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.normal,
                                     ),
-                                hintText: '(g)',
+                                hintText: FFLocalizations.of(context).getText(
+                                  'emdg1tx2' /* (g) */,
+                                ),
                                 hintStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
                                     .override(
@@ -384,7 +481,7 @@ class _FoodCostumizeWidgetState extends State<FoodCostumizeWidget> {
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'Plus Jakarta Sans',
-                                    color: Color(0xFFDBE2E7),
+                                    color: Color(0xFF050505),
                                     fontSize: 14.0,
                                     fontWeight: FontWeight.normal,
                                   ),
@@ -408,7 +505,10 @@ class _FoodCostumizeWidgetState extends State<FoodCostumizeWidget> {
                                 controller: _model.textController5,
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                  labelText: '碳水化合物',
+                                  labelText:
+                                      FFLocalizations.of(context).getText(
+                                    '3rosfyqr' /* 碳水化合物 */,
+                                  ),
                                   labelStyle: FlutterFlowTheme.of(context)
                                       .labelMedium
                                       .override(
@@ -417,7 +517,9 @@ class _FoodCostumizeWidgetState extends State<FoodCostumizeWidget> {
                                         fontSize: 14.0,
                                         fontWeight: FontWeight.normal,
                                       ),
-                                  hintText: '(g)',
+                                  hintText: FFLocalizations.of(context).getText(
+                                    'eytsk4g5' /* (g) */,
+                                  ),
                                   hintStyle: FlutterFlowTheme.of(context)
                                       .labelMedium
                                       .override(
@@ -461,11 +563,177 @@ class _FoodCostumizeWidgetState extends State<FoodCostumizeWidget> {
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Plus Jakarta Sans',
-                                      color: Color(0xFFDBE2E7),
+                                      color: Color(0xFF050505),
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.normal,
                                     ),
                                 validator: _model.textController5Validator
+                                    .asValidator(context),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 16.0, 0.0, 0.0),
+                            child: Container(
+                              width: MediaQuery.sizeOf(context).width * 0.5,
+                              child: TextFormField(
+                                controller: _model.textController6,
+                                obscureText: false,
+                                decoration: InputDecoration(
+                                  labelText:
+                                      FFLocalizations.of(context).getText(
+                                    'xb3jfu46' /* 飽和脂肪 */,
+                                  ),
+                                  labelStyle: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .override(
+                                        fontFamily: 'Plus Jakarta Sans',
+                                        color: Color(0xFF57636C),
+                                        fontSize: 14.0,
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                  hintText: FFLocalizations.of(context).getText(
+                                    'dgb1yt89' /* (g) */,
+                                  ),
+                                  hintStyle: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .override(
+                                        fontFamily: 'Plus Jakarta Sans',
+                                        color: Color(0xFF57636C),
+                                        fontSize: 14.0,
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                      color: Color(0xFFE0E3E7),
+                                      width: 2.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(8.0),
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                      color: Color(0xFF4B39EF),
+                                      width: 2.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(8.0),
+                                  ),
+                                  errorBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                      color: Color(0xFFFF5963),
+                                      width: 2.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(8.0),
+                                  ),
+                                  focusedErrorBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                      color: Color(0xFFFF5963),
+                                      width: 2.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(8.0),
+                                  ),
+                                  filled: true,
+                                  fillColor: Colors.white,
+                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Plus Jakarta Sans',
+                                      color: Color(0xFF050505),
+                                      fontSize: 14.0,
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                                validator: _model.textController6Validator
+                                    .asValidator(context),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 16.0, 0.0, 0.0),
+                            child: Container(
+                              width: MediaQuery.sizeOf(context).width * 0.5,
+                              child: TextFormField(
+                                controller: _model.textController7,
+                                obscureText: false,
+                                decoration: InputDecoration(
+                                  labelText:
+                                      FFLocalizations.of(context).getText(
+                                    'iq1gfs4o' /* 反式脂肪 */,
+                                  ),
+                                  labelStyle: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .override(
+                                        fontFamily: 'Plus Jakarta Sans',
+                                        color: Color(0xFF57636C),
+                                        fontSize: 14.0,
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                  hintText: FFLocalizations.of(context).getText(
+                                    'e10uutvn' /* (g) */,
+                                  ),
+                                  hintStyle: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .override(
+                                        fontFamily: 'Plus Jakarta Sans',
+                                        color: Color(0xFF57636C),
+                                        fontSize: 14.0,
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                      color: Color(0xFFE0E3E7),
+                                      width: 2.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(8.0),
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                      color: Color(0xFF4B39EF),
+                                      width: 2.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(8.0),
+                                  ),
+                                  errorBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                      color: Color(0xFFFF5963),
+                                      width: 2.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(8.0),
+                                  ),
+                                  focusedErrorBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                      color: Color(0xFFFF5963),
+                                      width: 2.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(8.0),
+                                  ),
+                                  filled: true,
+                                  fillColor: Colors.white,
+                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Plus Jakarta Sans',
+                                      color: Color(0xFF050505),
+                                      fontSize: 14.0,
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                                validator: _model.textController7Validator
                                     .asValidator(context),
                               ),
                             ),
@@ -480,14 +748,34 @@ class _FoodCostumizeWidgetState extends State<FoodCostumizeWidget> {
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
                 child: FlutterFlowDropDown<String>(
                   controller: _model.dropDownValueController1 ??=
-                      FormFieldController<String>(null),
-                  options: ['早餐', '午餐', '晚餐', '點心'],
+                      FormFieldController<String>(
+                    _model.dropDownValue1 ??=
+                        FFLocalizations.of(context).getText(
+                      '0t0n45x5' /* 早餐 */,
+                    ),
+                  ),
+                  options: [
+                    FFLocalizations.of(context).getText(
+                      'hi0eitlz' /* 早餐 */,
+                    ),
+                    FFLocalizations.of(context).getText(
+                      'thuxmg0v' /* 午餐 */,
+                    ),
+                    FFLocalizations.of(context).getText(
+                      'mbzta7df' /* 晚餐 */,
+                    ),
+                    FFLocalizations.of(context).getText(
+                      '5suprb3i' /* 點心 */,
+                    )
+                  ],
                   onChanged: (val) =>
                       setState(() => _model.dropDownValue1 = val),
                   width: MediaQuery.sizeOf(context).width * 0.92,
                   height: 50.0,
                   textStyle: FlutterFlowTheme.of(context).bodyMedium,
-                  hintText: '選擇飲食時段',
+                  hintText: FFLocalizations.of(context).getText(
+                    'x0bge0mg' /* 選擇飲食時段 */,
+                  ),
                   icon: Icon(
                     Icons.keyboard_arrow_down_rounded,
                     color: FlutterFlowTheme.of(context).secondaryText,
@@ -508,13 +796,19 @@ class _FoodCostumizeWidgetState extends State<FoodCostumizeWidget> {
                 child: FlutterFlowDropDown<String>(
                   controller: _model.dropDownValueController2 ??=
                       FormFieldController<String>(null),
-                  options: ['2023-07-28'],
+                  options: [
+                    FFLocalizations.of(context).getText(
+                      'az7dzljn' /* 2023-07-28 */,
+                    )
+                  ],
                   onChanged: (val) =>
                       setState(() => _model.dropDownValue2 = val),
                   width: MediaQuery.sizeOf(context).width * 0.92,
                   height: 50.0,
                   textStyle: FlutterFlowTheme.of(context).bodyMedium,
-                  hintText: '選擇飲食日期',
+                  hintText: FFLocalizations.of(context).getText(
+                    'dwpm06x1' /* 選擇飲食日期 */,
+                  ),
                   icon: Icon(
                     Icons.keyboard_arrow_down_rounded,
                     color: FlutterFlowTheme.of(context).secondaryText,
@@ -550,7 +844,9 @@ class _FoodCostumizeWidgetState extends State<FoodCostumizeWidget> {
 
                   context.pushNamed('record');
                 },
-                text: '儲存食品',
+                text: FFLocalizations.of(context).getText(
+                  'azzv3pu3' /* 儲存食品 */,
+                ),
                 options: FFButtonOptions(
                   width: 270.0,
                   height: 50.0,

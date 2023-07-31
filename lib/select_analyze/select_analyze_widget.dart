@@ -63,7 +63,9 @@ class _SelectAnalyzeWidgetState extends State<SelectAnalyzeWidget> {
               onPressed: () {
                 print('Button pressed ...');
               },
-              text: 'Candy Diary',
+              text: FFLocalizations.of(context).getText(
+                'o0wfyg2t' /* Candy Diary */,
+              ),
               options: FFButtonOptions(
                 width: 185.0,
                 height: 40.0,
@@ -99,7 +101,9 @@ class _SelectAnalyzeWidgetState extends State<SelectAnalyzeWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                   child: Text(
-                    '- 結算報告 -',
+                    FFLocalizations.of(context).getText(
+                      'jniqvf0g' /* - 結算報告 - */,
+                    ),
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Poppins',
@@ -126,7 +130,9 @@ class _SelectAnalyzeWidgetState extends State<SelectAnalyzeWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 20.0, 0.0, 0.0),
                             child: Text(
-                              '挑選您想了解的結算報告：',
+                              FFLocalizations.of(context).getText(
+                                'r3uocg4m' /* 挑選您想了解的結算報告： */,
+                              ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -157,7 +163,9 @@ class _SelectAnalyzeWidgetState extends State<SelectAnalyzeWidget> {
                                       onPressed: () async {
                                         context.pushNamed('analyze');
                                       },
-                                      text: '整日結算報告',
+                                      text: FFLocalizations.of(context).getText(
+                                        'dc18p5cf' /* 整日結算報告 */,
+                                      ),
                                       options: FFButtonOptions(
                                         width: double.infinity,
                                         height: 80.0,
@@ -190,7 +198,9 @@ class _SelectAnalyzeWidgetState extends State<SelectAnalyzeWidget> {
                                       onPressed: () async {
                                         context.pushNamed('weight_analyze');
                                       },
-                                      text: '體重變化報告',
+                                      text: FFLocalizations.of(context).getText(
+                                        'mtjubudo' /* 體重變化報告 */,
+                                      ),
                                       options: FFButtonOptions(
                                         width: double.infinity,
                                         height: 80.0,

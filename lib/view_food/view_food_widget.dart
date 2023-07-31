@@ -61,7 +61,9 @@ class _ViewFoodWidgetState extends State<ViewFoodWidget> {
               },
             ),
             title: Text(
-              '早餐',
+              FFLocalizations.of(context).getText(
+                'qmv3whvd' /* 早餐 */,
+              ),
               style: FlutterFlowTheme.of(context).headlineMedium.override(
                     fontFamily: 'Outfit',
                     color: Color(0xFFE5E0EB),
@@ -129,7 +131,9 @@ class _ViewFoodWidgetState extends State<ViewFoodWidget> {
                             extentRatio: 0.25,
                             children: [
                               SlidableAction(
-                                label: 'Delete',
+                                label: FFLocalizations.of(context).getText(
+                                  'm8uf8g3s' /* Delete */,
+                                ),
                                 backgroundColor: Color(0xFFF32143),
                                 icon: Icons.delete,
                                 onPressed: (_) {
@@ -140,7 +144,9 @@ class _ViewFoodWidgetState extends State<ViewFoodWidget> {
                           ),
                           child: ListTile(
                             title: Text(
-                              '起司漢堡',
+                              FFLocalizations.of(context).getText(
+                                'z07tdr95' /* 起司漢堡 */,
+                              ),
                               style: FlutterFlowTheme.of(context)
                                   .headlineSmall
                                   .override(
@@ -149,7 +155,9 @@ class _ViewFoodWidgetState extends State<ViewFoodWidget> {
                                   ),
                             ),
                             subtitle: Text(
-                              '500大卡',
+                              FFLocalizations.of(context).getText(
+                                'f2d7mmv6' /* 500大卡 */,
+                              ),
                               style: FlutterFlowTheme.of(context).titleSmall,
                             ),
                             trailing: Icon(
@@ -175,7 +183,9 @@ class _ViewFoodWidgetState extends State<ViewFoodWidget> {
                             extentRatio: 0.25,
                             children: [
                               SlidableAction(
-                                label: 'Delete',
+                                label: FFLocalizations.of(context).getText(
+                                  'ij131rts' /* Delete */,
+                                ),
                                 backgroundColor: Color(0xFFF32143),
                                 icon: Icons.delete,
                                 onPressed: (_) {
@@ -186,7 +196,9 @@ class _ViewFoodWidgetState extends State<ViewFoodWidget> {
                           ),
                           child: ListTile(
                             title: Text(
-                              '豆漿',
+                              FFLocalizations.of(context).getText(
+                                '8x1tq4qr' /* 豆漿 */,
+                              ),
                               style: FlutterFlowTheme.of(context)
                                   .headlineSmall
                                   .override(
@@ -195,7 +207,9 @@ class _ViewFoodWidgetState extends State<ViewFoodWidget> {
                                   ),
                             ),
                             subtitle: Text(
-                              '180大卡',
+                              FFLocalizations.of(context).getText(
+                                '02c1bf21' /* 180大卡 */,
+                              ),
                               style: FlutterFlowTheme.of(context).titleSmall,
                             ),
                             trailing: Icon(

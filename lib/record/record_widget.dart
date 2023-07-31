@@ -61,7 +61,9 @@ class _RecordWidgetState extends State<RecordWidget> {
               },
             ),
             title: Text(
-              'Hi! Celine',
+              FFLocalizations.of(context).getText(
+                'k32bkhy6' /* Hi! Celine */,
+              ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
                     fontFamily: 'Poppins',
                     color: FlutterFlowTheme.of(context).primaryBtnText,
@@ -104,7 +106,9 @@ class _RecordWidgetState extends State<RecordWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 0.0, 0.0),
                     child: Text(
-                      'Daily Lessons',
+                      FFLocalizations.of(context).getText(
+                        'jkr1u9dh' /* Daily Lessons */,
+                      ),
                       style: FlutterFlowTheme.of(context).titleMedium.override(
                             fontFamily: 'Outfit',
                             color: Color(0xFF57636C),
@@ -120,7 +124,9 @@ class _RecordWidgetState extends State<RecordWidget> {
                       onPressed: () async {
                         context.pushNamed('food_weekend');
                       },
-                      text: '查看本週紀錄',
+                      text: FFLocalizations.of(context).getText(
+                        '6m7kt223' /* 查看本週紀錄 */,
+                      ),
                       options: FFButtonOptions(
                         height: 40.0,
                         padding: EdgeInsetsDirectional.fromSTEB(
@@ -199,7 +205,9 @@ class _RecordWidgetState extends State<RecordWidget> {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        '早餐',
+                                        FFLocalizations.of(context).getText(
+                                          'nigq3gxz' /* 早餐 */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .titleMedium
                                             .override(
@@ -213,7 +221,9 @@ class _RecordWidgetState extends State<RecordWidget> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 4.0, 8.0, 0.0),
                                         child: AutoSizeText(
-                                          'A wonderfully delicious 2 patty melt that melts into your...',
+                                          FFLocalizations.of(context).getText(
+                                            'luhcr8gw' /* A wonderfully delicious 2 patt... */,
+                                          ),
                                           textAlign: TextAlign.start,
                                           style: FlutterFlowTheme.of(context)
                                               .bodySmall
@@ -335,7 +345,9 @@ class _RecordWidgetState extends State<RecordWidget> {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        '午餐',
+                                        FFLocalizations.of(context).getText(
+                                          'qlhqnf7s' /* 午餐 */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .titleMedium
                                             .override(
@@ -449,7 +461,9 @@ class _RecordWidgetState extends State<RecordWidget> {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        '晚餐',
+                                        FFLocalizations.of(context).getText(
+                                          'vn0e8kv0' /* 晚餐 */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .titleMedium
                                             .override(
@@ -563,7 +577,9 @@ class _RecordWidgetState extends State<RecordWidget> {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        '點心',
+                                        FFLocalizations.of(context).getText(
+                                          'cnmbo1y9' /* 點心 */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .titleMedium
                                             .override(
@@ -577,7 +593,9 @@ class _RecordWidgetState extends State<RecordWidget> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 4.0, 8.0, 0.0),
                                         child: AutoSizeText(
-                                          'Learn how to brew a delicious pourover every morning.',
+                                          FFLocalizations.of(context).getText(
+                                            'klpvcf9r' /* Learn how to brew a delicious ... */,
+                                          ),
                                           textAlign: TextAlign.start,
                                           style: FlutterFlowTheme.of(context)
                                               .bodySmall
@@ -694,7 +712,9 @@ class _RecordWidgetState extends State<RecordWidget> {
                                     ),
                                     Flexible(
                                       child: Text(
-                                        '請在此紀錄您的飲水量',
+                                        FFLocalizations.of(context).getText(
+                                          'lkmu1xsl' /* 請在此紀錄您的飲水量 */,
+                                        ),
                                         textAlign: TextAlign.center,
                                         style: FlutterFlowTheme.of(context)
                                             .headlineSmall
@@ -718,7 +738,9 @@ class _RecordWidgetState extends State<RecordWidget> {
                                     onPressed: () async {
                                       context.pushNamed('record_water');
                                     },
-                                    text: '記錄飲水',
+                                    text: FFLocalizations.of(context).getText(
+                                      '15pgzods' /* 記錄飲水 */,
+                                    ),
                                     options: FFButtonOptions(
                                       height: 40.0,
                                       padding: EdgeInsetsDirectional.fromSTEB(
@@ -745,7 +767,9 @@ class _RecordWidgetState extends State<RecordWidget> {
                                     onPressed: () async {
                                       context.pushNamed('water_target');
                                     },
-                                    text: '修改飲水目標',
+                                    text: FFLocalizations.of(context).getText(
+                                      '9kjf72nn' /* 修改飲水目標 */,
+                                    ),
                                     options: FFButtonOptions(
                                       height: 40.0,
                                       padding: EdgeInsetsDirectional.fromSTEB(
@@ -774,7 +798,9 @@ class _RecordWidgetState extends State<RecordWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 15.0, 0.0, 0.0),
                                 child: Text(
-                                  '- 目前飲水目標：2000 ml -',
+                                  FFLocalizations.of(context).getText(
+                                    '78lf2fcu' /* - 目前飲水目標：2000 ml - */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(

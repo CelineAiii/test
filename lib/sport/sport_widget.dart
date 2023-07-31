@@ -66,7 +66,9 @@ class _SportWidgetState extends State<SportWidget> {
               },
             ),
             title: Text(
-              'Hi! Celine',
+              FFLocalizations.of(context).getText(
+                'crx94f5r' /* Hi! Celine */,
+              ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
                     fontFamily: 'Poppins',
                     color: FlutterFlowTheme.of(context).primaryBtnText,
@@ -108,7 +110,9 @@ class _SportWidgetState extends State<SportWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                       child: Text(
-                        'This is your daily summary.',
+                        FFLocalizations.of(context).getText(
+                          'higqiuj1' /* This is your daily summary. */,
+                        ),
                         style: FlutterFlowTheme.of(context).bodySmall.override(
                               fontFamily: 'Outfit',
                               color: Color(0xFF57636C),
@@ -164,7 +168,9 @@ class _SportWidgetState extends State<SportWidget> {
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 12.0, 0.0, 0.0),
                                     child: Text(
-                                      '今日運動時間',
+                                      FFLocalizations.of(context).getText(
+                                        'g4i6o3tg' /* 今日運動時間 */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .titleMedium
                                           .override(
@@ -179,7 +185,9 @@ class _SportWidgetState extends State<SportWidget> {
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 4.0, 0.0, 0.0),
                                     child: Text(
-                                      'Goals',
+                                      FFLocalizations.of(context).getText(
+                                        'bi75mcfp' /* Goals */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodySmall
                                           .override(
@@ -199,7 +207,9 @@ class _SportWidgetState extends State<SportWidget> {
                                           MainAxisAlignment.center,
                                       children: [
                                         Text(
-                                          '2hr',
+                                          FFLocalizations.of(context).getText(
+                                            'bjgrgh1y' /* 2hr */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .titleMedium
                                               .override(
@@ -249,7 +259,9 @@ class _SportWidgetState extends State<SportWidget> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    '已消耗卡路里',
+                                    FFLocalizations.of(context).getText(
+                                      'ms94vcfk' /* 已消耗卡路里 */,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .titleMedium
                                         .override(
@@ -263,7 +275,9 @@ class _SportWidgetState extends State<SportWidget> {
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 4.0, 0.0, 0.0),
                                     child: Text(
-                                      '大卡',
+                                      FFLocalizations.of(context).getText(
+                                        'bfbcdp32' /* 大卡 */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodySmall
                                           .override(
@@ -283,7 +297,9 @@ class _SportWidgetState extends State<SportWidget> {
                                           MainAxisAlignment.center,
                                       children: [
                                         Text(
-                                          '200',
+                                          FFLocalizations.of(context).getText(
+                                            '46w1yt9m' /* 200 */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .titleMedium
                                               .override(
@@ -297,7 +313,9 @@ class _SportWidgetState extends State<SportWidget> {
                                     ),
                                   ),
                                   Text(
-                                    '今日剩餘',
+                                    FFLocalizations.of(context).getText(
+                                      'qxa1j1m4' /* 今日剩餘 */,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodySmall
                                         .override(
@@ -308,7 +326,9 @@ class _SportWidgetState extends State<SportWidget> {
                                         ),
                                   ),
                                   Text(
-                                    '100',
+                                    FFLocalizations.of(context).getText(
+                                      'ixh7bjqm' /* 100 */,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .titleMedium
                                         .override(
@@ -362,6 +382,7 @@ class _SportWidgetState extends State<SportWidget> {
                             fontFamily: 'Poppins',
                             color: Color(0xFFB1B1B7),
                           ),
+                  locale: FFLocalizations.of(context).languageCode,
                 ),
               ),
               Padding(
@@ -390,7 +411,9 @@ class _SportWidgetState extends State<SportWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 8.0, 0.0, 0.0),
                           child: Text(
-                            'Timer',
+                            FFLocalizations.of(context).getText(
+                              'uy5ox0o3' /* Timer */,
+                            ),
                             style: FlutterFlowTheme.of(context)
                                 .headlineMedium
                                 .override(
@@ -413,7 +436,9 @@ class _SportWidgetState extends State<SportWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 0.0, 0.0),
                                 child: Text(
-                                  'Go Training Now',
+                                  FFLocalizations.of(context).getText(
+                                    'uad7is6x' /* Go Training Now */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .titleMedium
                                       .override(
@@ -476,7 +501,9 @@ class _SportWidgetState extends State<SportWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 8.0, 0.0, 0.0),
                           child: Text(
-                            'Record',
+                            FFLocalizations.of(context).getText(
+                              'cptijfdl' /* Record */,
+                            ),
                             style: FlutterFlowTheme.of(context)
                                 .headlineMedium
                                 .override(
@@ -499,7 +526,9 @@ class _SportWidgetState extends State<SportWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 0.0, 0.0),
                                 child: Text(
-                                  'Go Record Your Training Now',
+                                  FFLocalizations.of(context).getText(
+                                    'x5cee2bc' /* Go Record Your Training Now */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .titleMedium
                                       .override(

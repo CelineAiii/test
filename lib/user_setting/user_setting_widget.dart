@@ -71,7 +71,9 @@ class _UserSettingWidgetState extends State<UserSettingWidget> {
               onPressed: () {
                 print('Button pressed ...');
               },
-              text: 'Candy Diary',
+              text: FFLocalizations.of(context).getText(
+                'ewz1qf60' /* Candy Diary */,
+              ),
               options: FFButtonOptions(
                 width: 185.0,
                 height: 40.0,
@@ -107,7 +109,9 @@ class _UserSettingWidgetState extends State<UserSettingWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                   child: Text(
-                    '- 個人資料設定 -',
+                    FFLocalizations.of(context).getText(
+                      '7ikl2xvk' /* - 個人資料設定 - */,
+                    ),
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Poppins',
@@ -153,7 +157,9 @@ class _UserSettingWidgetState extends State<UserSettingWidget> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 10.0, 0.0, 0.0),
                                         child: Text(
-                                          '1. 暱稱：',
+                                          FFLocalizations.of(context).getText(
+                                            '7g4sred2' /* 1. 暱稱： */,
+                                          ),
                                           textAlign: TextAlign.start,
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
@@ -185,7 +191,11 @@ class _UserSettingWidgetState extends State<UserSettingWidget> {
                                             autofocus: true,
                                             obscureText: false,
                                             decoration: InputDecoration(
-                                              hintText: 'ex. Celine',
+                                              hintText:
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                '1ux5p2ev' /* ex. Celine */,
+                                              ),
                                               hintStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .bodySmall,
@@ -261,7 +271,9 @@ class _UserSettingWidgetState extends State<UserSettingWidget> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 10.0, 0.0, 0.0),
                                         child: Text(
-                                          '2. 性別：',
+                                          FFLocalizations.of(context).getText(
+                                            'l5f8ajd4' /* 2. 性別： */,
+                                          ),
                                           textAlign: TextAlign.start,
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
@@ -279,12 +291,22 @@ class _UserSettingWidgetState extends State<UserSettingWidget> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 5.0, 0.0, 5.0),
                                         child: FlutterFlowRadioButton(
-                                          options: ['Female', 'Male'].toList(),
+                                          options: [
+                                            FFLocalizations.of(context).getText(
+                                              'or1rv02n' /* Female */,
+                                            ),
+                                            FFLocalizations.of(context).getText(
+                                              'z5oxqqhf' /* Male */,
+                                            )
+                                          ].toList(),
                                           onChanged: (val) => setState(() {}),
                                           controller: _model
                                                   .radioButtonValueController ??=
                                               FormFieldController<String>(
-                                                  'Female'),
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                            '6yxq4s0y' /* Female */,
+                                          )),
                                           optionHeight: 25.0,
                                           textStyle:
                                               FlutterFlowTheme.of(context)
@@ -314,7 +336,9 @@ class _UserSettingWidgetState extends State<UserSettingWidget> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 10.0, 0.0, 0.0),
                                         child: Text(
-                                          '3. 身高：',
+                                          FFLocalizations.of(context).getText(
+                                            '1i29lx89' /* 3. 身高： */,
+                                          ),
                                           textAlign: TextAlign.start,
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
@@ -346,7 +370,11 @@ class _UserSettingWidgetState extends State<UserSettingWidget> {
                                             autofocus: true,
                                             obscureText: false,
                                             decoration: InputDecoration(
-                                              hintText: 'ex. 158',
+                                              hintText:
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                '6ua90556' /* ex. 158 */,
+                                              ),
                                               hintStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .bodySmall,
@@ -422,7 +450,9 @@ class _UserSettingWidgetState extends State<UserSettingWidget> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 10.0, 0.0, 0.0),
                                         child: Text(
-                                          '4. 體重：',
+                                          FFLocalizations.of(context).getText(
+                                            'omcrov8v' /* 4. 體重： */,
+                                          ),
                                           textAlign: TextAlign.start,
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
@@ -454,7 +484,11 @@ class _UserSettingWidgetState extends State<UserSettingWidget> {
                                             autofocus: true,
                                             obscureText: false,
                                             decoration: InputDecoration(
-                                              hintText: 'ex. 50',
+                                              hintText:
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                'n0parimi' /* ex. 50 */,
+                                              ),
                                               hintStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .bodySmall,
@@ -530,7 +564,9 @@ class _UserSettingWidgetState extends State<UserSettingWidget> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 10.0, 0.0, 0.0),
                                         child: Text(
-                                          '5. 年齡：',
+                                          FFLocalizations.of(context).getText(
+                                            '2ugjija4' /* 5. 年齡： */,
+                                          ),
                                           textAlign: TextAlign.start,
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
@@ -562,7 +598,11 @@ class _UserSettingWidgetState extends State<UserSettingWidget> {
                                             autofocus: true,
                                             obscureText: false,
                                             decoration: InputDecoration(
-                                              hintText: 'ex. 20',
+                                              hintText:
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                '438fjci8' /* ex. 20 */,
+                                              ),
                                               hintStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .bodySmall,
@@ -643,7 +683,9 @@ class _UserSettingWidgetState extends State<UserSettingWidget> {
                               onPressed: () async {
                                 context.pushNamed('user');
                               },
-                              text: '確定',
+                              text: FFLocalizations.of(context).getText(
+                                'cmv9fzkm' /* 確定 */,
+                              ),
                               options: FFButtonOptions(
                                 width: 130.0,
                                 height: 40.0,
