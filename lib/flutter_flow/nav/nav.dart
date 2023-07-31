@@ -266,7 +266,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'food_costumize',
               path: 'foodCostumize',
-              builder: (context, params) => FoodCostumizeWidget(),
+              builder: (context, params) => FoodCostumizeWidget(
+                name: params.getParam('name', ParamType.bool),
+              ),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

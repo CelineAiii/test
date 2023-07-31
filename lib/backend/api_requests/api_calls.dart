@@ -12,6 +12,7 @@ const _kPrivateApiFunctionName = 'ffPrivateApiCall';
 class UploadImageCall {
   static Future<ApiCallResponse> call({
     FFUploadedFile? image,
+    String? name = 'photo',
   }) {
     return ApiManager.instance.makeApiCall(
       callName: 'upload image',

@@ -6,6 +6,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/upload_data.dart';
+import '/flutter_flow/permissions_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -13,7 +14,12 @@ import 'food_costumize_model.dart';
 export 'food_costumize_model.dart';
 
 class FoodCostumizeWidget extends StatefulWidget {
-  const FoodCostumizeWidget({Key? key}) : super(key: key);
+  const FoodCostumizeWidget({
+    Key? key,
+    this.name,
+  }) : super(key: key);
+
+  final bool? name;
 
   @override
   _FoodCostumizeWidgetState createState() => _FoodCostumizeWidgetState();
@@ -102,6 +108,8 @@ class _FoodCostumizeWidgetState extends State<FoodCostumizeWidget> {
                 size: 30.0,
               ),
               onPressed: () async {
+                await requestPermission(photoLibraryPermission);
+                await requestPermission(cameraPermission);
                 final selectedMedia = await selectMediaWithSourceBottomSheet(
                   context: context,
                   allowPhoto: true,
