@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'choose_detect_model.dart';
@@ -32,6 +33,11 @@ class _ChooseDetectWidgetState extends State<ChooseDetectWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => ChooseDetectModel());
+
+    // On component load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      Navigator.pop(context);
+    });
   }
 
   @override
@@ -68,13 +74,12 @@ class _ChooseDetectWidgetState extends State<ChooseDetectWidget> {
                 padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
-                    'ihcfc3p3' /* 選取辨識種類 */,
+                    '2j9h60ll' /* 選取辨識種類 */,
                   ),
-                  style: FlutterFlowTheme.of(context).headlineSmall.override(
-                        fontFamily: 'Outfit',
+                  style: FlutterFlowTheme.of(context).displaySmall.override(
+                        fontFamily: 'Poppins',
                         color: Color(0xFF050505),
                         fontSize: 20.0,
-                        fontWeight: FontWeight.w500,
                       ),
                 ),
               ),
@@ -82,7 +87,7 @@ class _ChooseDetectWidgetState extends State<ChooseDetectWidget> {
                 padding: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 0.0, 8.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
-                    'p5xfmk81' /* label or photo */,
+                    'lrxjm7aj' /* label or photo */,
                   ),
                   style: FlutterFlowTheme.of(context).bodySmall.override(
                         fontFamily: 'Outfit',
@@ -126,29 +131,21 @@ class _ChooseDetectWidgetState extends State<ChooseDetectWidget> {
                             ),
                           ),
                         ),
-                        Expanded(
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                12.0, 0.0, 0.0, 0.0),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  FFLocalizations.of(context).getText(
-                                    '6kukh1jj' /* 食品影像 */,
-                                  ),
-                                  style: FlutterFlowTheme.of(context)
-                                      .titleSmall
-                                      .override(
-                                        fontFamily: 'Outfit',
-                                        color: Color(0xFF050505),
-                                        fontSize: 16.0,
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                ),
-                              ],
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              8.0, 0.0, 0.0, 0.0),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              'cobcucar' /* 食品影像 */,
                             ),
+                            style: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
+                                  fontFamily: 'Outfit',
+                                  color: Color(0xFF050505),
+                                  fontSize: 16.0,
+                                  fontWeight: FontWeight.w500,
+                                ),
                           ),
                         ),
                       ],
@@ -182,29 +179,20 @@ class _ChooseDetectWidgetState extends State<ChooseDetectWidget> {
                           ),
                         ),
                       ),
-                      Expanded(
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              12.0, 0.0, 0.0, 0.0),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                FFLocalizations.of(context).getText(
-                                  'iwekrm3c' /* 食品標籤 */,
-                                ),
-                                style: FlutterFlowTheme.of(context)
-                                    .titleSmall
-                                    .override(
-                                      fontFamily: 'Outfit',
-                                      color: Color(0xFF050505),
-                                      fontSize: 16.0,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                              ),
-                            ],
+                      Padding(
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
+                        child: Text(
+                          FFLocalizations.of(context).getText(
+                            '1mwgi5fc' /* 食品標籤 */,
                           ),
+                          style:
+                              FlutterFlowTheme.of(context).titleSmall.override(
+                                    fontFamily: 'Outfit',
+                                    color: Color(0xFF050505),
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.w500,
+                                  ),
                         ),
                       ),
                     ],

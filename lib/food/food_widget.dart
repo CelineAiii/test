@@ -1,17 +1,22 @@
+import '/components/water_options_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/upload_data.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:text_search/text_search.dart';
 import 'food_model.dart';
 export 'food_model.dart';
 
 class FoodWidget extends StatefulWidget {
-  const FoodWidget({Key? key}) : super(key: key);
+  const FoodWidget({
+    Key? key,
+    this.searchName,
+  }) : super(key: key);
+
+  final List<String>? searchName;
 
   @override
   _FoodWidgetState createState() => _FoodWidgetState();
@@ -63,50 +68,6 @@ class _FoodWidgetState extends State<FoodWidget> {
           ),
           actions: [
             FlutterFlowIconButton(
-              borderRadius: 30.0,
-              borderWidth: 1.0,
-              buttonSize: 60.0,
-              icon: Icon(
-                Icons.photo_camera,
-                color: FlutterFlowTheme.of(context).lineColor,
-                size: 30.0,
-              ),
-              onPressed: () async {
-                final selectedMedia = await selectMediaWithSourceBottomSheet(
-                  context: context,
-                  allowPhoto: true,
-                );
-                if (selectedMedia != null &&
-                    selectedMedia.every(
-                        (m) => validateFileFormat(m.storagePath, context))) {
-                  setState(() => _model.isDataUploading = true);
-                  var selectedUploadedFiles = <FFUploadedFile>[];
-
-                  try {
-                    selectedUploadedFiles = selectedMedia
-                        .map((m) => FFUploadedFile(
-                              name: m.storagePath.split('/').last,
-                              bytes: m.bytes,
-                              height: m.dimensions?.height,
-                              width: m.dimensions?.width,
-                              blurHash: m.blurHash,
-                            ))
-                        .toList();
-                  } finally {
-                    _model.isDataUploading = false;
-                  }
-                  if (selectedUploadedFiles.length == selectedMedia.length) {
-                    setState(() {
-                      _model.uploadedLocalFile = selectedUploadedFiles.first;
-                    });
-                  } else {
-                    setState(() {});
-                    return;
-                  }
-                }
-              },
-            ),
-            FlutterFlowIconButton(
               borderColor: Colors.transparent,
               borderRadius: 30.0,
               borderWidth: 1.0,
@@ -154,6 +115,18 @@ class _FoodWidgetState extends State<FoodWidget> {
                       Duration(milliseconds: 2000),
                       () => setState(() {}),
                     ),
+                    onFieldSubmitted: (_) async {
+                      setState(() {
+                        _model.simpleSearchResults = TextSearch(widget
+                                .searchName!
+                                .map((str) => TextSearchItem(str, [str]))
+                                .toList())
+                            .search('無')
+                            .map((r) => r.object)
+                            .toList();
+                        ;
+                      });
+                    },
                     obscureText: false,
                     decoration: InputDecoration(
                       labelText: FFLocalizations.of(context).getText(
@@ -213,40 +186,32 @@ class _FoodWidgetState extends State<FoodWidget> {
                   ),
                 ),
               ),
-              Container(
-                width: double.infinity,
-                height: 110.0,
-                decoration: BoxDecoration(),
-                child: ListView(
-                  padding: EdgeInsets.zero,
-                  primary: false,
-                  shrinkWrap: true,
-                  scrollDirection: Axis.horizontal,
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(16.0, 8.0, 0.0, 8.0),
-                      child: Container(
-                        width: 120.0,
-                        height: 190.0,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          boxShadow: [
-                            BoxShadow(
-                              blurRadius: 4.0,
-                              color: Color(0x230E151B),
-                              offset: Offset(0.0, 2.0),
-                            )
-                          ],
-                          borderRadius: BorderRadius.circular(12.0),
-                        ),
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              4.0, 4.0, 4.0, 4.0),
-                          child: Column(
+                    Expanded(
+                      child: Padding(
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 5.0, 0.0),
+                        child: Container(
+                          width: 150.0,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            boxShadow: [
+                              BoxShadow(
+                                blurRadius: 4.0,
+                                color: Color(0x230E151B),
+                                offset: Offset(0.0, 2.0),
+                              )
+                            ],
+                            borderRadius: BorderRadius.circular(12.0),
+                            shape: BoxShape.rectangle,
+                          ),
+                          child: Row(
                             mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               FlutterFlowIconButton(
                                 borderColor: Colors.transparent,
@@ -259,8 +224,23 @@ class _FoodWidgetState extends State<FoodWidget> {
                                       FlutterFlowTheme.of(context).primaryText,
                                   size: 30.0,
                                 ),
-                                onPressed: () {
-                                  print('IconButton pressed ...');
+                                onPressed: () async {
+                                  await showModalBottomSheet(
+                                    isScrollControlled: true,
+                                    backgroundColor: Colors.transparent,
+                                    context: context,
+                                    builder: (context) {
+                                      return GestureDetector(
+                                        onTap: () => FocusScope.of(context)
+                                            .requestFocus(_model.unfocusNode),
+                                        child: Padding(
+                                          padding:
+                                              MediaQuery.viewInsetsOf(context),
+                                          child: WaterOptionsWidget(),
+                                        ),
+                                      );
+                                    },
+                                  ).then((value) => setState(() {}));
                                 },
                               ),
                               Padding(
@@ -268,7 +248,7 @@ class _FoodWidgetState extends State<FoodWidget> {
                                     0.0, 4.0, 0.0, 0.0),
                                 child: Text(
                                   FFLocalizations.of(context).getText(
-                                    '9t7lo2gq' /* Carbohydrate */,
+                                    '00opp2nd' /* Carbohydrate */,
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodySmall
@@ -285,154 +265,25 @@ class _FoodWidgetState extends State<FoodWidget> {
                         ),
                       ),
                     ),
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 8.0),
-                      child: Container(
-                        width: 120.0,
-                        height: 190.0,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          boxShadow: [
-                            BoxShadow(
-                              blurRadius: 4.0,
-                              color: Color(0x230E151B),
-                              offset: Offset(0.0, 2.0),
-                            )
-                          ],
-                          borderRadius: BorderRadius.circular(12.0),
-                        ),
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              4.0, 4.0, 4.0, 4.0),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              FlutterFlowIconButton(
-                                borderColor: Colors.transparent,
-                                borderRadius: 30.0,
-                                borderWidth: 1.0,
-                                buttonSize: 60.0,
-                                icon: FaIcon(
-                                  FontAwesomeIcons.fish,
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryText,
-                                  size: 30.0,
-                                ),
-                                onPressed: () {
-                                  print('IconButton pressed ...');
-                                },
-                              ),
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 4.0, 0.0, 0.0),
-                                child: Text(
-                                  FFLocalizations.of(context).getText(
-                                    'fnuj697m' /* Protein */,
-                                  ),
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodySmall
-                                      .override(
-                                        fontFamily: 'Outfit',
-                                        color: Color(0xFF57636C),
-                                        fontSize: 12.0,
-                                        fontWeight: FontWeight.normal,
-                                      ),
-                                ),
-                              ),
+                    Expanded(
+                      child: Padding(
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(5.0, 8.0, 12.0, 8.0),
+                        child: Container(
+                          width: 150.0,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            boxShadow: [
+                              BoxShadow(
+                                blurRadius: 4.0,
+                                color: Color(0x230E151B),
+                                offset: Offset(0.0, 2.0),
+                              )
                             ],
+                            borderRadius: BorderRadius.circular(12.0),
                           ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 8.0),
-                      child: Container(
-                        width: 120.0,
-                        height: 190.0,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          boxShadow: [
-                            BoxShadow(
-                              blurRadius: 4.0,
-                              color: Color(0x230E151B),
-                              offset: Offset(0.0, 2.0),
-                            )
-                          ],
-                          borderRadius: BorderRadius.circular(12.0),
-                        ),
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              4.0, 4.0, 4.0, 4.0),
-                          child: Column(
+                          child: Row(
                             mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              FlutterFlowIconButton(
-                                borderColor: Colors.transparent,
-                                borderRadius: 30.0,
-                                borderWidth: 1.0,
-                                buttonSize: 60.0,
-                                icon: FaIcon(
-                                  FontAwesomeIcons.drupal,
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryText,
-                                  size: 30.0,
-                                ),
-                                onPressed: () {
-                                  print('IconButton pressed ...');
-                                },
-                              ),
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 4.0, 0.0, 0.0),
-                                child: Text(
-                                  FFLocalizations.of(context).getText(
-                                    '9rozguco' /* Fat */,
-                                  ),
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodySmall
-                                      .override(
-                                        fontFamily: 'Outfit',
-                                        color: Color(0xFF57636C),
-                                        fontSize: 12.0,
-                                        fontWeight: FontWeight.normal,
-                                      ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 0.0, 8.0),
-                      child: Container(
-                        width: 120.0,
-                        height: 190.0,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          boxShadow: [
-                            BoxShadow(
-                              blurRadius: 4.0,
-                              color: Color(0x230E151B),
-                              offset: Offset(0.0, 2.0),
-                            )
-                          ],
-                          borderRadius: BorderRadius.circular(12.0),
-                        ),
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              4.0, 4.0, 4.0, 4.0),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               FlutterFlowIconButton(
                                 borderColor: Colors.transparent,
@@ -440,13 +291,28 @@ class _FoodWidgetState extends State<FoodWidget> {
                                 borderWidth: 1.0,
                                 buttonSize: 60.0,
                                 icon: Icon(
-                                  Icons.local_drink,
+                                  Icons.cake,
                                   color:
                                       FlutterFlowTheme.of(context).primaryText,
                                   size: 30.0,
                                 ),
-                                onPressed: () {
-                                  print('IconButton pressed ...');
+                                onPressed: () async {
+                                  await showModalBottomSheet(
+                                    isScrollControlled: true,
+                                    backgroundColor: Colors.transparent,
+                                    context: context,
+                                    builder: (context) {
+                                      return GestureDetector(
+                                        onTap: () => FocusScope.of(context)
+                                            .requestFocus(_model.unfocusNode),
+                                        child: Padding(
+                                          padding:
+                                              MediaQuery.viewInsetsOf(context),
+                                          child: WaterOptionsWidget(),
+                                        ),
+                                      );
+                                    },
+                                  ).then((value) => setState(() {}));
                                 },
                               ),
                               Padding(
@@ -454,7 +320,7 @@ class _FoodWidgetState extends State<FoodWidget> {
                                     0.0, 4.0, 0.0, 0.0),
                                 child: Text(
                                   FFLocalizations.of(context).getText(
-                                    'dgbp0dmb' /* Water */,
+                                    'ob1w9oxe' /* Carbohydrate */,
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodySmall

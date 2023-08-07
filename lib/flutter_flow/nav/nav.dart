@@ -106,7 +106,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'food',
               path: 'food',
-              builder: (context, params) => FoodWidget(),
+              builder: (context, params) => FoodWidget(
+                searchName: params.getParam<String>(
+                    'searchName', ParamType.String, true),
+              ),
             ),
             FFRoute(
               name: 'timer',
@@ -246,7 +249,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'food_weekend',
               path: 'foodWeekend',
-              builder: (context, params) => FoodWeekendWidget(),
+              builder: (context, params) => FoodWeekendWidget(
+                date: params.getParam('date', ParamType.DateTime),
+              ),
             ),
             FFRoute(
               name: 'sport_bike',

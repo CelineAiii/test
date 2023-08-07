@@ -797,20 +797,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'zh_Hant': 'Search products...',
       'en': '',
     },
-    '9t7lo2gq': {
+    '00opp2nd': {
       'zh_Hant': 'Carbohydrate',
       'en': '',
     },
-    'fnuj697m': {
-      'zh_Hant': 'Protein',
-      'en': '',
-    },
-    '9rozguco': {
-      'zh_Hant': 'Fat',
-      'en': '',
-    },
-    'dgbp0dmb': {
-      'zh_Hant': 'Water',
+    'ob1w9oxe': {
+      'zh_Hant': 'Carbohydrate',
       'en': '',
     },
     'mwecd7z6': {
@@ -1429,22 +1421,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'u7uinrr6': {
       'zh_Hant': 'Search products...',
-      'en': '',
-    },
-    'azkxhz10': {
-      'zh_Hant': 'Carbohydrate',
-      'en': '',
-    },
-    'y1vkhf9g': {
-      'zh_Hant': 'Protein',
-      'en': '',
-    },
-    'q6fjjp0j': {
-      'zh_Hant': 'Fat',
-      'en': '',
-    },
-    'k1s6vtqa': {
-      'zh_Hant': 'Water',
       'en': '',
     },
     'myjfigif': {
@@ -2391,44 +2367,16 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // food_weekend
   {
-    'qoyweu4c': {
-      'zh_Hant': 'Page Title',
+    'i2vxvfju': {
+      'zh_Hant': 'Hello World',
       'en': '',
     },
-    'ryt31ums': {
-      'zh_Hant': '早餐',
+    'udhrjkq1': {
+      'zh_Hant': 'Hello World',
       'en': '',
     },
-    'z4i7smlm': {
-      'zh_Hant': '共230大卡',
-      'en': '',
-    },
-    '3yf1g9g2': {
-      'zh_Hant': '早餐',
-      'en': '',
-    },
-    '7tn9goye': {
-      'zh_Hant': '午餐',
-      'en': '',
-    },
-    'wxi1v3qb': {
-      'zh_Hant': '共580大卡',
-      'en': '',
-    },
-    '7scmu7oy': {
+    'q2dh7v1d': {
       'zh_Hant': '晚餐',
-      'en': '',
-    },
-    'l8p2ibjd': {
-      'zh_Hant': '共500大卡',
-      'en': '',
-    },
-    '1l38tgvn': {
-      'zh_Hant': '點心',
-      'en': '',
-    },
-    '3wz0icku': {
-      'zh_Hant': '共480大卡',
       'en': '',
     },
     'kkwmdh7c': {
@@ -2631,131 +2579,131 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // food_costumize
   {
-    '4xoj3ys5': {
+    'p8rxl97z': {
       'zh_Hant': '快速加入食品',
       'en': '',
     },
-    'wjnn8ba4': {
+    'ijlb0es6': {
       'zh_Hant': '食品名稱',
       'en': '',
     },
-    'wcjtue95': {
+    'bhcd0jar': {
       'zh_Hant': '無',
       'en': '',
     },
-    'flntlqin': {
+    'vohezztg': {
       'zh_Hant': '卡路里',
       'en': '',
     },
-    'ydog0gqb': {
+    'qbcktdpk': {
       'zh_Hant': '(cal)',
       'en': '',
     },
-    'i0l97nmk': {
+    '95zui94y': {
       'zh_Hant': '0',
       'en': '',
     },
-    'xf4jn58p': {
+    'teata3y5': {
       'zh_Hant': '糖類',
       'en': '',
     },
-    'b12ps8fx': {
+    'ruutd3iy': {
       'zh_Hant': '(g)',
       'en': '',
     },
-    '2jtfsany': {
+    'puxsg3ju': {
       'zh_Hant': '0',
       'en': '',
     },
-    '0mqp5krt': {
+    'jf3y29jq': {
       'zh_Hant': '蛋白質',
       'en': '',
     },
-    'emdg1tx2': {
+    'r22gjqm1': {
       'zh_Hant': '(g)',
       'en': '',
     },
-    '60g2t3d5': {
+    'cgre6gso': {
       'zh_Hant': '0',
       'en': '',
     },
-    '3rosfyqr': {
+    'yrtq8p6w': {
       'zh_Hant': '碳水化合物',
       'en': '',
     },
-    'eytsk4g5': {
+    'afzem612': {
       'zh_Hant': '(g)',
       'en': '',
     },
-    'nb8gtusv': {
+    'e728n9a7': {
       'zh_Hant': '0',
       'en': '',
     },
-    'xb3jfu46': {
+    'yzjuq3p7': {
       'zh_Hant': '飽和脂肪',
       'en': '',
     },
-    'dgb1yt89': {
+    '13yb8kna': {
       'zh_Hant': '(g)',
       'en': '',
     },
-    'mcb3s2fq': {
+    '109jl84l': {
       'zh_Hant': '0',
       'en': '',
     },
-    'iq1gfs4o': {
+    '847s118p': {
       'zh_Hant': '反式脂肪',
       'en': '',
     },
-    'e10uutvn': {
+    'ncyerzq1': {
       'zh_Hant': '(g)',
       'en': '',
     },
-    '7hzuso7z': {
+    '56ge40yu': {
       'zh_Hant': '0',
       'en': '',
     },
-    '0t0n45x5': {
+    'id0r0wg6': {
       'zh_Hant': '早餐',
       'en': '',
     },
-    'hi0eitlz': {
+    'nsvsgaka': {
       'zh_Hant': '早餐',
       'en': '',
     },
-    'thuxmg0v': {
+    's4w609xd': {
       'zh_Hant': '午餐',
       'en': '',
     },
-    'mbzta7df': {
+    'jcx5hm4y': {
       'zh_Hant': '晚餐',
       'en': '',
     },
-    '5suprb3i': {
+    'ubr6qwgd': {
       'zh_Hant': '點心',
       'en': '',
     },
-    'x0bge0mg': {
+    '63f4y5pd': {
       'zh_Hant': '選擇飲食時段',
       'en': '',
     },
-    'och8ujh3': {
+    'q5ki5s2k': {
       'zh_Hant': 'Search for an item...',
       'en': '',
     },
-    'az7dzljn': {
+    '3lj0r14l': {
       'zh_Hant': '2023-07-28',
       'en': '',
     },
-    'dwpm06x1': {
+    'ys8djxom': {
       'zh_Hant': '選擇飲食日期',
       'en': '',
     },
-    '0yw9ndet': {
+    'w9ytb050': {
       'zh_Hant': 'Search for an item...',
       'en': '',
     },
-    'azzv3pu3': {
+    'h98rerbi': {
       'zh_Hant': '儲存食品',
       'en': '',
     },
@@ -2766,20 +2714,35 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // choose_detect
   {
-    'ihcfc3p3': {
+    '2j9h60ll': {
       'zh_Hant': '選取辨識種類',
       'en': '',
     },
-    'p5xfmk81': {
+    'lrxjm7aj': {
       'zh_Hant': 'label or photo',
       'en': '',
     },
-    '6kukh1jj': {
+    'cobcucar': {
       'zh_Hant': '食品影像',
       'en': '',
     },
-    'iwekrm3c': {
+    '1mwgi5fc': {
       'zh_Hant': '食品標籤',
+      'en': '',
+    },
+  },
+  // waterOptions
+  {
+    'ry1l6ru5': {
+      'zh_Hant': 'Options',
+      'en': '',
+    },
+    'piudvhef': {
+      'zh_Hant': '記錄飲水',
+      'en': '',
+    },
+    'hy9g5208': {
+      'zh_Hant': '修改飲水目標',
       'en': '',
     },
   },
