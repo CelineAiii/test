@@ -113,20 +113,19 @@ class _FoodWidgetState extends State<FoodWidget> {
                     onChanged: (_) => EasyDebounce.debounce(
                       '_model.textController',
                       Duration(milliseconds: 2000),
-                      () => setState(() {}),
+                      () async {
+                        setState(() {
+                          _model.simpleSearchResults = TextSearch(widget
+                                  .searchName!
+                                  .map((str) => TextSearchItem(str, [str]))
+                                  .toList())
+                              .search('無')
+                              .map((r) => r.object)
+                              .toList();
+                          ;
+                        });
+                      },
                     ),
-                    onFieldSubmitted: (_) async {
-                      setState(() {
-                        _model.simpleSearchResults = TextSearch(widget
-                                .searchName!
-                                .map((str) => TextSearchItem(str, [str]))
-                                .toList())
-                            .search('無')
-                            .map((r) => r.object)
-                            .toList();
-                        ;
-                      });
-                    },
                     obscureText: false,
                     decoration: InputDecoration(
                       labelText: FFLocalizations.of(context).getText(
