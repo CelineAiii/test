@@ -791,12 +791,52 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
-  // food
+  // timer
   {
-    'v2hbd5xf': {
-      'zh_Hant': 'Search products...',
+    'zrjji4wj': {
+      'zh_Hant': 'Time Left',
       'en': '',
     },
+    'zo2wtj5r': {
+      'zh_Hant': '修改時間',
+      'en': '',
+    },
+    'a3g64sa5': {
+      'zh_Hant': 'Workout ',
+      'en': '',
+    },
+    't1qsc1d0': {
+      'zh_Hant': 'Push Ups',
+      'en': '',
+    },
+    'n6gzgvz8': {
+      'zh_Hant': 'Current Set',
+      'en': '',
+    },
+    '4vdew5vn': {
+      'zh_Hant': '40 in 1 minute',
+      'en': '',
+    },
+    '6f3fyzu7': {
+      'zh_Hant':
+          'Pushups are an exercise in which a person, keeping a prone position, with the hands palms down under the shoulders, the balls of the feet on the ground, and the back straight, pushes the body up and lets it down by an alternate straightening and bending of the arms.',
+      'en': '',
+    },
+    '1rioi8an': {
+      'zh_Hant': 'Complete Workout',
+      'en': '',
+    },
+    'dlxnrtnh': {
+      'zh_Hant': 'Pushups',
+      'en': '',
+    },
+    '6cequxul': {
+      'zh_Hant': 'Home',
+      'en': '',
+    },
+  },
+  // food
+  {
     '00opp2nd': {
       'zh_Hant': 'Carbohydrate',
       'en': '',
@@ -862,50 +902,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     '1th6m5yh': {
-      'zh_Hant': 'Home',
-      'en': '',
-    },
-  },
-  // timer
-  {
-    'zrjji4wj': {
-      'zh_Hant': 'Time Left',
-      'en': '',
-    },
-    'zo2wtj5r': {
-      'zh_Hant': '修改時間',
-      'en': '',
-    },
-    'a3g64sa5': {
-      'zh_Hant': 'Workout ',
-      'en': '',
-    },
-    't1qsc1d0': {
-      'zh_Hant': 'Push Ups',
-      'en': '',
-    },
-    'n6gzgvz8': {
-      'zh_Hant': 'Current Set',
-      'en': '',
-    },
-    '4vdew5vn': {
-      'zh_Hant': '40 in 1 minute',
-      'en': '',
-    },
-    '6f3fyzu7': {
-      'zh_Hant':
-          'Pushups are an exercise in which a person, keeping a prone position, with the hands palms down under the shoulders, the balls of the feet on the ground, and the back straight, pushes the body up and lets it down by an alternate straightening and bending of the arms.',
-      'en': '',
-    },
-    '1rioi8an': {
-      'zh_Hant': 'Complete Workout',
-      'en': '',
-    },
-    'dlxnrtnh': {
-      'zh_Hant': 'Pushups',
-      'en': '',
-    },
-    '6cequxul': {
       'zh_Hant': 'Home',
       'en': '',
     },
@@ -1115,6 +1111,49 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
+  // target_setting1
+  {
+    'mttmdugs': {
+      'zh_Hant': 'Candy Diary',
+      'en': '',
+    },
+    'o5wyky0m': {
+      'zh_Hant': '- 目標設定 -',
+      'en': '',
+    },
+    'b6v33zi9': {
+      'zh_Hant': '1. 身高：',
+      'en': '',
+    },
+    'hbsw72ey': {
+      'zh_Hant': 'ex. 158',
+      'en': '',
+    },
+    'rigngj8h': {
+      'zh_Hant': '2. 現在體重：',
+      'en': '',
+    },
+    '8smtamdb': {
+      'zh_Hant': 'ex. 158',
+      'en': '',
+    },
+    'ywdypywe': {
+      'zh_Hant': '3. 目標體重：',
+      'en': '',
+    },
+    'mk2jzg5i': {
+      'zh_Hant': 'ex. 158',
+      'en': '',
+    },
+    'monnib9r': {
+      'zh_Hant': '確定',
+      'en': '',
+    },
+    'qeta4mzp': {
+      'zh_Hant': 'Home',
+      'en': '',
+    },
+  },
   // food_recommand
   {
     '2rtg499i': {
@@ -1175,49 +1214,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '2htbm4tn': {
       'zh_Hant': '減肥',
-      'en': '',
-    },
-  },
-  // target_setting1
-  {
-    'mttmdugs': {
-      'zh_Hant': 'Candy Diary',
-      'en': '',
-    },
-    'o5wyky0m': {
-      'zh_Hant': '- 目標設定 -',
-      'en': '',
-    },
-    'b6v33zi9': {
-      'zh_Hant': '1. 身高：',
-      'en': '',
-    },
-    'hbsw72ey': {
-      'zh_Hant': 'ex. 158',
-      'en': '',
-    },
-    'rigngj8h': {
-      'zh_Hant': '2. 現在體重：',
-      'en': '',
-    },
-    '8smtamdb': {
-      'zh_Hant': 'ex. 158',
-      'en': '',
-    },
-    'ywdypywe': {
-      'zh_Hant': '3. 目標體重：',
-      'en': '',
-    },
-    'mk2jzg5i': {
-      'zh_Hant': 'ex. 158',
-      'en': '',
-    },
-    'monnib9r': {
-      'zh_Hant': '確定',
-      'en': '',
-    },
-    'qeta4mzp': {
-      'zh_Hant': 'Home',
       'en': '',
     },
   },
@@ -2712,6 +2708,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
+  // searchPage
+  {
+    'ch717glr': {
+      'zh_Hant': 'Search products...',
+      'en': '',
+    },
+    'qhiv8yuj': {
+      'zh_Hant': 'Home',
+      'en': '',
+    },
+  },
   // choose_detect
   {
     '2j9h60ll': {
@@ -2743,6 +2750,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'hy9g5208': {
       'zh_Hant': '修改飲水目標',
+      'en': '',
+    },
+  },
+  // Card22DoubleLine
+  {
+    'ce6scqge': {
+      'zh_Hant': 'Phone Number',
+      'en': '',
+    },
+    'cpwycurq': {
+      'zh_Hant': '(123) 456-7890',
       'en': '',
     },
   },

@@ -30,6 +30,38 @@ class UploadImageCall {
       cache: false,
     );
   }
+
+  static dynamic calorie(dynamic response) => getJsonField(
+        response,
+        r'''$.calorie''',
+      );
+}
+
+class UploadImageCopyCall {
+  static Future<ApiCallResponse> call({
+    FFUploadedFile? image,
+    String? name = 'photo',
+  }) {
+    return ApiManager.instance.makeApiCall(
+      callName: 'upload image Copy',
+      apiUrl: '7ad1-220-128-241-243.ngrok-free.app',
+      callType: ApiCallType.GET,
+      headers: {},
+      params: {
+        'image': image,
+        'name': name,
+      },
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+    );
+  }
+
+  static dynamic calorie(dynamic response) => getJsonField(
+        response,
+        r'''$.calorie''',
+      );
 }
 
 class ApiPagingParams {

@@ -99,71 +99,94 @@ class _FoodCostumizeWidgetState extends State<FoodCostumizeWidget> {
         actions: [
           Padding(
             padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
-            child: FlutterFlowIconButton(
-              borderRadius: 20.0,
-              borderWidth: 1.0,
-              buttonSize: 48.0,
-              icon: Icon(
-                Icons.photo_camera,
-                color: Color(0xFFFAF7F7),
-                size: 30.0,
-              ),
-              onPressed: () async {
-                await requestPermission(photoLibraryPermission);
-                await requestPermission(cameraPermission);
-                await showModalBottomSheet(
-                  isScrollControlled: true,
-                  backgroundColor: Colors.transparent,
-                  enableDrag: false,
-                  context: context,
-                  builder: (context) {
-                    return Padding(
-                      padding: MediaQuery.viewInsetsOf(context),
-                      child: ChooseDetectWidget(
-                        name: widget.name!.toString(),
+            child: FutureBuilder<ApiCallResponse>(
+              future: UploadImageCopyCall.call(),
+              builder: (context, snapshot) {
+                // Customize what your widget looks like when it's loading.
+                if (!snapshot.hasData) {
+                  return Center(
+                    child: SizedBox(
+                      width: 50.0,
+                      height: 50.0,
+                      child: CircularProgressIndicator(
+                        valueColor: AlwaysStoppedAnimation<Color>(
+                          FlutterFlowTheme.of(context).primary,
+                        ),
                       ),
-                    );
-                  },
-                ).then((value) => setState(() {}));
-
-                final selectedMedia = await selectMediaWithSourceBottomSheet(
-                  context: context,
-                  allowPhoto: true,
-                );
-                if (selectedMedia != null &&
-                    selectedMedia.every(
-                        (m) => validateFileFormat(m.storagePath, context))) {
-                  setState(() => _model.isDataUploading = true);
-                  var selectedUploadedFiles = <FFUploadedFile>[];
-
-                  try {
-                    selectedUploadedFiles = selectedMedia
-                        .map((m) => FFUploadedFile(
-                              name: m.storagePath.split('/').last,
-                              bytes: m.bytes,
-                              height: m.dimensions?.height,
-                              width: m.dimensions?.width,
-                              blurHash: m.blurHash,
-                            ))
-                        .toList();
-                  } finally {
-                    _model.isDataUploading = false;
-                  }
-                  if (selectedUploadedFiles.length == selectedMedia.length) {
-                    setState(() {
-                      _model.uploadedLocalFile = selectedUploadedFiles.first;
-                    });
-                  } else {
-                    setState(() {});
-                    return;
-                  }
+                    ),
+                  );
                 }
+                final iconButtonUploadImageCopyResponse = snapshot.data!;
+                return FlutterFlowIconButton(
+                  borderRadius: 20.0,
+                  borderWidth: 1.0,
+                  buttonSize: 48.0,
+                  icon: Icon(
+                    Icons.photo_camera,
+                    color: Color(0xFFFAF7F7),
+                    size: 30.0,
+                  ),
+                  onPressed: () async {
+                    await requestPermission(photoLibraryPermission);
+                    await requestPermission(cameraPermission);
+                    await showModalBottomSheet(
+                      isScrollControlled: true,
+                      backgroundColor: Colors.transparent,
+                      enableDrag: false,
+                      context: context,
+                      builder: (context) {
+                        return Padding(
+                          padding: MediaQuery.viewInsetsOf(context),
+                          child: ChooseDetectWidget(
+                            name: widget.name!.toString(),
+                          ),
+                        );
+                      },
+                    ).then((value) => setState(() {}));
 
-                _model.imageDetect = await UploadImageCall.call(
-                  image: _model.uploadedLocalFile,
+                    final selectedMedia =
+                        await selectMediaWithSourceBottomSheet(
+                      context: context,
+                      allowPhoto: true,
+                    );
+                    if (selectedMedia != null &&
+                        selectedMedia.every((m) =>
+                            validateFileFormat(m.storagePath, context))) {
+                      setState(() => _model.isDataUploading = true);
+                      var selectedUploadedFiles = <FFUploadedFile>[];
+
+                      try {
+                        selectedUploadedFiles = selectedMedia
+                            .map((m) => FFUploadedFile(
+                                  name: m.storagePath.split('/').last,
+                                  bytes: m.bytes,
+                                  height: m.dimensions?.height,
+                                  width: m.dimensions?.width,
+                                  blurHash: m.blurHash,
+                                ))
+                            .toList();
+                      } finally {
+                        _model.isDataUploading = false;
+                      }
+                      if (selectedUploadedFiles.length ==
+                          selectedMedia.length) {
+                        setState(() {
+                          _model.uploadedLocalFile =
+                              selectedUploadedFiles.first;
+                        });
+                      } else {
+                        setState(() {});
+                        return;
+                      }
+                    }
+
+                    _model.imageDetect = await UploadImageCall.call(
+                      image: _model.uploadedLocalFile,
+                    );
+
+                    setState(() {});
+                  },
                 );
-
-                setState(() {});
               },
             ),
           ),
@@ -203,6 +226,15 @@ class _FoodCostumizeWidgetState extends State<FoodCostumizeWidget> {
                               fontSize: 24.0,
                               fontWeight: FontWeight.w500,
                             ),
+                      ),
+                      Text(
+                        valueOrDefault<String>(
+                          UploadImageCall.calorie(
+                            (_model.imageDetect?.jsonBody ?? ''),
+                          ).toString(),
+                          '0.0 kcal',
+                        ),
+                        style: FlutterFlowTheme.of(context).bodyMedium,
                       ),
                     ],
                   ),

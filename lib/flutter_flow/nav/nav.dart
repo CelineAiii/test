@@ -104,18 +104,18 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => ForgetPasswordWidget(),
             ),
             FFRoute(
+              name: 'timer',
+              path: 'timer',
+              builder: (context, params) => TimerWidget(
+                time: params.getParam('time', ParamType.int),
+              ),
+            ),
+            FFRoute(
               name: 'food',
               path: 'food',
               builder: (context, params) => FoodWidget(
                 searchName: params.getParam<String>(
                     'searchName', ParamType.String, true),
-              ),
-            ),
-            FFRoute(
-              name: 'timer',
-              path: 'timer',
-              builder: (context, params) => TimerWidget(
-                time: params.getParam('time', ParamType.int),
               ),
             ),
             FFRoute(
@@ -134,14 +134,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => NutrientWidget(),
             ),
             FFRoute(
-              name: 'food_recommand',
-              path: 'foodRecommand',
-              builder: (context, params) => FoodRecommandWidget(),
-            ),
-            FFRoute(
               name: 'target_setting1',
               path: 'targetSetting1',
               builder: (context, params) => TargetSetting1Widget(),
+            ),
+            FFRoute(
+              name: 'food_recommand',
+              path: 'foodRecommand',
+              builder: (context, params) => FoodRecommandWidget(),
             ),
             FFRoute(
               name: 'target_setting2',
@@ -273,6 +273,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               path: 'foodCostumize',
               builder: (context, params) => FoodCostumizeWidget(
                 name: params.getParam('name', ParamType.bool),
+              ),
+            ),
+            FFRoute(
+              name: 'searchPage',
+              path: 'searchPage',
+              builder: (context, params) => SearchPageWidget(
+                searchName: params.getParam<String>(
+                    'searchName', ParamType.String, true),
               ),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),

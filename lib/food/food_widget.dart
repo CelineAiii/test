@@ -2,11 +2,9 @@ import '/components/water_options_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'package:text_search/text_search.dart';
 import 'food_model.dart';
 export 'food_model.dart';
 
@@ -31,8 +29,6 @@ class _FoodWidgetState extends State<FoodWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => FoodModel());
-
-    _model.textController ??= TextEditingController();
   }
 
   @override
@@ -49,142 +45,75 @@ class _FoodWidgetState extends State<FoodWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: Color(0xFFF1F4F8),
-        appBar: AppBar(
-          backgroundColor: Color(0xFF3C2E92),
-          automaticallyImplyLeading: false,
-          leading: FlutterFlowIconButton(
-            borderColor: Colors.transparent,
-            borderRadius: 30.0,
-            borderWidth: 1.0,
-            buttonSize: 60.0,
-            icon: Icon(
-              Icons.arrow_back,
-              color: Color(0xFFD4D4DC),
-              size: 30.0,
-            ),
-            onPressed: () async {
-              context.safePop();
-            },
-          ),
-          actions: [
-            FlutterFlowIconButton(
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(70.0),
+          child: AppBar(
+            backgroundColor: Color(0xFF3C2E92),
+            automaticallyImplyLeading: false,
+            leading: FlutterFlowIconButton(
               borderColor: Colors.transparent,
               borderRadius: 30.0,
               borderWidth: 1.0,
               buttonSize: 60.0,
               icon: Icon(
-                Icons.add,
-                color: FlutterFlowTheme.of(context).lineColor,
+                Icons.arrow_back,
+                color: Color(0xFFD4D4DC),
                 size: 30.0,
               ),
               onPressed: () async {
-                // takeshot
-
-                context.pushNamed('food_costumize');
+                context.safePop();
               },
             ),
-          ],
-          centerTitle: false,
-          elevation: 0.0,
+            actions: [
+              FlutterFlowIconButton(
+                borderRadius: 30.0,
+                borderWidth: 1.0,
+                buttonSize: 40.0,
+                icon: Icon(
+                  Icons.search_outlined,
+                  color: FlutterFlowTheme.of(context).lineColor,
+                  size: 30.0,
+                ),
+                onPressed: () async {
+                  context.pushNamed(
+                    'searchPage',
+                    extra: <String, dynamic>{
+                      kTransitionInfoKey: TransitionInfo(
+                        hasTransition: true,
+                        transitionType: PageTransitionType.scale,
+                        alignment: Alignment.bottomCenter,
+                      ),
+                    },
+                  );
+                },
+              ),
+              FlutterFlowIconButton(
+                borderColor: Colors.transparent,
+                borderRadius: 30.0,
+                borderWidth: 1.0,
+                buttonSize: 60.0,
+                icon: Icon(
+                  Icons.add,
+                  color: FlutterFlowTheme.of(context).lineColor,
+                  size: 30.0,
+                ),
+                onPressed: () async {
+                  // takeshot
+
+                  context.pushNamed('food_costumize');
+                },
+              ),
+            ],
+            centerTitle: false,
+            toolbarHeight: 70.0,
+            elevation: 0.0,
+          ),
         ),
         body: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Container(
-                width: double.infinity,
-                height: 70.0,
-                decoration: BoxDecoration(
-                  color: Color(0xFF3C2E92),
-                  boxShadow: [
-                    BoxShadow(
-                      blurRadius: 5.0,
-                      color: Color(0x27000000),
-                      offset: Offset(0.0, 3.0),
-                    )
-                  ],
-                ),
-                child: Padding(
-                  padding:
-                      EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
-                  child: TextFormField(
-                    controller: _model.textController,
-                    onChanged: (_) => EasyDebounce.debounce(
-                      '_model.textController',
-                      Duration(milliseconds: 2000),
-                      () async {
-                        setState(() {
-                          _model.simpleSearchResults = TextSearch(widget
-                                  .searchName!
-                                  .map((str) => TextSearchItem(str, [str]))
-                                  .toList())
-                              .search('無')
-                              .map((r) => r.object)
-                              .toList();
-                          ;
-                        });
-                      },
-                    ),
-                    obscureText: false,
-                    decoration: InputDecoration(
-                      labelText: FFLocalizations.of(context).getText(
-                        'v2hbd5xf' /* Search products... */,
-                      ),
-                      labelStyle:
-                          FlutterFlowTheme.of(context).bodySmall.override(
-                                fontFamily: 'Outfit',
-                                color: Color(0xFF57636C),
-                                fontSize: 12.0,
-                                fontWeight: FontWeight.normal,
-                              ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Color(0x00000000),
-                          width: 1.0,
-                        ),
-                        borderRadius: BorderRadius.circular(12.0),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Color(0x00000000),
-                          width: 1.0,
-                        ),
-                        borderRadius: BorderRadius.circular(12.0),
-                      ),
-                      errorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Color(0x00000000),
-                          width: 1.0,
-                        ),
-                        borderRadius: BorderRadius.circular(12.0),
-                      ),
-                      focusedErrorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Color(0x00000000),
-                          width: 1.0,
-                        ),
-                        borderRadius: BorderRadius.circular(12.0),
-                      ),
-                      filled: true,
-                      fillColor: Colors.white,
-                      prefixIcon: Icon(
-                        Icons.search_rounded,
-                        color: Color(0xFF57636C),
-                      ),
-                    ),
-                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Outfit',
-                          color: Color(0xFF14181B),
-                          fontSize: 12.0,
-                          fontWeight: FontWeight.normal,
-                        ),
-                    maxLines: null,
-                    validator:
-                        _model.textControllerValidator.asValidator(context),
-                  ),
-                ),
-              ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                 child: Row(
