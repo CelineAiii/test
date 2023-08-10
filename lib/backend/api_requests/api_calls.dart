@@ -16,7 +16,7 @@ class UploadImageCall {
   }) {
     return ApiManager.instance.makeApiCall(
       callName: 'upload image',
-      apiUrl: 'a7c6-120-126-16-233.ngrok-free.app',
+      apiUrl: '7ad1-220-128-241-243.ngrok-free.app',
       callType: ApiCallType.POST,
       headers: {},
       params: {
@@ -35,33 +35,32 @@ class UploadImageCall {
         response,
         r'''$.calorie''',
       );
+  static dynamic getFoods(dynamic response) => getJsonField(
+        response,
+        r'''$.food''',
+        true,
+      );
 }
 
 class UploadImageCopyCall {
   static Future<ApiCallResponse> call({
-    FFUploadedFile? image,
     String? name = 'photo',
   }) {
     return ApiManager.instance.makeApiCall(
       callName: 'upload image Copy',
-      apiUrl: '7ad1-220-128-241-243.ngrok-free.app',
-      callType: ApiCallType.GET,
+      apiUrl: '7ad1-220-128-241-243.ngrok-free.app/image',
+      callType: ApiCallType.POST,
       headers: {},
       params: {
-        'image': image,
         'name': name,
       },
+      bodyType: BodyType.MULTIPART,
       returnBody: true,
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
     );
   }
-
-  static dynamic calorie(dynamic response) => getJsonField(
-        response,
-        r'''$.calorie''',
-      );
 }
 
 class ApiPagingParams {

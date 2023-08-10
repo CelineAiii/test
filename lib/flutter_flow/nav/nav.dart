@@ -269,6 +269,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => SportCostumizeWidget(),
             ),
             FFRoute(
+              name: 'searchPage',
+              path: 'searchPage',
+              builder: (context, params) => SearchPageWidget(
+                searchName: params.getParam<String>(
+                    'searchName', ParamType.String, true),
+              ),
+            ),
+            FFRoute(
               name: 'food_costumize',
               path: 'foodCostumize',
               builder: (context, params) => FoodCostumizeWidget(
@@ -276,9 +284,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ),
             ),
             FFRoute(
-              name: 'searchPage',
-              path: 'searchPage',
-              builder: (context, params) => SearchPageWidget(
+              name: 'Details04CoffeeProduct',
+              path: 'details04CoffeeProduct',
+              builder: (context, params) => Details04CoffeeProductWidget(),
+            ),
+            FFRoute(
+              name: 'photo_response',
+              path: 'photoResponse',
+              builder: (context, params) => PhotoResponseWidget(
                 searchName: params.getParam<String>(
                     'searchName', ParamType.String, true),
               ),

@@ -39,5 +39,8 @@ export '/food_weekend/food_weekend_widget.dart' show FoodWeekendWidget;
 export '/sport_bike/sport_bike_widget.dart' show SportBikeWidget;
 export '/sport_other/sport_other_widget.dart' show SportOtherWidget;
 export '/sport_costumize/sport_costumize_widget.dart' show SportCostumizeWidget;
-export '/food_costumize/food_costumize_widget.dart' show FoodCostumizeWidget;
 export '/search_page/search_page_widget.dart' show SearchPageWidget;
+export '/food_costumize/food_costumize_widget.dart' show FoodCostumizeWidget;
+export '/details04_coffee_product/details04_coffee_product_widget.dart'
+    show Details04CoffeeProductWidget;
+export '/photo_response/photo_response_widget.dart' show PhotoResponseWidget;

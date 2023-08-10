@@ -73,6 +73,7 @@ dependencies:
   smooth_page_indicator: 1.0.1
   sqflite: 2.2.6
   stop_watch_timer: 1.5.0
+  swipeable_card_stack: 0.0.5
   table_calendar: 3.0.9
   timeago: 3.2.2
   url_launcher: 6.1.10

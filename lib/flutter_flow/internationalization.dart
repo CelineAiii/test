@@ -2573,6 +2573,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
+  // searchPage
+  {
+    'ch717glr': {
+      'zh_Hant': 'Search products...',
+      'en': '',
+    },
+    'qhiv8yuj': {
+      'zh_Hant': 'Home',
+      'en': '',
+    },
+  },
   // food_costumize
   {
     'p8rxl97z': {
@@ -2596,6 +2607,18 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     '95zui94y': {
+      'zh_Hant': '0',
+      'en': '',
+    },
+    'bjc7kpnt': {
+      'zh_Hant': '脂肪',
+      'en': '',
+    },
+    'f95nrjbv': {
+      'zh_Hant': '(g)',
+      'en': '',
+    },
+    'tfj83om2': {
       'zh_Hant': '0',
       'en': '',
     },
@@ -2708,13 +2731,125 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
-  // searchPage
+  // Details04CoffeeProduct
   {
-    'ch717glr': {
-      'zh_Hant': 'Search products...',
+    's694c054': {
+      'zh_Hant': 'SWEET LATTE',
       'en': '',
     },
-    'qhiv8yuj': {
+    '9rr0h3qp': {
+      'zh_Hant':
+          'Espresso and steamed milk, lightly sweetened with unrefined brown sugar.',
+      'en': '',
+    },
+    'fnk4gqp1': {
+      'zh_Hant': 'Milk',
+      'en': '',
+    },
+    '1wglmye7': {
+      'zh_Hant': 'Milk',
+      'en': '',
+    },
+    'e36dogm4': {
+      'zh_Hant': 'Whole Milk',
+      'en': '',
+    },
+    '2pu0jn3a': {
+      'zh_Hant': 'Espresso Shots',
+      'en': '',
+    },
+    'yvssi3sd': {
+      'zh_Hant': 'Standard',
+      'en': '',
+    },
+    'xoxt42p7': {
+      'zh_Hant': 'Sugar',
+      'en': '',
+    },
+    'zjdome0y': {
+      'zh_Hant': 'No Extra Sugar',
+      'en': '',
+    },
+    'r0yxsqbh': {
+      'zh_Hant': 'Add Item',
+      'en': '',
+    },
+    'r0w3nke0': {
+      'zh_Hant': '1 Item • \$7',
+      'en': '',
+    },
+    '9l9ypr1s': {
+      'zh_Hant': 'Home',
+      'en': '',
+    },
+  },
+  // photo_response
+  {
+    'f4txzgn7': {
+      'zh_Hant': '份量',
+      'en': '',
+    },
+    '052kdhym': {
+      'zh_Hant': '熱量',
+      'en': '',
+    },
+    '8bgtqhuw': {
+      'zh_Hant': '碳水化合物',
+      'en': '',
+    },
+    'wfc31e9i': {
+      'zh_Hant': '蛋白質',
+      'en': '',
+    },
+    'l4i7mm7b': {
+      'zh_Hant': '脂肪',
+      'en': '',
+    },
+    'g0w0n619': {
+      'zh_Hant': '飽和脂肪',
+      'en': '',
+    },
+    'h79cqt68': {
+      'zh_Hant': '反式脂肪',
+      'en': '',
+    },
+    'nvv4dfls': {
+      'zh_Hant': '糖',
+      'en': '',
+    },
+    '0bsuzf1y': {
+      'zh_Hant': '鈉',
+      'en': '',
+    },
+    'xdrd8vhr': {
+      'zh_Hant': '鈣',
+      'en': '',
+    },
+    '3viyoolg': {
+      'zh_Hant': '鉀',
+      'en': '',
+    },
+    'u924a670': {
+      'zh_Hant': '早餐',
+      'en': '',
+    },
+    '2btzf4ay': {
+      'zh_Hant': '午餐',
+      'en': '',
+    },
+    'cydtno56': {
+      'zh_Hant': '晚餐',
+      'en': '',
+    },
+    'cxs15wnv': {
+      'zh_Hant': '點心',
+      'en': '',
+    },
+    '9xj1csw2': {
+      'zh_Hant': 'Add ',
+      'en': '',
+    },
+    'fya2b9j9': {
       'zh_Hant': 'Home',
       'en': '',
     },
@@ -2761,6 +2896,149 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'cpwycurq': {
       'zh_Hant': '(123) 456-7890',
+      'en': '',
+    },
+  },
+  // card
+  {
+    'sd1vdhk4': {
+      'zh_Hant': '快速加入食品',
+      'en': '',
+    },
+    'tkehjxep': {
+      'zh_Hant': '食品名稱',
+      'en': '',
+    },
+    'wdqnizdz': {
+      'zh_Hant': '無',
+      'en': '',
+    },
+    'nim69dsw': {
+      'zh_Hant': '卡路里',
+      'en': '',
+    },
+    '72r6im2u': {
+      'zh_Hant': '(cal)',
+      'en': '',
+    },
+    'frs8e34m': {
+      'zh_Hant': '0',
+      'en': '',
+    },
+    'n29dyj33': {
+      'zh_Hant': '脂肪',
+      'en': '',
+    },
+    'klsf8nls': {
+      'zh_Hant': '(g)',
+      'en': '',
+    },
+    'aios2na2': {
+      'zh_Hant': '0',
+      'en': '',
+    },
+    'skizt83o': {
+      'zh_Hant': '糖類',
+      'en': '',
+    },
+    'tdojv6hh': {
+      'zh_Hant': '(g)',
+      'en': '',
+    },
+    'gvid92z3': {
+      'zh_Hant': '0',
+      'en': '',
+    },
+    'vo6pb26x': {
+      'zh_Hant': '蛋白質',
+      'en': '',
+    },
+    'b4g43hkg': {
+      'zh_Hant': '(g)',
+      'en': '',
+    },
+    'mrr9s6tu': {
+      'zh_Hant': '0',
+      'en': '',
+    },
+    'qtn8rkcz': {
+      'zh_Hant': '碳水化合物',
+      'en': '',
+    },
+    'brv6hv7p': {
+      'zh_Hant': '(g)',
+      'en': '',
+    },
+    't80i15no': {
+      'zh_Hant': '0',
+      'en': '',
+    },
+    'hnou6wot': {
+      'zh_Hant': '飽和脂肪',
+      'en': '',
+    },
+    '5jvqcgl5': {
+      'zh_Hant': '(g)',
+      'en': '',
+    },
+    'ub5bn0by': {
+      'zh_Hant': '0',
+      'en': '',
+    },
+    'igvfxafk': {
+      'zh_Hant': '反式脂肪',
+      'en': '',
+    },
+    '38fdhwhs': {
+      'zh_Hant': '(g)',
+      'en': '',
+    },
+    'qmwtw4bi': {
+      'zh_Hant': '0',
+      'en': '',
+    },
+    'w60wac2q': {
+      'zh_Hant': '早餐',
+      'en': '',
+    },
+    '6l1k3l6w': {
+      'zh_Hant': '早餐',
+      'en': '',
+    },
+    'fnviypmt': {
+      'zh_Hant': '午餐',
+      'en': '',
+    },
+    '6ct5guv1': {
+      'zh_Hant': '晚餐',
+      'en': '',
+    },
+    'lr0l7rg3': {
+      'zh_Hant': '點心',
+      'en': '',
+    },
+    '1icxr8xg': {
+      'zh_Hant': '選擇飲食時段',
+      'en': '',
+    },
+    'optp0655': {
+      'zh_Hant': 'Search for an item...',
+      'en': '',
+    },
+    'tjtmjo0b': {
+      'zh_Hant': '2023-07-28',
+      'en': '',
+    },
+    'tk3uzwte': {
+      'zh_Hant': '選擇飲食日期',
+      'en': '',
+    },
+    'cefkvqw6': {
+      'zh_Hant': 'Search for an item...',
+      'en': '',
+    },
+    '312f8qyn': {
+      'zh_Hant': '儲存食品',
       'en': '',
     },
   },
