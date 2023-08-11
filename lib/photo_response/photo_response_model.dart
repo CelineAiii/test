@@ -18,6 +18,8 @@ class PhotoResponseModel extends FlutterFlowModel {
   FFUploadedFile uploadedLocalFile =
       FFUploadedFile(bytes: Uint8List.fromList([]));
 
+  // Stores action output result for [Backend Call - API (upload image)] action in photo_response widget.
+  ApiCallResponse? apiResultydn;
   // State field(s) for SwipeableStack widget.
   late SwipeableCardSectionController swipeableStackController;
   // State field(s) for CheckboxListTile widget.

@@ -68,6 +68,14 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
           return;
         }
       }
+
+      _model.apiResultydn = await UploadImageCall.call(
+        image: _model.uploadedLocalFile,
+        name: 'photo',
+      );
+      if (!(_model.apiResultydn?.succeeded ?? true)) {
+        return;
+      }
     });
   }
 
