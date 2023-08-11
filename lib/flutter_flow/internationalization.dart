@@ -2584,153 +2584,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
-  // food_costumize
-  {
-    'p8rxl97z': {
-      'zh_Hant': '快速加入食品',
-      'en': '',
-    },
-    'ijlb0es6': {
-      'zh_Hant': '食品名稱',
-      'en': '',
-    },
-    'bhcd0jar': {
-      'zh_Hant': '無',
-      'en': '',
-    },
-    'vohezztg': {
-      'zh_Hant': '卡路里',
-      'en': '',
-    },
-    'qbcktdpk': {
-      'zh_Hant': '(cal)',
-      'en': '',
-    },
-    '95zui94y': {
-      'zh_Hant': '0',
-      'en': '',
-    },
-    'bjc7kpnt': {
-      'zh_Hant': '脂肪',
-      'en': '',
-    },
-    'f95nrjbv': {
-      'zh_Hant': '(g)',
-      'en': '',
-    },
-    'tfj83om2': {
-      'zh_Hant': '0',
-      'en': '',
-    },
-    'teata3y5': {
-      'zh_Hant': '糖類',
-      'en': '',
-    },
-    'ruutd3iy': {
-      'zh_Hant': '(g)',
-      'en': '',
-    },
-    'puxsg3ju': {
-      'zh_Hant': '0',
-      'en': '',
-    },
-    'jf3y29jq': {
-      'zh_Hant': '蛋白質',
-      'en': '',
-    },
-    'r22gjqm1': {
-      'zh_Hant': '(g)',
-      'en': '',
-    },
-    'cgre6gso': {
-      'zh_Hant': '0',
-      'en': '',
-    },
-    'yrtq8p6w': {
-      'zh_Hant': '碳水化合物',
-      'en': '',
-    },
-    'afzem612': {
-      'zh_Hant': '(g)',
-      'en': '',
-    },
-    'e728n9a7': {
-      'zh_Hant': '0',
-      'en': '',
-    },
-    'yzjuq3p7': {
-      'zh_Hant': '飽和脂肪',
-      'en': '',
-    },
-    '13yb8kna': {
-      'zh_Hant': '(g)',
-      'en': '',
-    },
-    '109jl84l': {
-      'zh_Hant': '0',
-      'en': '',
-    },
-    '847s118p': {
-      'zh_Hant': '反式脂肪',
-      'en': '',
-    },
-    'ncyerzq1': {
-      'zh_Hant': '(g)',
-      'en': '',
-    },
-    '56ge40yu': {
-      'zh_Hant': '0',
-      'en': '',
-    },
-    'id0r0wg6': {
-      'zh_Hant': '早餐',
-      'en': '',
-    },
-    'nsvsgaka': {
-      'zh_Hant': '早餐',
-      'en': '',
-    },
-    's4w609xd': {
-      'zh_Hant': '午餐',
-      'en': '',
-    },
-    'jcx5hm4y': {
-      'zh_Hant': '晚餐',
-      'en': '',
-    },
-    'ubr6qwgd': {
-      'zh_Hant': '點心',
-      'en': '',
-    },
-    '63f4y5pd': {
-      'zh_Hant': '選擇飲食時段',
-      'en': '',
-    },
-    'q5ki5s2k': {
-      'zh_Hant': 'Search for an item...',
-      'en': '',
-    },
-    '3lj0r14l': {
-      'zh_Hant': '2023-07-28',
-      'en': '',
-    },
-    'ys8djxom': {
-      'zh_Hant': '選擇飲食日期',
-      'en': '',
-    },
-    'w9ytb050': {
-      'zh_Hant': 'Search for an item...',
-      'en': '',
-    },
-    'h98rerbi': {
-      'zh_Hant': '儲存食品',
-      'en': '',
-    },
-    'fxrqu7r3': {
-      'zh_Hant': 'Home',
-      'en': '',
-    },
-  },
   // Details04CoffeeProduct
   {
     's694c054': {
@@ -2783,6 +2636,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
+  // food_costumize
+  {
+    'p8rxl97z': {
+      'zh_Hant': '快速加入食品',
+      'en': '',
+    },
+    'fxrqu7r3': {
+      'zh_Hant': 'Home',
+      'en': '',
+    },
+  },
   // photo_response
   {
     'f4txzgn7': {
@@ -2829,19 +2693,19 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'zh_Hant': '鉀',
       'en': '',
     },
-    'u924a670': {
+    'cr3jrq1a': {
       'zh_Hant': '早餐',
       'en': '',
     },
-    '2btzf4ay': {
+    'mtf7f0ic': {
       'zh_Hant': '午餐',
       'en': '',
     },
-    'cydtno56': {
+    'ode6p2e9': {
       'zh_Hant': '晚餐',
       'en': '',
     },
-    'cxs15wnv': {
+    '324aqvy3': {
       'zh_Hant': '點心',
       'en': '',
     },
@@ -2850,6 +2714,90 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     'fya2b9j9': {
+      'zh_Hant': 'Home',
+      'en': '',
+    },
+  },
+  // food_costumizeCopy
+  {
+    'nqsatdk6': {
+      'zh_Hant': 'Page Title',
+      'en': '',
+    },
+    'vzwnv1xt': {
+      'zh_Hant':
+          'Here is an intro and description of what this toolkit entails. We hope you enjoy it as much as we do!',
+      'en': '',
+    },
+    'flmz4war': {
+      'zh_Hant': 'Introduction',
+      'en': '',
+    },
+    'a9y6yj4i': {
+      'zh_Hant': 'Intro',
+      'en': '',
+    },
+    'n3s73hod': {
+      'zh_Hant': 'Disclaimer',
+      'en': '',
+    },
+    'ykvujnzd': {
+      'zh_Hant': 'Main Content',
+      'en': '',
+    },
+    's4uczoar': {
+      'zh_Hant': 'Prologue',
+      'en': '',
+    },
+    'i2skt7af': {
+      'zh_Hant': 'Excercise',
+      'en': '',
+    },
+    'j224v6hu': {
+      'zh_Hant': 'Home',
+      'en': '',
+    },
+  },
+  // Details02BasicLayout
+  {
+    'ui6szm35': {
+      'zh_Hant': 'Page Title',
+      'en': '',
+    },
+    'k9enoadl': {
+      'zh_Hant': 'Overview',
+      'en': '',
+    },
+    'x7md3t8n': {
+      'zh_Hant':
+          'Here is an intro and description of what this toolkit entails. We hope you enjoy it as much as we do!',
+      'en': '',
+    },
+    'voilawvf': {
+      'zh_Hant': 'Introduction',
+      'en': '',
+    },
+    'o37kqitq': {
+      'zh_Hant': 'Intro',
+      'en': '',
+    },
+    '92v1qv2b': {
+      'zh_Hant': 'Disclaimer',
+      'en': '',
+    },
+    'fb0b57np': {
+      'zh_Hant': 'Main Content',
+      'en': '',
+    },
+    '63u00zdi': {
+      'zh_Hant': 'Prologue',
+      'en': '',
+    },
+    'mygm0kb2': {
+      'zh_Hant': 'Excercise',
+      'en': '',
+    },
+    'fzixm4bh': {
       'zh_Hant': 'Home',
       'en': '',
     },
@@ -2885,17 +2833,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'hy9g5208': {
       'zh_Hant': '修改飲水目標',
-      'en': '',
-    },
-  },
-  // Card22DoubleLine
-  {
-    'ce6scqge': {
-      'zh_Hant': 'Phone Number',
-      'en': '',
-    },
-    'cpwycurq': {
-      'zh_Hant': '(123) 456-7890',
       'en': '',
     },
   },

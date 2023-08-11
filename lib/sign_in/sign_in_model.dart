@@ -10,6 +10,11 @@ class SignInModel extends FlutterFlowModel {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
+  // State field(s) for TabBar widget.
+  TabController? tabBarController;
+  int get tabBarCurrentIndex =>
+      tabBarController != null ? tabBarController!.index : 0;
+
   // State field(s) for emailAddress widget.
   TextEditingController? emailAddressController;
   String? Function(BuildContext, String?)? emailAddressControllerValidator;
@@ -35,6 +40,7 @@ class SignInModel extends FlutterFlowModel {
 
   void dispose() {
     unfocusNode.dispose();
+    tabBarController?.dispose();
     emailAddressController?.dispose();
     passwordController?.dispose();
     emailAddressCreateController?.dispose();

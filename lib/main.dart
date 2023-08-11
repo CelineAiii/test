@@ -69,8 +69,14 @@ class _MyAppState extends State<MyApp> {
         Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hant'),
         Locale('en'),
       ],
-      theme: ThemeData(brightness: Brightness.light),
-      darkTheme: ThemeData(brightness: Brightness.dark),
+      theme: ThemeData(
+        brightness: Brightness.light,
+        scrollbarTheme: ScrollbarThemeData(),
+      ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        scrollbarTheme: ScrollbarThemeData(),
+      ),
       themeMode: _themeMode,
       routerConfig: _router,
     );

@@ -13,10 +13,10 @@ export 'photo_response_model.dart';
 class PhotoResponseWidget extends StatefulWidget {
   const PhotoResponseWidget({
     Key? key,
-    this.searchName,
+    required this.response,
   }) : super(key: key);
 
-  final List<String>? searchName;
+  final FFUploadedFile? response;
 
   @override
   _PhotoResponseWidgetState createState() => _PhotoResponseWidgetState();
@@ -894,7 +894,7 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                                       FFLocalizations.of(
                                                               context)
                                                           .getText(
-                                                        'u924a670' /* 早餐 */,
+                                                        'cr3jrq1a' /* 早餐 */,
                                                       ),
                                                       style:
                                                           FlutterFlowTheme.of(
@@ -959,7 +959,7 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                                       FFLocalizations.of(
                                                               context)
                                                           .getText(
-                                                        '2btzf4ay' /* 午餐 */,
+                                                        'mtf7f0ic' /* 午餐 */,
                                                       ),
                                                       style:
                                                           FlutterFlowTheme.of(
@@ -1024,7 +1024,7 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                                       FFLocalizations.of(
                                                               context)
                                                           .getText(
-                                                        'cydtno56' /* 晚餐 */,
+                                                        'ode6p2e9' /* 晚餐 */,
                                                       ),
                                                       style:
                                                           FlutterFlowTheme.of(
@@ -1089,7 +1089,7 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                                       FFLocalizations.of(
                                                               context)
                                                           .getText(
-                                                        'cxs15wnv' /* 點心 */,
+                                                        '324aqvy3' /* 點心 */,
                                                       ),
                                                       style:
                                                           FlutterFlowTheme.of(

@@ -277,6 +277,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ),
             ),
             FFRoute(
+              name: 'Details04CoffeeProduct',
+              path: 'details04CoffeeProduct',
+              builder: (context, params) => Details04CoffeeProductWidget(),
+            ),
+            FFRoute(
               name: 'food_costumize',
               path: 'foodCostumize',
               builder: (context, params) => FoodCostumizeWidget(
@@ -284,17 +289,23 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ),
             ),
             FFRoute(
-              name: 'Details04CoffeeProduct',
-              path: 'details04CoffeeProduct',
-              builder: (context, params) => Details04CoffeeProductWidget(),
-            ),
-            FFRoute(
               name: 'photo_response',
               path: 'photoResponse',
               builder: (context, params) => PhotoResponseWidget(
-                searchName: params.getParam<String>(
-                    'searchName', ParamType.String, true),
+                response: params.getParam('response', ParamType.FFUploadedFile),
               ),
+            ),
+            FFRoute(
+              name: 'food_costumizeCopy',
+              path: 'foodCostumizeCopy',
+              builder: (context, params) => FoodCostumizeCopyWidget(
+                name: params.getParam('name', ParamType.bool),
+              ),
+            ),
+            FFRoute(
+              name: 'Details02BasicLayout',
+              path: 'details02BasicLayout',
+              builder: (context, params) => Details02BasicLayoutWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),
