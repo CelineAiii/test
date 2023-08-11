@@ -269,17 +269,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => SportCostumizeWidget(),
             ),
             FFRoute(
-              name: 'searchPage',
-              path: 'searchPage',
-              builder: (context, params) => SearchPageWidget(
-                searchName: params.getParam<String>(
-                    'searchName', ParamType.String, true),
-              ),
-            ),
-            FFRoute(
               name: 'Details04CoffeeProduct',
               path: 'details04CoffeeProduct',
               builder: (context, params) => Details04CoffeeProductWidget(),
+            ),
+            FFRoute(
+              name: 'searchPage',
+              path: 'searchPage',
+              builder: (context, params) => SearchPageWidget(),
             ),
             FFRoute(
               name: 'food_costumize',
@@ -301,11 +298,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => FoodCostumizeCopyWidget(
                 name: params.getParam('name', ParamType.bool),
               ),
-            ),
-            FFRoute(
-              name: 'Details02BasicLayout',
-              path: 'details02BasicLayout',
-              builder: (context, params) => Details02BasicLayoutWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

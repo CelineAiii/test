@@ -9,12 +9,7 @@ import 'search_page_model.dart';
 export 'search_page_model.dart';
 
 class SearchPageWidget extends StatefulWidget {
-  const SearchPageWidget({
-    Key? key,
-    this.searchName,
-  }) : super(key: key);
-
-  final List<String>? searchName;
+  const SearchPageWidget({Key? key}) : super(key: key);
 
   @override
   _SearchPageWidgetState createState() => _SearchPageWidgetState();

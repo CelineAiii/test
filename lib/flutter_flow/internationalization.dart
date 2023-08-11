@@ -2573,17 +2573,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
-  // searchPage
-  {
-    'ch717glr': {
-      'zh_Hant': 'Search products...',
-      'en': '',
-    },
-    'qhiv8yuj': {
-      'zh_Hant': 'Home',
-      'en': '',
-    },
-  },
   // Details04CoffeeProduct
   {
     's694c054': {
@@ -2632,6 +2621,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     '9l9ypr1s': {
+      'zh_Hant': 'Home',
+      'en': '',
+    },
+  },
+  // searchPage
+  {
+    'ch717glr': {
+      'zh_Hant': 'Search products...',
+      'en': '',
+    },
+    'qhiv8yuj': {
       'zh_Hant': 'Home',
       'en': '',
     },
@@ -2754,50 +2754,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     'j224v6hu': {
-      'zh_Hant': 'Home',
-      'en': '',
-    },
-  },
-  // Details02BasicLayout
-  {
-    'ui6szm35': {
-      'zh_Hant': 'Page Title',
-      'en': '',
-    },
-    'k9enoadl': {
-      'zh_Hant': 'Overview',
-      'en': '',
-    },
-    'x7md3t8n': {
-      'zh_Hant':
-          'Here is an intro and description of what this toolkit entails. We hope you enjoy it as much as we do!',
-      'en': '',
-    },
-    'voilawvf': {
-      'zh_Hant': 'Introduction',
-      'en': '',
-    },
-    'o37kqitq': {
-      'zh_Hant': 'Intro',
-      'en': '',
-    },
-    '92v1qv2b': {
-      'zh_Hant': 'Disclaimer',
-      'en': '',
-    },
-    'fb0b57np': {
-      'zh_Hant': 'Main Content',
-      'en': '',
-    },
-    '63u00zdi': {
-      'zh_Hant': 'Prologue',
-      'en': '',
-    },
-    'mygm0kb2': {
-      'zh_Hant': 'Excercise',
-      'en': '',
-    },
-    'fzixm4bh': {
       'zh_Hant': 'Home',
       'en': '',
     },
