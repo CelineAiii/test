@@ -348,42 +348,161 @@ class _SportWidgetState extends State<SportWidget> {
                   ],
                 ),
               ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
-                child: FlutterFlowCalendar(
-                  color: Color(0xFFCB5165),
-                  iconColor: Color(0xFF0D0F10),
-                  weekFormat: false,
-                  weekStartsMonday: false,
-                  initialDate: widget.date,
-                  rowHeight: 64.0,
-                  onChange: (DateTimeRange? newSelectedDate) {
-                    setState(
-                        () => _model.calendarSelectedDay = newSelectedDate);
-                  },
-                  titleStyle:
-                      FlutterFlowTheme.of(context).headlineSmall.override(
-                            fontFamily: 'Poppins',
-                            color: Color(0xFF0D0F10),
+              Stack(
+                children: [
+                  Align(
+                    alignment: AlignmentDirectional(0.0, 6.44),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Align(
+                          alignment: AlignmentDirectional(-0.93, 0.75),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 85.0, 0.0, 0.0),
+                            child: Container(
+                              width: 45.0,
+                              height: 45.0,
+                              decoration: BoxDecoration(
+                                color: Color(0x7CBEB1DA),
+                                shape: BoxShape.circle,
+                              ),
+                            ),
                           ),
-                  dayOfWeekStyle:
-                      FlutterFlowTheme.of(context).labelLarge.override(
-                            fontFamily: 'Poppins',
-                            color: Color(0xFF0D0F10),
+                        ),
+                        Align(
+                          alignment: AlignmentDirectional(-0.93, 0.75),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 85.0, 0.0, 0.0),
+                            child: Container(
+                              width: 45.0,
+                              height: 45.0,
+                              decoration: BoxDecoration(
+                                color: Color(0x7CBEB1DA),
+                                shape: BoxShape.circle,
+                              ),
+                            ),
                           ),
-                  dateStyle: FlutterFlowTheme.of(context).titleSmall,
-                  selectedDateStyle:
-                      FlutterFlowTheme.of(context).headlineSmall.override(
-                            fontFamily: 'Poppins',
-                            color: Color(0xFF13112C),
+                        ),
+                        Align(
+                          alignment: AlignmentDirectional(-0.93, 0.75),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 85.0, 0.0, 0.0),
+                            child: Container(
+                              width: 45.0,
+                              height: 45.0,
+                              decoration: BoxDecoration(
+                                color: Color(0x7CBEB1DA),
+                                shape: BoxShape.circle,
+                              ),
+                            ),
                           ),
-                  inactiveDateStyle:
-                      FlutterFlowTheme.of(context).labelMedium.override(
-                            fontFamily: 'Poppins',
-                            color: Color(0xFFB1B1B7),
+                        ),
+                        Align(
+                          alignment: AlignmentDirectional(-0.93, 0.75),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 85.0, 0.0, 0.0),
+                            child: Container(
+                              width: 45.0,
+                              height: 45.0,
+                              decoration: BoxDecoration(
+                                color: Color(0x7CBEB1DA),
+                                shape: BoxShape.circle,
+                              ),
+                            ),
                           ),
-                  locale: FFLocalizations.of(context).languageCode,
-                ),
+                        ),
+                        Align(
+                          alignment: AlignmentDirectional(-0.93, 0.75),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 85.0, 0.0, 0.0),
+                            child: Container(
+                              width: 45.0,
+                              height: 45.0,
+                              decoration: BoxDecoration(
+                                color: Color(0x7CBEB1DA),
+                                shape: BoxShape.circle,
+                              ),
+                            ),
+                          ),
+                        ),
+                        Align(
+                          alignment: AlignmentDirectional(-0.93, 0.75),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 85.0, 0.0, 0.0),
+                            child: Container(
+                              width: 45.0,
+                              height: 45.0,
+                              decoration: BoxDecoration(
+                                color: Color(0x7CBEB1DA),
+                                shape: BoxShape.circle,
+                              ),
+                            ),
+                          ),
+                        ),
+                        Align(
+                          alignment: AlignmentDirectional(-0.93, 0.75),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 85.0, 0.0, 0.0),
+                            child: Container(
+                              width: 45.0,
+                              height: 45.0,
+                              decoration: BoxDecoration(
+                                color: Color(0x7CBEB1DA),
+                                shape: BoxShape.circle,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+                    child: FlutterFlowCalendar(
+                      color: Color(0x00FAF7F7),
+                      iconColor: Color(0xFF0D0F10),
+                      weekFormat: true,
+                      weekStartsMonday: false,
+                      initialDate: widget.date,
+                      rowHeight: 64.0,
+                      onChange: (DateTimeRange? newSelectedDate) {
+                        setState(
+                            () => _model.calendarSelectedDay = newSelectedDate);
+                      },
+                      titleStyle:
+                          FlutterFlowTheme.of(context).headlineSmall.override(
+                                fontFamily: 'Poppins',
+                                color: Color(0xFF0D0F10),
+                              ),
+                      dayOfWeekStyle:
+                          FlutterFlowTheme.of(context).labelLarge.override(
+                                fontFamily: 'Poppins',
+                                color: Color(0xFF0D0F10),
+                              ),
+                      dateStyle: FlutterFlowTheme.of(context).titleSmall,
+                      selectedDateStyle:
+                          FlutterFlowTheme.of(context).headlineSmall.override(
+                                fontFamily: 'Poppins',
+                                color: Color(0xFF13112C),
+                              ),
+                      inactiveDateStyle:
+                          FlutterFlowTheme.of(context).labelMedium.override(
+                                fontFamily: 'Poppins',
+                                color: Color(0xFFB1B1B7),
+                              ),
+                      locale: FFLocalizations.of(context).languageCode,
+                    ),
+                  ),
+                ],
               ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(16.0, 2.0, 16.0, 12.0),

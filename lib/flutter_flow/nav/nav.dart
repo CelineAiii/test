@@ -57,6 +57,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   : ShoppingWidget(),
             ),
             FFRoute(
+              name: 'analyze',
+              path: 'analyze',
+              builder: (context, params) => AnalyzeWidget(),
+            ),
+            FFRoute(
               name: 'sport',
               path: 'sport',
               builder: (context, params) => params.isEmpty
@@ -64,11 +69,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   : SportWidget(
                       date: params.getParam('date', ParamType.DateTime),
                     ),
-            ),
-            FFRoute(
-              name: 'analyze',
-              path: 'analyze',
-              builder: (context, params) => AnalyzeWidget(),
             ),
             FFRoute(
               name: 'social',
@@ -99,9 +99,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   : UserWidget(),
             ),
             FFRoute(
-              name: 'forget_password',
-              path: 'forgetPassword',
-              builder: (context, params) => ForgetPasswordWidget(),
+              name: 'send_forgetVal',
+              path: 'sendForgetVal',
+              builder: (context, params) => SendForgetValWidget(),
             ),
             FFRoute(
               name: 'timer',
@@ -124,14 +124,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => RecordWidget(),
             ),
             FFRoute(
-              name: 'view_food',
-              path: 'viewFood',
-              builder: (context, params) => ViewFoodWidget(),
-            ),
-            FFRoute(
               name: 'nutrient',
               path: 'nutrient',
               builder: (context, params) => NutrientWidget(),
+            ),
+            FFRoute(
+              name: 'view_food',
+              path: 'viewFood',
+              builder: (context, params) => ViewFoodWidget(),
             ),
             FFRoute(
               name: 'target_setting1',
@@ -286,6 +286,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ),
             ),
             FFRoute(
+              name: 'food_costumizeCopy',
+              path: 'foodCostumizeCopy',
+              builder: (context, params) => FoodCostumizeCopyWidget(
+                name: params.getParam('name', ParamType.bool),
+              ),
+            ),
+            FFRoute(
               name: 'photo_response',
               path: 'photoResponse',
               builder: (context, params) => PhotoResponseWidget(
@@ -293,11 +300,19 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ),
             ),
             FFRoute(
-              name: 'food_costumizeCopy',
-              path: 'foodCostumizeCopy',
-              builder: (context, params) => FoodCostumizeCopyWidget(
-                name: params.getParam('name', ParamType.bool),
-              ),
+              name: 'SuccessPage',
+              path: 'successPage',
+              builder: (context, params) => SuccessPageWidget(),
+            ),
+            FFRoute(
+              name: 'tmpp',
+              path: 'tmpp',
+              builder: (context, params) => TmppWidget(),
+            ),
+            FFRoute(
+              name: 'password_val',
+              path: 'passwordVal',
+              builder: (context, params) => PasswordValWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

@@ -816,6 +816,7 @@ class _CardWidgetState extends State<CardWidget> {
                         EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                     hidesUnderline: true,
                     isSearchable: false,
+                    isMultiSelect: false,
                   ),
                 ),
                 Padding(
@@ -850,6 +851,7 @@ class _CardWidgetState extends State<CardWidget> {
                         EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                     hidesUnderline: true,
                     isSearchable: false,
+                    isMultiSelect: false,
                   ),
                 ),
                 FFButtonWidget(

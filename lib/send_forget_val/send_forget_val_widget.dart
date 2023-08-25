@@ -7,25 +7,25 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'forget_password_model.dart';
-export 'forget_password_model.dart';
+import 'send_forget_val_model.dart';
+export 'send_forget_val_model.dart';
 
-class ForgetPasswordWidget extends StatefulWidget {
-  const ForgetPasswordWidget({Key? key}) : super(key: key);
+class SendForgetValWidget extends StatefulWidget {
+  const SendForgetValWidget({Key? key}) : super(key: key);
 
   @override
-  _ForgetPasswordWidgetState createState() => _ForgetPasswordWidgetState();
+  _SendForgetValWidgetState createState() => _SendForgetValWidgetState();
 }
 
-class _ForgetPasswordWidgetState extends State<ForgetPasswordWidget> {
-  late ForgetPasswordModel _model;
+class _SendForgetValWidgetState extends State<SendForgetValWidget> {
+  late SendForgetValModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => ForgetPasswordModel());
+    _model = createModel(context, () => SendForgetValModel());
 
     _model.emailAddressController ??= TextEditingController();
   }
@@ -73,22 +73,6 @@ class _ForgetPasswordWidgetState extends State<ForgetPasswordWidget> {
                         onPressed: () async {
                           context.pop();
                         },
-                      ),
-                    ),
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(4.0, 0.0, 0.0, 0.0),
-                      child: Text(
-                        FFLocalizations.of(context).getText(
-                          'agkw1k18' /* Back */,
-                        ),
-                        style:
-                            FlutterFlowTheme.of(context).displaySmall.override(
-                                  fontFamily: 'Outfit',
-                                  color: Color(0xFF0D0814),
-                                  fontSize: 16.0,
-                                  fontWeight: FontWeight.w500,
-                                ),
                       ),
                     ),
                   ],

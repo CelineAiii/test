@@ -2,6 +2,7 @@ import '/components/choose_detect_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/upload_data.dart';
 import '/flutter_flow/permissions_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -88,6 +89,49 @@ class _FoodCostumizeWidgetState extends State<FoodCostumizeWidget> {
                     );
                   },
                 ).then((value) => setState(() {}));
+
+                final selectedMedia = await selectMediaWithSourceBottomSheet(
+                  context: context,
+                  allowPhoto: true,
+                );
+                if (selectedMedia != null &&
+                    selectedMedia.every(
+                        (m) => validateFileFormat(m.storagePath, context))) {
+                  setState(() => _model.isDataUploading = true);
+                  var selectedUploadedFiles = <FFUploadedFile>[];
+
+                  try {
+                    selectedUploadedFiles = selectedMedia
+                        .map((m) => FFUploadedFile(
+                              name: m.storagePath.split('/').last,
+                              bytes: m.bytes,
+                              height: m.dimensions?.height,
+                              width: m.dimensions?.width,
+                              blurHash: m.blurHash,
+                            ))
+                        .toList();
+                  } finally {
+                    _model.isDataUploading = false;
+                  }
+                  if (selectedUploadedFiles.length == selectedMedia.length) {
+                    setState(() {
+                      _model.uploadedLocalFile = selectedUploadedFiles.first;
+                    });
+                  } else {
+                    setState(() {});
+                    return;
+                  }
+                }
+
+                context.pushNamed(
+                  'photo_response',
+                  queryParameters: {
+                    'response': serializeParam(
+                      _model.uploadedLocalFile,
+                      ParamType.FFUploadedFile,
+                    ),
+                  }.withoutNulls,
+                );
               },
             ),
           ),

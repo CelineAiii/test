@@ -564,6 +564,7 @@ class _NutrientWidgetState extends State<NutrientWidget> {
                         EdgeInsetsDirectional.fromSTEB(12.0, 4.0, 12.0, 4.0),
                     hidesUnderline: true,
                     isSearchable: false,
+                    isMultiSelect: false,
                   ),
                 ),
                 Expanded(

@@ -1,18 +1,18 @@
 // Export pages
 export '/home_page/home_page_widget.dart' show HomePageWidget;
 export '/shopping/shopping_widget.dart' show ShoppingWidget;
-export '/sport/sport_widget.dart' show SportWidget;
 export '/analyze/analyze_widget.dart' show AnalyzeWidget;
+export '/sport/sport_widget.dart' show SportWidget;
 export '/social/social_widget.dart' show SocialWidget;
 export '/diet_plan/diet_plan_widget.dart' show DietPlanWidget;
 export '/sign_in/sign_in_widget.dart' show SignInWidget;
 export '/user/user_widget.dart' show UserWidget;
-export '/forget_password/forget_password_widget.dart' show ForgetPasswordWidget;
+export '/send_forget_val/send_forget_val_widget.dart' show SendForgetValWidget;
 export '/timer/timer_widget.dart' show TimerWidget;
 export '/food/food_widget.dart' show FoodWidget;
 export '/record/record_widget.dart' show RecordWidget;
-export '/view_food/view_food_widget.dart' show ViewFoodWidget;
 export '/nutrient/nutrient_widget.dart' show NutrientWidget;
+export '/view_food/view_food_widget.dart' show ViewFoodWidget;
 export '/target_setting1/target_setting1_widget.dart' show TargetSetting1Widget;
 export '/food_recommand/food_recommand_widget.dart' show FoodRecommandWidget;
 export '/target_setting2/target_setting2_widget.dart' show TargetSetting2Widget;
@@ -43,6 +43,9 @@ export '/details04_coffee_product/details04_coffee_product_widget.dart'
     show Details04CoffeeProductWidget;
 export '/search_page/search_page_widget.dart' show SearchPageWidget;
 export '/food_costumize/food_costumize_widget.dart' show FoodCostumizeWidget;
-export '/photo_response/photo_response_widget.dart' show PhotoResponseWidget;
 export '/food_costumize_copy/food_costumize_copy_widget.dart'
     show FoodCostumizeCopyWidget;
+export '/photo_response/photo_response_widget.dart' show PhotoResponseWidget;
+export '/success_page/success_page_widget.dart' show SuccessPageWidget;
+export '/tmpp/tmpp_widget.dart' show TmppWidget;
+export '/password_val/password_val_widget.dart' show PasswordValWidget;

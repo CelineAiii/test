@@ -275,69 +275,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
-  // sport
-  {
-    'higqiuj1': {
-      'zh_Hant': 'This is your daily summary.',
-      'en': '',
-    },
-    'g4i6o3tg': {
-      'zh_Hant': '今日運動時間',
-      'en': '',
-    },
-    'bi75mcfp': {
-      'zh_Hant': 'Goals',
-      'en': '',
-    },
-    'bjgrgh1y': {
-      'zh_Hant': '2hr',
-      'en': '',
-    },
-    'ms94vcfk': {
-      'zh_Hant': '已消耗卡路里',
-      'en': '',
-    },
-    'bfbcdp32': {
-      'zh_Hant': '大卡',
-      'en': '',
-    },
-    '46w1yt9m': {
-      'zh_Hant': '200',
-      'en': '',
-    },
-    'qxa1j1m4': {
-      'zh_Hant': '今日剩餘',
-      'en': '',
-    },
-    'ixh7bjqm': {
-      'zh_Hant': '100',
-      'en': '',
-    },
-    'uy5ox0o3': {
-      'zh_Hant': 'Timer',
-      'en': '',
-    },
-    'uad7is6x': {
-      'zh_Hant': 'Go Training Now',
-      'en': '',
-    },
-    'cptijfdl': {
-      'zh_Hant': 'Record',
-      'en': '',
-    },
-    'x5cee2bc': {
-      'zh_Hant': 'Go Record Your Training Now',
-      'en': '',
-    },
-    'crx94f5r': {
-      'zh_Hant': 'Hi! Celine',
-      'en': '',
-    },
-    'rdadx54s': {
-      'zh_Hant': 'Home',
-      'en': '',
-    },
-  },
   // analyze
   {
     'hswzjhmp': {
@@ -429,6 +366,69 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     '9hlxo0tu': {
+      'zh_Hant': 'Home',
+      'en': '',
+    },
+  },
+  // sport
+  {
+    'higqiuj1': {
+      'zh_Hant': 'This is your daily summary.',
+      'en': '',
+    },
+    'g4i6o3tg': {
+      'zh_Hant': '今日運動時間',
+      'en': '',
+    },
+    'bi75mcfp': {
+      'zh_Hant': 'Goals',
+      'en': '',
+    },
+    'bjgrgh1y': {
+      'zh_Hant': '2hr',
+      'en': '',
+    },
+    'ms94vcfk': {
+      'zh_Hant': '已消耗卡路里',
+      'en': '',
+    },
+    'bfbcdp32': {
+      'zh_Hant': '大卡',
+      'en': '',
+    },
+    '46w1yt9m': {
+      'zh_Hant': '200',
+      'en': '',
+    },
+    'qxa1j1m4': {
+      'zh_Hant': '今日剩餘',
+      'en': '',
+    },
+    'ixh7bjqm': {
+      'zh_Hant': '100',
+      'en': '',
+    },
+    'uy5ox0o3': {
+      'zh_Hant': 'Timer',
+      'en': '',
+    },
+    'uad7is6x': {
+      'zh_Hant': 'Go Training Now',
+      'en': '',
+    },
+    'cptijfdl': {
+      'zh_Hant': 'Record',
+      'en': '',
+    },
+    'x5cee2bc': {
+      'zh_Hant': 'Go Record Your Training Now',
+      'en': '',
+    },
+    'crx94f5r': {
+      'zh_Hant': 'Hi! Celine',
+      'en': '',
+    },
+    'rdadx54s': {
       'zh_Hant': 'Home',
       'en': '',
     },
@@ -759,12 +759,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
-  // forget_password
+  // send_forgetVal
   {
-    'agkw1k18': {
-      'zh_Hant': 'Back',
-      'en': '',
-    },
     'xchqoiwb': {
       'zh_Hant': 'Forgot Password',
       'en': '',
@@ -965,41 +961,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
-  // view_food
-  {
-    'm8uf8g3s': {
-      'zh_Hant': 'Delete',
-      'en': '',
-    },
-    'z07tdr95': {
-      'zh_Hant': '起司漢堡',
-      'en': '',
-    },
-    'f2d7mmv6': {
-      'zh_Hant': '500大卡',
-      'en': '',
-    },
-    'ij131rts': {
-      'zh_Hant': 'Delete',
-      'en': '',
-    },
-    '8x1tq4qr': {
-      'zh_Hant': '豆漿',
-      'en': '',
-    },
-    '02c1bf21': {
-      'zh_Hant': '180大卡',
-      'en': '',
-    },
-    'qmv3whvd': {
-      'zh_Hant': '早餐',
-      'en': '',
-    },
-    '41uz41ce': {
-      'zh_Hant': 'Home',
-      'en': '',
-    },
-  },
   // nutrient
   {
     'cr8vmvt4': {
@@ -1111,6 +1072,41 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
+  // view_food
+  {
+    'm8uf8g3s': {
+      'zh_Hant': 'Delete',
+      'en': '',
+    },
+    'z07tdr95': {
+      'zh_Hant': '起司漢堡',
+      'en': '',
+    },
+    'f2d7mmv6': {
+      'zh_Hant': '500大卡',
+      'en': '',
+    },
+    'ij131rts': {
+      'zh_Hant': 'Delete',
+      'en': '',
+    },
+    '8x1tq4qr': {
+      'zh_Hant': '豆漿',
+      'en': '',
+    },
+    '02c1bf21': {
+      'zh_Hant': '180大卡',
+      'en': '',
+    },
+    'qmv3whvd': {
+      'zh_Hant': '早餐',
+      'en': '',
+    },
+    '41uz41ce': {
+      'zh_Hant': 'Home',
+      'en': '',
+    },
+  },
   // target_setting1
   {
     'mttmdugs': {
@@ -1157,59 +1153,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // food_recommand
   {
     '2rtg499i': {
-      'zh_Hant': '- 推薦食譜 -',
-      'en': '',
-    },
-    '1nygul98': {
-      'zh_Hant': '以下為今日推薦您的食譜',
-      'en': '',
-    },
-    'tpq9dwlb': {
-      'zh_Hant': '1. 早餐：',
-      'en': '',
-    },
-    'v6wy9xwt': {
-      'zh_Hant': 'Hello World',
-      'en': '',
-    },
-    'zbblx6kc': {
-      'zh_Hant': 'Hello World',
-      'en': '',
-    },
-    '1r5k8eku': {
-      'zh_Hant': 'Hello World',
-      'en': '',
-    },
-    'ej69lgmz': {
-      'zh_Hant': '2. 午餐：',
-      'en': '',
-    },
-    'clm1s0eo': {
-      'zh_Hant': 'Hello World',
-      'en': '',
-    },
-    'm95ga6r3': {
-      'zh_Hant': 'Hello World',
-      'en': '',
-    },
-    'c9h8oi58': {
-      'zh_Hant': 'Hello World',
-      'en': '',
-    },
-    'e03qwnc6': {
-      'zh_Hant': '3. 晚餐：',
-      'en': '',
-    },
-    'gzamu213': {
-      'zh_Hant': '4. 點心：',
-      'en': '',
-    },
-    'ory97fdp': {
-      'zh_Hant': ' ',
-      'en': '',
-    },
-    '3na4ztc7': {
-      'zh_Hant': 'Candy Diary',
+      'zh_Hant': '推薦食譜',
       'en': '',
     },
     '2htbm4tn': {
@@ -2647,77 +2591,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
-  // photo_response
-  {
-    'f4txzgn7': {
-      'zh_Hant': '份量',
-      'en': '',
-    },
-    '052kdhym': {
-      'zh_Hant': '熱量',
-      'en': '',
-    },
-    '8bgtqhuw': {
-      'zh_Hant': '碳水化合物',
-      'en': '',
-    },
-    'wfc31e9i': {
-      'zh_Hant': '蛋白質',
-      'en': '',
-    },
-    'l4i7mm7b': {
-      'zh_Hant': '脂肪',
-      'en': '',
-    },
-    'g0w0n619': {
-      'zh_Hant': '飽和脂肪',
-      'en': '',
-    },
-    'h79cqt68': {
-      'zh_Hant': '反式脂肪',
-      'en': '',
-    },
-    'nvv4dfls': {
-      'zh_Hant': '糖',
-      'en': '',
-    },
-    '0bsuzf1y': {
-      'zh_Hant': '鈉',
-      'en': '',
-    },
-    'xdrd8vhr': {
-      'zh_Hant': '鈣',
-      'en': '',
-    },
-    '3viyoolg': {
-      'zh_Hant': '鉀',
-      'en': '',
-    },
-    'cr3jrq1a': {
-      'zh_Hant': '早餐',
-      'en': '',
-    },
-    'mtf7f0ic': {
-      'zh_Hant': '午餐',
-      'en': '',
-    },
-    'ode6p2e9': {
-      'zh_Hant': '晚餐',
-      'en': '',
-    },
-    '324aqvy3': {
-      'zh_Hant': '點心',
-      'en': '',
-    },
-    '9xj1csw2': {
-      'zh_Hant': 'Add ',
-      'en': '',
-    },
-    'fya2b9j9': {
-      'zh_Hant': 'Home',
-      'en': '',
-    },
-  },
   // food_costumizeCopy
   {
     'nqsatdk6': {
@@ -2754,6 +2627,178 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     'j224v6hu': {
+      'zh_Hant': 'Home',
+      'en': '',
+    },
+  },
+  // photo_response
+  {
+    'xbcsjcf1': {
+      'zh_Hant': '辨識結果',
+      'en': '',
+    },
+    'f4txzgn7': {
+      'zh_Hant': '份量',
+      'en': '',
+    },
+    '7h1x0f1p': {
+      'zh_Hant': 'Hello World',
+      'en': '',
+    },
+    '052kdhym': {
+      'zh_Hant': '熱量',
+      'en': '',
+    },
+    'dlfrmjv4': {
+      'zh_Hant': 'Whole Milk',
+      'en': '',
+    },
+    '8bgtqhuw': {
+      'zh_Hant': '碳水化合物',
+      'en': '',
+    },
+    'kjspkdmr': {
+      'zh_Hant': 'Whole Milk',
+      'en': '',
+    },
+    'wfc31e9i': {
+      'zh_Hant': '蛋白質',
+      'en': '',
+    },
+    'jranmkkf': {
+      'zh_Hant': 'Standard',
+      'en': '',
+    },
+    'l4i7mm7b': {
+      'zh_Hant': '脂肪',
+      'en': '',
+    },
+    'a61vxc9c': {
+      'zh_Hant': 'Standard',
+      'en': '',
+    },
+    'g0w0n619': {
+      'zh_Hant': '飽和脂肪',
+      'en': '',
+    },
+    'jdjtj0cn': {
+      'zh_Hant': 'Standard',
+      'en': '',
+    },
+    'h79cqt68': {
+      'zh_Hant': '反式脂肪',
+      'en': '',
+    },
+    'f3zcii3q': {
+      'zh_Hant': 'Standard',
+      'en': '',
+    },
+    'nvv4dfls': {
+      'zh_Hant': '糖',
+      'en': '',
+    },
+    '0n3mipo2': {
+      'zh_Hant': 'Standard',
+      'en': '',
+    },
+    '0bsuzf1y': {
+      'zh_Hant': '鈉',
+      'en': '',
+    },
+    'bbmsfauo': {
+      'zh_Hant': 'Standard',
+      'en': '',
+    },
+    'xdrd8vhr': {
+      'zh_Hant': '鈣',
+      'en': '',
+    },
+    'ft392j1z': {
+      'zh_Hant': 'Standard',
+      'en': '',
+    },
+    '3viyoolg': {
+      'zh_Hant': '鉀',
+      'en': '',
+    },
+    'xfxsii0o': {
+      'zh_Hant': 'Standard',
+      'en': '',
+    },
+    'ktkenbg3': {
+      'zh_Hant': '每100克',
+      'en': '',
+    },
+    'lzpufndj': {
+      'zh_Hant': '每一份量',
+      'en': '',
+    },
+    'nvmbrvs8': {
+      'zh_Hant': '請選擇',
+      'en': '',
+    },
+    'orhl1eof': {
+      'zh_Hant': '1',
+      'en': '',
+    },
+    '1h1d81og': {
+      'zh_Hant': 'p',
+      'en': '',
+    },
+    '9xj1csw2': {
+      'zh_Hant': 'Add ',
+      'en': '',
+    },
+    'fya2b9j9': {
+      'zh_Hant': 'Home',
+      'en': '',
+    },
+  },
+  // SuccessPage
+  {
+    'v0pj7wgd': {
+      'zh_Hant': 'Congrats!',
+      'en': '',
+    },
+    '594vgwwf': {
+      'zh_Hant': 'Thanks for taking the quiz.',
+      'en': '',
+    },
+    'txgq3e7x': {
+      'zh_Hant': 'Home',
+      'en': '',
+    },
+  },
+  // tmpp
+  {
+    '5kkiqovi': {
+      'zh_Hant': 'Page Title',
+      'en': '',
+    },
+    'laqy3sj5': {
+      'zh_Hant': 'Thanks for taking the quiz.',
+      'en': '',
+    },
+    '6cx9rc8s': {
+      'zh_Hant': 'Home',
+      'en': '',
+    },
+  },
+  // password_val
+  {
+    'ezdbvq74': {
+      'zh_Hant': 'Forgot Password',
+      'en': '',
+    },
+    'dhjuzufi': {
+      'zh_Hant': '請先至您的信箱進行驗證，\n驗證成功後點選以下按鈕即可開始更改新密碼。',
+      'en': '',
+    },
+    'cmh9xo02': {
+      'zh_Hant': 'Start',
+      'en': '',
+    },
+    'aqeqx509': {
       'zh_Hant': 'Home',
       'en': '',
     },
