@@ -81,9 +81,7 @@ class _SendForgetValWidgetState extends State<SendForgetValWidget> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                 child: Text(
-                  FFLocalizations.of(context).getText(
-                    'xchqoiwb' /* Forgot Password */,
-                  ),
+                  'Forgot Password',
                   style: FlutterFlowTheme.of(context).displaySmall.override(
                         fontFamily: 'Outfit',
                         color: Color(0xFF0D0814),
@@ -113,9 +111,7 @@ class _SendForgetValWidgetState extends State<SendForgetValWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 15.0),
                     child: Text(
-                      FFLocalizations.of(context).getText(
-                        'dhbyeupg' /* We will send you an email with... */,
-                      ),
+                      'We will send you an email with a link to reset your password, please enter the email associated with your account below.',
                       style: FlutterFlowTheme.of(context).bodySmall.override(
                             fontFamily: 'Outfit',
                             color: Color(0xFF0D0814),
@@ -148,18 +144,14 @@ class _SendForgetValWidgetState extends State<SendForgetValWidget> {
                 controller: _model.emailAddressController,
                 obscureText: false,
                 decoration: InputDecoration(
-                  labelText: FFLocalizations.of(context).getText(
-                    'kvvpt1dy' /* Your email address... */,
-                  ),
+                  labelText: 'Your email address...',
                   labelStyle: FlutterFlowTheme.of(context).bodySmall.override(
                         fontFamily: 'Outfit',
                         color: Color(0xFF57636C),
                         fontSize: 14.0,
                         fontWeight: FontWeight.normal,
                       ),
-                  hintText: FFLocalizations.of(context).getText(
-                    'h1v7p80y' /* Enter your email... */,
-                  ),
+                  hintText: 'Enter your email...',
                   hintStyle: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Lexend Deca',
                         color: Color(0xFF57636C),
@@ -247,9 +239,7 @@ class _SendForgetValWidgetState extends State<SendForgetValWidget> {
                   },
                 );
               },
-              text: FFLocalizations.of(context).getText(
-                'affywxro' /* Send Link */,
-              ),
+              text: 'Send Link',
               options: FFButtonOptions(
                 width: 270.0,
                 height: 50.0,

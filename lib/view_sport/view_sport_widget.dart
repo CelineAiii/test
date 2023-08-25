@@ -63,9 +63,7 @@ class _ViewSportWidgetState extends State<ViewSportWidget> {
               },
             ),
             title: Text(
-              FFLocalizations.of(context).getText(
-                '6lze4zeq' /* 今日運動紀錄 */,
-              ),
+              '今日運動紀錄',
               style: FlutterFlowTheme.of(context).headlineMedium.override(
                     fontFamily: 'Outfit',
                     color: Color(0xFFE5E0EB),
@@ -125,9 +123,7 @@ class _ViewSportWidgetState extends State<ViewSportWidget> {
                           extentRatio: 0.5,
                           children: [
                             SlidableAction(
-                              label: FFLocalizations.of(context).getText(
-                                'xi19f98g' /* Delete */,
-                              ),
+                              label: 'Delete',
                               backgroundColor: Color(0xFFF32143),
                               icon: Icons.delete,
                               onPressed: (_) {
@@ -135,9 +131,7 @@ class _ViewSportWidgetState extends State<ViewSportWidget> {
                               },
                             ),
                             SlidableAction(
-                              label: FFLocalizations.of(context).getText(
-                                'se2oj67b' /* Edit */,
-                              ),
+                              label: 'Edit',
                               backgroundColor: Color(0xFF858E99),
                               icon: FontAwesomeIcons.tools,
                               onPressed: (_) async {
@@ -153,9 +147,7 @@ class _ViewSportWidgetState extends State<ViewSportWidget> {
                             size: 25.0,
                           ),
                           title: Text(
-                            FFLocalizations.of(context).getText(
-                              'u0kidq14' /* 游泳 - 800公尺 */,
-                            ),
+                            '游泳 - 800公尺',
                             style: FlutterFlowTheme.of(context)
                                 .headlineSmall
                                 .override(
@@ -164,9 +156,7 @@ class _ViewSportWidgetState extends State<ViewSportWidget> {
                                 ),
                           ),
                           subtitle: Text(
-                            FFLocalizations.of(context).getText(
-                              '8t4sk7gn' /* 消耗 300 kal */,
-                            ),
+                            '消耗 300 kal',
                             style: FlutterFlowTheme.of(context).titleSmall,
                           ),
                           tileColor: Color(0xFFE5E0EB),
@@ -179,9 +169,7 @@ class _ViewSportWidgetState extends State<ViewSportWidget> {
                           extentRatio: 0.5,
                           children: [
                             SlidableAction(
-                              label: FFLocalizations.of(context).getText(
-                                'dhp0h0f1' /* Delete */,
-                              ),
+                              label: 'Delete',
                               backgroundColor: Color(0xFFF32143),
                               icon: Icons.delete,
                               onPressed: (_) {
@@ -189,9 +177,7 @@ class _ViewSportWidgetState extends State<ViewSportWidget> {
                               },
                             ),
                             SlidableAction(
-                              label: FFLocalizations.of(context).getText(
-                                'b115yy8s' /* Edit */,
-                              ),
+                              label: 'Edit',
                               backgroundColor: Color(0xFF858E99),
                               icon: FontAwesomeIcons.tools,
                               onPressed: (_) async {
@@ -207,9 +193,7 @@ class _ViewSportWidgetState extends State<ViewSportWidget> {
                             size: 30.0,
                           ),
                           title: Text(
-                            FFLocalizations.of(context).getText(
-                              'zwgltacm' /* 慢跑 - 30 min */,
-                            ),
+                            '慢跑 - 30 min',
                             style: FlutterFlowTheme.of(context)
                                 .headlineSmall
                                 .override(
@@ -218,9 +202,7 @@ class _ViewSportWidgetState extends State<ViewSportWidget> {
                                 ),
                           ),
                           subtitle: Text(
-                            FFLocalizations.of(context).getText(
-                              'fbn76m40' /* 消耗 180 kal */,
-                            ),
+                            '消耗 180 kal',
                             style: FlutterFlowTheme.of(context).titleSmall,
                           ),
                           tileColor: Color(0xFFE5E0EB),

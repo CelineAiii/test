@@ -64,9 +64,7 @@ class _SportRunWidgetState extends State<SportRunWidget> {
               },
             ),
             title: Text(
-              FFLocalizations.of(context).getText(
-                'ggx9tor0' /* Hi! Celine */,
-              ),
+              'Hi! Celine',
               style: FlutterFlowTheme.of(context).bodyMedium.override(
                     fontFamily: 'Poppins',
                     color: FlutterFlowTheme.of(context).primaryBtnText,
@@ -103,9 +101,7 @@ class _SportRunWidgetState extends State<SportRunWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 20.0),
               child: Text(
-                FFLocalizations.of(context).getText(
-                  '1kz9dhi2' /* 請在此紀錄您的運動 */,
-                ),
+                '請在此紀錄您的運動',
                 textAlign: TextAlign.center,
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: 'Poppins',
@@ -118,36 +114,12 @@ class _SportRunWidgetState extends State<SportRunWidget> {
               child: FlutterFlowDropDown<String>(
                 controller: _model.dropDownValueController ??=
                     FormFieldController<String>(null),
-                options: [
-                  FFLocalizations.of(context).getText(
-                    '4lx0g5k1' /* 快走、健走 */,
-                  ),
-                  FFLocalizations.of(context).getText(
-                    'tuejgb2e' /* 慢走 */,
-                  ),
-                  FFLocalizations.of(context).getText(
-                    'sabtyree' /* 下樓梯 */,
-                  ),
-                  FFLocalizations.of(context).getText(
-                    'j4fxf2e2' /* 上樓梯 */,
-                  ),
-                  FFLocalizations.of(context).getText(
-                    'vewv526x' /* 慢跑 */,
-                  ),
-                  FFLocalizations.of(context).getText(
-                    '35cd8i7o' /* 普通快跑 */,
-                  ),
-                  FFLocalizations.of(context).getText(
-                    'v5npttjs' /* 加強快跑 */,
-                  )
-                ],
+                options: ['快走、健走', '慢走', '下樓梯', '上樓梯', '慢跑', '普通快跑', '加強快跑'],
                 onChanged: (val) => setState(() => _model.dropDownValue = val),
                 width: 300.0,
                 height: 80.0,
                 textStyle: FlutterFlowTheme.of(context).bodyMedium,
-                hintText: FFLocalizations.of(context).getText(
-                  'nhb6seig' /* 請選擇運動種類... */,
-                ),
+                hintText: '請選擇運動種類...',
                 icon: Icon(
                   Icons.keyboard_arrow_down_rounded,
                   color: FlutterFlowTheme.of(context).secondaryText,
@@ -170,9 +142,7 @@ class _SportRunWidgetState extends State<SportRunWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 0.0, 0.0),
                   child: Text(
-                    FFLocalizations.of(context).getText(
-                      't0m3p88t' /* 此次選擇之運動為： */,
-                    ),
+                    '此次選擇之運動為：',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Poppins',
                           fontSize: 20.0,
@@ -184,9 +154,7 @@ class _SportRunWidgetState extends State<SportRunWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 20.0, 0.0),
                     child: Text(
-                      FFLocalizations.of(context).getText(
-                        'yx0ctu68' /* 跑步 */,
-                      ),
+                      '跑步',
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Poppins',
@@ -204,9 +172,7 @@ class _SportRunWidgetState extends State<SportRunWidget> {
                 autofocus: true,
                 obscureText: false,
                 decoration: InputDecoration(
-                  labelText: FFLocalizations.of(context).getText(
-                    'k3dv0bbc' /* 請輸入運動總時數...(單位：分鐘） */,
-                  ),
+                  labelText: '請輸入運動總時數...(單位：分鐘）',
                   labelStyle: FlutterFlowTheme.of(context).labelMedium,
                   hintStyle: FlutterFlowTheme.of(context).labelMedium,
                   enabledBorder: OutlineInputBorder(
@@ -248,9 +214,7 @@ class _SportRunWidgetState extends State<SportRunWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 0.0, 0.0),
                   child: Text(
-                    FFLocalizations.of(context).getText(
-                      'mle7b05x' /* 此次輸入之總時數為： */,
-                    ),
+                    '此次輸入之總時數為：',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Poppins',
                           fontSize: 20.0,
@@ -262,9 +226,7 @@ class _SportRunWidgetState extends State<SportRunWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 20.0, 0.0),
                     child: Text(
-                      FFLocalizations.of(context).getText(
-                        '227inz8f' /* 30 min */,
-                      ),
+                      '30 min',
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Poppins',
@@ -282,9 +244,7 @@ class _SportRunWidgetState extends State<SportRunWidget> {
                   padding:
                       EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 20.0, 10.0),
                   child: Text(
-                    FFLocalizations.of(context).getText(
-                      'oc2lzefw' /* Total: */,
-                    ),
+                    'Total:',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Poppins',
                           color: Color(0xFFCB5165),
@@ -304,9 +264,7 @@ class _SportRunWidgetState extends State<SportRunWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                     child: Text(
-                      FFLocalizations.of(context).getText(
-                        '4boklsyi' /* 本次運動之平均熱量消耗量： */,
-                      ),
+                      '本次運動之平均熱量消耗量：',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Poppins',
                             fontSize: 20.0,
@@ -318,9 +276,7 @@ class _SportRunWidgetState extends State<SportRunWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                       child: Text(
-                        FFLocalizations.of(context).getText(
-                          'gg3wkfpl' /* 400 kal */,
-                        ),
+                        '400 kal',
                         textAlign: TextAlign.end,
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Poppins',
@@ -351,9 +307,7 @@ class _SportRunWidgetState extends State<SportRunWidget> {
                   },
                 );
               },
-              text: FFLocalizations.of(context).getText(
-                '0vw4k54d' /* 加入運動 */,
-              ),
+              text: '加入運動',
               options: FFButtonOptions(
                 height: 60.0,
                 padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),

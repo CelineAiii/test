@@ -64,9 +64,7 @@ class _SportSwimWidgetState extends State<SportSwimWidget> {
               },
             ),
             title: Text(
-              FFLocalizations.of(context).getText(
-                '4msnrga4' /* Hi! Celine */,
-              ),
+              'Hi! Celine',
               style: FlutterFlowTheme.of(context).bodyMedium.override(
                     fontFamily: 'Poppins',
                     color: FlutterFlowTheme.of(context).primaryBtnText,
@@ -103,9 +101,7 @@ class _SportSwimWidgetState extends State<SportSwimWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 20.0),
               child: Text(
-                FFLocalizations.of(context).getText(
-                  'rof0ogrb' /* 請在此紀錄您的運動 */,
-                ),
+                '請在此紀錄您的運動',
                 textAlign: TextAlign.center,
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: 'Poppins',
@@ -118,21 +114,12 @@ class _SportSwimWidgetState extends State<SportSwimWidget> {
               child: FlutterFlowDropDown<String>(
                 controller: _model.dropDownValueController ??=
                     FormFieldController<String>(null),
-                options: [
-                  FFLocalizations.of(context).getText(
-                    '4ugxtzgm' /* 游泳（慢） */,
-                  ),
-                  FFLocalizations.of(context).getText(
-                    '9azb1slb' /* 游泳（較快） */,
-                  )
-                ],
+                options: ['游泳（慢）', '游泳（較快）'],
                 onChanged: (val) => setState(() => _model.dropDownValue = val),
                 width: 300.0,
                 height: 80.0,
                 textStyle: FlutterFlowTheme.of(context).bodyMedium,
-                hintText: FFLocalizations.of(context).getText(
-                  'rrdgy282' /* 請選擇運動種類... */,
-                ),
+                hintText: '請選擇運動種類...',
                 icon: Icon(
                   Icons.keyboard_arrow_down_rounded,
                   color: FlutterFlowTheme.of(context).secondaryText,
@@ -155,9 +142,7 @@ class _SportSwimWidgetState extends State<SportSwimWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 0.0, 0.0),
                   child: Text(
-                    FFLocalizations.of(context).getText(
-                      'gyctz3w3' /* 此次選擇之運動為： */,
-                    ),
+                    '此次選擇之運動為：',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Poppins',
                           fontSize: 20.0,
@@ -169,9 +154,7 @@ class _SportSwimWidgetState extends State<SportSwimWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 20.0, 0.0),
                     child: Text(
-                      FFLocalizations.of(context).getText(
-                        '2sx0iqs0' /* 游泳 */,
-                      ),
+                      '游泳',
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Poppins',
@@ -189,9 +172,7 @@ class _SportSwimWidgetState extends State<SportSwimWidget> {
                 autofocus: true,
                 obscureText: false,
                 decoration: InputDecoration(
-                  labelText: FFLocalizations.of(context).getText(
-                    'himevmyu' /* 請輸入運動總距離...(單位：公尺） */,
-                  ),
+                  labelText: '請輸入運動總距離...(單位：公尺）',
                   labelStyle: FlutterFlowTheme.of(context).labelMedium,
                   hintStyle: FlutterFlowTheme.of(context).labelMedium,
                   enabledBorder: OutlineInputBorder(
@@ -233,9 +214,7 @@ class _SportSwimWidgetState extends State<SportSwimWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 0.0, 0.0),
                   child: Text(
-                    FFLocalizations.of(context).getText(
-                      '07fk3k5a' /* 此次輸入之總距離為： */,
-                    ),
+                    '此次輸入之總距離為：',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Poppins',
                           fontSize: 20.0,
@@ -247,9 +226,7 @@ class _SportSwimWidgetState extends State<SportSwimWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 20.0, 0.0),
                     child: Text(
-                      FFLocalizations.of(context).getText(
-                        'nh170y28' /* 800 公尺 */,
-                      ),
+                      '800 公尺',
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Poppins',
@@ -267,9 +244,7 @@ class _SportSwimWidgetState extends State<SportSwimWidget> {
                   padding:
                       EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 20.0, 10.0),
                   child: Text(
-                    FFLocalizations.of(context).getText(
-                      'e3wbyxs7' /* Total: */,
-                    ),
+                    'Total:',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Poppins',
                           color: Color(0xFFCB5165),
@@ -289,9 +264,7 @@ class _SportSwimWidgetState extends State<SportSwimWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                     child: Text(
-                      FFLocalizations.of(context).getText(
-                        'v83vuima' /* 本次運動之平均熱量消耗量： */,
-                      ),
+                      '本次運動之平均熱量消耗量：',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Poppins',
                             fontSize: 20.0,
@@ -303,9 +276,7 @@ class _SportSwimWidgetState extends State<SportSwimWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                       child: Text(
-                        FFLocalizations.of(context).getText(
-                          'bimm7tti' /* 400 kal */,
-                        ),
+                        '400 kal',
                         textAlign: TextAlign.end,
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Poppins',
@@ -336,9 +307,7 @@ class _SportSwimWidgetState extends State<SportSwimWidget> {
                   },
                 );
               },
-              text: FFLocalizations.of(context).getText(
-                'tuzfegof' /* 加入運動 */,
-              ),
+              text: '加入運動',
               options: FFButtonOptions(
                 height: 60.0,
                 padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),

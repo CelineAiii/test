@@ -39,30 +39,14 @@ class _CardWidgetState extends State<CardWidget> {
     _model.textController7 ??= TextEditingController();
     _model.textController8 ??= TextEditingController();
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {
-          _model.textController1?.text = FFLocalizations.of(context).getText(
-            'wdqnizdz' /* 無 */,
-          );
-          _model.textController2?.text = FFLocalizations.of(context).getText(
-            'frs8e34m' /* 0 */,
-          );
-          _model.textController3?.text = FFLocalizations.of(context).getText(
-            'aios2na2' /* 0 */,
-          );
-          _model.textController4?.text = FFLocalizations.of(context).getText(
-            'gvid92z3' /* 0 */,
-          );
-          _model.textController5?.text = FFLocalizations.of(context).getText(
-            'mrr9s6tu' /* 0 */,
-          );
-          _model.textController6?.text = FFLocalizations.of(context).getText(
-            't80i15no' /* 0 */,
-          );
-          _model.textController7?.text = FFLocalizations.of(context).getText(
-            'ub5bn0by' /* 0 */,
-          );
-          _model.textController8?.text = FFLocalizations.of(context).getText(
-            'qmwtw4bi' /* 0 */,
-          );
+          _model.textController1?.text = '無';
+          _model.textController2?.text = '0';
+          _model.textController3?.text = '0';
+          _model.textController4?.text = '0';
+          _model.textController5?.text = '0';
+          _model.textController6?.text = '0';
+          _model.textController7?.text = '0';
+          _model.textController8?.text = '0';
         }));
   }
 
@@ -96,9 +80,7 @@ class _CardWidgetState extends State<CardWidget> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Text(
-                        FFLocalizations.of(context).getText(
-                          'sd1vdhk4' /* 快速加入食品 */,
-                        ),
+                        '快速加入食品',
                         style: FlutterFlowTheme.of(context)
                             .headlineMedium
                             .override(
@@ -129,10 +111,7 @@ class _CardWidgetState extends State<CardWidget> {
                                 controller: _model.textController1,
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                  labelText:
-                                      FFLocalizations.of(context).getText(
-                                    'tkehjxep' /* 食品名稱 */,
-                                  ),
+                                  labelText: '食品名稱',
                                   labelStyle: FlutterFlowTheme.of(context)
                                       .labelMedium
                                       .override(
@@ -206,10 +185,7 @@ class _CardWidgetState extends State<CardWidget> {
                                 controller: _model.textController2,
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                  labelText:
-                                      FFLocalizations.of(context).getText(
-                                    'nim69dsw' /* 卡路里 */,
-                                  ),
+                                  labelText: '卡路里',
                                   labelStyle: FlutterFlowTheme.of(context)
                                       .labelMedium
                                       .override(
@@ -218,9 +194,7 @@ class _CardWidgetState extends State<CardWidget> {
                                         fontSize: 14.0,
                                         fontWeight: FontWeight.normal,
                                       ),
-                                  hintText: FFLocalizations.of(context).getText(
-                                    '72r6im2u' /* (cal) */,
-                                  ),
+                                  hintText: '(cal)',
                                   hintStyle: FlutterFlowTheme.of(context)
                                       .labelMedium
                                       .override(
@@ -286,10 +260,7 @@ class _CardWidgetState extends State<CardWidget> {
                                 controller: _model.textController3,
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                  labelText:
-                                      FFLocalizations.of(context).getText(
-                                    'n29dyj33' /* 脂肪 */,
-                                  ),
+                                  labelText: '脂肪',
                                   labelStyle: FlutterFlowTheme.of(context)
                                       .labelMedium
                                       .override(
@@ -298,9 +269,7 @@ class _CardWidgetState extends State<CardWidget> {
                                         fontSize: 14.0,
                                         fontWeight: FontWeight.normal,
                                       ),
-                                  hintText: FFLocalizations.of(context).getText(
-                                    'klsf8nls' /* (g) */,
-                                  ),
+                                  hintText: '(g)',
                                   hintStyle: FlutterFlowTheme.of(context)
                                       .labelMedium
                                       .override(
@@ -366,10 +335,7 @@ class _CardWidgetState extends State<CardWidget> {
                                 controller: _model.textController4,
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                  labelText:
-                                      FFLocalizations.of(context).getText(
-                                    'skizt83o' /* 糖類 */,
-                                  ),
+                                  labelText: '糖類',
                                   labelStyle: FlutterFlowTheme.of(context)
                                       .labelMedium
                                       .override(
@@ -378,9 +344,7 @@ class _CardWidgetState extends State<CardWidget> {
                                         fontSize: 14.0,
                                         fontWeight: FontWeight.normal,
                                       ),
-                                  hintText: FFLocalizations.of(context).getText(
-                                    'tdojv6hh' /* (g) */,
-                                  ),
+                                  hintText: '(g)',
                                   hintStyle: FlutterFlowTheme.of(context)
                                       .labelMedium
                                       .override(
@@ -446,10 +410,7 @@ class _CardWidgetState extends State<CardWidget> {
                                 controller: _model.textController5,
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                  labelText:
-                                      FFLocalizations.of(context).getText(
-                                    'vo6pb26x' /* 蛋白質 */,
-                                  ),
+                                  labelText: '蛋白質',
                                   labelStyle: FlutterFlowTheme.of(context)
                                       .labelMedium
                                       .override(
@@ -458,9 +419,7 @@ class _CardWidgetState extends State<CardWidget> {
                                         fontSize: 14.0,
                                         fontWeight: FontWeight.normal,
                                       ),
-                                  hintText: FFLocalizations.of(context).getText(
-                                    'b4g43hkg' /* (g) */,
-                                  ),
+                                  hintText: '(g)',
                                   hintStyle: FlutterFlowTheme.of(context)
                                       .labelMedium
                                       .override(
@@ -528,10 +487,7 @@ class _CardWidgetState extends State<CardWidget> {
                                   controller: _model.textController6,
                                   obscureText: false,
                                   decoration: InputDecoration(
-                                    labelText:
-                                        FFLocalizations.of(context).getText(
-                                      'qtn8rkcz' /* 碳水化合物 */,
-                                    ),
+                                    labelText: '碳水化合物',
                                     labelStyle: FlutterFlowTheme.of(context)
                                         .labelMedium
                                         .override(
@@ -540,10 +496,7 @@ class _CardWidgetState extends State<CardWidget> {
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.normal,
                                         ),
-                                    hintText:
-                                        FFLocalizations.of(context).getText(
-                                      'brv6hv7p' /* (g) */,
-                                    ),
+                                    hintText: '(g)',
                                     hintStyle: FlutterFlowTheme.of(context)
                                         .labelMedium
                                         .override(
@@ -612,10 +565,7 @@ class _CardWidgetState extends State<CardWidget> {
                                   controller: _model.textController7,
                                   obscureText: false,
                                   decoration: InputDecoration(
-                                    labelText:
-                                        FFLocalizations.of(context).getText(
-                                      'hnou6wot' /* 飽和脂肪 */,
-                                    ),
+                                    labelText: '飽和脂肪',
                                     labelStyle: FlutterFlowTheme.of(context)
                                         .labelMedium
                                         .override(
@@ -624,10 +574,7 @@ class _CardWidgetState extends State<CardWidget> {
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.normal,
                                         ),
-                                    hintText:
-                                        FFLocalizations.of(context).getText(
-                                      '5jvqcgl5' /* (g) */,
-                                    ),
+                                    hintText: '(g)',
                                     hintStyle: FlutterFlowTheme.of(context)
                                         .labelMedium
                                         .override(
@@ -696,10 +643,7 @@ class _CardWidgetState extends State<CardWidget> {
                                   controller: _model.textController8,
                                   obscureText: false,
                                   decoration: InputDecoration(
-                                    labelText:
-                                        FFLocalizations.of(context).getText(
-                                      'igvfxafk' /* 反式脂肪 */,
-                                    ),
+                                    labelText: '反式脂肪',
                                     labelStyle: FlutterFlowTheme.of(context)
                                         .labelMedium
                                         .override(
@@ -708,10 +652,7 @@ class _CardWidgetState extends State<CardWidget> {
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.normal,
                                         ),
-                                    hintText:
-                                        FFLocalizations.of(context).getText(
-                                      '38fdhwhs' /* (g) */,
-                                    ),
+                                    hintText: '(g)',
                                     hintStyle: FlutterFlowTheme.of(context)
                                         .labelMedium
                                         .override(
@@ -775,33 +716,15 @@ class _CardWidgetState extends State<CardWidget> {
                   child: FlutterFlowDropDown<String>(
                     controller: _model.dropDownValueController1 ??=
                         FormFieldController<String>(
-                      _model.dropDownValue1 ??=
-                          FFLocalizations.of(context).getText(
-                        'w60wac2q' /* 早餐 */,
-                      ),
+                      _model.dropDownValue1 ??= '早餐',
                     ),
-                    options: [
-                      FFLocalizations.of(context).getText(
-                        '6l1k3l6w' /* 早餐 */,
-                      ),
-                      FFLocalizations.of(context).getText(
-                        'fnviypmt' /* 午餐 */,
-                      ),
-                      FFLocalizations.of(context).getText(
-                        '6ct5guv1' /* 晚餐 */,
-                      ),
-                      FFLocalizations.of(context).getText(
-                        'lr0l7rg3' /* 點心 */,
-                      )
-                    ],
+                    options: ['早餐', '午餐', '晚餐', '點心'],
                     onChanged: (val) =>
                         setState(() => _model.dropDownValue1 = val),
                     width: MediaQuery.sizeOf(context).width * 0.92,
                     height: 50.0,
                     textStyle: FlutterFlowTheme.of(context).bodyMedium,
-                    hintText: FFLocalizations.of(context).getText(
-                      '1icxr8xg' /* 選擇飲食時段 */,
-                    ),
+                    hintText: '選擇飲食時段',
                     icon: Icon(
                       Icons.keyboard_arrow_down_rounded,
                       color: FlutterFlowTheme.of(context).secondaryText,
@@ -824,19 +747,13 @@ class _CardWidgetState extends State<CardWidget> {
                   child: FlutterFlowDropDown<String>(
                     controller: _model.dropDownValueController2 ??=
                         FormFieldController<String>(null),
-                    options: [
-                      FFLocalizations.of(context).getText(
-                        'tjtmjo0b' /* 2023-07-28 */,
-                      )
-                    ],
+                    options: ['2023-07-28'],
                     onChanged: (val) =>
                         setState(() => _model.dropDownValue2 = val),
                     width: MediaQuery.sizeOf(context).width * 0.92,
                     height: 50.0,
                     textStyle: FlutterFlowTheme.of(context).bodyMedium,
-                    hintText: FFLocalizations.of(context).getText(
-                      'tk3uzwte' /* 選擇飲食日期 */,
-                    ),
+                    hintText: '選擇飲食日期',
                     icon: Icon(
                       Icons.keyboard_arrow_down_rounded,
                       color: FlutterFlowTheme.of(context).secondaryText,
@@ -873,9 +790,7 @@ class _CardWidgetState extends State<CardWidget> {
                       },
                     );
                   },
-                  text: FFLocalizations.of(context).getText(
-                    '312f8qyn' /* 儲存食品 */,
-                  ),
+                  text: '儲存食品',
                   options: FFButtonOptions(
                     width: 270.0,
                     height: 50.0,

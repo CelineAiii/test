@@ -81,9 +81,7 @@ class _ChooseDetectWidgetState extends State<ChooseDetectWidget> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                 child: Text(
-                  FFLocalizations.of(context).getText(
-                    '2j9h60ll' /* 選取辨識種類 */,
-                  ),
+                  '選取辨識種類',
                   style: FlutterFlowTheme.of(context).displaySmall.override(
                         fontFamily: 'Poppins',
                         color: Color(0xFF050505),
@@ -94,9 +92,7 @@ class _ChooseDetectWidgetState extends State<ChooseDetectWidget> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 0.0, 8.0),
                 child: Text(
-                  FFLocalizations.of(context).getText(
-                    'lrxjm7aj' /* label or photo */,
-                  ),
+                  'label or photo',
                   style: FlutterFlowTheme.of(context).bodySmall.override(
                         fontFamily: 'Outfit',
                         color: Color(0xFF858E99),
@@ -187,9 +183,7 @@ class _ChooseDetectWidgetState extends State<ChooseDetectWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               8.0, 0.0, 0.0, 0.0),
                           child: Text(
-                            FFLocalizations.of(context).getText(
-                              'cobcucar' /* 食品影像 */,
-                            ),
+                            '食品影像',
                             style: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .override(
@@ -235,9 +229,7 @@ class _ChooseDetectWidgetState extends State<ChooseDetectWidget> {
                         padding:
                             EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
                         child: Text(
-                          FFLocalizations.of(context).getText(
-                            '1mwgi5fc' /* 食品標籤 */,
-                          ),
+                          '食品標籤',
                           style:
                               FlutterFlowTheme.of(context).titleSmall.override(
                                     fontFamily: 'Outfit',

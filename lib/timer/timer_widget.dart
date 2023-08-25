@@ -68,9 +68,7 @@ class _TimerWidgetState extends State<TimerWidget> {
             },
           ),
           title: Text(
-            FFLocalizations.of(context).getText(
-              'dlxnrtnh' /* Pushups */,
-            ),
+            'Pushups',
             style: FlutterFlowTheme.of(context).bodyMedium.override(
                   fontFamily: 'Space Grotesk',
                   color: Color(0xFF14181B),
@@ -99,9 +97,7 @@ class _TimerWidgetState extends State<TimerWidget> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          FFLocalizations.of(context).getText(
-                            'zrjji4wj' /* Time Left */,
-                          ),
+                          'Time Left',
                           style: FlutterFlowTheme.of(context)
                               .headlineSmall
                               .override(
@@ -115,9 +111,7 @@ class _TimerWidgetState extends State<TimerWidget> {
                           onPressed: () async {
                             Navigator.pop(context);
                           },
-                          text: FFLocalizations.of(context).getText(
-                            'zo2wtj5r' /* 修改時間 */,
-                          ),
+                          text: '修改時間',
                           options: FFButtonOptions(
                             height: 40.0,
                             padding: EdgeInsetsDirectional.fromSTEB(
@@ -277,9 +271,7 @@ class _TimerWidgetState extends State<TimerWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Text(
-                                        FFLocalizations.of(context).getText(
-                                          'a3g64sa5' /* Workout  */,
-                                        ),
+                                        'Workout ',
                                         style: FlutterFlowTheme.of(context)
                                             .headlineSmall
                                             .override(
@@ -290,9 +282,7 @@ class _TimerWidgetState extends State<TimerWidget> {
                                             ),
                                       ),
                                       Text(
-                                        FFLocalizations.of(context).getText(
-                                          't1qsc1d0' /* Push Ups */,
-                                        ),
+                                        'Push Ups',
                                         style: FlutterFlowTheme.of(context)
                                             .headlineSmall
                                             .override(
@@ -313,9 +303,7 @@ class _TimerWidgetState extends State<TimerWidget> {
                                           MainAxisAlignment.spaceBetween,
                                       children: [
                                         Text(
-                                          FFLocalizations.of(context).getText(
-                                            'n6gzgvz8' /* Current Set */,
-                                          ),
+                                          'Current Set',
                                           style: FlutterFlowTheme.of(context)
                                               .headlineMedium
                                               .override(
@@ -326,9 +314,7 @@ class _TimerWidgetState extends State<TimerWidget> {
                                               ),
                                         ),
                                         Text(
-                                          FFLocalizations.of(context).getText(
-                                            '4vdew5vn' /* 40 in 1 minute */,
-                                          ),
+                                          '40 in 1 minute',
                                           style: FlutterFlowTheme.of(context)
                                               .headlineMedium
                                               .override(
@@ -342,9 +328,7 @@ class _TimerWidgetState extends State<TimerWidget> {
                                     ),
                                   ),
                                   Text(
-                                    FFLocalizations.of(context).getText(
-                                      '6f3fyzu7' /* Pushups are an exercise in whi... */,
-                                    ),
+                                    'Pushups are an exercise in which a person, keeping a prone position, with the hands palms down under the shoulders, the balls of the feet on the ground, and the back straight, pushes the body up and lets it down by an alternate straightening and bending of the arms.',
                                     style: FlutterFlowTheme.of(context)
                                         .bodySmall
                                         .override(
@@ -364,9 +348,7 @@ class _TimerWidgetState extends State<TimerWidget> {
                                 onPressed: () {
                                   print('Button pressed ...');
                                 },
-                                text: FFLocalizations.of(context).getText(
-                                  '1rioi8an' /* Complete Workout */,
-                                ),
+                                text: 'Complete Workout',
                                 options: FFButtonOptions(
                                   width: 270.0,
                                   height: 50.0,

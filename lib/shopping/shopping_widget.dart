@@ -77,9 +77,7 @@ class _ShoppingWidgetState extends State<ShoppingWidget>
               onPressed: () async {
                 context.goNamed('HomePage');
               },
-              text: FFLocalizations.of(context).getText(
-                'kkfrap0l' /* Candy Diary */,
-              ),
+              text: 'Candy Diary',
               options: FFButtonOptions(
                 width: 185.0,
                 height: 40.0,
@@ -148,9 +146,7 @@ class _ShoppingWidgetState extends State<ShoppingWidget>
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        FFLocalizations.of(context).getText(
-                          'ytn74fe9' /*  Products */,
-                        ),
+                        ' Products',
                         style:
                             FlutterFlowTheme.of(context).titleMedium.override(
                                   fontFamily: 'Outfit',
@@ -166,9 +162,7 @@ class _ShoppingWidgetState extends State<ShoppingWidget>
                           onPressed: () async {
                             context.pushNamed('product');
                           },
-                          text: FFLocalizations.of(context).getText(
-                            'm9qm5een' /* 已擁有之商品 */,
-                          ),
+                          text: '已擁有之商品',
                           options: FFButtonOptions(
                             height: 40.0,
                             padding: EdgeInsetsDirectional.fromSTEB(
@@ -329,10 +323,7 @@ class _ShoppingWidgetState extends State<ShoppingWidget>
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
                                               Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  'yhpy4pe4' /* 漂亮的糖果罐 */,
-                                                ),
+                                                '漂亮的糖果罐',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .headlineSmall
@@ -358,10 +349,7 @@ class _ShoppingWidgetState extends State<ShoppingWidget>
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
                                               Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  'uaclfso6' /* Produced by Celine */,
-                                                ),
+                                                'Produced by Celine',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodySmall
@@ -387,10 +375,7 @@ class _ShoppingWidgetState extends State<ShoppingWidget>
                                                 MainAxisAlignment.end,
                                             children: [
                                               Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  '84m9q16i' /* 30 Pt */,
-                                                ),
+                                                '30 Pt',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .titleMedium
@@ -492,10 +477,7 @@ class _ShoppingWidgetState extends State<ShoppingWidget>
                                               MainAxisAlignment.spaceBetween,
                                           children: [
                                             Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'i2w1gobt' /* 可愛的糖果罐 */,
-                                              ),
+                                              '可愛的糖果罐',
                                               style: FlutterFlowTheme.of(
                                                       context)
                                                   .headlineSmall
@@ -518,10 +500,7 @@ class _ShoppingWidgetState extends State<ShoppingWidget>
                                               MainAxisAlignment.spaceBetween,
                                           children: [
                                             Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'pr1l544p' /* Produced by Celine */,
-                                              ),
+                                              'Produced by Celine',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodySmall
@@ -546,10 +525,7 @@ class _ShoppingWidgetState extends State<ShoppingWidget>
                                               MainAxisAlignment.end,
                                           children: [
                                             Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                '1wknsxmp' /* 28 Pt */,
-                                              ),
+                                              '28 Pt',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .titleMedium
@@ -649,10 +625,7 @@ class _ShoppingWidgetState extends State<ShoppingWidget>
                                               MainAxisAlignment.spaceBetween,
                                           children: [
                                             Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                't2bzv6i7' /* 拐杖糖 */,
-                                              ),
+                                              '拐杖糖',
                                               style: FlutterFlowTheme.of(
                                                       context)
                                                   .headlineSmall
@@ -675,10 +648,7 @@ class _ShoppingWidgetState extends State<ShoppingWidget>
                                               MainAxisAlignment.spaceBetween,
                                           children: [
                                             Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'gje3g2ea' /* Produced by Celine */,
-                                              ),
+                                              'Produced by Celine',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodySmall
@@ -703,10 +673,7 @@ class _ShoppingWidgetState extends State<ShoppingWidget>
                                               MainAxisAlignment.end,
                                           children: [
                                             Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                '8jzd5qte' /* 50 Pt */,
-                                              ),
+                                              '50 Pt',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .titleMedium
@@ -806,10 +773,7 @@ class _ShoppingWidgetState extends State<ShoppingWidget>
                                               MainAxisAlignment.spaceBetween,
                                           children: [
                                             Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'ju22v1xt' /* 好看的糖果 */,
-                                              ),
+                                              '好看的糖果',
                                               style: FlutterFlowTheme.of(
                                                       context)
                                                   .headlineSmall
@@ -832,10 +796,7 @@ class _ShoppingWidgetState extends State<ShoppingWidget>
                                               MainAxisAlignment.spaceBetween,
                                           children: [
                                             Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'fpe36z03' /* Produced by Celine */,
-                                              ),
+                                              'Produced by Celine',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodySmall
@@ -860,10 +821,7 @@ class _ShoppingWidgetState extends State<ShoppingWidget>
                                               MainAxisAlignment.end,
                                           children: [
                                             Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'holg8j7q' /* 50 Pt */,
-                                              ),
+                                              '50 Pt',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .titleMedium
@@ -963,10 +921,7 @@ class _ShoppingWidgetState extends State<ShoppingWidget>
                                               MainAxisAlignment.spaceBetween,
                                           children: [
                                             Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                's22vhl0f' /* 普通好看的糖果罐 */,
-                                              ),
+                                              '普通好看的糖果罐',
                                               style: FlutterFlowTheme.of(
                                                       context)
                                                   .headlineSmall
@@ -989,10 +944,7 @@ class _ShoppingWidgetState extends State<ShoppingWidget>
                                               MainAxisAlignment.spaceBetween,
                                           children: [
                                             Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'yin0x08w' /* Produced by Celine */,
-                                              ),
+                                              'Produced by Celine',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodySmall
@@ -1017,10 +969,7 @@ class _ShoppingWidgetState extends State<ShoppingWidget>
                                               MainAxisAlignment.end,
                                           children: [
                                             Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                '5e7uj8u1' /* 20 Pt */,
-                                              ),
+                                              '20 Pt',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .titleMedium

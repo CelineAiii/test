@@ -64,9 +64,7 @@ class _SportBikeWidgetState extends State<SportBikeWidget> {
               },
             ),
             title: Text(
-              FFLocalizations.of(context).getText(
-                '5ukq3x24' /* Hi! Celine */,
-              ),
+              'Hi! Celine',
               style: FlutterFlowTheme.of(context).bodyMedium.override(
                     fontFamily: 'Poppins',
                     color: FlutterFlowTheme.of(context).primaryBtnText,
@@ -103,9 +101,7 @@ class _SportBikeWidgetState extends State<SportBikeWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 20.0),
               child: Text(
-                FFLocalizations.of(context).getText(
-                  '0uz4029u' /* 請在此紀錄您的運動 */,
-                ),
+                '請在此紀錄您的運動',
                 textAlign: TextAlign.center,
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: 'Poppins',
@@ -118,24 +114,12 @@ class _SportBikeWidgetState extends State<SportBikeWidget> {
               child: FlutterFlowDropDown<String>(
                 controller: _model.dropDownValueController ??=
                     FormFieldController<String>(null),
-                options: [
-                  FFLocalizations.of(context).getText(
-                    'bfd3u0mv' /* 一般速度 10km/hr */,
-                  ),
-                  FFLocalizations.of(context).getText(
-                    'ozl288g6' /* 偏快 20km/hr */,
-                  ),
-                  FFLocalizations.of(context).getText(
-                    'z3efqnoo' /* 快速30km/hr */,
-                  )
-                ],
+                options: ['一般速度 10km/hr', '偏快 20km/hr', '快速30km/hr'],
                 onChanged: (val) => setState(() => _model.dropDownValue = val),
                 width: 300.0,
                 height: 80.0,
                 textStyle: FlutterFlowTheme.of(context).bodyMedium,
-                hintText: FFLocalizations.of(context).getText(
-                  'f6eghyp5' /* 請選擇運動種類... */,
-                ),
+                hintText: '請選擇運動種類...',
                 icon: Icon(
                   Icons.keyboard_arrow_down_rounded,
                   color: FlutterFlowTheme.of(context).secondaryText,
@@ -158,9 +142,7 @@ class _SportBikeWidgetState extends State<SportBikeWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 0.0, 0.0),
                   child: Text(
-                    FFLocalizations.of(context).getText(
-                      'sapg6yff' /* 此次選擇之運動為： */,
-                    ),
+                    '此次選擇之運動為：',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Poppins',
                           fontSize: 20.0,
@@ -172,9 +154,7 @@ class _SportBikeWidgetState extends State<SportBikeWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 20.0, 0.0),
                     child: Text(
-                      FFLocalizations.of(context).getText(
-                        'sab14hpg' /* 跑步 */,
-                      ),
+                      '跑步',
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Poppins',
@@ -192,9 +172,7 @@ class _SportBikeWidgetState extends State<SportBikeWidget> {
                 autofocus: true,
                 obscureText: false,
                 decoration: InputDecoration(
-                  labelText: FFLocalizations.of(context).getText(
-                    'inuysxcn' /* 請輸入運動總時數...(單位：分鐘） */,
-                  ),
+                  labelText: '請輸入運動總時數...(單位：分鐘）',
                   labelStyle: FlutterFlowTheme.of(context).labelMedium,
                   hintStyle: FlutterFlowTheme.of(context).labelMedium,
                   enabledBorder: OutlineInputBorder(
@@ -236,9 +214,7 @@ class _SportBikeWidgetState extends State<SportBikeWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 0.0, 0.0),
                   child: Text(
-                    FFLocalizations.of(context).getText(
-                      '9wthwnco' /* 此次輸入之總時數為： */,
-                    ),
+                    '此次輸入之總時數為：',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Poppins',
                           fontSize: 20.0,
@@ -250,9 +226,7 @@ class _SportBikeWidgetState extends State<SportBikeWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 20.0, 0.0),
                     child: Text(
-                      FFLocalizations.of(context).getText(
-                        'tyr6g725' /* 30 min */,
-                      ),
+                      '30 min',
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Poppins',
@@ -270,9 +244,7 @@ class _SportBikeWidgetState extends State<SportBikeWidget> {
                   padding:
                       EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 20.0, 10.0),
                   child: Text(
-                    FFLocalizations.of(context).getText(
-                      'vj8eftoh' /* Total: */,
-                    ),
+                    'Total:',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Poppins',
                           color: Color(0xFFCB5165),
@@ -292,9 +264,7 @@ class _SportBikeWidgetState extends State<SportBikeWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                     child: Text(
-                      FFLocalizations.of(context).getText(
-                        '5hci0mxa' /* 本次運動之平均熱量消耗量： */,
-                      ),
+                      '本次運動之平均熱量消耗量：',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Poppins',
                             fontSize: 20.0,
@@ -306,9 +276,7 @@ class _SportBikeWidgetState extends State<SportBikeWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                       child: Text(
-                        FFLocalizations.of(context).getText(
-                          '4s0f31l4' /* 400 kal */,
-                        ),
+                        '400 kal',
                         textAlign: TextAlign.end,
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Poppins',
@@ -339,9 +307,7 @@ class _SportBikeWidgetState extends State<SportBikeWidget> {
                   },
                 );
               },
-              text: FFLocalizations.of(context).getText(
-                '2tv4s713' /* 加入運動 */,
-              ),
+              text: '加入運動',
               options: FFButtonOptions(
                 height: 60.0,
                 padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),

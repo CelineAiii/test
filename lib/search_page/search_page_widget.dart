@@ -75,9 +75,7 @@ class _SearchPageWidgetState extends State<SearchPageWidget> {
                 ),
                 obscureText: false,
                 decoration: InputDecoration(
-                  labelText: FFLocalizations.of(context).getText(
-                    'ch717glr' /* Search products... */,
-                  ),
+                  labelText: 'Search products...',
                   labelStyle: FlutterFlowTheme.of(context).bodySmall.override(
                         fontFamily: 'Outfit',
                         color: Color(0xFF57636C),

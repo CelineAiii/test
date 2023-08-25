@@ -54,9 +54,7 @@ class _SuccessPageWidgetState extends State<SuccessPageWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Text(
-                          FFLocalizations.of(context).getText(
-                            'v0pj7wgd' /* Congrats! */,
-                          ),
+                          'Congrats!',
                           style: FlutterFlowTheme.of(context)
                               .headlineMedium
                               .override(
@@ -70,9 +68,7 @@ class _SuccessPageWidgetState extends State<SuccessPageWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 12.0, 0.0, 0.0),
                           child: Text(
-                            FFLocalizations.of(context).getText(
-                              '594vgwwf' /* Thanks for taking the quiz. */,
-                            ),
+                            'Thanks for taking the quiz.',
                             style: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .override(

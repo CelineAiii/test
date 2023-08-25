@@ -63,9 +63,7 @@ class _SettingWidgetState extends State<SettingWidget> {
               onPressed: () async {
                 context.pushNamed('HomePage');
               },
-              text: FFLocalizations.of(context).getText(
-                '7ey8hja6' /* Candy Diary */,
-              ),
+              text: 'Candy Diary',
               options: FFButtonOptions(
                 width: 185.0,
                 height: 40.0,
@@ -101,9 +99,7 @@ class _SettingWidgetState extends State<SettingWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                   child: Text(
-                    FFLocalizations.of(context).getText(
-                      'cq7zmb7h' /* - 修改資料 - */,
-                    ),
+                    '- 修改資料 -',
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Poppins',
@@ -130,9 +126,7 @@ class _SettingWidgetState extends State<SettingWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 20.0, 0.0, 0.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                'cze0a44z' /* 請挑選您欲修改的項目： */,
-                              ),
+                              '請挑選您欲修改的項目：',
                               textAlign: TextAlign.start,
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
@@ -165,9 +159,7 @@ class _SettingWidgetState extends State<SettingWidget> {
                                       onPressed: () async {
                                         context.pushNamed('user_setting');
                                       },
-                                      text: FFLocalizations.of(context).getText(
-                                        'phyk4byu' /* 個人資料 */,
-                                      ),
+                                      text: '個人資料',
                                       options: FFButtonOptions(
                                         width: double.infinity,
                                         height: 80.0,
@@ -200,9 +192,7 @@ class _SettingWidgetState extends State<SettingWidget> {
                                       onPressed: () async {
                                         context.pushNamed('target_setting1');
                                       },
-                                      text: FFLocalizations.of(context).getText(
-                                        's5giea5f' /* 目標設定 */,
-                                      ),
+                                      text: '目標設定',
                                       options: FFButtonOptions(
                                         width: double.infinity,
                                         height: 80.0,

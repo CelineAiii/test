@@ -51,9 +51,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
               onPressed: () async {
                 context.goNamed('HomePage');
               },
-              text: FFLocalizations.of(context).getText(
-                'yxgepgzb' /* Candy Diary */,
-              ),
+              text: 'Candy Diary',
               options: FFButtonOptions(
                 width: 185.0,
                 height: 40.0,
@@ -134,9 +132,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 10.0, 0.0, 0.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                '7yniin3c' /* 目前的減肥計劃為： */,
-                              ),
+                              '目前的減肥計劃為：',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -150,9 +146,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 0.0),
                           child: Text(
-                            FFLocalizations.of(context).getText(
-                              '7o3prw4t' /* 168間歇性斷食法 */,
-                            ),
+                            '168間歇性斷食法',
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
@@ -168,9 +162,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                   child: Text(
-                    FFLocalizations.of(context).getText(
-                      'om5tp76x' /* 請在此選擇您的減肥計劃 */,
-                    ),
+                    '請在此選擇您的減肥計劃',
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Poppins',
@@ -216,9 +208,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 10.0, 0.0, 0.0),
                                           child: Text(
-                                            FFLocalizations.of(context).getText(
-                                              'in0fzu59' /* 168間歇性斷食法 */,
-                                            ),
+                                            '168間歇性斷食法',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -258,11 +248,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                                             .fromSTEB(0.0, 10.0,
                                                                 0.0, 0.0),
                                                     child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'c2wtgb70' /* 1. 實行方式： */,
-                                                      ),
+                                                      '1. 實行方式：',
                                                       textAlign:
                                                           TextAlign.start,
                                                       style:
@@ -282,12 +268,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                                       .fromSTEB(
                                                           0.0, 5.0, 0.0, 0.0),
                                                   child: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'fycnpbry' /* 進食時間：8小時
-斷食時間：16小時 */
-                                                      ,
-                                                    ),
+                                                    '進食時間：8小時\n斷食時間：16小時',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium
@@ -307,11 +288,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                                             .fromSTEB(0.0, 10.0,
                                                                 0.0, 0.0),
                                                     child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'n1h4u0yf' /* 2. 注意事項： */,
-                                                      ),
+                                                      '2. 注意事項：',
                                                       textAlign:
                                                           TextAlign.start,
                                                       style:
@@ -331,12 +308,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                                       .fromSTEB(
                                                           30.0, 5.0, 30.0, 0.0),
                                                   child: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      '5tgguyee' /* 斷食前最後一餐吃飽一點
-進食8 小時內避免油炸物、高熱量食物... */
-                                                      ,
-                                                    ),
+                                                    '斷食前最後一餐吃飽一點\n進食8 小時內避免油炸物、高熱量食物、零食甜點、精緻碳水化合物等',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium
@@ -358,10 +330,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                             onPressed: () async {
                                               context.pushNamed('user');
                                             },
-                                            text: FFLocalizations.of(context)
-                                                .getText(
-                                              'jf88k3tk' /* 確定 */,
-                                            ),
+                                            text: '確定',
                                             options: FFButtonOptions(
                                               width: 130.0,
                                               height: 40.0,
@@ -411,9 +380,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 10.0, 0.0, 0.0),
                                           child: Text(
-                                            FFLocalizations.of(context).getText(
-                                              '2rehxgl7' /* 168間歇性斷食法 */,
-                                            ),
+                                            '168間歇性斷食法',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -453,11 +420,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                                             .fromSTEB(0.0, 10.0,
                                                                 0.0, 0.0),
                                                     child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'elk8xgg4' /* 1. 實行方式： */,
-                                                      ),
+                                                      '1. 實行方式：',
                                                       textAlign:
                                                           TextAlign.start,
                                                       style:
@@ -477,12 +440,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                                       .fromSTEB(
                                                           0.0, 5.0, 0.0, 0.0),
                                                   child: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      '1rdm6qtp' /* 進食時間：8小時
-斷食時間：16小時 */
-                                                      ,
-                                                    ),
+                                                    '進食時間：8小時\n斷食時間：16小時',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium
@@ -502,11 +460,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                                             .fromSTEB(0.0, 10.0,
                                                                 0.0, 0.0),
                                                     child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'xjp79qfk' /* 2. 注意事項： */,
-                                                      ),
+                                                      '2. 注意事項：',
                                                       textAlign:
                                                           TextAlign.start,
                                                       style:
@@ -526,12 +480,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                                       .fromSTEB(
                                                           30.0, 5.0, 30.0, 0.0),
                                                   child: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'x339hoev' /* 斷食前最後一餐吃飽一點
-進食8 小時內避免油炸物、高熱量食物... */
-                                                      ,
-                                                    ),
+                                                    '斷食前最後一餐吃飽一點\n進食8 小時內避免油炸物、高熱量食物、零食甜點、精緻碳水化合物等',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium
@@ -553,10 +502,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                             onPressed: () async {
                                               context.pushNamed('user');
                                             },
-                                            text: FFLocalizations.of(context)
-                                                .getText(
-                                              'v1nkfrst' /* 確定 */,
-                                            ),
+                                            text: '確定',
                                             options: FFButtonOptions(
                                               width: 130.0,
                                               height: 40.0,
@@ -606,9 +552,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 10.0, 0.0, 0.0),
                                           child: Text(
-                                            FFLocalizations.of(context).getText(
-                                              'ngfrunq3' /* 168間歇性斷食法 */,
-                                            ),
+                                            '168間歇性斷食法',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -648,11 +592,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                                             .fromSTEB(0.0, 10.0,
                                                                 0.0, 0.0),
                                                     child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'd9ng62p6' /* 1. 實行方式： */,
-                                                      ),
+                                                      '1. 實行方式：',
                                                       textAlign:
                                                           TextAlign.start,
                                                       style:
@@ -672,12 +612,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                                       .fromSTEB(
                                                           0.0, 5.0, 0.0, 0.0),
                                                   child: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'lqot5eoi' /* 進食時間：8小時
-斷食時間：16小時 */
-                                                      ,
-                                                    ),
+                                                    '進食時間：8小時\n斷食時間：16小時',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium
@@ -697,11 +632,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                                             .fromSTEB(0.0, 10.0,
                                                                 0.0, 0.0),
                                                     child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'ffbhy532' /* 2. 注意事項： */,
-                                                      ),
+                                                      '2. 注意事項：',
                                                       textAlign:
                                                           TextAlign.start,
                                                       style:
@@ -721,12 +652,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                                       .fromSTEB(
                                                           30.0, 5.0, 30.0, 0.0),
                                                   child: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'gb0t78u1' /* 斷食前最後一餐吃飽一點
-進食8 小時內避免油炸物、高熱量食物... */
-                                                      ,
-                                                    ),
+                                                    '斷食前最後一餐吃飽一點\n進食8 小時內避免油炸物、高熱量食物、零食甜點、精緻碳水化合物等',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium
@@ -748,10 +674,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                             onPressed: () async {
                                               context.pushNamed('user');
                                             },
-                                            text: FFLocalizations.of(context)
-                                                .getText(
-                                              'n9pygquh' /* 確定 */,
-                                            ),
+                                            text: '確定',
                                             options: FFButtonOptions(
                                               width: 130.0,
                                               height: 40.0,
@@ -865,10 +788,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                               size: 30.0,
                                             ),
                                             Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'whdvq8zy' /* 推薦食譜 */,
-                                              ),
+                                              '推薦食譜',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
@@ -907,11 +827,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                                             .fromSTEB(10.0,
                                                                 10.0, 0.0, 0.0),
                                                     child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'rih2ze2y' /* 1. 早餐: */,
-                                                      ),
+                                                      '1. 早餐:',
                                                       textAlign:
                                                           TextAlign.start,
                                                       style: FlutterFlowTheme
@@ -932,13 +848,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                                             .fromSTEB(30.0,
                                                                 10.0, 0.0, 0.0),
                                                     child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'm77asa7y' /* 希臘優格+燕麥
-香蕉*1 */
-                                                        ,
-                                                      ),
+                                                      '希臘優格+燕麥\n香蕉*1',
                                                       textAlign:
                                                           TextAlign.start,
                                                       style:
@@ -985,11 +895,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                                             .fromSTEB(10.0,
                                                                 10.0, 0.0, 0.0),
                                                     child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'orisnn1l' /* 1. 早餐: */,
-                                                      ),
+                                                      '1. 早餐:',
                                                       textAlign:
                                                           TextAlign.start,
                                                       style: FlutterFlowTheme
@@ -1010,13 +916,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                                             .fromSTEB(30.0,
                                                                 10.0, 0.0, 0.0),
                                                     child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'hcsot12k' /* 希臘優格+燕麥
-香蕉*1 */
-                                                        ,
-                                                      ),
+                                                      '希臘優格+燕麥\n香蕉*1',
                                                       textAlign:
                                                           TextAlign.start,
                                                       style:
@@ -1063,11 +963,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                                             .fromSTEB(10.0,
                                                                 10.0, 0.0, 0.0),
                                                     child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'vbpuzd4g' /* 1. 早餐: */,
-                                                      ),
+                                                      '1. 早餐:',
                                                       textAlign:
                                                           TextAlign.start,
                                                       style: FlutterFlowTheme
@@ -1088,13 +984,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                                             .fromSTEB(30.0,
                                                                 10.0, 0.0, 0.0),
                                                     child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        '4sxj2j7b' /* 希臘優格+燕麥
-香蕉*1 */
-                                                        ,
-                                                      ),
+                                                      '希臘優格+燕麥\n香蕉*1',
                                                       textAlign:
                                                           TextAlign.start,
                                                       style:
@@ -1140,10 +1030,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                               size: 30.0,
                                             ),
                                             Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'wqz6m2pq' /* 推薦食譜 */,
-                                              ),
+                                              '推薦食譜',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
@@ -1182,11 +1069,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                                             .fromSTEB(10.0,
                                                                 10.0, 0.0, 0.0),
                                                     child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        '578xdliw' /* 1. 早餐: */,
-                                                      ),
+                                                      '1. 早餐:',
                                                       textAlign:
                                                           TextAlign.start,
                                                       style: FlutterFlowTheme
@@ -1207,13 +1090,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                                             .fromSTEB(30.0,
                                                                 10.0, 0.0, 0.0),
                                                     child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'qeukmx0m' /* 希臘優格+燕麥
-香蕉*1 */
-                                                        ,
-                                                      ),
+                                                      '希臘優格+燕麥\n香蕉*1',
                                                       textAlign:
                                                           TextAlign.start,
                                                       style:
@@ -1259,10 +1136,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                               size: 30.0,
                                             ),
                                             Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                '6niobmfm' /* 推薦食譜 */,
-                                              ),
+                                              '推薦食譜',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
@@ -1301,11 +1175,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                                             .fromSTEB(10.0,
                                                                 10.0, 0.0, 0.0),
                                                     child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'o3ibui37' /* 1. 早餐: */,
-                                                      ),
+                                                      '1. 早餐:',
                                                       textAlign:
                                                           TextAlign.start,
                                                       style: FlutterFlowTheme
@@ -1326,13 +1196,7 @@ class _DietPlanWidgetState extends State<DietPlanWidget> {
                                                             .fromSTEB(30.0,
                                                                 10.0, 0.0, 0.0),
                                                     child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        '5awjio86' /* 希臘優格+燕麥
-香蕉*1 */
-                                                        ,
-                                                      ),
+                                                      '希臘優格+燕麥\n香蕉*1',
                                                       textAlign:
                                                           TextAlign.start,
                                                       style:

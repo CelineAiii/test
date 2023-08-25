@@ -66,9 +66,7 @@ class _FoodWeekendWidgetState extends State<FoodWeekendWidget> {
               },
             ),
             title: Text(
-              FFLocalizations.of(context).getText(
-                'q2dh7v1d' /* 晚餐 */,
-              ),
+              '晚餐',
               style: FlutterFlowTheme.of(context).headlineMedium.override(
                     fontFamily: 'Outfit',
                     color: Color(0xFFE5E0EB),
@@ -164,9 +162,7 @@ class _FoodWeekendWidgetState extends State<FoodWeekendWidget> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            FFLocalizations.of(context).getText(
-                              'i2vxvfju' /* Hello World */,
-                            ),
+                            'Hello World',
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
@@ -179,9 +175,7 @@ class _FoodWeekendWidgetState extends State<FoodWeekendWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 4.0, 0.0, 0.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                'udhrjkq1' /* Hello World */,
-                              ),
+                              'Hello World',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(

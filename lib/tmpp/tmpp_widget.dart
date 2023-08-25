@@ -42,9 +42,7 @@ class _TmppWidgetState extends State<TmppWidget> {
           backgroundColor: FlutterFlowTheme.of(context).primary,
           automaticallyImplyLeading: false,
           title: Text(
-            FFLocalizations.of(context).getText(
-              '5kkiqovi' /* Page Title */,
-            ),
+            'Page Title',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Poppins',
                   color: Colors.white,
@@ -60,9 +58,7 @@ class _TmppWidgetState extends State<TmppWidget> {
           child: Padding(
             padding: EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
             child: Text(
-              FFLocalizations.of(context).getText(
-                'laqy3sj5' /* Thanks for taking the quiz. */,
-              ),
+              'Thanks for taking the quiz.',
               style: FlutterFlowTheme.of(context).titleSmall.override(
                     fontFamily: 'Outfit',
                     color: Color(0xFFAE99E3),

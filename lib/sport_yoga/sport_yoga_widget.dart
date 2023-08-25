@@ -64,9 +64,7 @@ class _SportYogaWidgetState extends State<SportYogaWidget> {
               },
             ),
             title: Text(
-              FFLocalizations.of(context).getText(
-                'qkowovpo' /* Hi! Celine */,
-              ),
+              'Hi! Celine',
               style: FlutterFlowTheme.of(context).bodyMedium.override(
                     fontFamily: 'Poppins',
                     color: FlutterFlowTheme.of(context).primaryBtnText,
@@ -103,9 +101,7 @@ class _SportYogaWidgetState extends State<SportYogaWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 20.0),
               child: Text(
-                FFLocalizations.of(context).getText(
-                  'rsr6jswq' /* 請在此紀錄您的運動 */,
-                ),
+                '請在此紀錄您的運動',
                 textAlign: TextAlign.center,
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: 'Poppins',
@@ -118,30 +114,12 @@ class _SportYogaWidgetState extends State<SportYogaWidget> {
               child: FlutterFlowDropDown<String>(
                 controller: _model.dropDownValueController ??=
                     FormFieldController<String>(null),
-                options: [
-                  FFLocalizations.of(context).getText(
-                    'bb4es15k' /* 瑜珈 */,
-                  ),
-                  FFLocalizations.of(context).getText(
-                    'rgbocrpg' /* 跳舞（慢） */,
-                  ),
-                  FFLocalizations.of(context).getText(
-                    '0vrpd42c' /* 跳舞（快） */,
-                  ),
-                  FFLocalizations.of(context).getText(
-                    'bok7jlzs' /* 太極拳 */,
-                  ),
-                  FFLocalizations.of(context).getText(
-                    '83odsuzy' /* 有氧舞蹈 */,
-                  )
-                ],
+                options: ['瑜珈', '跳舞（慢）', '跳舞（快）', '太極拳', '有氧舞蹈'],
                 onChanged: (val) => setState(() => _model.dropDownValue = val),
                 width: 300.0,
                 height: 80.0,
                 textStyle: FlutterFlowTheme.of(context).bodyMedium,
-                hintText: FFLocalizations.of(context).getText(
-                  '6e5maxsc' /* 請選擇運動種類... */,
-                ),
+                hintText: '請選擇運動種類...',
                 icon: Icon(
                   Icons.keyboard_arrow_down_rounded,
                   color: FlutterFlowTheme.of(context).secondaryText,
@@ -164,9 +142,7 @@ class _SportYogaWidgetState extends State<SportYogaWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 0.0, 0.0),
                   child: Text(
-                    FFLocalizations.of(context).getText(
-                      'nrlscdbd' /* 此次選擇之運動為： */,
-                    ),
+                    '此次選擇之運動為：',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Poppins',
                           fontSize: 20.0,
@@ -178,9 +154,7 @@ class _SportYogaWidgetState extends State<SportYogaWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 20.0, 0.0),
                     child: Text(
-                      FFLocalizations.of(context).getText(
-                        'g60e50lf' /* 瑜珈 */,
-                      ),
+                      '瑜珈',
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Poppins',
@@ -198,9 +172,7 @@ class _SportYogaWidgetState extends State<SportYogaWidget> {
                 autofocus: true,
                 obscureText: false,
                 decoration: InputDecoration(
-                  labelText: FFLocalizations.of(context).getText(
-                    'f5zcgzsg' /* 請輸入運動總時間...(單位：分鐘） */,
-                  ),
+                  labelText: '請輸入運動總時間...(單位：分鐘）',
                   labelStyle: FlutterFlowTheme.of(context).labelMedium,
                   hintStyle: FlutterFlowTheme.of(context).labelMedium,
                   enabledBorder: OutlineInputBorder(
@@ -242,9 +214,7 @@ class _SportYogaWidgetState extends State<SportYogaWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 0.0, 0.0),
                   child: Text(
-                    FFLocalizations.of(context).getText(
-                      'vd8nhss7' /* 此次輸入之總時間為： */,
-                    ),
+                    '此次輸入之總時間為：',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Poppins',
                           fontSize: 20.0,
@@ -256,9 +226,7 @@ class _SportYogaWidgetState extends State<SportYogaWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 20.0, 0.0),
                     child: Text(
-                      FFLocalizations.of(context).getText(
-                        'drsdd2hn' /* 30 min */,
-                      ),
+                      '30 min',
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Poppins',
@@ -276,9 +244,7 @@ class _SportYogaWidgetState extends State<SportYogaWidget> {
                   padding:
                       EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 20.0, 10.0),
                   child: Text(
-                    FFLocalizations.of(context).getText(
-                      'ea57e5dj' /* Total: */,
-                    ),
+                    'Total:',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Poppins',
                           color: Color(0xFFCB5165),
@@ -298,9 +264,7 @@ class _SportYogaWidgetState extends State<SportYogaWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                     child: Text(
-                      FFLocalizations.of(context).getText(
-                        'cgvf0qxa' /* 本次運動之平均熱量消耗量： */,
-                      ),
+                      '本次運動之平均熱量消耗量：',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Poppins',
                             fontSize: 20.0,
@@ -312,9 +276,7 @@ class _SportYogaWidgetState extends State<SportYogaWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                       child: Text(
-                        FFLocalizations.of(context).getText(
-                          'mpl04q3h' /* 400 kal */,
-                        ),
+                        '400 kal',
                         textAlign: TextAlign.end,
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Poppins',
@@ -345,9 +307,7 @@ class _SportYogaWidgetState extends State<SportYogaWidget> {
                   },
                 );
               },
-              text: FFLocalizations.of(context).getText(
-                '2hvsqy8l' /* 加入運動 */,
-              ),
+              text: '加入運動',
               options: FFButtonOptions(
                 height: 60.0,
                 padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),

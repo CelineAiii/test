@@ -59,9 +59,7 @@ class _SocialWidgetState extends State<SocialWidget> {
             onPressed: () async {
               context.goNamed('HomePage');
             },
-            text: FFLocalizations.of(context).getText(
-              '492fzvlh' /* Candy Diary */,
-            ),
+            text: 'Candy Diary',
             options: FFButtonOptions(
               width: 185.0,
               height: 40.0,
@@ -160,9 +158,7 @@ class _SocialWidgetState extends State<SocialWidget> {
                             ),
                           ),
                           Text(
-                            FFLocalizations.of(context).getText(
-                              'j8kiywyb' /* Welcome */,
-                            ),
+                            'Welcome',
                             style: FlutterFlowTheme.of(context)
                                 .headlineMedium
                                 .override(
@@ -176,9 +172,7 @@ class _SocialWidgetState extends State<SocialWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 4.0, 0.0, 0.0, 0.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                'i0nxczll' /* Hello World */,
-                              ),
+                              'Hello World',
                               style: FlutterFlowTheme.of(context)
                                   .titleMedium
                                   .override(
@@ -202,9 +196,7 @@ class _SocialWidgetState extends State<SocialWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 4.0, 0.0, 0.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                'ncu5zni4' /* Checkout news and highlights b... */,
-                              ),
+                              'Checkout news and highlights below.',
                               style: FlutterFlowTheme.of(context)
                                   .bodySmall
                                   .override(
@@ -275,9 +267,7 @@ class _SocialWidgetState extends State<SocialWidget> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 0.0, 0.0),
                                         child: Text(
-                                          FFLocalizations.of(context).getText(
-                                            'zyet7ro2' /* @username */,
-                                          ),
+                                          '@username',
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
@@ -360,10 +350,7 @@ class _SocialWidgetState extends State<SocialWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     4.0, 0.0, 0.0, 0.0),
                                             child: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'rrjqjqdg' /* 2,493 */,
-                                              ),
+                                              '2,493',
                                               style: FlutterFlowTheme.of(
                                                       context)
                                                   .bodySmall
@@ -392,9 +379,7 @@ class _SocialWidgetState extends State<SocialWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   4.0, 0.0, 0.0, 0.0),
                                           child: Text(
-                                            FFLocalizations.of(context).getText(
-                                              'dg63mnjx' /* 4 */,
-                                            ),
+                                            '4',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodySmall
                                                 .override(
@@ -430,9 +415,7 @@ class _SocialWidgetState extends State<SocialWidget> {
                               children: [
                                 Expanded(
                                   child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      'stq16z8s' /* I'm back with a super quick In... */,
-                                    ),
+                                    'I\'m back with a super quick Instagram redesign just for the fan. Rounded corners and cute icons, what else do we need, haha.⁣ ',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -498,9 +481,7 @@ class _SocialWidgetState extends State<SocialWidget> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 0.0, 0.0),
                                         child: Text(
-                                          FFLocalizations.of(context).getText(
-                                            'cm8hq85k' /* @username */,
-                                          ),
+                                          '@username',
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
@@ -583,10 +564,7 @@ class _SocialWidgetState extends State<SocialWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     4.0, 0.0, 0.0, 0.0),
                                             child: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'g5x75n6f' /* 2,493 */,
-                                              ),
+                                              '2,493',
                                               style: FlutterFlowTheme.of(
                                                       context)
                                                   .bodySmall
@@ -615,9 +593,7 @@ class _SocialWidgetState extends State<SocialWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   4.0, 0.0, 0.0, 0.0),
                                           child: Text(
-                                            FFLocalizations.of(context).getText(
-                                              'oj09nnfn' /* 4 */,
-                                            ),
+                                            '4',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodySmall
                                                 .override(
@@ -653,9 +629,7 @@ class _SocialWidgetState extends State<SocialWidget> {
                               children: [
                                 Expanded(
                                   child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      'r2dauf7n' /* I'm back with a super quick In... */,
-                                    ),
+                                    'I\'m back with a super quick Instagram redesign just for the fan. Rounded corners and cute icons, what else do we need, haha.⁣ ',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(

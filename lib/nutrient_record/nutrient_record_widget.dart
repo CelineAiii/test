@@ -61,9 +61,7 @@ class _NutrientRecordWidgetState extends State<NutrientRecordWidget> {
             onPressed: () {
               print('Button pressed ...');
             },
-            text: FFLocalizations.of(context).getText(
-              'j9qjdlqw' /* Candy Diary */,
-            ),
+            text: 'Candy Diary',
             options: FFButtonOptions(
               width: 185.0,
               height: 40.0,
@@ -105,9 +103,7 @@ class _NutrientRecordWidgetState extends State<NutrientRecordWidget> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      FFLocalizations.of(context).getText(
-                        'wp6eno9w' /* Name */,
-                      ),
+                      'Name',
                       style: FlutterFlowTheme.of(context).bodySmall.override(
                             fontFamily: 'Lexend Deca',
                             color: Color(0xFF95A1AC),
@@ -119,9 +115,7 @@ class _NutrientRecordWidgetState extends State<NutrientRecordWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                       child: Text(
-                        FFLocalizations.of(context).getText(
-                          'a1nijz0y' /* 起司漢堡 */,
-                        ),
+                        '起司漢堡',
                         textAlign: TextAlign.start,
                         style: FlutterFlowTheme.of(context)
                             .headlineMedium
@@ -150,9 +144,7 @@ class _NutrientRecordWidgetState extends State<NutrientRecordWidget> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      FFLocalizations.of(context).getText(
-                        't1pp4se3' /* Calories */,
-                      ),
+                      'Calories',
                       style: FlutterFlowTheme.of(context).bodySmall.override(
                             fontFamily: 'Lexend Deca',
                             color: Color(0xFF95A1AC),
@@ -166,9 +158,7 @@ class _NutrientRecordWidgetState extends State<NutrientRecordWidget> {
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                         child: Text(
-                          FFLocalizations.of(context).getText(
-                            '1sv7adcu' /* 230 */,
-                          ),
+                          '230',
                           textAlign: TextAlign.end,
                           style: FlutterFlowTheme.of(context)
                               .headlineMedium
@@ -198,9 +188,7 @@ class _NutrientRecordWidgetState extends State<NutrientRecordWidget> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      FFLocalizations.of(context).getText(
-                        'ggi6mjwz' /* Total Carbs */,
-                      ),
+                      'Total Carbs',
                       style: FlutterFlowTheme.of(context).bodySmall.override(
                             fontFamily: 'Lexend Deca',
                             color: Color(0xFF95A1AC),
@@ -212,9 +200,7 @@ class _NutrientRecordWidgetState extends State<NutrientRecordWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                       child: Text(
-                        FFLocalizations.of(context).getText(
-                          'p5llj0qn' /* 32g */,
-                        ),
+                        '32g',
                         textAlign: TextAlign.start,
                         style:
                             FlutterFlowTheme.of(context).titleMedium.override(
@@ -234,9 +220,7 @@ class _NutrientRecordWidgetState extends State<NutrientRecordWidget> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        FFLocalizations.of(context).getText(
-                          '4hndrz1o' /* Fiber */,
-                        ),
+                        'Fiber',
                         style: FlutterFlowTheme.of(context).bodySmall.override(
                               fontFamily: 'Lexend Deca',
                               color: Color(0xFF95A1AC),
@@ -248,9 +232,7 @@ class _NutrientRecordWidgetState extends State<NutrientRecordWidget> {
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                         child: Text(
-                          FFLocalizations.of(context).getText(
-                            'ghsc1bue' /* 4g */,
-                          ),
+                          '4g',
                           textAlign: TextAlign.start,
                           style:
                               FlutterFlowTheme.of(context).titleMedium.override(
@@ -271,9 +253,7 @@ class _NutrientRecordWidgetState extends State<NutrientRecordWidget> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        FFLocalizations.of(context).getText(
-                          '2a81dnll' /* Sugars */,
-                        ),
+                        'Sugars',
                         style: FlutterFlowTheme.of(context).bodySmall.override(
                               fontFamily: 'Lexend Deca',
                               color: Color(0xFF95A1AC),
@@ -285,9 +265,7 @@ class _NutrientRecordWidgetState extends State<NutrientRecordWidget> {
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                         child: Text(
-                          FFLocalizations.of(context).getText(
-                            '67kht3a7' /* 1g */,
-                          ),
+                          '1g',
                           textAlign: TextAlign.start,
                           style:
                               FlutterFlowTheme.of(context).titleMedium.override(
@@ -317,9 +295,7 @@ class _NutrientRecordWidgetState extends State<NutrientRecordWidget> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        FFLocalizations.of(context).getText(
-                          '9yhwa1re' /* Total Fat */,
-                        ),
+                        'Total Fat',
                         style: FlutterFlowTheme.of(context).bodySmall.override(
                               fontFamily: 'Lexend Deca',
                               color: Color(0xFF95A1AC),
@@ -331,9 +307,7 @@ class _NutrientRecordWidgetState extends State<NutrientRecordWidget> {
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                         child: Text(
-                          FFLocalizations.of(context).getText(
-                            'tdn8fhdy' /* 8g */,
-                          ),
+                          '8g',
                           textAlign: TextAlign.start,
                           style:
                               FlutterFlowTheme.of(context).titleSmall.override(
@@ -353,9 +327,7 @@ class _NutrientRecordWidgetState extends State<NutrientRecordWidget> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        FFLocalizations.of(context).getText(
-                          '3ltahha5' /* Saturated Fat */,
-                        ),
+                        'Saturated Fat',
                         style: FlutterFlowTheme.of(context).bodySmall.override(
                               fontFamily: 'Lexend Deca',
                               color: Color(0xFF95A1AC),
@@ -367,9 +339,7 @@ class _NutrientRecordWidgetState extends State<NutrientRecordWidget> {
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                         child: Text(
-                          FFLocalizations.of(context).getText(
-                            'kwcu8o2z' /* 1g */,
-                          ),
+                          '1g',
                           textAlign: TextAlign.start,
                           style:
                               FlutterFlowTheme.of(context).titleSmall.override(
@@ -389,9 +359,7 @@ class _NutrientRecordWidgetState extends State<NutrientRecordWidget> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        FFLocalizations.of(context).getText(
-                          'm5w2yjy4' /* Trans Fat */,
-                        ),
+                        'Trans Fat',
                         style: FlutterFlowTheme.of(context).bodySmall.override(
                               fontFamily: 'Lexend Deca',
                               color: Color(0xFF95A1AC),
@@ -400,9 +368,7 @@ class _NutrientRecordWidgetState extends State<NutrientRecordWidget> {
                             ),
                       ),
                       Text(
-                        FFLocalizations.of(context).getText(
-                          'ghewe6q3' /* 0g */,
-                        ),
+                        '0g',
                         style: FlutterFlowTheme.of(context).bodyMedium,
                       ),
                     ],
@@ -424,9 +390,7 @@ class _NutrientRecordWidgetState extends State<NutrientRecordWidget> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        FFLocalizations.of(context).getText(
-                          'asjq9j89' /* Protein */,
-                        ),
+                        'Protein',
                         style: FlutterFlowTheme.of(context).bodySmall.override(
                               fontFamily: 'Lexend Deca',
                               color: Color(0xFF95A1AC),
@@ -438,9 +402,7 @@ class _NutrientRecordWidgetState extends State<NutrientRecordWidget> {
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                         child: Text(
-                          FFLocalizations.of(context).getText(
-                            'hmv41am0' /* 3g */,
-                          ),
+                          '3g',
                           textAlign: TextAlign.start,
                           style:
                               FlutterFlowTheme.of(context).titleSmall.override(
@@ -473,9 +435,7 @@ class _NutrientRecordWidgetState extends State<NutrientRecordWidget> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        FFLocalizations.of(context).getText(
-                          '696kwhx0' /* Sodium */,
-                        ),
+                        'Sodium',
                         style: FlutterFlowTheme.of(context).bodySmall.override(
                               fontFamily: 'Lexend Deca',
                               color: Color(0xFF95A1AC),
@@ -487,9 +447,7 @@ class _NutrientRecordWidgetState extends State<NutrientRecordWidget> {
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                         child: Text(
-                          FFLocalizations.of(context).getText(
-                            '2ks6yyx8' /* 2mg */,
-                          ),
+                          '2mg',
                           textAlign: TextAlign.start,
                           style:
                               FlutterFlowTheme.of(context).titleSmall.override(
@@ -526,9 +484,7 @@ class _NutrientRecordWidgetState extends State<NutrientRecordWidget> {
               children: [
                 Expanded(
                   child: Text(
-                    FFLocalizations.of(context).getText(
-                      '8hxirmol' /* 1 */,
-                    ),
+                    '1',
                     textAlign: TextAlign.end,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Poppins',
@@ -539,9 +495,7 @@ class _NutrientRecordWidgetState extends State<NutrientRecordWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
                   child: Text(
-                    FFLocalizations.of(context).getText(
-                      'uznhm7qb' /* 份 */,
-                    ),
+                    '份',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Poppins',
                           fontSize: 20.0,

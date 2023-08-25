@@ -77,9 +77,7 @@ class _PasswordValWidgetState extends State<PasswordValWidget> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                 child: Text(
-                  FFLocalizations.of(context).getText(
-                    'ezdbvq74' /* Forgot Password */,
-                  ),
+                  'Forgot Password',
                   style: FlutterFlowTheme.of(context).displaySmall.override(
                         fontFamily: 'Outfit',
                         color: Color(0xFF0D0814),
@@ -109,11 +107,7 @@ class _PasswordValWidgetState extends State<PasswordValWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 15.0),
                     child: Text(
-                      FFLocalizations.of(context).getText(
-                        'dhjuzufi' /* 請先至您的信箱進行驗證，
-驗證成功後點選以下按鈕即可開始更改... */
-                        ,
-                      ),
+                      '請先至您的信箱進行驗證，\n驗證成功後點選以下按鈕即可開始更改新密碼。',
                       style: FlutterFlowTheme.of(context).bodySmall.override(
                             fontFamily: 'Outfit',
                             color: Color(0xFF0D0814),
@@ -132,9 +126,7 @@ class _PasswordValWidgetState extends State<PasswordValWidget> {
               onPressed: () async {
                 context.pushNamed('user');
               },
-              text: FFLocalizations.of(context).getText(
-                'cmh9xo02' /* Start */,
-              ),
+              text: 'Start',
               options: FFButtonOptions(
                 width: 270.0,
                 height: 50.0,

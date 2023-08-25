@@ -16,7 +16,6 @@ void main() async {
   usePathUrlStrategy();
 
   await FlutterFlowTheme.initialize();
-  await FFLocalizations.initialize();
 
   runApp(MyApp());
 }
@@ -31,7 +30,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  Locale? _locale = FFLocalizations.getStoredLocale();
+  Locale? _locale;
   ThemeMode _themeMode = FlutterFlowTheme.themeMode;
 
   late AppStateNotifier _appStateNotifier;
@@ -46,7 +45,6 @@ class _MyAppState extends State<MyApp> {
 
   void setLocale(String language) {
     setState(() => _locale = createLocale(language));
-    FFLocalizations.storeLocale(language);
   }
 
   void setThemeMode(ThemeMode mode) => setState(() {
@@ -66,7 +64,6 @@ class _MyAppState extends State<MyApp> {
       ],
       locale: _locale,
       supportedLocales: const [
-        Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hant'),
         Locale('en'),
       ],
       theme: ThemeData(
@@ -137,9 +134,7 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.home_rounded,
               size: 24.0,
             ),
-            label: FFLocalizations.of(context).getText(
-              'q3hy2eqy' /* 首頁 */,
-            ),
+            label: '首頁',
             tooltip: '',
           ),
           BottomNavigationBarItem(
@@ -147,9 +142,7 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.shopping_cart,
               size: 24.0,
             ),
-            label: FFLocalizations.of(context).getText(
-              '4nnr1m4s' /* 購物 */,
-            ),
+            label: '購物',
             tooltip: '',
           ),
           BottomNavigationBarItem(
@@ -157,9 +150,7 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.sports_handball,
               size: 24.0,
             ),
-            label: FFLocalizations.of(context).getText(
-              'rdadx54s' /* Home */,
-            ),
+            label: 'Home',
             tooltip: '',
           ),
           BottomNavigationBarItem(
@@ -167,9 +158,7 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.people,
               size: 24.0,
             ),
-            label: FFLocalizations.of(context).getText(
-              'rnzoh3i5' /* 社群 */,
-            ),
+            label: '社群',
             tooltip: '',
           ),
           BottomNavigationBarItem(
@@ -177,9 +166,7 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.assignment_outlined,
               size: 24.0,
             ),
-            label: FFLocalizations.of(context).getText(
-              '0cluujcd' /* 減肥 */,
-            ),
+            label: '減肥',
             tooltip: '',
           ),
           BottomNavigationBarItem(
@@ -187,9 +174,7 @@ class _NavBarPageState extends State<NavBarPage> {
               FontAwesomeIcons.solidUserCircle,
               size: 24.0,
             ),
-            label: FFLocalizations.of(context).getText(
-              '59d2zy2g' /* user */,
-            ),
+            label: 'user',
             tooltip: '',
           )
         ],

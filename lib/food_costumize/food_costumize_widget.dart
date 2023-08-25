@@ -160,9 +160,7 @@ class _FoodCostumizeWidgetState extends State<FoodCostumizeWidget> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Text(
-                        FFLocalizations.of(context).getText(
-                          'p8rxl97z' /* 快速加入食品 */,
-                        ),
+                        '快速加入食品',
                         style: FlutterFlowTheme.of(context)
                             .headlineMedium
                             .override(

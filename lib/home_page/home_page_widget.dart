@@ -131,9 +131,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
               onPressed: () async {
                 context.goNamed('HomePage');
               },
-              text: FFLocalizations.of(context).getText(
-                '2i23id2v' /* Candy Diary */,
-              ),
+              text: 'Candy Diary',
               options: FFButtonOptions(
                 width: 185.0,
                 height: 40.0,
@@ -252,10 +250,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                               MainAxisAlignment.spaceBetween,
                                           children: [
                                             Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'gcdiuq2n' /* Celine Ai */,
-                                              ),
+                                              'Celine Ai',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
@@ -266,10 +261,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                       ),
                                             ),
                                             Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                '3o28kfsy' /* LV.9999 */,
-                                              ),
+                                              'LV.9999',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
@@ -292,10 +284,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                             progressColor: Color(0xFF3C2E92),
                                             backgroundColor: Color(0xFFF1F4F8),
                                             center: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'wcx7ycnx' /* 50% */,
-                                              ),
+                                              '50%',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
@@ -325,10 +314,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                               ),
                                               Expanded(
                                                 child: Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    'jpvnkctl' /* 100000 */,
-                                                  ),
+                                                  '100000',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyMedium,
@@ -384,10 +370,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                   size: 30.0,
                                                 ),
                                                 Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    'wktty6un' /* 卡路里攝取量 */,
-                                                  ),
+                                                  '卡路里攝取量',
                                                   textAlign: TextAlign.start,
                                                   style: FlutterFlowTheme.of(
                                                           context)
@@ -417,10 +400,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                               backgroundColor:
                                                   Color(0xFFF1F4F8),
                                               center: Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  'pn8us8zs' /* 50% */,
-                                                ),
+                                                '50%',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium
@@ -530,10 +510,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                   size: 30.0,
                                                 ),
                                                 Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    '3jxu5uem' /* 水分攝取量 */,
-                                                  ),
+                                                  '水分攝取量',
                                                   textAlign: TextAlign.start,
                                                   style: FlutterFlowTheme.of(
                                                           context)
@@ -563,10 +540,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                               backgroundColor:
                                                   Color(0xFFF1F4F8),
                                               center: Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  'b12sryvc' /* 50% */,
-                                                ),
+                                                '50%',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium
@@ -689,11 +663,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         .start,
                                                                 children: [
                                                                   Text(
-                                                                    FFLocalizations.of(
-                                                                            context)
-                                                                        .getText(
-                                                                      'iio8tnsq' /* 早餐 */,
-                                                                    ),
+                                                                    '早餐',
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .headlineMedium
@@ -716,11 +686,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                             0.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      FFLocalizations.of(
-                                                                              context)
-                                                                          .getText(
-                                                                        '9vchkvps' /* 共230大卡 */,
-                                                                      ),
+                                                                      '共230大卡',
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyMedium
@@ -831,11 +797,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         .start,
                                                                 children: [
                                                                   Text(
-                                                                    FFLocalizations.of(
-                                                                            context)
-                                                                        .getText(
-                                                                      'fgsj9ko6' /* 午餐 */,
-                                                                    ),
+                                                                    '午餐',
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .headlineMedium
@@ -858,11 +820,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                             0.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      FFLocalizations.of(
-                                                                              context)
-                                                                          .getText(
-                                                                        '0mtzdntr' /* 共580大卡 */,
-                                                                      ),
+                                                                      '共580大卡',
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyMedium
@@ -973,11 +931,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         .start,
                                                                 children: [
                                                                   Text(
-                                                                    FFLocalizations.of(
-                                                                            context)
-                                                                        .getText(
-                                                                      'f1mya4nc' /* 晚餐 */,
-                                                                    ),
+                                                                    '晚餐',
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .headlineMedium
@@ -1000,11 +954,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                             0.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      FFLocalizations.of(
-                                                                              context)
-                                                                          .getText(
-                                                                        'kj6hpc68' /* 共500大卡 */,
-                                                                      ),
+                                                                      '共500大卡',
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyMedium
@@ -1115,11 +1065,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         .start,
                                                                 children: [
                                                                   Text(
-                                                                    FFLocalizations.of(
-                                                                            context)
-                                                                        .getText(
-                                                                      'm0nyd31b' /* 點心 */,
-                                                                    ),
+                                                                    '點心',
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .headlineMedium
@@ -1142,11 +1088,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                             0.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      FFLocalizations.of(
-                                                                              context)
-                                                                          .getText(
-                                                                        'bzjwjtuf' /* 共480大卡 */,
-                                                                      ),
+                                                                      '共480大卡',
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyMedium
@@ -1221,11 +1163,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         .start,
                                                                 children: [
                                                                   Text(
-                                                                    FFLocalizations.of(
-                                                                            context)
-                                                                        .getText(
-                                                                      '4ppo8br8' /* 今日攝取卡路里數 */,
-                                                                    ),
+                                                                    '今日攝取卡路里數',
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .headlineSmall
@@ -1239,11 +1177,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         ),
                                                                   ),
                                                                   Text(
-                                                                    FFLocalizations.of(
-                                                                            context)
-                                                                        .getText(
-                                                                      'bjto2kb0' /* 共1790卡 */,
-                                                                    ),
+                                                                    '共1790卡',
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .displaySmall
@@ -1291,11 +1225,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                             0xFFF1F4F8),
                                                                     center:
                                                                         Text(
-                                                                      FFLocalizations.of(
-                                                                              context)
-                                                                          .getText(
-                                                                        '6qjc3mxb' /* 55% */,
-                                                                      ),
+                                                                      '55%',
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .headlineMedium
@@ -1320,11 +1250,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                           -0.1,
                                                                           0.0),
                                                                   child: Text(
-                                                                    FFLocalizations.of(
-                                                                            context)
-                                                                        .getText(
-                                                                      'bx04cltl' /* 總攝取量佔比 */,
-                                                                    ),
+                                                                    '總攝取量佔比',
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .bodyMedium

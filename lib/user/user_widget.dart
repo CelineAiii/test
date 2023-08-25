@@ -96,9 +96,7 @@ class _UserWidgetState extends State<UserWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Text(
-                                    FFLocalizations.of(context).getText(
-                                      '35ik1loa' /* Celine Ai */,
-                                    ),
+                                    'Celine Ai',
                                     style: FlutterFlowTheme.of(context)
                                         .headlineMedium
                                         .override(
@@ -118,9 +116,7 @@ class _UserWidgetState extends State<UserWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Text(
-                                    FFLocalizations.of(context).getText(
-                                      '5bkv560c' /* LV.999 | $100000 */,
-                                    ),
+                                    'LV.999 | \$100000',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -218,9 +214,7 @@ class _UserWidgetState extends State<UserWidget> {
                                     onPressed: () async {
                                       context.pushNamed('setting');
                                     },
-                                    text: FFLocalizations.of(context).getText(
-                                      'j3vvki8a' /* 修改個人資料 */,
-                                    ),
+                                    text: '修改個人資料',
                                     options: FFButtonOptions(
                                       width: 130.0,
                                       height: 40.0,
@@ -298,9 +292,7 @@ class _UserWidgetState extends State<UserWidget> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Text(
-                                        FFLocalizations.of(context).getText(
-                                          'pusgek6x' /* 目前減肥計劃 */,
-                                        ),
+                                        '目前減肥計劃',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -331,9 +323,7 @@ class _UserWidgetState extends State<UserWidget> {
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 10.0, 0.0, 0.0),
                                       child: Text(
-                                        FFLocalizations.of(context).getText(
-                                          '54j4vvmt' /* 168斷食法 */,
-                                        ),
+                                        '168斷食法',
                                         textAlign: TextAlign.center,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -363,9 +353,7 @@ class _UserWidgetState extends State<UserWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 10.0, 0.0, 0.0),
                                           child: Text(
-                                            FFLocalizations.of(context).getText(
-                                              'yyphs6vw' /* - 預計花費 150 日即可達成 - */,
-                                            ),
+                                            '- 預計花費 150 日即可達成 -',
                                             textAlign: TextAlign.center,
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
@@ -386,10 +374,7 @@ class _UserWidgetState extends State<UserWidget> {
                                                   .fromSTEB(
                                                       0.0, 0.0, 0.0, 10.0),
                                               child: Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  'vomy4mih' /* 每日可攝取總量： */,
-                                                ),
+                                                '每日可攝取總量：',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium
@@ -404,10 +389,7 @@ class _UserWidgetState extends State<UserWidget> {
                                                   .fromSTEB(
                                                       0.0, 0.0, 0.0, 10.0),
                                               child: Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  'z58fccpp' /* 1200 kal */,
-                                                ),
+                                                '1200 kal',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium
@@ -432,9 +414,7 @@ class _UserWidgetState extends State<UserWidget> {
                                     onPressed: () async {
                                       context.pushNamed('food_recommand');
                                     },
-                                    text: FFLocalizations.of(context).getText(
-                                      '84yhfc16' /* 建議食譜 */,
-                                    ),
+                                    text: '建議食譜',
                                     icon: Icon(
                                       Icons.fastfood_sharp,
                                       size: 15.0,
@@ -493,9 +473,7 @@ class _UserWidgetState extends State<UserWidget> {
                                           size: 30.0,
                                         ),
                                         Text(
-                                          FFLocalizations.of(context).getText(
-                                            '7kwkyyac' /* 今日飲食攝取量 */,
-                                          ),
+                                          '今日飲食攝取量',
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
                                               .bodySmall
@@ -514,9 +492,7 @@ class _UserWidgetState extends State<UserWidget> {
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Text(
-                                          FFLocalizations.of(context).getText(
-                                            'hlh45g3d' /* 攝取卡路里數：1000 kal */,
-                                          ),
+                                          '攝取卡路里數：1000 kal',
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
@@ -530,9 +506,7 @@ class _UserWidgetState extends State<UserWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 10.0),
                                           child: Text(
-                                            FFLocalizations.of(context).getText(
-                                              'eyrerky5' /* 每日總攝取限制：1500 kal */,
-                                            ),
+                                            '每日總攝取限制：1500 kal',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -576,9 +550,7 @@ class _UserWidgetState extends State<UserWidget> {
                                           size: 30.0,
                                         ),
                                         Text(
-                                          FFLocalizations.of(context).getText(
-                                            'wz3s5o9b' /* 今日運動消耗 */,
-                                          ),
+                                          '今日運動消耗',
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
                                               .bodySmall
@@ -597,9 +569,7 @@ class _UserWidgetState extends State<UserWidget> {
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Text(
-                                          FFLocalizations.of(context).getText(
-                                            'fp8txb5v' /* 消耗卡路里數：1000 kal */,
-                                          ),
+                                          '消耗卡路里數：1000 kal',
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
@@ -613,9 +583,7 @@ class _UserWidgetState extends State<UserWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 10.0),
                                           child: Text(
-                                            FFLocalizations.of(context).getText(
-                                              'b5alq9wr' /* 運動總時數：4 hr */,
-                                            ),
+                                            '運動總時數：4 hr',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -636,9 +604,7 @@ class _UserWidgetState extends State<UserWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 30.0, 0.0, 0.0),
                           child: Text(
-                            FFLocalizations.of(context).getText(
-                              'knyv0g86' /* Created by Candy Diary */,
-                            ),
+                            'Created by Candy Diary',
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
@@ -653,9 +619,7 @@ class _UserWidgetState extends State<UserWidget> {
                             onPressed: () {
                               print('Button pressed ...');
                             },
-                            text: FFLocalizations.of(context).getText(
-                              'muylm87r' /* 登出 */,
-                            ),
+                            text: '登出',
                             options: FFButtonOptions(
                               height: 40.0,
                               padding: EdgeInsetsDirectional.fromSTEB(

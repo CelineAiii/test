@@ -63,9 +63,7 @@ class _TargetSetting2WidgetState extends State<TargetSetting2Widget> {
               onPressed: () {
                 print('Button pressed ...');
               },
-              text: FFLocalizations.of(context).getText(
-                'd7htg3mo' /* Candy Diary */,
-              ),
+              text: 'Candy Diary',
               options: FFButtonOptions(
                 width: 185.0,
                 height: 40.0,
@@ -101,9 +99,7 @@ class _TargetSetting2WidgetState extends State<TargetSetting2Widget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                   child: Text(
-                    FFLocalizations.of(context).getText(
-                      'xy79jbct' /* - 目標設定 - */,
-                    ),
+                    '- 目標設定 -',
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Poppins',
@@ -130,9 +126,7 @@ class _TargetSetting2WidgetState extends State<TargetSetting2Widget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 10.0, 0.0, 0.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                '8sixivwu' /* 請挑選您的活動程度： */,
-                              ),
+                              '請挑選您的活動程度：',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -211,10 +205,7 @@ class _TargetSetting2WidgetState extends State<TargetSetting2Widget> {
                                                         newValue!);
                                                   },
                                                   title: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'r7qhu13g' /* 低活動量 */,
-                                                    ),
+                                                    '低活動量',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelSmall
@@ -230,10 +221,7 @@ class _TargetSetting2WidgetState extends State<TargetSetting2Widget> {
                                                         ),
                                                   ),
                                                   subtitle: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      '6wnkvwdc' /* 一天一小時 */,
-                                                    ),
+                                                    '一天一小時',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .headlineSmall
@@ -275,10 +263,7 @@ class _TargetSetting2WidgetState extends State<TargetSetting2Widget> {
                                                   .fromSTEB(
                                                       12.0, 0.0, 24.0, 0.0),
                                               child: Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  'cthlbrge' /* 一周小於兩天 */,
-                                                ),
+                                                '一周小於兩天',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .labelMedium
@@ -353,10 +338,7 @@ class _TargetSetting2WidgetState extends State<TargetSetting2Widget> {
                                                         newValue!);
                                                   },
                                                   title: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'oszro8e6' /* 中活動量 */,
-                                                    ),
+                                                    '中活動量',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelSmall
@@ -372,10 +354,7 @@ class _TargetSetting2WidgetState extends State<TargetSetting2Widget> {
                                                         ),
                                                   ),
                                                   subtitle: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'tbpvkixn' /* 一天二小時 */,
-                                                    ),
+                                                    '一天二小時',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .headlineSmall
@@ -417,10 +396,7 @@ class _TargetSetting2WidgetState extends State<TargetSetting2Widget> {
                                                   .fromSTEB(
                                                       12.0, 0.0, 24.0, 0.0),
                                               child: Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  'jfe4s89j' /* 一周2~3天  */,
-                                                ),
+                                                '一周2~3天 ',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .labelMedium
@@ -495,10 +471,7 @@ class _TargetSetting2WidgetState extends State<TargetSetting2Widget> {
                                                         newValue!);
                                                   },
                                                   title: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'ehyham37' /* 高活動量 */,
-                                                    ),
+                                                    '高活動量',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelSmall
@@ -514,10 +487,7 @@ class _TargetSetting2WidgetState extends State<TargetSetting2Widget> {
                                                         ),
                                                   ),
                                                   subtitle: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'ojc5b4rx' /* 一天二小時 */,
-                                                    ),
+                                                    '一天二小時',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .headlineSmall
@@ -559,10 +529,7 @@ class _TargetSetting2WidgetState extends State<TargetSetting2Widget> {
                                                   .fromSTEB(
                                                       12.0, 0.0, 24.0, 0.0),
                                               child: Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  'deks0thf' /* 一周大於三天 */,
-                                                ),
+                                                '一周大於三天',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .labelMedium
@@ -593,9 +560,7 @@ class _TargetSetting2WidgetState extends State<TargetSetting2Widget> {
                               onPressed: () async {
                                 context.pushNamed('target_setting3');
                               },
-                              text: FFLocalizations.of(context).getText(
-                                'l1xj5h1o' /* 確定 */,
-                              ),
+                              text: '確定',
                               options: FFButtonOptions(
                                 width: 130.0,
                                 height: 40.0,

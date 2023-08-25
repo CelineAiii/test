@@ -52,9 +52,7 @@ class _Details04CoffeeProductWidgetState
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                       child: Text(
-                        FFLocalizations.of(context).getText(
-                          's694c054' /* SWEET LATTE */,
-                        ),
+                        'SWEET LATTE',
                         style:
                             FlutterFlowTheme.of(context).headlineSmall.override(
                                   fontFamily: 'Outfit',
@@ -68,9 +66,7 @@ class _Details04CoffeeProductWidgetState
                       padding:
                           EdgeInsetsDirectional.fromSTEB(24.0, 8.0, 24.0, 0.0),
                       child: Text(
-                        FFLocalizations.of(context).getText(
-                          '9rr0h3qp' /* Espresso and steamed milk, lig... */,
-                        ),
+                        'Espresso and steamed milk, lightly sweetened with unrefined brown sugar.',
                         textAlign: TextAlign.center,
                         style:
                             FlutterFlowTheme.of(context).labelMedium.override(
@@ -103,9 +99,7 @@ class _Details04CoffeeProductWidgetState
                           children: [
                             Expanded(
                               child: Text(
-                                FFLocalizations.of(context).getText(
-                                  'fnk4gqp1' /* Milk */,
-                                ),
+                                'Milk',
                                 style: FlutterFlowTheme.of(context)
                                     .labelLarge
                                     .override(
@@ -142,9 +136,7 @@ class _Details04CoffeeProductWidgetState
                           children: [
                             Expanded(
                               child: Text(
-                                FFLocalizations.of(context).getText(
-                                  '1wglmye7' /* Milk */,
-                                ),
+                                'Milk',
                                 style: FlutterFlowTheme.of(context)
                                     .labelLarge
                                     .override(
@@ -156,9 +148,7 @@ class _Details04CoffeeProductWidgetState
                               ),
                             ),
                             Text(
-                              FFLocalizations.of(context).getText(
-                                'e36dogm4' /* Whole Milk */,
-                              ),
+                              'Whole Milk',
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
                                   .override(
@@ -203,9 +193,7 @@ class _Details04CoffeeProductWidgetState
                           children: [
                             Expanded(
                               child: Text(
-                                FFLocalizations.of(context).getText(
-                                  '2pu0jn3a' /* Espresso Shots */,
-                                ),
+                                'Espresso Shots',
                                 style: FlutterFlowTheme.of(context)
                                     .labelLarge
                                     .override(
@@ -217,9 +205,7 @@ class _Details04CoffeeProductWidgetState
                               ),
                             ),
                             Text(
-                              FFLocalizations.of(context).getText(
-                                'yvssi3sd' /* Standard */,
-                              ),
+                              'Standard',
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
                                   .override(
@@ -264,9 +250,7 @@ class _Details04CoffeeProductWidgetState
                           children: [
                             Expanded(
                               child: Text(
-                                FFLocalizations.of(context).getText(
-                                  'xoxt42p7' /* Sugar */,
-                                ),
+                                'Sugar',
                                 style: FlutterFlowTheme.of(context)
                                     .labelLarge
                                     .override(
@@ -278,9 +262,7 @@ class _Details04CoffeeProductWidgetState
                               ),
                             ),
                             Text(
-                              FFLocalizations.of(context).getText(
-                                'zjdome0y' /* No Extra Sugar */,
-                              ),
+                              'No Extra Sugar',
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
                                   .override(
@@ -330,9 +312,7 @@ class _Details04CoffeeProductWidgetState
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 4.0),
                       child: Text(
-                        FFLocalizations.of(context).getText(
-                          'r0yxsqbh' /* Add Item */,
-                        ),
+                        'Add Item',
                         style:
                             FlutterFlowTheme.of(context).titleMedium.override(
                                   fontFamily: 'Plus Jakarta Sans',
@@ -343,9 +323,7 @@ class _Details04CoffeeProductWidgetState
                       ),
                     ),
                     Text(
-                      FFLocalizations.of(context).getText(
-                        'r0w3nke0' /* 1 Item • $7 */,
-                      ),
+                      '1 Item • \$7',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Plus Jakarta Sans',
                             color: Color(0x99FFFFFF),

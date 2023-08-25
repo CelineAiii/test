@@ -76,9 +76,7 @@ class _SportCostumizeWidgetState extends State<SportCostumizeWidget> {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Text(
-                      FFLocalizations.of(context).getText(
-                        'lmcix99p' /* 快速加入運動 */,
-                      ),
+                      '快速加入運動',
                       style:
                           FlutterFlowTheme.of(context).headlineMedium.override(
                                 fontFamily: 'Outfit',
@@ -107,9 +105,7 @@ class _SportCostumizeWidgetState extends State<SportCostumizeWidget> {
                               controller: _model.textController1,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: FFLocalizations.of(context).getText(
-                                  '9s2ytlob' /* 運動名稱 */,
-                                ),
+                                labelText: '運動名稱',
                                 labelStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
                                     .override(
@@ -183,9 +179,7 @@ class _SportCostumizeWidgetState extends State<SportCostumizeWidget> {
                               controller: _model.textController2,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: FFLocalizations.of(context).getText(
-                                  '6x0btm0v' /* 消耗卡路里 */,
-                                ),
+                                labelText: '消耗卡路里',
                                 labelStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
                                     .override(
@@ -194,9 +188,7 @@ class _SportCostumizeWidgetState extends State<SportCostumizeWidget> {
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.normal,
                                     ),
-                                hintText: FFLocalizations.of(context).getText(
-                                  '32itnoy3' /* (cal) */,
-                                ),
+                                hintText: '(cal)',
                                 hintStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
                                     .override(
@@ -262,9 +254,7 @@ class _SportCostumizeWidgetState extends State<SportCostumizeWidget> {
                               controller: _model.textController3,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: FFLocalizations.of(context).getText(
-                                  'qq11403u' /* 時間 */,
-                                ),
+                                labelText: '時間',
                                 labelStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
                                     .override(
@@ -273,9 +263,7 @@ class _SportCostumizeWidgetState extends State<SportCostumizeWidget> {
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.normal,
                                     ),
-                                hintText: FFLocalizations.of(context).getText(
-                                  'b4iqn8ut' /* (min) */,
-                                ),
+                                hintText: '(min)',
                                 hintStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
                                     .override(
@@ -338,19 +326,13 @@ class _SportCostumizeWidgetState extends State<SportCostumizeWidget> {
                 child: FlutterFlowDropDown<String>(
                   controller: _model.dropDownValueController ??=
                       FormFieldController<String>(null),
-                  options: [
-                    FFLocalizations.of(context).getText(
-                      'd8er99ph' /* 點心 */,
-                    )
-                  ],
+                  options: ['點心'],
                   onChanged: (val) =>
                       setState(() => _model.dropDownValue = val),
                   width: MediaQuery.sizeOf(context).width * 0.92,
                   height: 50.0,
                   textStyle: FlutterFlowTheme.of(context).bodyMedium,
-                  hintText: FFLocalizations.of(context).getText(
-                    'hgrz6c7c' /* 選擇運動日期 */,
-                  ),
+                  hintText: '選擇運動日期',
                   icon: Icon(
                     Icons.keyboard_arrow_down_rounded,
                     color: FlutterFlowTheme.of(context).secondaryText,
@@ -387,9 +369,7 @@ class _SportCostumizeWidgetState extends State<SportCostumizeWidget> {
 
                   context.pushNamed('sport_record');
                 },
-                text: FFLocalizations.of(context).getText(
-                  'y3txh2ni' /* 儲存運動 */,
-                ),
+                text: '儲存運動',
                 options: FFButtonOptions(
                   width: 270.0,
                   height: 50.0,

@@ -140,10 +140,7 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 20.0, 0.0, 0.0),
                                             child: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'xbcsjcf1' /* 辨識結果 */,
-                                              ),
+                                              '辨識結果',
                                               style: FlutterFlowTheme.of(
                                                       context)
                                                   .headlineSmall
@@ -179,11 +176,7 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                                 children: [
                                                   Expanded(
                                                     child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'f4txzgn7' /* 份量 */,
-                                                      ),
+                                                      '份量',
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -201,10 +194,7 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                                     ),
                                                   ),
                                                   Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      '7h1x0f1p' /* Hello World */,
-                                                    ),
+                                                    'Hello World',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyLarge
@@ -241,11 +231,7 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                                 children: [
                                                   Expanded(
                                                     child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        '052kdhym' /* 熱量 */,
-                                                      ),
+                                                      '熱量',
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -263,10 +249,7 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                                     ),
                                                   ),
                                                   Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'dlfrmjv4' /* Whole Milk */,
-                                                    ),
+                                                    'Whole Milk',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyLarge
@@ -308,11 +291,7 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                                 children: [
                                                   Expanded(
                                                     child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        '8bgtqhuw' /* 碳水化合物 */,
-                                                      ),
+                                                      '碳水化合物',
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -330,10 +309,7 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                                     ),
                                                   ),
                                                   Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'kjspkdmr' /* Whole Milk */,
-                                                    ),
+                                                    'Whole Milk',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyLarge
@@ -375,11 +351,7 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                                 children: [
                                                   Expanded(
                                                     child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'wfc31e9i' /* 蛋白質 */,
-                                                      ),
+                                                      '蛋白質',
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -397,10 +369,7 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                                     ),
                                                   ),
                                                   Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'jranmkkf' /* Standard */,
-                                                    ),
+                                                    'Standard',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyLarge
@@ -442,11 +411,7 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                                 children: [
                                                   Expanded(
                                                     child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'l4i7mm7b' /* 脂肪 */,
-                                                      ),
+                                                      '脂肪',
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -464,10 +429,7 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                                     ),
                                                   ),
                                                   Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'a61vxc9c' /* Standard */,
-                                                    ),
+                                                    'Standard',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyLarge
@@ -509,11 +471,7 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                                 children: [
                                                   Expanded(
                                                     child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'g0w0n619' /* 飽和脂肪 */,
-                                                      ),
+                                                      '飽和脂肪',
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -531,10 +489,7 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                                     ),
                                                   ),
                                                   Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'jdjtj0cn' /* Standard */,
-                                                    ),
+                                                    'Standard',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyLarge
@@ -576,11 +531,7 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                                 children: [
                                                   Expanded(
                                                     child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'h79cqt68' /* 反式脂肪 */,
-                                                      ),
+                                                      '反式脂肪',
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -598,10 +549,7 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                                     ),
                                                   ),
                                                   Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'f3zcii3q' /* Standard */,
-                                                    ),
+                                                    'Standard',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyLarge
@@ -643,11 +591,7 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                                 children: [
                                                   Expanded(
                                                     child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'nvv4dfls' /* 糖 */,
-                                                      ),
+                                                      '糖',
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -665,10 +609,7 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                                     ),
                                                   ),
                                                   Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      '0n3mipo2' /* Standard */,
-                                                    ),
+                                                    'Standard',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyLarge
@@ -710,11 +651,7 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                                 children: [
                                                   Expanded(
                                                     child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        '0bsuzf1y' /* 鈉 */,
-                                                      ),
+                                                      '鈉',
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -732,10 +669,7 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                                     ),
                                                   ),
                                                   Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'bbmsfauo' /* Standard */,
-                                                    ),
+                                                    'Standard',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyLarge
@@ -777,11 +711,7 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                                 children: [
                                                   Expanded(
                                                     child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'xdrd8vhr' /* 鈣 */,
-                                                      ),
+                                                      '鈣',
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -799,10 +729,7 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                                     ),
                                                   ),
                                                   Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'ft392j1z' /* Standard */,
-                                                    ),
+                                                    'Standard',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyLarge
@@ -844,11 +771,7 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                                 children: [
                                                   Expanded(
                                                     child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        '3viyoolg' /* 鉀 */,
-                                                      ),
+                                                      '鉀',
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -866,10 +789,7 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                                     ),
                                                   ),
                                                   Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'xfxsii0o' /* Standard */,
-                                                    ),
+                                                    'Standard',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyLarge
@@ -926,16 +846,8 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                                       ),
                                                       options: ['g', '份'],
                                                       optionLabels: [
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          'ktkenbg3' /* 每100克 */,
-                                                        ),
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          'lzpufndj' /* 每一份量 */,
-                                                        )
+                                                        '每100克',
+                                                        '每一份量'
                                                       ],
                                                       onChanged: (val) =>
                                                           setState(() => _model
@@ -953,12 +865,7 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                                                 color: Colors
                                                                     .black,
                                                               ),
-                                                      hintText:
-                                                          FFLocalizations.of(
-                                                                  context)
-                                                              .getText(
-                                                        'nvmbrvs8' /* 請選擇 */,
-                                                      ),
+                                                      hintText: '請選擇',
                                                       fillColor:
                                                           Color(0xFFE5E0EB),
                                                       elevation: 2.0,
@@ -985,12 +892,7 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                                       obscureText: false,
                                                       decoration:
                                                           InputDecoration(
-                                                        hintText:
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                          'orhl1eof' /* 1 */,
-                                                        ),
+                                                        hintText: '1',
                                                         hintStyle:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -1112,11 +1014,7 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                                                     10.0,
                                                                     10.0),
                                                         child: Text(
-                                                          FFLocalizations.of(
-                                                                  context)
-                                                              .getText(
-                                                            '1h1d81og' /* p */,
-                                                          ),
+                                                          'p',
                                                           textAlign:
                                                               TextAlign.center,
                                                           style: FlutterFlowTheme
@@ -1181,10 +1079,7 @@ class _PhotoResponseWidgetState extends State<PhotoResponseWidget> {
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                '9xj1csw2' /* Add  */,
-                                              ),
+                                              'Add ',
                                               textAlign: TextAlign.center,
                                               style:
                                                   FlutterFlowTheme.of(context)

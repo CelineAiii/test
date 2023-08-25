@@ -65,9 +65,7 @@ class _TargetSetting3WidgetState extends State<TargetSetting3Widget> {
               onPressed: () {
                 print('Button pressed ...');
               },
-              text: FFLocalizations.of(context).getText(
-                'x4nxrkjv' /* Candy Diary */,
-              ),
+              text: 'Candy Diary',
               options: FFButtonOptions(
                 width: 185.0,
                 height: 40.0,
@@ -103,9 +101,7 @@ class _TargetSetting3WidgetState extends State<TargetSetting3Widget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                   child: Text(
-                    FFLocalizations.of(context).getText(
-                      '3415knl2' /* - 目標設定 - */,
-                    ),
+                    '- 目標設定 -',
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Poppins',
@@ -132,9 +128,7 @@ class _TargetSetting3WidgetState extends State<TargetSetting3Widget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 10.0, 0.0, 0.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                'qa0qq1z7' /* 是否有個人疾病史： */,
-                              ),
+                              '是否有個人疾病史：',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -157,27 +151,13 @@ class _TargetSetting3WidgetState extends State<TargetSetting3Widget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   FlutterFlowCheckboxGroup(
-                                    options: [
-                                      FFLocalizations.of(context).getText(
-                                        'qrh0m7us' /* 糖尿病 */,
-                                      ),
-                                      FFLocalizations.of(context).getText(
-                                        '3acpji1c' /* 乳糖不耐症 */,
-                                      ),
-                                      FFLocalizations.of(context).getText(
-                                        'nifag18k' /* 無 */,
-                                      )
-                                    ],
+                                    options: ['糖尿病', '乳糖不耐症', '無'],
                                     onChanged: (val) => setState(
                                         () => _model.checkboxGroupValues = val),
                                     controller:
                                         _model.checkboxGroupValueController ??=
                                             FormFieldController<List<String>>(
-                                      [
-                                        FFLocalizations.of(context).getText(
-                                          'ko1t2l6h' /* 無 */,
-                                        )
-                                      ],
+                                      ['無'],
                                     ),
                                     activeColor: Color(0xFFA492BE),
                                     checkColor: Colors.white,
@@ -207,9 +187,7 @@ class _TargetSetting3WidgetState extends State<TargetSetting3Widget> {
                               onPressed: () async {
                                 context.pushNamed('user');
                               },
-                              text: FFLocalizations.of(context).getText(
-                                'klkn174r' /* 確定 */,
-                              ),
+                              text: '確定',
                               options: FFButtonOptions(
                                 width: 130.0,
                                 height: 40.0,

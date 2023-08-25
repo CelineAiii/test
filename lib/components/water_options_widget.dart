@@ -61,9 +61,7 @@ class _WaterOptionsWidgetState extends State<WaterOptionsWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(12.0, 12.0, 0.0, 0.0),
               child: Text(
-                FFLocalizations.of(context).getText(
-                  'ry1l6ru5' /* Options */,
-                ),
+                'Options',
                 textAlign: TextAlign.start,
                 style: FlutterFlowTheme.of(context).labelMedium.override(
                       fontFamily: 'Plus Jakarta Sans',
@@ -110,9 +108,7 @@ class _WaterOptionsWidgetState extends State<WaterOptionsWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 12.0, 0.0, 0.0, 0.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                'piudvhef' /* 記錄飲水 */,
-                              ),
+                              '記錄飲水',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
@@ -164,9 +160,7 @@ class _WaterOptionsWidgetState extends State<WaterOptionsWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 12.0, 0.0, 0.0, 0.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                'hy9g5208' /* 修改飲水目標 */,
-                              ),
+                              '修改飲水目標',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(

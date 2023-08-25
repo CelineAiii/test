@@ -59,9 +59,7 @@ class _FoodRecommandWidgetState extends State<FoodRecommandWidget> {
               },
             ),
             title: Text(
-              FFLocalizations.of(context).getText(
-                '2rtg499i' /* 推薦食譜 */,
-              ),
+              '推薦食譜',
               textAlign: TextAlign.center,
               style: FlutterFlowTheme.of(context).bodyMedium.override(
                     fontFamily: 'Poppins',

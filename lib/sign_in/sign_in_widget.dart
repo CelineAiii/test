@@ -80,9 +80,7 @@ class _SignInWidgetState extends State<SignInWidget>
                           ),
                         ),
                         Text(
-                          FFLocalizations.of(context).getText(
-                            '69j8r5jo' /* Candy Diary */,
-                          ),
+                          'Candy Diary',
                           style: FlutterFlowTheme.of(context)
                               .bodyMedium
                               .override(
@@ -118,14 +116,10 @@ class _SignInWidgetState extends State<SignInWidget>
                         indicatorColor: Colors.white,
                         tabs: [
                           Tab(
-                            text: FFLocalizations.of(context).getText(
-                              's4wxv4lx' /* Sign In */,
-                            ),
+                            text: 'Sign In',
                           ),
                           Tab(
-                            text: FFLocalizations.of(context).getText(
-                              '937kpc4c' /* Sign Up */,
-                            ),
+                            text: 'Sign Up',
                           ),
                         ],
                         controller: _model.tabBarController,
@@ -157,10 +151,7 @@ class _SignInWidgetState extends State<SignInWidget>
                                             fontSize: 14.0,
                                             fontWeight: FontWeight.normal,
                                           ),
-                                      hintText:
-                                          FFLocalizations.of(context).getText(
-                                        'xyd37vh8' /* Enter your email... */,
-                                      ),
+                                      hintText: 'Enter your email...',
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .bodySmall
                                           .override(
@@ -233,10 +224,7 @@ class _SignInWidgetState extends State<SignInWidget>
                                             fontSize: 14.0,
                                             fontWeight: FontWeight.normal,
                                           ),
-                                      hintText:
-                                          FFLocalizations.of(context).getText(
-                                        'elimdt0x' /* Enter your password... */,
-                                      ),
+                                      hintText: 'Enter your password...',
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .bodySmall
                                           .override(
@@ -331,9 +319,7 @@ class _SignInWidgetState extends State<SignInWidget>
                                           return;
                                         }
                                       },
-                                      text: FFLocalizations.of(context).getText(
-                                        'xf5mspge' /* Sign In */,
-                                      ),
+                                      text: 'Sign In',
                                       options: FFButtonOptions(
                                         width: 230.0,
                                         height: 50.0,
@@ -367,9 +353,7 @@ class _SignInWidgetState extends State<SignInWidget>
                                       print(
                                           'Button-ForgotPassword pressed ...');
                                     },
-                                    text: FFLocalizations.of(context).getText(
-                                      'sz3yi0lm' /* Forgot Password? */,
-                                    ),
+                                    text: 'Forgot Password?',
                                     options: FFButtonOptions(
                                       width: 170.0,
                                       height: 40.0,
@@ -420,10 +404,7 @@ class _SignInWidgetState extends State<SignInWidget>
                                             fontSize: 14.0,
                                             fontWeight: FontWeight.normal,
                                           ),
-                                      hintText:
-                                          FFLocalizations.of(context).getText(
-                                        'rlt88wwa' /* Enter your email... */,
-                                      ),
+                                      hintText: 'Enter your email...',
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .bodySmall
                                           .override(
@@ -500,10 +481,7 @@ class _SignInWidgetState extends State<SignInWidget>
                                             fontSize: 14.0,
                                             fontWeight: FontWeight.normal,
                                           ),
-                                      hintText:
-                                          FFLocalizations.of(context).getText(
-                                        '9c1wao67' /* Enter your password... */,
-                                      ),
+                                      hintText: 'Enter your password...',
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .bodySmall
                                           .override(
@@ -586,9 +564,7 @@ class _SignInWidgetState extends State<SignInWidget>
                                     onPressed: () {
                                       print('Button-Login pressed ...');
                                     },
-                                    text: FFLocalizations.of(context).getText(
-                                      'ki9xb0gs' /* Create Account */,
-                                    ),
+                                    text: 'Create Account',
                                     options: FFButtonOptions(
                                       width: 230.0,
                                       height: 50.0,

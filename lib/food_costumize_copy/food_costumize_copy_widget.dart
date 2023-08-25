@@ -147,9 +147,7 @@ class _FoodCostumizeCopyWidgetState extends State<FoodCostumizeCopyWidget> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 0.0, 0.0),
                 child: Text(
-                  FFLocalizations.of(context).getText(
-                    'nqsatdk6' /* Page Title */,
-                  ),
+                  'Page Title',
                   style: FlutterFlowTheme.of(context).displaySmall.override(
                         fontFamily: 'Outfit',
                         color: Color(0xFF0F1113),
@@ -163,9 +161,7 @@ class _FoodCostumizeCopyWidgetState extends State<FoodCostumizeCopyWidget> {
                   padding:
                       EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 16.0),
                   child: Text(
-                    FFLocalizations.of(context).getText(
-                      'vzwnv1xt' /* Here is an intro and descripti... */,
-                    ),
+                    'Here is an intro and description of what this toolkit entails. We hope you enjoy it as much as we do!',
                     style: FlutterFlowTheme.of(context).labelLarge.override(
                           fontFamily: 'Outfit',
                           color: Color(0xFF57636C),
@@ -178,9 +174,7 @@ class _FoodCostumizeCopyWidgetState extends State<FoodCostumizeCopyWidget> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 8.0),
                 child: Text(
-                  FFLocalizations.of(context).getText(
-                    'flmz4war' /* Introduction */,
-                  ),
+                  'Introduction',
                   style: FlutterFlowTheme.of(context).bodySmall.override(
                         fontFamily: 'Outfit',
                         color: Color(0xFF0F1113),
@@ -213,9 +207,7 @@ class _FoodCostumizeCopyWidgetState extends State<FoodCostumizeCopyWidget> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          FFLocalizations.of(context).getText(
-                            'a9y6yj4i' /* Intro */,
-                          ),
+                          'Intro',
                           style:
                               FlutterFlowTheme.of(context).labelMedium.override(
                                     fontFamily: 'Outfit',
@@ -258,9 +250,7 @@ class _FoodCostumizeCopyWidgetState extends State<FoodCostumizeCopyWidget> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          FFLocalizations.of(context).getText(
-                            'n3s73hod' /* Disclaimer */,
-                          ),
+                          'Disclaimer',
                           style:
                               FlutterFlowTheme.of(context).labelMedium.override(
                                     fontFamily: 'Outfit',
@@ -282,9 +272,7 @@ class _FoodCostumizeCopyWidgetState extends State<FoodCostumizeCopyWidget> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 8.0),
                 child: Text(
-                  FFLocalizations.of(context).getText(
-                    'ykvujnzd' /* Main Content */,
-                  ),
+                  'Main Content',
                   style: FlutterFlowTheme.of(context).bodySmall.override(
                         fontFamily: 'Outfit',
                         color: Color(0xFF0F1113),
@@ -317,9 +305,7 @@ class _FoodCostumizeCopyWidgetState extends State<FoodCostumizeCopyWidget> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          FFLocalizations.of(context).getText(
-                            's4uczoar' /* Prologue */,
-                          ),
+                          'Prologue',
                           style:
                               FlutterFlowTheme.of(context).labelMedium.override(
                                     fontFamily: 'Outfit',
@@ -362,9 +348,7 @@ class _FoodCostumizeCopyWidgetState extends State<FoodCostumizeCopyWidget> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          FFLocalizations.of(context).getText(
-                            'i2skt7af' /* Excercise */,
-                          ),
+                          'Excercise',
                           style:
                               FlutterFlowTheme.of(context).labelMedium.override(
                                     fontFamily: 'Outfit',

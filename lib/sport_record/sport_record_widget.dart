@@ -62,9 +62,7 @@ class _SportRecordWidgetState extends State<SportRecordWidget> {
               },
             ),
             title: Text(
-              FFLocalizations.of(context).getText(
-                'gx76ghxj' /* Hi! Celine */,
-              ),
+              'Hi! Celine',
               style: FlutterFlowTheme.of(context).bodyMedium.override(
                     fontFamily: 'Poppins',
                     color: FlutterFlowTheme.of(context).primaryBtnText,
@@ -116,9 +114,7 @@ class _SportRecordWidgetState extends State<SportRecordWidget> {
                                 onPressed: () async {
                                   context.pushNamed('view_sport');
                                 },
-                                text: FFLocalizations.of(context).getText(
-                                  'y48atww8' /* 點擊查看今日運動紀錄 */,
-                                ),
+                                text: '點擊查看今日運動紀錄',
                                 options: FFButtonOptions(
                                   height: 40.0,
                                   padding: EdgeInsetsDirectional.fromSTEB(
@@ -185,9 +181,7 @@ class _SportRecordWidgetState extends State<SportRecordWidget> {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          FFLocalizations.of(context).getText(
-                                            '38uuw5qt' /* 球類運動 */,
-                                          ),
+                                          '球類運動',
                                           style: FlutterFlowTheme.of(context)
                                               .titleMedium
                                               .override(
@@ -202,9 +196,7 @@ class _SportRecordWidgetState extends State<SportRecordWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 4.0, 8.0, 0.0),
                                           child: AutoSizeText(
-                                            FFLocalizations.of(context).getText(
-                                              'djokt4vz' /* 記錄關於球類運動的部分... */,
-                                            ),
+                                            '記錄關於球類運動的部分...',
                                             textAlign: TextAlign.start,
                                             style: FlutterFlowTheme.of(context)
                                                 .bodySmall
@@ -300,9 +292,7 @@ class _SportRecordWidgetState extends State<SportRecordWidget> {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          FFLocalizations.of(context).getText(
-                                            'pdqzd4fp' /* 跑步/走路 */,
-                                          ),
+                                          '跑步/走路',
                                           style: FlutterFlowTheme.of(context)
                                               .titleMedium
                                               .override(
@@ -317,9 +307,7 @@ class _SportRecordWidgetState extends State<SportRecordWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 4.0, 8.0, 0.0),
                                           child: AutoSizeText(
-                                            FFLocalizations.of(context).getText(
-                                              '3ncn3hkq' /* 記錄關於行走相關運動的部分... */,
-                                            ),
+                                            '記錄關於行走相關運動的部分...',
                                             textAlign: TextAlign.start,
                                             style: FlutterFlowTheme.of(context)
                                                 .bodySmall
@@ -415,9 +403,7 @@ class _SportRecordWidgetState extends State<SportRecordWidget> {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          FFLocalizations.of(context).getText(
-                                            '75f99jdz' /* 游泳 */,
-                                          ),
+                                          '游泳',
                                           style: FlutterFlowTheme.of(context)
                                               .titleMedium
                                               .override(
@@ -432,9 +418,7 @@ class _SportRecordWidgetState extends State<SportRecordWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 4.0, 8.0, 0.0),
                                           child: AutoSizeText(
-                                            FFLocalizations.of(context).getText(
-                                              'nwy09fha' /* 記錄關於游泳運動的部分... */,
-                                            ),
+                                            '記錄關於游泳運動的部分...',
                                             textAlign: TextAlign.start,
                                             style: FlutterFlowTheme.of(context)
                                                 .bodySmall
@@ -530,9 +514,7 @@ class _SportRecordWidgetState extends State<SportRecordWidget> {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          FFLocalizations.of(context).getText(
-                                            '5quqhwgo' /* 腳踏車 */,
-                                          ),
+                                          '腳踏車',
                                           style: FlutterFlowTheme.of(context)
                                               .titleMedium
                                               .override(
@@ -547,9 +529,7 @@ class _SportRecordWidgetState extends State<SportRecordWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 4.0, 8.0, 0.0),
                                           child: AutoSizeText(
-                                            FFLocalizations.of(context).getText(
-                                              'm1y3n8wl' /* 記錄關於腳踏車相關運動的部分... */,
-                                            ),
+                                            '記錄關於腳踏車相關運動的部分...',
                                             textAlign: TextAlign.start,
                                             style: FlutterFlowTheme.of(context)
                                                 .bodySmall
@@ -643,9 +623,7 @@ class _SportRecordWidgetState extends State<SportRecordWidget> {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          FFLocalizations.of(context).getText(
-                                            '358wz4ww' /* 有氧相關運動 */,
-                                          ),
+                                          '有氧相關運動',
                                           style: FlutterFlowTheme.of(context)
                                               .titleMedium
                                               .override(
@@ -660,9 +638,7 @@ class _SportRecordWidgetState extends State<SportRecordWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 4.0, 8.0, 0.0),
                                           child: AutoSizeText(
-                                            FFLocalizations.of(context).getText(
-                                              '6sk9khf0' /* 記錄關於有氧運動的部分... */,
-                                            ),
+                                            '記錄關於有氧運動的部分...',
                                             textAlign: TextAlign.start,
                                             style: FlutterFlowTheme.of(context)
                                                 .bodySmall
@@ -756,9 +732,7 @@ class _SportRecordWidgetState extends State<SportRecordWidget> {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          FFLocalizations.of(context).getText(
-                                            'qj3i1wrp' /* 其他運動 */,
-                                          ),
+                                          '其他運動',
                                           style: FlutterFlowTheme.of(context)
                                               .titleMedium
                                               .override(
@@ -773,9 +747,7 @@ class _SportRecordWidgetState extends State<SportRecordWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 4.0, 8.0, 0.0),
                                           child: AutoSizeText(
-                                            FFLocalizations.of(context).getText(
-                                              'f4zdnd5t' /* 記錄關於其他運動（核心）的部分... */,
-                                            ),
+                                            '記錄關於其他運動（核心）的部分...',
                                             textAlign: TextAlign.start,
                                             style: FlutterFlowTheme.of(context)
                                                 .bodySmall
@@ -869,9 +841,7 @@ class _SportRecordWidgetState extends State<SportRecordWidget> {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          FFLocalizations.of(context).getText(
-                                            'wos0do7g' /* 自定義運動 */,
-                                          ),
+                                          '自定義運動',
                                           style: FlutterFlowTheme.of(context)
                                               .titleMedium
                                               .override(
@@ -886,9 +856,7 @@ class _SportRecordWidgetState extends State<SportRecordWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 4.0, 8.0, 0.0),
                                           child: AutoSizeText(
-                                            FFLocalizations.of(context).getText(
-                                              'yal1bl6p' /* 記錄關於自定義運動的部分... */,
-                                            ),
+                                            '記錄關於自定義運動的部分...',
                                             textAlign: TextAlign.start,
                                             style: FlutterFlowTheme.of(context)
                                                 .bodySmall
@@ -984,10 +952,7 @@ class _SportRecordWidgetState extends State<SportRecordWidget> {
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'sgsdwf27' /* 目前總運動時數： */,
-                                              ),
+                                              '目前總運動時數：',
                                               style: FlutterFlowTheme.of(
                                                       context)
                                                   .titleMedium
@@ -1006,10 +971,7 @@ class _SportRecordWidgetState extends State<SportRecordWidget> {
                                                     .fromSTEB(
                                                         0.0, 0.0, 10.0, 0.0),
                                                 child: Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    'unb6tnjy' /* 300 min */,
-                                                  ),
+                                                  '300 min',
                                                   textAlign: TextAlign.end,
                                                   style: FlutterFlowTheme.of(
                                                           context)
@@ -1031,10 +993,7 @@ class _SportRecordWidgetState extends State<SportRecordWidget> {
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                '37p1s8gm' /* 目前總運動距離： */,
-                                              ),
+                                              '目前總運動距離：',
                                               style: FlutterFlowTheme.of(
                                                       context)
                                                   .titleMedium
@@ -1053,10 +1012,7 @@ class _SportRecordWidgetState extends State<SportRecordWidget> {
                                                     .fromSTEB(
                                                         0.0, 0.0, 10.0, 0.0),
                                                 child: Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    'pnj3yo5u' /* 1000 m */,
-                                                  ),
+                                                  '1000 m',
                                                   textAlign: TextAlign.end,
                                                   style: FlutterFlowTheme.of(
                                                           context)
@@ -1078,10 +1034,7 @@ class _SportRecordWidgetState extends State<SportRecordWidget> {
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'n1plvluw' /* 目前總消耗卡路里數： */,
-                                              ),
+                                              '目前總消耗卡路里數：',
                                               style: FlutterFlowTheme.of(
                                                       context)
                                                   .titleMedium
@@ -1098,10 +1051,7 @@ class _SportRecordWidgetState extends State<SportRecordWidget> {
                                                     .fromSTEB(
                                                         0.0, 0.0, 10.0, 0.0),
                                                 child: Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    '4767wwwe' /* 800 kal */,
-                                                  ),
+                                                  '800 kal',
                                                   textAlign: TextAlign.end,
                                                   style: FlutterFlowTheme.of(
                                                           context)

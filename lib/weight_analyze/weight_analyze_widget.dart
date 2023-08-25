@@ -71,9 +71,7 @@ class _WeightAnalyzeWidgetState extends State<WeightAnalyzeWidget> {
               onPressed: () async {
                 context.goNamed('HomePage');
               },
-              text: FFLocalizations.of(context).getText(
-                '6wt1ia9f' /* Candy Diary */,
-              ),
+              text: 'Candy Diary',
               options: FFButtonOptions(
                 width: 185.0,
                 height: 40.0,
@@ -166,9 +164,7 @@ class _WeightAnalyzeWidgetState extends State<WeightAnalyzeWidget> {
                                   ),
                                 ),
                                 Text(
-                                  FFLocalizations.of(context).getText(
-                                    'a53118mq' /* Weight Report */,
-                                  ),
+                                  'Weight Report',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -214,9 +210,7 @@ class _WeightAnalyzeWidgetState extends State<WeightAnalyzeWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 10.0, 0.0, 10.0),
                                           child: Text(
-                                            FFLocalizations.of(context).getText(
-                                              'fmynfjzo' /* - 今日體重紀錄 - */,
-                                            ),
+                                            '- 今日體重紀錄 -',
                                             textAlign: TextAlign.center,
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
@@ -231,9 +225,7 @@ class _WeightAnalyzeWidgetState extends State<WeightAnalyzeWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   15.0, 0.0, 0.0, 0.0),
                                           child: Text(
-                                            FFLocalizations.of(context).getText(
-                                              'fk2spb9e' /* 昨日體重：52 kg */,
-                                            ),
+                                            '昨日體重：52 kg',
                                             textAlign: TextAlign.start,
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium,
@@ -278,16 +270,9 @@ class _WeightAnalyzeWidgetState extends State<WeightAnalyzeWidget> {
                                               textStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium,
-                                              hintText:
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                'txe5tro8' /* Please select... */,
-                                              ),
+                                              hintText: 'Please select...',
                                               searchHintText:
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                '502r7h6q' /* Search for an item... */,
-                                              ),
+                                                  'Search for an item...',
                                               icon: Icon(
                                                 Icons
                                                     .keyboard_arrow_down_rounded,
@@ -320,10 +305,7 @@ class _WeightAnalyzeWidgetState extends State<WeightAnalyzeWidget> {
                                             onPressed: () {
                                               print('Button pressed ...');
                                             },
-                                            text: FFLocalizations.of(context)
-                                                .getText(
-                                              '5luxbvlp' /* 確認 */,
-                                            ),
+                                            text: '確認',
                                             options: FFButtonOptions(
                                               width: 50.0,
                                               height: 40.0,
@@ -375,9 +357,7 @@ class _WeightAnalyzeWidgetState extends State<WeightAnalyzeWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 10.0, 0.0, 0.0),
                                           child: Text(
-                                            FFLocalizations.of(context).getText(
-                                              '3c15j3fv' /* - 體重分析圖 - */,
-                                            ),
+                                            '- 體重分析圖 -',
                                             textAlign: TextAlign.center,
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium

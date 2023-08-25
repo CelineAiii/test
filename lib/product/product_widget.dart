@@ -67,9 +67,7 @@ class _ProductWidgetState extends State<ProductWidget>
               onPressed: () async {
                 context.goNamed('HomePage');
               },
-              text: FFLocalizations.of(context).getText(
-                '0o6hydn1' /* Candy Diary */,
-              ),
+              text: 'Candy Diary',
               options: FFButtonOptions(
                 width: 185.0,
                 height: 40.0,
@@ -141,9 +139,7 @@ class _ProductWidgetState extends State<ProductWidget>
                         padding: EdgeInsetsDirectional.fromSTEB(
                             10.0, 20.0, 0.0, 0.0),
                         child: Text(
-                          FFLocalizations.of(context).getText(
-                            'tooiobju' /* 已擁有之商品： */,
-                          ),
+                          '已擁有之商品：',
                           style:
                               FlutterFlowTheme.of(context).titleMedium.override(
                                     fontFamily: 'Outfit',
@@ -210,9 +206,7 @@ class _ProductWidgetState extends State<ProductWidget>
                                             MainAxisAlignment.spaceBetween,
                                         children: [
                                           Text(
-                                            FFLocalizations.of(context).getText(
-                                              'ez4b3rbu' /* 預設糖果罐 */,
-                                            ),
+                                            '預設糖果罐',
                                             style: FlutterFlowTheme.of(context)
                                                 .headlineSmall
                                                 .override(
@@ -234,9 +228,7 @@ class _ProductWidgetState extends State<ProductWidget>
                                             MainAxisAlignment.spaceBetween,
                                         children: [
                                           Text(
-                                            FFLocalizations.of(context).getText(
-                                              'eu3051n2' /* Produced by Celine */,
-                                            ),
+                                            'Produced by Celine',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodySmall
                                                 .override(
@@ -274,9 +266,7 @@ class _ProductWidgetState extends State<ProductWidget>
                                       },
                                     );
                                   },
-                                  text: FFLocalizations.of(context).getText(
-                                    'z2vcbl2q' /* 替換 */,
-                                  ),
+                                  text: '替換',
                                   options: FFButtonOptions(
                                     width: 50.0,
                                     height: 40.0,
@@ -350,9 +340,7 @@ class _ProductWidgetState extends State<ProductWidget>
                                             MainAxisAlignment.spaceBetween,
                                         children: [
                                           Text(
-                                            FFLocalizations.of(context).getText(
-                                              'q8ppii2c' /* 預設糖果 */,
-                                            ),
+                                            '預設糖果',
                                             style: FlutterFlowTheme.of(context)
                                                 .headlineSmall
                                                 .override(
@@ -374,9 +362,7 @@ class _ProductWidgetState extends State<ProductWidget>
                                             MainAxisAlignment.spaceBetween,
                                         children: [
                                           Text(
-                                            FFLocalizations.of(context).getText(
-                                              'xk6dys2o' /* Produced by Celine */,
-                                            ),
+                                            'Produced by Celine',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodySmall
                                                 .override(
@@ -414,9 +400,7 @@ class _ProductWidgetState extends State<ProductWidget>
                                       },
                                     );
                                   },
-                                  text: FFLocalizations.of(context).getText(
-                                    'yb4b4lku' /* 替換 */,
-                                  ),
+                                  text: '替換',
                                   options: FFButtonOptions(
                                     width: 50.0,
                                     height: 40.0,
@@ -490,9 +474,7 @@ class _ProductWidgetState extends State<ProductWidget>
                                             MainAxisAlignment.spaceBetween,
                                         children: [
                                           GradientText(
-                                            FFLocalizations.of(context).getText(
-                                              'l5rcqs1m' /* 普通好看的糖果罐 */,
-                                            ),
+                                            '普通好看的糖果罐',
                                             style: FlutterFlowTheme.of(context)
                                                 .headlineSmall
                                                 .override(
@@ -523,9 +505,7 @@ class _ProductWidgetState extends State<ProductWidget>
                                             MainAxisAlignment.spaceBetween,
                                         children: [
                                           Text(
-                                            FFLocalizations.of(context).getText(
-                                              'uy491o4y' /* Produced by Celine */,
-                                            ),
+                                            'Produced by Celine',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodySmall
                                                 .override(
@@ -563,9 +543,7 @@ class _ProductWidgetState extends State<ProductWidget>
                                       },
                                     );
                                   },
-                                  text: FFLocalizations.of(context).getText(
-                                    'jt3yy0sb' /* 替換 */,
-                                  ),
+                                  text: '替換',
                                   options: FFButtonOptions(
                                     width: 50.0,
                                     height: 40.0,
@@ -639,9 +617,7 @@ class _ProductWidgetState extends State<ProductWidget>
                                             MainAxisAlignment.spaceBetween,
                                         children: [
                                           Text(
-                                            FFLocalizations.of(context).getText(
-                                              'e91plmqk' /* 雷根糖 */,
-                                            ),
+                                            '雷根糖',
                                             style: FlutterFlowTheme.of(context)
                                                 .headlineSmall
                                                 .override(
@@ -663,9 +639,7 @@ class _ProductWidgetState extends State<ProductWidget>
                                             MainAxisAlignment.spaceBetween,
                                         children: [
                                           Text(
-                                            FFLocalizations.of(context).getText(
-                                              '2yez3wr9' /* Produced by Celine */,
-                                            ),
+                                            'Produced by Celine',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodySmall
                                                 .override(
@@ -703,9 +677,7 @@ class _ProductWidgetState extends State<ProductWidget>
                                       },
                                     );
                                   },
-                                  text: FFLocalizations.of(context).getText(
-                                    'za8xsbm6' /* 替換 */,
-                                  ),
+                                  text: '替換',
                                   options: FFButtonOptions(
                                     width: 50.0,
                                     height: 40.0,
